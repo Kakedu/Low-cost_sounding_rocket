@@ -1,0 +1,37 @@
+{
+  "motor": {
+    "output": "C:\\Users\\Haoran Du\\AppData\\Local\\Temp\\validation_cavour_9y9ti2gv\\jsb\\engine\\L995.xml",
+    "impulse_Ns": 3617.98,
+    "source_impulse_Ns": 3617.98,
+    "prop_kg": 1.996,
+    "prop_lb": 4.400426753210156,
+    "burned_kg": 0.30079987906996825,
+    "remaining_prop_lb": 3.7372765351631285,
+    "isp_s": 184.8353138391726,
+    "isp_scale": 1.0,
+    "start_time_s": 0.5141999999999597,
+    "sample_dt_s": 0.002,
+    "rows": 1651,
+    "burn_end_s": 3.8,
+    "initial_regularized_thrust_N": 1214.658153846154,
+    "terminal_regularized_thrust_N": 0.2011559912801589
+  },
+  "t_exit": 0.5141999999999597,
+  "v_exit": 49.22734326107732,
+  "dT": 7.500000000000249,
+  "dT_reanalysis": 7.500000000000249,
+  "T_pad_reanalysis_C": 23.837698407669166,
+  "isp": 184.83531383917258,
+  "impulse": 3617.98,
+  "m_prop": 1.996,
+  "cmq": -2454.980753901015,
+  "cna0": 10.504949247965664,
+  "cp_sub_from_tail": 0.5485377349420639,
+  "static_margin_cal": 6.258291010172463,
+  "static_margin_launch_cal": 4.379943707939698,
+  "weather": [
+    "2023-10-13 13:00:00",
+    "2023-10-13 14:00:00"
+  ],
+  "pad_m": 150.0
+}

@@ -1,0 +1,3406 @@
+{
+  "seed": 7,
+  "n": 200,
+  "inputs": [
+    {
+      "sample": 0,
+      "cd": 0.9321277042563927,
+      "imp": 1.0325635033056806,
+      "delta_T_extra_K": 1.6693722788183025,
+      "wind_scale": 0.5485333753688784,
+      "wind_rotation_deg": -26.520064513517593,
+      "environment": {
+        "CD_SCALE": 0.9321277042563927,
+        "IMP_SCALE": 1.0325635033056806,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 1.6693722788183025,
+        "WIND_SCALE": 0.5485333753688784,
+        "WIND_ROT_DEG": -26.520064513517593,
+        "WEATHER_WEIGHT": 0.5074357331894203
+      }
+    },
+    {
+      "sample": 1,
+      "cd": 1.0922667390698677,
+      "imp": 1.028071963399919,
+      "delta_T_extra_K": 0.373354091497637,
+      "wind_scale": 0.13606952001579758,
+      "wind_rotation_deg": -4.528848651449163,
+      "environment": {
+        "CD_SCALE": 1.0922667390698677,
+        "IMP_SCALE": 1.028071963399919,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.373354091497637,
+        "WIND_SCALE": 0.13606952001579758,
+        "WIND_ROT_DEG": -4.528848651449163,
+        "WEATHER_WEIGHT": 0.8268521246720381
+      }
+    },
+    {
+      "sample": 2,
+      "cd": 1.0840187637189516,
+      "imp": 1.0315281788830246,
+      "delta_T_extra_K": 1.862682036333803,
+      "wind_scale": 0.5950207119761702,
+      "wind_rotation_deg": 28.575306335575206,
+      "environment": {
+        "CD_SCALE": 1.0840187637189516,
+        "IMP_SCALE": 1.0315281788830246,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 1.862682036333803,
+        "WIND_SCALE": 0.5950207119761702,
+        "WIND_ROT_DEG": 28.575306335575206,
+        "WEATHER_WEIGHT": 0.04658268061775628
+      }
+    },
+    {
+      "sample": 3,
+      "cd": 0.9017217822252025,
+      "imp": 1.017408389919295,
+      "delta_T_extra_K": -0.9633521248117407,
+      "wind_scale": 0.17668835711755254,
+      "wind_rotation_deg": -11.49109055388394,
+      "environment": {
+        "CD_SCALE": 0.9017217822252025,
+        "IMP_SCALE": 1.017408389919295,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -0.9633521248117407,
+        "WIND_SCALE": 0.17668835711755254,
+        "WIND_ROT_DEG": -11.49109055388394,
+        "WEATHER_WEIGHT": 0.8161263591200314
+      }
+    },
+    {
+      "sample": 4,
+      "cd": 1.0948548364652826,
+      "imp": 1.049666122093951,
+      "delta_T_extra_K": -1.3141593245717154,
+      "wind_scale": 0.09418346245998471,
+      "wind_rotation_deg": -26.42392980202604,
+      "environment": {
+        "CD_SCALE": 1.0948548364652826,
+        "IMP_SCALE": 1.049666122093951,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -1.3141593245717154,
+        "WIND_SCALE": 0.09418346245998471,
+        "WIND_ROT_DEG": -26.42392980202604,
+        "WEATHER_WEIGHT": 0.20595871281932654
+      }
+    },
+    {
+      "sample": 5,
+      "cd": 1.1731175041767885,
+      "imp": 0.998135141274631,
+      "delta_T_extra_K": -1.4353684704935579,
+      "wind_scale": 0.8783427952614581,
+      "wind_rotation_deg": -2.80893741775348,
+      "environment": {
+        "CD_SCALE": 1.1731175041767885,
+        "IMP_SCALE": 0.998135141274631,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -1.4353684704935579,
+        "WIND_SCALE": 0.8783427952614581,
+        "WIND_ROT_DEG": -2.80893741775348,
+        "WEATHER_WEIGHT": 0.29976699686368236
+      }
+    },
+    {
+      "sample": 6,
+      "cd": 1.06700792503925,
+      "imp": 0.9698065861243178,
+      "delta_T_extra_K": -1.6342574197032156,
+      "wind_scale": 1.3127062433601433,
+      "wind_rotation_deg": 13.766717366353056,
+      "environment": {
+        "CD_SCALE": 1.06700792503925,
+        "IMP_SCALE": 0.9698065861243178,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -1.6342574197032156,
+        "WIND_SCALE": 1.3127062433601433,
+        "WIND_ROT_DEG": 13.766717366353056,
+        "WEATHER_WEIGHT": 0.2879377648901865
+      }
+    },
+    {
+      "sample": 7,
+      "cd": 0.8793543669757433,
+      "imp": 1.0251344125197959,
+      "delta_T_extra_K": -0.0934198423994331,
+      "wind_scale": 1.135711394347874,
+      "wind_rotation_deg": -20.880927920369714,
+      "environment": {
+        "CD_SCALE": 0.8793543669757433,
+        "IMP_SCALE": 1.0251344125197959,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -0.0934198423994331,
+        "WIND_SCALE": 1.135711394347874,
+        "WIND_ROT_DEG": -20.880927920369714,
+        "WEATHER_WEIGHT": 0.4889631004758056
+      }
+    },
+    {
+      "sample": 8,
+      "cd": 1.3043289905801445,
+      "imp": 1.0322009384627067,
+      "delta_T_extra_K": -2.7451294548613485,
+      "wind_scale": 0.47062126927214515,
+      "wind_rotation_deg": 11.717721976419554,
+      "environment": {
+        "CD_SCALE": 1.3043289905801445,
+        "IMP_SCALE": 1.0322009384627067,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -2.7451294548613485,
+        "WIND_SCALE": 0.47062126927214515,
+        "WIND_ROT_DEG": 11.717721976419554,
+        "WEATHER_WEIGHT": 0.5943698771050184
+      }
+    },
+    {
+      "sample": 9,
+      "cd": 0.8198346160153805,
+      "imp": 1.0003991015909908,
+      "delta_T_extra_K": -0.7966816389238037,
+      "wind_scale": 1.417021642661906,
+      "wind_rotation_deg": -1.5540997548213333,
+      "environment": {
+        "CD_SCALE": 0.8198346160153805,
+        "IMP_SCALE": 1.0003991015909908,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -0.7966816389238037,
+        "WIND_SCALE": 1.417021642661906,
+        "WIND_ROT_DEG": -1.5540997548213333,
+        "WEATHER_WEIGHT": 0.6641522054746745
+      }
+    },
+    {
+      "sample": 10,
+      "cd": 1.3050401475849525,
+      "imp": 1.0341570609468334,
+      "delta_T_extra_K": 2.7839484389981717,
+      "wind_scale": 0.42689329814122384,
+      "wind_rotation_deg": -6.85251345319735,
+      "environment": {
+        "CD_SCALE": 1.3050401475849525,
+        "IMP_SCALE": 1.0341570609468334,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 2.7839484389981717,
+        "WIND_SCALE": 0.42689329814122384,
+        "WIND_ROT_DEG": -6.85251345319735,
+        "WEATHER_WEIGHT": 0.6686527158841882
+      }
+    },
+    {
+      "sample": 11,
+      "cd": 0.9650600896793013,
+      "imp": 1.0327249715108422,
+      "delta_T_extra_K": 0.23587782065772947,
+      "wind_scale": 0.17564369172259786,
+      "wind_rotation_deg": -26.462734840121374,
+      "environment": {
+        "CD_SCALE": 0.9650600896793013,
+        "IMP_SCALE": 1.0327249715108422,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.23587782065772947,
+        "WIND_SCALE": 0.17564369172259786,
+        "WIND_ROT_DEG": -26.462734840121374,
+        "WEATHER_WEIGHT": 0.7682329884725208
+      }
+    },
+    {
+      "sample": 12,
+      "cd": 1.0866549662271483,
+      "imp": 1.0255825338161322,
+      "delta_T_extra_K": 0.4248932133252278,
+      "wind_scale": 0.6737811014239965,
+      "wind_rotation_deg": 2.966394548642242,
+      "environment": {
+        "CD_SCALE": 1.0866549662271483,
+        "IMP_SCALE": 1.0255825338161322,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.4248932133252278,
+        "WIND_SCALE": 0.6737811014239965,
+        "WIND_ROT_DEG": 2.966394548642242,
+        "WEATHER_WEIGHT": 0.8833838264415125
+      }
+    },
+    {
+      "sample": 13,
+      "cd": 0.9246971639624805,
+      "imp": 1.0295861080790363,
+      "delta_T_extra_K": -2.7168213787819884,
+      "wind_scale": 0.6229447758175479,
+      "wind_rotation_deg": -8.473730080102513,
+      "environment": {
+        "CD_SCALE": 0.9246971639624805,
+        "IMP_SCALE": 1.0295861080790363,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -2.7168213787819884,
+        "WIND_SCALE": 0.6229447758175479,
+        "WIND_ROT_DEG": -8.473730080102513,
+        "WEATHER_WEIGHT": 0.884192827198217
+      }
+    },
+    {
+      "sample": 14,
+      "cd": 1.0938480528140573,
+      "imp": 1.0015132202404347,
+      "delta_T_extra_K": 0.1236997126854037,
+      "wind_scale": 0.7274440955120349,
+      "wind_rotation_deg": 5.347410223935341,
+      "environment": {
+        "CD_SCALE": 1.0938480528140573,
+        "IMP_SCALE": 1.0015132202404347,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.1236997126854037,
+        "WIND_SCALE": 0.7274440955120349,
+        "WIND_ROT_DEG": 5.347410223935341,
+        "WEATHER_WEIGHT": 0.26274661929853793
+      }
+    },
+    {
+      "sample": 15,
+      "cd": 1.1318256213799516,
+      "imp": 1.0374082053209703,
+      "delta_T_extra_K": 0.04019841232091522,
+      "wind_scale": 0.8495118355595879,
+      "wind_rotation_deg": 27.185875531505715,
+      "environment": {
+        "CD_SCALE": 1.1318256213799516,
+        "IMP_SCALE": 1.0374082053209703,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.04019841232091522,
+        "WIND_SCALE": 0.8495118355595879,
+        "WIND_ROT_DEG": 27.185875531505715,
+        "WEATHER_WEIGHT": 0.6904936571359779
+      }
+    },
+    {
+      "sample": 16,
+      "cd": 0.7460913419752767,
+      "imp": 1.016848959872336,
+      "delta_T_extra_K": 3.03241377252877,
+      "wind_scale": 1.1699542360591093,
+      "wind_rotation_deg": 22.47079104806859,
+      "environment": {
+        "CD_SCALE": 0.7460913419752767,
+        "IMP_SCALE": 1.016848959872336,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 3.03241377252877,
+        "WIND_SCALE": 1.1699542360591093,
+        "WIND_ROT_DEG": 22.47079104806859,
+        "WEATHER_WEIGHT": 0.7978731211965661
+      }
+    },
+    {
+      "sample": 17,
+      "cd": 1.129386067877867,
+      "imp": 0.9833690102974408,
+      "delta_T_extra_K": 0.9472819183472605,
+      "wind_scale": 0.9514343485285636,
+      "wind_rotation_deg": -26.265130702878746,
+      "environment": {
+        "CD_SCALE": 1.129386067877867,
+        "IMP_SCALE": 0.9833690102974408,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.9472819183472605,
+        "WIND_SCALE": 0.9514343485285636,
+        "WIND_ROT_DEG": -26.265130702878746,
+        "WEATHER_WEIGHT": 0.06734761584302484
+      }
+    },
+    {
+      "sample": 18,
+      "cd": 1.010643718345556,
+      "imp": 1.0247303359556872,
+      "delta_T_extra_K": 0.030650089278275228,
+      "wind_scale": 0.22689739841914192,
+      "wind_rotation_deg": -23.91213791864421,
+      "environment": {
+        "CD_SCALE": 1.010643718345556,
+        "IMP_SCALE": 1.0247303359556872,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.030650089278275228,
+        "WIND_SCALE": 0.22689739841914192,
+        "WIND_ROT_DEG": -23.91213791864421,
+        "WEATHER_WEIGHT": 0.363609922034571
+      }
+    },
+    {
+      "sample": 19,
+      "cd": 0.9819423074805302,
+      "imp": 1.0696138747010084,
+      "delta_T_extra_K": 0.48741395515908204,
+      "wind_scale": 0.22282572799633715,
+      "wind_rotation_deg": -14.864534606575363,
+      "environment": {
+        "CD_SCALE": 0.9819423074805302,
+        "IMP_SCALE": 1.0696138747010084,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.48741395515908204,
+        "WIND_SCALE": 0.22282572799633715,
+        "WIND_ROT_DEG": -14.864534606575363,
+        "WEATHER_WEIGHT": 0.34738954605370154
+      }
+    },
+    {
+      "sample": 20,
+      "cd": 0.9173518623361686,
+      "imp": 1.035359414044859,
+      "delta_T_extra_K": 1.6786095687517615,
+      "wind_scale": 0.7257519846244042,
+      "wind_rotation_deg": -24.846920306630064,
+      "environment": {
+        "CD_SCALE": 0.9173518623361686,
+        "IMP_SCALE": 1.035359414044859,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 1.6786095687517615,
+        "WIND_SCALE": 0.7257519846244042,
+        "WIND_ROT_DEG": -24.846920306630064,
+        "WEATHER_WEIGHT": 0.10218761674816845
+      }
+    },
+    {
+      "sample": 21,
+      "cd": 0.9712019484573725,
+      "imp": 1.0138188521879394,
+      "delta_T_extra_K": 0.982719289993715,
+      "wind_scale": 0.24215791578964724,
+      "wind_rotation_deg": -28.61425673728511,
+      "environment": {
+        "CD_SCALE": 0.9712019484573725,
+        "IMP_SCALE": 1.0138188521879394,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.982719289993715,
+        "WIND_SCALE": 0.24215791578964724,
+        "WIND_ROT_DEG": -28.61425673728511,
+        "WEATHER_WEIGHT": 0.9509855728747021
+      }
+    },
+    {
+      "sample": 22,
+      "cd": 0.8786478550887208,
+      "imp": 1.0137684456885392,
+      "delta_T_extra_K": 1.8118784524557459,
+      "wind_scale": 1.4677518640784593,
+      "wind_rotation_deg": 21.799501817380133,
+      "environment": {
+        "CD_SCALE": 0.8786478550887208,
+        "IMP_SCALE": 1.0137684456885392,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 1.8118784524557459,
+        "WIND_SCALE": 1.4677518640784593,
+        "WIND_ROT_DEG": 21.799501817380133,
+        "WEATHER_WEIGHT": 0.6961967859078019
+      }
+    },
+    {
+      "sample": 23,
+      "cd": 1.0216630861175093,
+      "imp": 1.0033353999631343,
+      "delta_T_extra_K": 1.430258060671716,
+      "wind_scale": 1.1579068626030469,
+      "wind_rotation_deg": 1.9555438495727415,
+      "environment": {
+        "CD_SCALE": 1.0216630861175093,
+        "IMP_SCALE": 1.0033353999631343,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 1.430258060671716,
+        "WIND_SCALE": 1.1579068626030469,
+        "WIND_ROT_DEG": 1.9555438495727415,
+        "WEATHER_WEIGHT": 0.7790548913381772
+      }
+    },
+    {
+      "sample": 24,
+      "cd": 0.9165553299916029,
+      "imp": 1.0403069385917492,
+      "delta_T_extra_K": 2.9222490040894646,
+      "wind_scale": 1.2091178771785014,
+      "wind_rotation_deg": 19.099976599522392,
+      "environment": {
+        "CD_SCALE": 0.9165553299916029,
+        "IMP_SCALE": 1.0403069385917492,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 2.9222490040894646,
+        "WIND_SCALE": 1.2091178771785014,
+        "WIND_ROT_DEG": 19.099976599522392,
+        "WEATHER_WEIGHT": 0.7398730203757141
+      }
+    },
+    {
+      "sample": 25,
+      "cd": 0.9452915566073918,
+      "imp": 1.0151100896194336,
+      "delta_T_extra_K": 1.7919819155137606,
+      "wind_scale": 0.043470226112048094,
+      "wind_rotation_deg": -28.323775474676133,
+      "environment": {
+        "CD_SCALE": 0.9452915566073918,
+        "IMP_SCALE": 1.0151100896194336,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 1.7919819155137606,
+        "WIND_SCALE": 0.043470226112048094,
+        "WIND_ROT_DEG": -28.323775474676133,
+        "WEATHER_WEIGHT": 0.2794185390490298
+      }
+    },
+    {
+      "sample": 26,
+      "cd": 0.963547585541294,
+      "imp": 1.068126790679333,
+      "delta_T_extra_K": -3.335228932427561,
+      "wind_scale": 1.4820570873042902,
+      "wind_rotation_deg": 27.30003787927999,
+      "environment": {
+        "CD_SCALE": 0.963547585541294,
+        "IMP_SCALE": 1.068126790679333,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -3.335228932427561,
+        "WIND_SCALE": 1.4820570873042902,
+        "WIND_ROT_DEG": 27.30003787927999,
+        "WEATHER_WEIGHT": 0.3646358853618661
+      }
+    },
+    {
+      "sample": 27,
+      "cd": 1.1411030427856055,
+      "imp": 1.009229855689101,
+      "delta_T_extra_K": 1.0575084272488533,
+      "wind_scale": 0.30656004491433453,
+      "wind_rotation_deg": 7.4439838462690915,
+      "environment": {
+        "CD_SCALE": 1.1411030427856055,
+        "IMP_SCALE": 1.009229855689101,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 1.0575084272488533,
+        "WIND_SCALE": 0.30656004491433453,
+        "WIND_ROT_DEG": 7.4439838462690915,
+        "WEATHER_WEIGHT": 0.9003083378841142
+      }
+    },
+    {
+      "sample": 28,
+      "cd": 1.1075764246578035,
+      "imp": 0.9950386878865937,
+      "delta_T_extra_K": 0.19376508835395498,
+      "wind_scale": 0.9908784753073412,
+      "wind_rotation_deg": 24.586628253103378,
+      "environment": {
+        "CD_SCALE": 1.1075764246578035,
+        "IMP_SCALE": 0.9950386878865937,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.19376508835395498,
+        "WIND_SCALE": 0.9908784753073412,
+        "WIND_ROT_DEG": 24.586628253103378,
+        "WEATHER_WEIGHT": 0.78230288409809
+      }
+    },
+    {
+      "sample": 29,
+      "cd": 0.9057890294602043,
+      "imp": 1.005380945322532,
+      "delta_T_extra_K": -1.7104603535505145,
+      "wind_scale": 1.1837031465304146,
+      "wind_rotation_deg": -10.048968008123403,
+      "environment": {
+        "CD_SCALE": 0.9057890294602043,
+        "IMP_SCALE": 1.005380945322532,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -1.7104603535505145,
+        "WIND_SCALE": 1.1837031465304146,
+        "WIND_ROT_DEG": -10.048968008123403,
+        "WEATHER_WEIGHT": 0.800823568896691
+      }
+    },
+    {
+      "sample": 30,
+      "cd": 1.1925110123762048,
+      "imp": 1.0075422024931484,
+      "delta_T_extra_K": 2.2762103101624485,
+      "wind_scale": 0.2550054899578432,
+      "wind_rotation_deg": -22.37769796212814,
+      "environment": {
+        "CD_SCALE": 1.1925110123762048,
+        "IMP_SCALE": 1.0075422024931484,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 2.2762103101624485,
+        "WIND_SCALE": 0.2550054899578432,
+        "WIND_ROT_DEG": -22.37769796212814,
+        "WEATHER_WEIGHT": 0.1511507003814898
+      }
+    },
+    {
+      "sample": 31,
+      "cd": 0.8833904990385693,
+      "imp": 1.0420018424895696,
+      "delta_T_extra_K": -1.5302112160899362,
+      "wind_scale": 1.2397657177880805,
+      "wind_rotation_deg": 28.81835660682183,
+      "environment": {
+        "CD_SCALE": 0.8833904990385693,
+        "IMP_SCALE": 1.0420018424895696,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -1.5302112160899362,
+        "WIND_SCALE": 1.2397657177880805,
+        "WIND_ROT_DEG": 28.81835660682183,
+        "WEATHER_WEIGHT": 0.6572682927360199
+      }
+    },
+    {
+      "sample": 32,
+      "cd": 0.8462339608120867,
+      "imp": 1.0294938961098392,
+      "delta_T_extra_K": 3.9734040975574207,
+      "wind_scale": 0.9745120045107458,
+      "wind_rotation_deg": 1.5948628259433306,
+      "environment": {
+        "CD_SCALE": 0.8462339608120867,
+        "IMP_SCALE": 1.0294938961098392,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 3.9734040975574207,
+        "WIND_SCALE": 0.9745120045107458,
+        "WIND_ROT_DEG": 1.5948628259433306,
+        "WEATHER_WEIGHT": 0.9336248050574267
+      }
+    },
+    {
+      "sample": 33,
+      "cd": 1.027843032783279,
+      "imp": 0.9772878567217075,
+      "delta_T_extra_K": 1.2281749963647965,
+      "wind_scale": 0.3165635059922232,
+      "wind_rotation_deg": -14.88991131807277,
+      "environment": {
+        "CD_SCALE": 1.027843032783279,
+        "IMP_SCALE": 0.9772878567217075,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 1.2281749963647965,
+        "WIND_SCALE": 0.3165635059922232,
+        "WIND_ROT_DEG": -14.88991131807277,
+        "WEATHER_WEIGHT": 0.29296665267021893
+      }
+    },
+    {
+      "sample": 34,
+      "cd": 0.9960319963116828,
+      "imp": 1.0412020213983164,
+      "delta_T_extra_K": -0.6943902097908172,
+      "wind_scale": 1.3650255844733348,
+      "wind_rotation_deg": -8.772958562804465,
+      "environment": {
+        "CD_SCALE": 0.9960319963116828,
+        "IMP_SCALE": 1.0412020213983164,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -0.6943902097908172,
+        "WIND_SCALE": 1.3650255844733348,
+        "WIND_ROT_DEG": -8.772958562804465,
+        "WEATHER_WEIGHT": 0.45816098647173364
+      }
+    },
+    {
+      "sample": 35,
+      "cd": 1.032036345055036,
+      "imp": 0.9651271277614868,
+      "delta_T_extra_K": -1.625024092427416,
+      "wind_scale": 1.3765816265139965,
+      "wind_rotation_deg": 0.09893646721388905,
+      "environment": {
+        "CD_SCALE": 1.032036345055036,
+        "IMP_SCALE": 0.9651271277614868,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -1.625024092427416,
+        "WIND_SCALE": 1.3765816265139965,
+        "WIND_ROT_DEG": 0.09893646721388905,
+        "WEATHER_WEIGHT": 0.5318249624359338
+      }
+    },
+    {
+      "sample": 36,
+      "cd": 0.9439549501876939,
+      "imp": 1.0124793693139045,
+      "delta_T_extra_K": 0.05433249983999652,
+      "wind_scale": 1.1987556757383326,
+      "wind_rotation_deg": -19.659197267193065,
+      "environment": {
+        "CD_SCALE": 0.9439549501876939,
+        "IMP_SCALE": 1.0124793693139045,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.05433249983999652,
+        "WIND_SCALE": 1.1987556757383326,
+        "WIND_ROT_DEG": -19.659197267193065,
+        "WEATHER_WEIGHT": 0.47349293246195634
+      }
+    },
+    {
+      "sample": 37,
+      "cd": 0.9964465069517333,
+      "imp": 1.0047823766986161,
+      "delta_T_extra_K": -1.8895366977579493,
+      "wind_scale": 0.7775230690545553,
+      "wind_rotation_deg": 3.326512492814814,
+      "environment": {
+        "CD_SCALE": 0.9964465069517333,
+        "IMP_SCALE": 1.0047823766986161,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -1.8895366977579493,
+        "WIND_SCALE": 0.7775230690545553,
+        "WIND_ROT_DEG": 3.326512492814814,
+        "WEATHER_WEIGHT": 0.7842724753654755
+      }
+    },
+    {
+      "sample": 38,
+      "cd": 1.1970970078965102,
+      "imp": 1.027420988794412,
+      "delta_T_extra_K": -0.43431736521087194,
+      "wind_scale": 0.7615709876884809,
+      "wind_rotation_deg": 3.7037631993885753,
+      "environment": {
+        "CD_SCALE": 1.1970970078965102,
+        "IMP_SCALE": 1.027420988794412,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -0.43431736521087194,
+        "WIND_SCALE": 0.7615709876884809,
+        "WIND_ROT_DEG": 3.7037631993885753,
+        "WEATHER_WEIGHT": 0.7599931425900166
+      }
+    },
+    {
+      "sample": 39,
+      "cd": 1.371908139995921,
+      "imp": 1.0418679877275325,
+      "delta_T_extra_K": -0.8483177276345925,
+      "wind_scale": 0.7583296962768324,
+      "wind_rotation_deg": 0.7296883461191648,
+      "environment": {
+        "CD_SCALE": 1.371908139995921,
+        "IMP_SCALE": 1.0418679877275325,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -0.8483177276345925,
+        "WIND_SCALE": 0.7583296962768324,
+        "WIND_ROT_DEG": 0.7296883461191648,
+        "WEATHER_WEIGHT": 0.6927310025482292
+      }
+    },
+    {
+      "sample": 40,
+      "cd": 0.776295282056676,
+      "imp": 1.0235752949590788,
+      "delta_T_extra_K": 2.169814280563261,
+      "wind_scale": 1.3148032226708901,
+      "wind_rotation_deg": 26.53083529821454,
+      "environment": {
+        "CD_SCALE": 0.776295282056676,
+        "IMP_SCALE": 1.0235752949590788,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 2.169814280563261,
+        "WIND_SCALE": 1.3148032226708901,
+        "WIND_ROT_DEG": 26.53083529821454,
+        "WEATHER_WEIGHT": 0.2595922941176907
+      }
+    },
+    {
+      "sample": 41,
+      "cd": 0.8781653266412562,
+      "imp": 0.9680441511117227,
+      "delta_T_extra_K": -1.3125947955225439,
+      "wind_scale": 0.20570165384527722,
+      "wind_rotation_deg": -22.70268273694916,
+      "environment": {
+        "CD_SCALE": 0.8781653266412562,
+        "IMP_SCALE": 0.9680441511117227,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -1.3125947955225439,
+        "WIND_SCALE": 0.20570165384527722,
+        "WIND_ROT_DEG": -22.70268273694916,
+        "WEATHER_WEIGHT": 0.4421180882750436
+      }
+    },
+    {
+      "sample": 42,
+      "cd": 1.1188849554985494,
+      "imp": 1.0103771675302498,
+      "delta_T_extra_K": -1.2726122098429569,
+      "wind_scale": 1.3455396493181502,
+      "wind_rotation_deg": -20.733202573878472,
+      "environment": {
+        "CD_SCALE": 1.1188849554985494,
+        "IMP_SCALE": 1.0103771675302498,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -1.2726122098429569,
+        "WIND_SCALE": 1.3455396493181502,
+        "WIND_ROT_DEG": -20.733202573878472,
+        "WEATHER_WEIGHT": 0.7161198827881962
+      }
+    },
+    {
+      "sample": 43,
+      "cd": 0.7240809889318404,
+      "imp": 1.0188659494109462,
+      "delta_T_extra_K": -0.7042611610251277,
+      "wind_scale": 1.4513171739995758,
+      "wind_rotation_deg": -16.82473015188482,
+      "environment": {
+        "CD_SCALE": 0.7240809889318404,
+        "IMP_SCALE": 1.0188659494109462,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -0.7042611610251277,
+        "WIND_SCALE": 1.4513171739995758,
+        "WIND_ROT_DEG": -16.82473015188482,
+        "WEATHER_WEIGHT": 0.9525041289189863
+      }
+    },
+    {
+      "sample": 44,
+      "cd": 0.816021604376353,
+      "imp": 1.0474478158220955,
+      "delta_T_extra_K": 0.4407870533668513,
+      "wind_scale": 0.6472827269964583,
+      "wind_rotation_deg": 0.9363034682615421,
+      "environment": {
+        "CD_SCALE": 0.816021604376353,
+        "IMP_SCALE": 1.0474478158220955,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.4407870533668513,
+        "WIND_SCALE": 0.6472827269964583,
+        "WIND_ROT_DEG": 0.9363034682615421,
+        "WEATHER_WEIGHT": 0.33911614433881987
+      }
+    },
+    {
+      "sample": 45,
+      "cd": 0.8853946629250328,
+      "imp": 1.0291431533659987,
+      "delta_T_extra_K": 1.2380773598930686,
+      "wind_scale": 0.029224392078589734,
+      "wind_rotation_deg": 3.243014868499678,
+      "environment": {
+        "CD_SCALE": 0.8853946629250328,
+        "IMP_SCALE": 1.0291431533659987,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 1.2380773598930686,
+        "WIND_SCALE": 0.029224392078589734,
+        "WIND_ROT_DEG": 3.243014868499678,
+        "WEATHER_WEIGHT": 0.44045810180270206
+      }
+    },
+    {
+      "sample": 46,
+      "cd": 1.1699703639491763,
+      "imp": 1.0213090029032652,
+      "delta_T_extra_K": -0.5452117181809695,
+      "wind_scale": 1.477624866201149,
+      "wind_rotation_deg": 17.301783365854853,
+      "environment": {
+        "CD_SCALE": 1.1699703639491763,
+        "IMP_SCALE": 1.0213090029032652,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -0.5452117181809695,
+        "WIND_SCALE": 1.477624866201149,
+        "WIND_ROT_DEG": 17.301783365854853,
+        "WEATHER_WEIGHT": 0.9716959586470741
+      }
+    },
+    {
+      "sample": 47,
+      "cd": 0.9751466630111975,
+      "imp": 1.01674313746468,
+      "delta_T_extra_K": 0.721040250657656,
+      "wind_scale": 1.1684961451018383,
+      "wind_rotation_deg": -13.773234148721453,
+      "environment": {
+        "CD_SCALE": 0.9751466630111975,
+        "IMP_SCALE": 1.01674313746468,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.721040250657656,
+        "WIND_SCALE": 1.1684961451018383,
+        "WIND_ROT_DEG": -13.773234148721453,
+        "WEATHER_WEIGHT": 0.1295555593056773
+      }
+    },
+    {
+      "sample": 48,
+      "cd": 0.6672131790148504,
+      "imp": 1.051035359952027,
+      "delta_T_extra_K": -0.04613008986270958,
+      "wind_scale": 1.378757262767657,
+      "wind_rotation_deg": 4.235695523595233,
+      "environment": {
+        "CD_SCALE": 0.6672131790148504,
+        "IMP_SCALE": 1.051035359952027,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -0.04613008986270958,
+        "WIND_SCALE": 1.378757262767657,
+        "WIND_ROT_DEG": 4.235695523595233,
+        "WEATHER_WEIGHT": 0.7004174465466179
+      }
+    },
+    {
+      "sample": 49,
+      "cd": 1.0973238815752913,
+      "imp": 1.0280781410949347,
+      "delta_T_extra_K": 0.27519756266934187,
+      "wind_scale": 0.637975561193584,
+      "wind_rotation_deg": -25.65515431660857,
+      "environment": {
+        "CD_SCALE": 1.0973238815752913,
+        "IMP_SCALE": 1.0280781410949347,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.27519756266934187,
+        "WIND_SCALE": 0.637975561193584,
+        "WIND_ROT_DEG": -25.65515431660857,
+        "WEATHER_WEIGHT": 0.9383497090401628
+      }
+    },
+    {
+      "sample": 50,
+      "cd": 0.774050613436472,
+      "imp": 0.9688026004617496,
+      "delta_T_extra_K": 0.3447800271847113,
+      "wind_scale": 1.2941624535807694,
+      "wind_rotation_deg": -2.7735887416245077,
+      "environment": {
+        "CD_SCALE": 0.774050613436472,
+        "IMP_SCALE": 0.9688026004617496,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.3447800271847113,
+        "WIND_SCALE": 1.2941624535807694,
+        "WIND_ROT_DEG": -2.7735887416245077,
+        "WEATHER_WEIGHT": 0.3391517772846362
+      }
+    },
+    {
+      "sample": 51,
+      "cd": 0.9255482744373489,
+      "imp": 0.9536002866573341,
+      "delta_T_extra_K": -1.122178245359915,
+      "wind_scale": 0.1938371998429933,
+      "wind_rotation_deg": 1.6149015916303036,
+      "environment": {
+        "CD_SCALE": 0.9255482744373489,
+        "IMP_SCALE": 0.9536002866573341,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -1.122178245359915,
+        "WIND_SCALE": 0.1938371998429933,
+        "WIND_ROT_DEG": 1.6149015916303036,
+        "WEATHER_WEIGHT": 0.23843616946135393
+      }
+    },
+    {
+      "sample": 52,
+      "cd": 1.0737974010739701,
+      "imp": 1.0109428443162172,
+      "delta_T_extra_K": 0.3871337938399343,
+      "wind_scale": 0.45750809681884014,
+      "wind_rotation_deg": 15.569895299913675,
+      "environment": {
+        "CD_SCALE": 1.0737974010739701,
+        "IMP_SCALE": 1.0109428443162172,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.3871337938399343,
+        "WIND_SCALE": 0.45750809681884014,
+        "WIND_ROT_DEG": 15.569895299913675,
+        "WEATHER_WEIGHT": 0.2899608347243582
+      }
+    },
+    {
+      "sample": 53,
+      "cd": 1.1547172953756564,
+      "imp": 0.9945989281974397,
+      "delta_T_extra_K": -0.0005226713709647572,
+      "wind_scale": 0.027244660941872556,
+      "wind_rotation_deg": -14.973074628286353,
+      "environment": {
+        "CD_SCALE": 1.1547172953756564,
+        "IMP_SCALE": 0.9945989281974397,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -0.0005226713709647572,
+        "WIND_SCALE": 0.027244660941872556,
+        "WIND_ROT_DEG": -14.973074628286353,
+        "WEATHER_WEIGHT": 0.015346117455019681
+      }
+    },
+    {
+      "sample": 54,
+      "cd": 0.9548459660782312,
+      "imp": 0.9740440913347996,
+      "delta_T_extra_K": -3.459676726593888,
+      "wind_scale": 0.15942201754063712,
+      "wind_rotation_deg": 19.135208420502835,
+      "environment": {
+        "CD_SCALE": 0.9548459660782312,
+        "IMP_SCALE": 0.9740440913347996,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -3.459676726593888,
+        "WIND_SCALE": 0.15942201754063712,
+        "WIND_ROT_DEG": 19.135208420502835,
+        "WEATHER_WEIGHT": 0.4321775857844161
+      }
+    },
+    {
+      "sample": 55,
+      "cd": 1.0548937080880378,
+      "imp": 0.9638297393169151,
+      "delta_T_extra_K": 0.08935537449305843,
+      "wind_scale": 0.7600289282327485,
+      "wind_rotation_deg": 11.264504141441485,
+      "environment": {
+        "CD_SCALE": 1.0548937080880378,
+        "IMP_SCALE": 0.9638297393169151,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.08935537449305843,
+        "WIND_SCALE": 0.7600289282327485,
+        "WIND_ROT_DEG": 11.264504141441485,
+        "WEATHER_WEIGHT": 0.9824405404147971
+      }
+    },
+    {
+      "sample": 56,
+      "cd": 0.7981332486669096,
+      "imp": 1.061490641341991,
+      "delta_T_extra_K": -1.0032801093952786,
+      "wind_scale": 0.5213282702328481,
+      "wind_rotation_deg": -26.736687792693825,
+      "environment": {
+        "CD_SCALE": 0.7981332486669096,
+        "IMP_SCALE": 1.061490641341991,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -1.0032801093952786,
+        "WIND_SCALE": 0.5213282702328481,
+        "WIND_ROT_DEG": -26.736687792693825,
+        "WEATHER_WEIGHT": 0.12981858115088285
+      }
+    },
+    {
+      "sample": 57,
+      "cd": 0.8422062331790615,
+      "imp": 1.0450488729134717,
+      "delta_T_extra_K": 1.0597538170921168,
+      "wind_scale": 0.24486978041456364,
+      "wind_rotation_deg": -24.930907637524157,
+      "environment": {
+        "CD_SCALE": 0.8422062331790615,
+        "IMP_SCALE": 1.0450488729134717,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 1.0597538170921168,
+        "WIND_SCALE": 0.24486978041456364,
+        "WIND_ROT_DEG": -24.930907637524157,
+        "WEATHER_WEIGHT": 0.8412689818507565
+      }
+    },
+    {
+      "sample": 58,
+      "cd": 1.2009792714026049,
+      "imp": 0.9811581004567081,
+      "delta_T_extra_K": 0.0610985406466572,
+      "wind_scale": 0.6891794150920811,
+      "wind_rotation_deg": -20.54802361024766,
+      "environment": {
+        "CD_SCALE": 1.2009792714026049,
+        "IMP_SCALE": 0.9811581004567081,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.0610985406466572,
+        "WIND_SCALE": 0.6891794150920811,
+        "WIND_ROT_DEG": -20.54802361024766,
+        "WEATHER_WEIGHT": 0.44582460823374026
+      }
+    },
+    {
+      "sample": 59,
+      "cd": 1.156188482685088,
+      "imp": 1.0237145000821628,
+      "delta_T_extra_K": 3.819564725497157,
+      "wind_scale": 0.8206100611783627,
+      "wind_rotation_deg": -15.333210363486387,
+      "environment": {
+        "CD_SCALE": 1.156188482685088,
+        "IMP_SCALE": 1.0237145000821628,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 3.819564725497157,
+        "WIND_SCALE": 0.8206100611783627,
+        "WIND_ROT_DEG": -15.333210363486387,
+        "WEATHER_WEIGHT": 0.9656667700587851
+      }
+    },
+    {
+      "sample": 60,
+      "cd": 0.9161419671636455,
+      "imp": 1.0218862866860186,
+      "delta_T_extra_K": -1.2524929592373515,
+      "wind_scale": 0.7541460095645994,
+      "wind_rotation_deg": -17.941196747938072,
+      "environment": {
+        "CD_SCALE": 0.9161419671636455,
+        "IMP_SCALE": 1.0218862866860186,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -1.2524929592373515,
+        "WIND_SCALE": 0.7541460095645994,
+        "WIND_ROT_DEG": -17.941196747938072,
+        "WEATHER_WEIGHT": 0.5047356395143127
+      }
+    },
+    {
+      "sample": 61,
+      "cd": 1.141709562281301,
+      "imp": 1.0223175299773095,
+      "delta_T_extra_K": 0.036539559318506803,
+      "wind_scale": 0.5992667554333887,
+      "wind_rotation_deg": -27.499982538530837,
+      "environment": {
+        "CD_SCALE": 1.141709562281301,
+        "IMP_SCALE": 1.0223175299773095,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.036539559318506803,
+        "WIND_SCALE": 0.5992667554333887,
+        "WIND_ROT_DEG": -27.499982538530837,
+        "WEATHER_WEIGHT": 0.022494146970257534
+      }
+    },
+    {
+      "sample": 62,
+      "cd": 0.934441790915078,
+      "imp": 1.0350228648326227,
+      "delta_T_extra_K": -2.4576915009030333,
+      "wind_scale": 0.9863155099690091,
+      "wind_rotation_deg": 12.959606401938686,
+      "environment": {
+        "CD_SCALE": 0.934441790915078,
+        "IMP_SCALE": 1.0350228648326227,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -2.4576915009030333,
+        "WIND_SCALE": 0.9863155099690091,
+        "WIND_ROT_DEG": 12.959606401938686,
+        "WEATHER_WEIGHT": 0.87909069356739
+      }
+    },
+    {
+      "sample": 63,
+      "cd": 0.9233026092897129,
+      "imp": 1.011965404817753,
+      "delta_T_extra_K": 0.8526524436279174,
+      "wind_scale": 0.2241947235633795,
+      "wind_rotation_deg": 13.44934640170954,
+      "environment": {
+        "CD_SCALE": 0.9233026092897129,
+        "IMP_SCALE": 1.011965404817753,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.8526524436279174,
+        "WIND_SCALE": 0.2241947235633795,
+        "WIND_ROT_DEG": 13.44934640170954,
+        "WEATHER_WEIGHT": 0.6432194497045294
+      }
+    },
+    {
+      "sample": 64,
+      "cd": 1.4082871417243967,
+      "imp": 1.0400026607801274,
+      "delta_T_extra_K": -1.7003119351665124,
+      "wind_scale": 1.218328373568591,
+      "wind_rotation_deg": -21.64154339884774,
+      "environment": {
+        "CD_SCALE": 1.4082871417243967,
+        "IMP_SCALE": 1.0400026607801274,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -1.7003119351665124,
+        "WIND_SCALE": 1.218328373568591,
+        "WIND_ROT_DEG": -21.64154339884774,
+        "WEATHER_WEIGHT": 0.5237572845285173
+      }
+    },
+    {
+      "sample": 65,
+      "cd": 0.7781961699978145,
+      "imp": 0.975560098978382,
+      "delta_T_extra_K": -0.07818551865821759,
+      "wind_scale": 1.2396136822529704,
+      "wind_rotation_deg": 5.043691008374324,
+      "environment": {
+        "CD_SCALE": 0.7781961699978145,
+        "IMP_SCALE": 0.975560098978382,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -0.07818551865821759,
+        "WIND_SCALE": 1.2396136822529704,
+        "WIND_ROT_DEG": 5.043691008374324,
+        "WEATHER_WEIGHT": 0.8928297364055078
+      }
+    },
+    {
+      "sample": 66,
+      "cd": 0.865694287703808,
+      "imp": 0.9715847848852356,
+      "delta_T_extra_K": 0.7863737098649888,
+      "wind_scale": 0.5410612146502294,
+      "wind_rotation_deg": -23.705011735878177,
+      "environment": {
+        "CD_SCALE": 0.865694287703808,
+        "IMP_SCALE": 0.9715847848852356,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.7863737098649888,
+        "WIND_SCALE": 0.5410612146502294,
+        "WIND_ROT_DEG": -23.705011735878177,
+        "WEATHER_WEIGHT": 0.835821199799971
+      }
+    },
+    {
+      "sample": 67,
+      "cd": 1.0009812233272732,
+      "imp": 0.9853736912573297,
+      "delta_T_extra_K": -0.7581263892417566,
+      "wind_scale": 1.020996264121231,
+      "wind_rotation_deg": -0.6423411084147297,
+      "environment": {
+        "CD_SCALE": 1.0009812233272732,
+        "IMP_SCALE": 0.9853736912573297,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -0.7581263892417566,
+        "WIND_SCALE": 1.020996264121231,
+        "WIND_ROT_DEG": -0.6423411084147297,
+        "WEATHER_WEIGHT": 0.0033143271278479602
+      }
+    },
+    {
+      "sample": 68,
+      "cd": 1.0805833041997848,
+      "imp": 0.9748175429544726,
+      "delta_T_extra_K": -2.147605621591343,
+      "wind_scale": 0.09907553433322791,
+      "wind_rotation_deg": 14.207299712535033,
+      "environment": {
+        "CD_SCALE": 1.0805833041997848,
+        "IMP_SCALE": 0.9748175429544726,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -2.147605621591343,
+        "WIND_SCALE": 0.09907553433322791,
+        "WIND_ROT_DEG": 14.207299712535033,
+        "WEATHER_WEIGHT": 0.2521935314626901
+      }
+    },
+    {
+      "sample": 69,
+      "cd": 0.9200162892860426,
+      "imp": 1.0397954532919367,
+      "delta_T_extra_K": 0.5314032162122322,
+      "wind_scale": 0.3078262906231298,
+      "wind_rotation_deg": 14.389715485244508,
+      "environment": {
+        "CD_SCALE": 0.9200162892860426,
+        "IMP_SCALE": 1.0397954532919367,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.5314032162122322,
+        "WIND_SCALE": 0.3078262906231298,
+        "WIND_ROT_DEG": 14.389715485244508,
+        "WEATHER_WEIGHT": 0.9757350941027705
+      }
+    },
+    {
+      "sample": 70,
+      "cd": 0.8073889987637317,
+      "imp": 1.0153169163652958,
+      "delta_T_extra_K": -1.0359885393372295,
+      "wind_scale": 0.9254610236673746,
+      "wind_rotation_deg": 8.565778522919175,
+      "environment": {
+        "CD_SCALE": 0.8073889987637317,
+        "IMP_SCALE": 1.0153169163652958,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -1.0359885393372295,
+        "WIND_SCALE": 0.9254610236673746,
+        "WIND_ROT_DEG": 8.565778522919175,
+        "WEATHER_WEIGHT": 0.07747181951780069
+      }
+    },
+    {
+      "sample": 71,
+      "cd": 0.7198451944037234,
+      "imp": 1.034049710427159,
+      "delta_T_extra_K": 0.9178419690032154,
+      "wind_scale": 0.4566257069388488,
+      "wind_rotation_deg": 4.065701872158499,
+      "environment": {
+        "CD_SCALE": 0.7198451944037234,
+        "IMP_SCALE": 1.034049710427159,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.9178419690032154,
+        "WIND_SCALE": 0.4566257069388488,
+        "WIND_ROT_DEG": 4.065701872158499,
+        "WEATHER_WEIGHT": 0.012469213324939443
+      }
+    },
+    {
+      "sample": 72,
+      "cd": 1.1341051426736304,
+      "imp": 1.0276665920441286,
+      "delta_T_extra_K": -0.7998745531327681,
+      "wind_scale": 0.4362847176440535,
+      "wind_rotation_deg": 0.9921416426644605,
+      "environment": {
+        "CD_SCALE": 1.1341051426736304,
+        "IMP_SCALE": 1.0276665920441286,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -0.7998745531327681,
+        "WIND_SCALE": 0.4362847176440535,
+        "WIND_ROT_DEG": 0.9921416426644605,
+        "WEATHER_WEIGHT": 0.46466285337431434
+      }
+    },
+    {
+      "sample": 73,
+      "cd": 0.7427281877982723,
+      "imp": 1.014203989884301,
+      "delta_T_extra_K": 0.1581553277148423,
+      "wind_scale": 0.29887504478925453,
+      "wind_rotation_deg": 28.687544205421617,
+      "environment": {
+        "CD_SCALE": 0.7427281877982723,
+        "IMP_SCALE": 1.014203989884301,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.1581553277148423,
+        "WIND_SCALE": 0.29887504478925453,
+        "WIND_ROT_DEG": 28.687544205421617,
+        "WEATHER_WEIGHT": 0.9362543409537164
+      }
+    },
+    {
+      "sample": 74,
+      "cd": 1.2196629123959313,
+      "imp": 1.0277132686503874,
+      "delta_T_extra_K": 1.6060419553273908,
+      "wind_scale": 0.40298586026037125,
+      "wind_rotation_deg": -17.40976680075164,
+      "environment": {
+        "CD_SCALE": 1.2196629123959313,
+        "IMP_SCALE": 1.0277132686503874,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 1.6060419553273908,
+        "WIND_SCALE": 0.40298586026037125,
+        "WIND_ROT_DEG": -17.40976680075164,
+        "WEATHER_WEIGHT": 0.9455872768948678
+      }
+    },
+    {
+      "sample": 75,
+      "cd": 0.9392460241301441,
+      "imp": 1.0123499763536452,
+      "delta_T_extra_K": 1.9197617975414185,
+      "wind_scale": 0.7860985688322294,
+      "wind_rotation_deg": 27.16442019919466,
+      "environment": {
+        "CD_SCALE": 0.9392460241301441,
+        "IMP_SCALE": 1.0123499763536452,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 1.9197617975414185,
+        "WIND_SCALE": 0.7860985688322294,
+        "WIND_ROT_DEG": 27.16442019919466,
+        "WEATHER_WEIGHT": 0.13260507288102608
+      }
+    },
+    {
+      "sample": 76,
+      "cd": 1.0846077259038263,
+      "imp": 0.9989354275270645,
+      "delta_T_extra_K": -0.3145075122195531,
+      "wind_scale": 1.3465585434005993,
+      "wind_rotation_deg": -0.8315606143710674,
+      "environment": {
+        "CD_SCALE": 1.0846077259038263,
+        "IMP_SCALE": 0.9989354275270645,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -0.3145075122195531,
+        "WIND_SCALE": 1.3465585434005993,
+        "WIND_ROT_DEG": -0.8315606143710674,
+        "WEATHER_WEIGHT": 0.024834403090665202
+      }
+    },
+    {
+      "sample": 77,
+      "cd": 0.8545711430889916,
+      "imp": 1.042992008097851,
+      "delta_T_extra_K": 0.039363264974023926,
+      "wind_scale": 0.4529265619127016,
+      "wind_rotation_deg": -21.557566784539286,
+      "environment": {
+        "CD_SCALE": 0.8545711430889916,
+        "IMP_SCALE": 1.042992008097851,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.039363264974023926,
+        "WIND_SCALE": 0.4529265619127016,
+        "WIND_ROT_DEG": -21.557566784539286,
+        "WEATHER_WEIGHT": 0.34396014642794537
+      }
+    },
+    {
+      "sample": 78,
+      "cd": 0.8414737917781155,
+      "imp": 1.0438671821475165,
+      "delta_T_extra_K": 0.013224490582354836,
+      "wind_scale": 0.18006202138827382,
+      "wind_rotation_deg": 25.583931593183188,
+      "environment": {
+        "CD_SCALE": 0.8414737917781155,
+        "IMP_SCALE": 1.0438671821475165,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.013224490582354836,
+        "WIND_SCALE": 0.18006202138827382,
+        "WIND_ROT_DEG": 25.583931593183188,
+        "WEATHER_WEIGHT": 0.7130235657969237
+      }
+    },
+    {
+      "sample": 79,
+      "cd": 0.6715433155602104,
+      "imp": 1.0282072309372625,
+      "delta_T_extra_K": -0.7195396465605479,
+      "wind_scale": 0.5893490730616568,
+      "wind_rotation_deg": 29.927550347136815,
+      "environment": {
+        "CD_SCALE": 0.6715433155602104,
+        "IMP_SCALE": 1.0282072309372625,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -0.7195396465605479,
+        "WIND_SCALE": 0.5893490730616568,
+        "WIND_ROT_DEG": 29.927550347136815,
+        "WEATHER_WEIGHT": 0.5891766553849033
+      }
+    },
+    {
+      "sample": 80,
+      "cd": 0.8574689463593732,
+      "imp": 1.0287091859486335,
+      "delta_T_extra_K": 0.6630450682384204,
+      "wind_scale": 1.2520139924657885,
+      "wind_rotation_deg": -12.862608595953816,
+      "environment": {
+        "CD_SCALE": 0.8574689463593732,
+        "IMP_SCALE": 1.0287091859486335,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.6630450682384204,
+        "WIND_SCALE": 1.2520139924657885,
+        "WIND_ROT_DEG": -12.862608595953816,
+        "WEATHER_WEIGHT": 0.9355898883112846
+      }
+    },
+    {
+      "sample": 81,
+      "cd": 1.0078141768150377,
+      "imp": 1.015413537970922,
+      "delta_T_extra_K": 1.178946958176253,
+      "wind_scale": 0.2847735707445103,
+      "wind_rotation_deg": -7.599042899097803,
+      "environment": {
+        "CD_SCALE": 1.0078141768150377,
+        "IMP_SCALE": 1.015413537970922,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 1.178946958176253,
+        "WIND_SCALE": 0.2847735707445103,
+        "WIND_ROT_DEG": -7.599042899097803,
+        "WEATHER_WEIGHT": 0.9561652647536071
+      }
+    },
+    {
+      "sample": 82,
+      "cd": 1.2851372153235279,
+      "imp": 0.9879693071649672,
+      "delta_T_extra_K": 3.0508892778712307,
+      "wind_scale": 0.8238422222819456,
+      "wind_rotation_deg": 13.174354917068882,
+      "environment": {
+        "CD_SCALE": 1.2851372153235279,
+        "IMP_SCALE": 0.9879693071649672,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 3.0508892778712307,
+        "WIND_SCALE": 0.8238422222819456,
+        "WIND_ROT_DEG": 13.174354917068882,
+        "WEATHER_WEIGHT": 0.049476034443567296
+      }
+    },
+    {
+      "sample": 83,
+      "cd": 0.7685547139423612,
+      "imp": 1.019482726739518,
+      "delta_T_extra_K": -1.632263504600088,
+      "wind_scale": 0.9667360656277706,
+      "wind_rotation_deg": -12.82750078190487,
+      "environment": {
+        "CD_SCALE": 0.7685547139423612,
+        "IMP_SCALE": 1.019482726739518,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -1.632263504600088,
+        "WIND_SCALE": 0.9667360656277706,
+        "WIND_ROT_DEG": -12.82750078190487,
+        "WEATHER_WEIGHT": 0.04897690498758278
+      }
+    },
+    {
+      "sample": 84,
+      "cd": 1.0757263543610531,
+      "imp": 1.0082904762704905,
+      "delta_T_extra_K": -0.7001352627055781,
+      "wind_scale": 1.1085487574943744,
+      "wind_rotation_deg": 28.57777058459125,
+      "environment": {
+        "CD_SCALE": 1.0757263543610531,
+        "IMP_SCALE": 1.0082904762704905,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -0.7001352627055781,
+        "WIND_SCALE": 1.1085487574943744,
+        "WIND_ROT_DEG": 28.57777058459125,
+        "WEATHER_WEIGHT": 0.26016905461407647
+      }
+    },
+    {
+      "sample": 85,
+      "cd": 1.126253160462759,
+      "imp": 1.0047440777634011,
+      "delta_T_extra_K": -1.0540236437951391,
+      "wind_scale": 0.5915516665549112,
+      "wind_rotation_deg": -19.960051934478418,
+      "environment": {
+        "CD_SCALE": 1.126253160462759,
+        "IMP_SCALE": 1.0047440777634011,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -1.0540236437951391,
+        "WIND_SCALE": 0.5915516665549112,
+        "WIND_ROT_DEG": -19.960051934478418,
+        "WEATHER_WEIGHT": 0.16165696140505814
+      }
+    },
+    {
+      "sample": 86,
+      "cd": 1.0975139269792094,
+      "imp": 1.0681617417545937,
+      "delta_T_extra_K": 0.6110697946182014,
+      "wind_scale": 1.4947126704370364,
+      "wind_rotation_deg": -3.0023733850912677,
+      "environment": {
+        "CD_SCALE": 1.0975139269792094,
+        "IMP_SCALE": 1.0681617417545937,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.6110697946182014,
+        "WIND_SCALE": 1.4947126704370364,
+        "WIND_ROT_DEG": -3.0023733850912677,
+        "WEATHER_WEIGHT": 0.13959606399972213
+      }
+    },
+    {
+      "sample": 87,
+      "cd": 1.4973330017483801,
+      "imp": 1.014158058047895,
+      "delta_T_extra_K": 0.6118002918449372,
+      "wind_scale": 0.13664150967397987,
+      "wind_rotation_deg": -15.652405156952742,
+      "environment": {
+        "CD_SCALE": 1.4973330017483801,
+        "IMP_SCALE": 1.014158058047895,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.6118002918449372,
+        "WIND_SCALE": 0.13664150967397987,
+        "WIND_ROT_DEG": -15.652405156952742,
+        "WEATHER_WEIGHT": 0.2583575681549194
+      }
+    },
+    {
+      "sample": 88,
+      "cd": 0.6740688660777636,
+      "imp": 0.9998661397612816,
+      "delta_T_extra_K": -1.3234544678447318,
+      "wind_scale": 0.7862522141263439,
+      "wind_rotation_deg": -7.388051180434296,
+      "environment": {
+        "CD_SCALE": 0.6740688660777636,
+        "IMP_SCALE": 0.9998661397612816,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -1.3234544678447318,
+        "WIND_SCALE": 0.7862522141263439,
+        "WIND_ROT_DEG": -7.388051180434296,
+        "WEATHER_WEIGHT": 0.33820310050331803
+      }
+    },
+    {
+      "sample": 89,
+      "cd": 1.0909418550303769,
+      "imp": 1.0482162131652755,
+      "delta_T_extra_K": 0.45974264929706454,
+      "wind_scale": 0.1888107026378047,
+      "wind_rotation_deg": 0.20374485666708253,
+      "environment": {
+        "CD_SCALE": 1.0909418550303769,
+        "IMP_SCALE": 1.0482162131652755,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.45974264929706454,
+        "WIND_SCALE": 0.1888107026378047,
+        "WIND_ROT_DEG": 0.20374485666708253,
+        "WEATHER_WEIGHT": 0.6296269058459393
+      }
+    },
+    {
+      "sample": 90,
+      "cd": 1.0728810060028504,
+      "imp": 0.9947879294834647,
+      "delta_T_extra_K": 0.01472486752080952,
+      "wind_scale": 0.6687875885349142,
+      "wind_rotation_deg": 27.23661451578856,
+      "environment": {
+        "CD_SCALE": 1.0728810060028504,
+        "IMP_SCALE": 0.9947879294834647,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.01472486752080952,
+        "WIND_SCALE": 0.6687875885349142,
+        "WIND_ROT_DEG": 27.23661451578856,
+        "WEATHER_WEIGHT": 0.8486836762304526
+      }
+    },
+    {
+      "sample": 91,
+      "cd": 1.197786824828149,
+      "imp": 1.004633796826802,
+      "delta_T_extra_K": -0.22568017221247516,
+      "wind_scale": 1.064267677407981,
+      "wind_rotation_deg": 23.74179116081413,
+      "environment": {
+        "CD_SCALE": 1.197786824828149,
+        "IMP_SCALE": 1.004633796826802,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -0.22568017221247516,
+        "WIND_SCALE": 1.064267677407981,
+        "WIND_ROT_DEG": 23.74179116081413,
+        "WEATHER_WEIGHT": 0.47326827770681124
+      }
+    },
+    {
+      "sample": 92,
+      "cd": 0.9774514665575132,
+      "imp": 1.0114966127341547,
+      "delta_T_extra_K": 2.512212919784695,
+      "wind_scale": 1.283194010721349,
+      "wind_rotation_deg": 28.334467313714512,
+      "environment": {
+        "CD_SCALE": 0.9774514665575132,
+        "IMP_SCALE": 1.0114966127341547,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 2.512212919784695,
+        "WIND_SCALE": 1.283194010721349,
+        "WIND_ROT_DEG": 28.334467313714512,
+        "WEATHER_WEIGHT": 0.24846528308918459
+      }
+    },
+    {
+      "sample": 93,
+      "cd": 0.8320671422487363,
+      "imp": 1.0270570295934043,
+      "delta_T_extra_K": 0.5496844889913948,
+      "wind_scale": 1.023112592572984,
+      "wind_rotation_deg": 26.489433568147724,
+      "environment": {
+        "CD_SCALE": 0.8320671422487363,
+        "IMP_SCALE": 1.0270570295934043,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.5496844889913948,
+        "WIND_SCALE": 1.023112592572984,
+        "WIND_ROT_DEG": 26.489433568147724,
+        "WEATHER_WEIGHT": 0.7217352889552988
+      }
+    },
+    {
+      "sample": 94,
+      "cd": 0.800775836355562,
+      "imp": 0.9792639235443429,
+      "delta_T_extra_K": -0.4039980758264101,
+      "wind_scale": 1.173447927001697,
+      "wind_rotation_deg": -16.045390261985833,
+      "environment": {
+        "CD_SCALE": 0.800775836355562,
+        "IMP_SCALE": 0.9792639235443429,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -0.4039980758264101,
+        "WIND_SCALE": 1.173447927001697,
+        "WIND_ROT_DEG": -16.045390261985833,
+        "WEATHER_WEIGHT": 0.9199201094924787
+      }
+    },
+    {
+      "sample": 95,
+      "cd": 0.9631952545700868,
+      "imp": 0.9908031800554342,
+      "delta_T_extra_K": -1.0111033622109018,
+      "wind_scale": 0.37769092092200895,
+      "wind_rotation_deg": 8.177465843005706,
+      "environment": {
+        "CD_SCALE": 0.9631952545700868,
+        "IMP_SCALE": 0.9908031800554342,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -1.0111033622109018,
+        "WIND_SCALE": 0.37769092092200895,
+        "WIND_ROT_DEG": 8.177465843005706,
+        "WEATHER_WEIGHT": 0.6985819173145595
+      }
+    },
+    {
+      "sample": 96,
+      "cd": 1.0387563027749591,
+      "imp": 1.0220153165528896,
+      "delta_T_extra_K": -1.2895604209796385,
+      "wind_scale": 0.33537455041505976,
+      "wind_rotation_deg": 6.063653827228556,
+      "environment": {
+        "CD_SCALE": 1.0387563027749591,
+        "IMP_SCALE": 1.0220153165528896,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -1.2895604209796385,
+        "WIND_SCALE": 0.33537455041505976,
+        "WIND_ROT_DEG": 6.063653827228556,
+        "WEATHER_WEIGHT": 0.010461639892133445
+      }
+    },
+    {
+      "sample": 97,
+      "cd": 0.8893369844246165,
+      "imp": 1.0196767345151039,
+      "delta_T_extra_K": 1.58033175016556,
+      "wind_scale": 0.966863459044075,
+      "wind_rotation_deg": 23.026441742043616,
+      "environment": {
+        "CD_SCALE": 0.8893369844246165,
+        "IMP_SCALE": 1.0196767345151039,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 1.58033175016556,
+        "WIND_SCALE": 0.966863459044075,
+        "WIND_ROT_DEG": 23.026441742043616,
+        "WEATHER_WEIGHT": 0.4753042200675436
+      }
+    },
+    {
+      "sample": 98,
+      "cd": 0.9946608440996535,
+      "imp": 1.048106247119329,
+      "delta_T_extra_K": -0.3613654208551434,
+      "wind_scale": 0.0326810761628511,
+      "wind_rotation_deg": -0.10138531706548193,
+      "environment": {
+        "CD_SCALE": 0.9946608440996535,
+        "IMP_SCALE": 1.048106247119329,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -0.3613654208551434,
+        "WIND_SCALE": 0.0326810761628511,
+        "WIND_ROT_DEG": -0.10138531706548193,
+        "WEATHER_WEIGHT": 0.6744632620153453
+      }
+    },
+    {
+      "sample": 99,
+      "cd": 0.8331790709457161,
+      "imp": 1.0027854125070355,
+      "delta_T_extra_K": 0.5572189895510476,
+      "wind_scale": 1.3877412420163082,
+      "wind_rotation_deg": -16.392835605318794,
+      "environment": {
+        "CD_SCALE": 0.8331790709457161,
+        "IMP_SCALE": 1.0027854125070355,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.5572189895510476,
+        "WIND_SCALE": 1.3877412420163082,
+        "WIND_ROT_DEG": -16.392835605318794,
+        "WEATHER_WEIGHT": 0.034097423373332436
+      }
+    },
+    {
+      "sample": 100,
+      "cd": 0.8795700125670454,
+      "imp": 1.043153195564103,
+      "delta_T_extra_K": 0.8585295200332093,
+      "wind_scale": 1.1086938326636298,
+      "wind_rotation_deg": 0.2927032414521804,
+      "environment": {
+        "CD_SCALE": 0.8795700125670454,
+        "IMP_SCALE": 1.043153195564103,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.8585295200332093,
+        "WIND_SCALE": 1.1086938326636298,
+        "WIND_ROT_DEG": 0.2927032414521804,
+        "WEATHER_WEIGHT": 0.20521858703863327
+      }
+    },
+    {
+      "sample": 101,
+      "cd": 1.3708553288889356,
+      "imp": 1.0463446900885827,
+      "delta_T_extra_K": -0.24407591589323077,
+      "wind_scale": 0.346213219297462,
+      "wind_rotation_deg": -16.713431210061035,
+      "environment": {
+        "CD_SCALE": 1.3708553288889356,
+        "IMP_SCALE": 1.0463446900885827,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -0.24407591589323077,
+        "WIND_SCALE": 0.346213219297462,
+        "WIND_ROT_DEG": -16.713431210061035,
+        "WEATHER_WEIGHT": 0.7604707396725854
+      }
+    },
+    {
+      "sample": 102,
+      "cd": 0.8559530046758099,
+      "imp": 1.0749080913498243,
+      "delta_T_extra_K": 0.4092650563348146,
+      "wind_scale": 0.6255436231612712,
+      "wind_rotation_deg": 9.917655165381909,
+      "environment": {
+        "CD_SCALE": 0.8559530046758099,
+        "IMP_SCALE": 1.0749080913498243,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.4092650563348146,
+        "WIND_SCALE": 0.6255436231612712,
+        "WIND_ROT_DEG": 9.917655165381909,
+        "WEATHER_WEIGHT": 0.9487613036841315
+      }
+    },
+    {
+      "sample": 103,
+      "cd": 1.1167343454515148,
+      "imp": 1.021635464093635,
+      "delta_T_extra_K": 1.1931584741558916,
+      "wind_scale": 1.4611795573993824,
+      "wind_rotation_deg": -21.485335343159022,
+      "environment": {
+        "CD_SCALE": 1.1167343454515148,
+        "IMP_SCALE": 1.021635464093635,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 1.1931584741558916,
+        "WIND_SCALE": 1.4611795573993824,
+        "WIND_ROT_DEG": -21.485335343159022,
+        "WEATHER_WEIGHT": 0.05184054158522622
+      }
+    },
+    {
+      "sample": 104,
+      "cd": 1.1787066693205348,
+      "imp": 1.036414091146145,
+      "delta_T_extra_K": 1.813401283779121,
+      "wind_scale": 1.4962947079467905,
+      "wind_rotation_deg": 25.89572988404352,
+      "environment": {
+        "CD_SCALE": 1.1787066693205348,
+        "IMP_SCALE": 1.036414091146145,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 1.813401283779121,
+        "WIND_SCALE": 1.4962947079467905,
+        "WIND_ROT_DEG": 25.89572988404352,
+        "WEATHER_WEIGHT": 0.3292427598735952
+      }
+    },
+    {
+      "sample": 105,
+      "cd": 0.7909628818286226,
+      "imp": 1.046005485865921,
+      "delta_T_extra_K": 3.231217138865852,
+      "wind_scale": 0.04784053167507579,
+      "wind_rotation_deg": 9.86579182388364,
+      "environment": {
+        "CD_SCALE": 0.7909628818286226,
+        "IMP_SCALE": 1.046005485865921,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 3.231217138865852,
+        "WIND_SCALE": 0.04784053167507579,
+        "WIND_ROT_DEG": 9.86579182388364,
+        "WEATHER_WEIGHT": 0.3786194163495823
+      }
+    },
+    {
+      "sample": 106,
+      "cd": 0.8654987626009077,
+      "imp": 1.0211407673367296,
+      "delta_T_extra_K": 1.2151453166942763,
+      "wind_scale": 0.5272002900412286,
+      "wind_rotation_deg": 27.33088994853466,
+      "environment": {
+        "CD_SCALE": 0.8654987626009077,
+        "IMP_SCALE": 1.0211407673367296,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 1.2151453166942763,
+        "WIND_SCALE": 0.5272002900412286,
+        "WIND_ROT_DEG": 27.33088994853466,
+        "WEATHER_WEIGHT": 0.12370828212148621
+      }
+    },
+    {
+      "sample": 107,
+      "cd": 0.983422682195123,
+      "imp": 1.0274944713095744,
+      "delta_T_extra_K": -0.2276698671228754,
+      "wind_scale": 1.232360426061219,
+      "wind_rotation_deg": 19.320478947730173,
+      "environment": {
+        "CD_SCALE": 0.983422682195123,
+        "IMP_SCALE": 1.0274944713095744,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -0.2276698671228754,
+        "WIND_SCALE": 1.232360426061219,
+        "WIND_ROT_DEG": 19.320478947730173,
+        "WEATHER_WEIGHT": 0.43244933402359675
+      }
+    },
+    {
+      "sample": 108,
+      "cd": 1.214147978248757,
+      "imp": 1.0199022240491202,
+      "delta_T_extra_K": 0.8594022313572492,
+      "wind_scale": 0.5463732935933746,
+      "wind_rotation_deg": 23.81960189694211,
+      "environment": {
+        "CD_SCALE": 1.214147978248757,
+        "IMP_SCALE": 1.0199022240491202,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.8594022313572492,
+        "WIND_SCALE": 0.5463732935933746,
+        "WIND_ROT_DEG": 23.81960189694211,
+        "WEATHER_WEIGHT": 0.030282055077419545
+      }
+    },
+    {
+      "sample": 109,
+      "cd": 0.9208598389144065,
+      "imp": 0.9834059532782761,
+      "delta_T_extra_K": 1.4573751087297486,
+      "wind_scale": 0.060974225873883736,
+      "wind_rotation_deg": -27.908736855961113,
+      "environment": {
+        "CD_SCALE": 0.9208598389144065,
+        "IMP_SCALE": 0.9834059532782761,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 1.4573751087297486,
+        "WIND_SCALE": 0.060974225873883736,
+        "WIND_ROT_DEG": -27.908736855961113,
+        "WEATHER_WEIGHT": 0.0625799432645594
+      }
+    },
+    {
+      "sample": 110,
+      "cd": 1.120973322185509,
+      "imp": 1.0129351842381475,
+      "delta_T_extra_K": 1.0970369298960396,
+      "wind_scale": 0.4084719941203025,
+      "wind_rotation_deg": 27.461376318527343,
+      "environment": {
+        "CD_SCALE": 1.120973322185509,
+        "IMP_SCALE": 1.0129351842381475,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 1.0970369298960396,
+        "WIND_SCALE": 0.4084719941203025,
+        "WIND_ROT_DEG": 27.461376318527343,
+        "WEATHER_WEIGHT": 0.6169784817366716
+      }
+    },
+    {
+      "sample": 111,
+      "cd": 0.8808484446080045,
+      "imp": 1.0064321538835896,
+      "delta_T_extra_K": 2.375178019795747,
+      "wind_scale": 0.41344549094221594,
+      "wind_rotation_deg": -29.773703043950174,
+      "environment": {
+        "CD_SCALE": 0.8808484446080045,
+        "IMP_SCALE": 1.0064321538835896,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 2.375178019795747,
+        "WIND_SCALE": 0.41344549094221594,
+        "WIND_ROT_DEG": -29.773703043950174,
+        "WEATHER_WEIGHT": 0.7556523725060236
+      }
+    },
+    {
+      "sample": 112,
+      "cd": 1.250285260079624,
+      "imp": 1.0100325507322947,
+      "delta_T_extra_K": 1.0822023907685177,
+      "wind_scale": 0.7127835867804049,
+      "wind_rotation_deg": 27.40665903646226,
+      "environment": {
+        "CD_SCALE": 1.250285260079624,
+        "IMP_SCALE": 1.0100325507322947,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 1.0822023907685177,
+        "WIND_SCALE": 0.7127835867804049,
+        "WIND_ROT_DEG": 27.40665903646226,
+        "WEATHER_WEIGHT": 0.9539105801012864
+      }
+    },
+    {
+      "sample": 113,
+      "cd": 1.0023389964003158,
+      "imp": 0.9983347057585676,
+      "delta_T_extra_K": 0.7460825405199881,
+      "wind_scale": 0.7402107655932076,
+      "wind_rotation_deg": 25.685965193751727,
+      "environment": {
+        "CD_SCALE": 1.0023389964003158,
+        "IMP_SCALE": 0.9983347057585676,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.7460825405199881,
+        "WIND_SCALE": 0.7402107655932076,
+        "WIND_ROT_DEG": 25.685965193751727,
+        "WEATHER_WEIGHT": 0.18293923146058
+      }
+    },
+    {
+      "sample": 114,
+      "cd": 1.0893577338473444,
+      "imp": 0.9849936921700577,
+      "delta_T_extra_K": 0.2929025193920178,
+      "wind_scale": 0.4916997163881626,
+      "wind_rotation_deg": -10.82707309986002,
+      "environment": {
+        "CD_SCALE": 1.0893577338473444,
+        "IMP_SCALE": 0.9849936921700577,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.2929025193920178,
+        "WIND_SCALE": 0.4916997163881626,
+        "WIND_ROT_DEG": -10.82707309986002,
+        "WEATHER_WEIGHT": 0.3618584408151584
+      }
+    },
+    {
+      "sample": 115,
+      "cd": 0.7500659423806645,
+      "imp": 1.0079727052666356,
+      "delta_T_extra_K": -0.5961550606448653,
+      "wind_scale": 1.1293285059921896,
+      "wind_rotation_deg": -15.161549266685503,
+      "environment": {
+        "CD_SCALE": 0.7500659423806645,
+        "IMP_SCALE": 1.0079727052666356,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -0.5961550606448653,
+        "WIND_SCALE": 1.1293285059921896,
+        "WIND_ROT_DEG": -15.161549266685503,
+        "WEATHER_WEIGHT": 0.06473302580077944
+      }
+    },
+    {
+      "sample": 116,
+      "cd": 1.2534528426697764,
+      "imp": 1.0165338564150561,
+      "delta_T_extra_K": 3.086307817336047,
+      "wind_scale": 1.481735744388756,
+      "wind_rotation_deg": -14.106521029203428,
+      "environment": {
+        "CD_SCALE": 1.2534528426697764,
+        "IMP_SCALE": 1.0165338564150561,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 3.086307817336047,
+        "WIND_SCALE": 1.481735744388756,
+        "WIND_ROT_DEG": -14.106521029203428,
+        "WEATHER_WEIGHT": 0.0840825975562709
+      }
+    },
+    {
+      "sample": 117,
+      "cd": 0.9320005957119512,
+      "imp": 1.0459504861504216,
+      "delta_T_extra_K": 1.0035090884602567,
+      "wind_scale": 0.6704446543737337,
+      "wind_rotation_deg": -15.948222071112175,
+      "environment": {
+        "CD_SCALE": 0.9320005957119512,
+        "IMP_SCALE": 1.0459504861504216,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 1.0035090884602567,
+        "WIND_SCALE": 0.6704446543737337,
+        "WIND_ROT_DEG": -15.948222071112175,
+        "WEATHER_WEIGHT": 0.416840631223647
+      }
+    },
+    {
+      "sample": 118,
+      "cd": 0.7902543122042003,
+      "imp": 0.9961833484844514,
+      "delta_T_extra_K": 1.2687417854668923,
+      "wind_scale": 0.18174710623641221,
+      "wind_rotation_deg": 20.452270788218115,
+      "environment": {
+        "CD_SCALE": 0.7902543122042003,
+        "IMP_SCALE": 0.9961833484844514,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 1.2687417854668923,
+        "WIND_SCALE": 0.18174710623641221,
+        "WIND_ROT_DEG": 20.452270788218115,
+        "WEATHER_WEIGHT": 0.29378214686659654
+      }
+    },
+    {
+      "sample": 119,
+      "cd": 0.7713656677039824,
+      "imp": 0.9996006878333037,
+      "delta_T_extra_K": -0.5912870764824152,
+      "wind_scale": 0.298785136335318,
+      "wind_rotation_deg": -15.154252416311316,
+      "environment": {
+        "CD_SCALE": 0.7713656677039824,
+        "IMP_SCALE": 0.9996006878333037,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -0.5912870764824152,
+        "WIND_SCALE": 0.298785136335318,
+        "WIND_ROT_DEG": -15.154252416311316,
+        "WEATHER_WEIGHT": 0.24534029689061643
+      }
+    },
+    {
+      "sample": 120,
+      "cd": 1.2399776983947564,
+      "imp": 1.0607105985818521,
+      "delta_T_extra_K": -0.695164315591798,
+      "wind_scale": 1.48867308995816,
+      "wind_rotation_deg": 0.4394707946369394,
+      "environment": {
+        "CD_SCALE": 1.2399776983947564,
+        "IMP_SCALE": 1.0607105985818521,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -0.695164315591798,
+        "WIND_SCALE": 1.48867308995816,
+        "WIND_ROT_DEG": 0.4394707946369394,
+        "WEATHER_WEIGHT": 0.2313809443238426
+      }
+    },
+    {
+      "sample": 121,
+      "cd": 1.1698057655791774,
+      "imp": 1.0431813624809425,
+      "delta_T_extra_K": -2.0378272514815636,
+      "wind_scale": 0.15349863102091948,
+      "wind_rotation_deg": -1.514234446216367,
+      "environment": {
+        "CD_SCALE": 1.1698057655791774,
+        "IMP_SCALE": 1.0431813624809425,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -2.0378272514815636,
+        "WIND_SCALE": 0.15349863102091948,
+        "WIND_ROT_DEG": -1.514234446216367,
+        "WEATHER_WEIGHT": 0.819102706246924
+      }
+    },
+    {
+      "sample": 122,
+      "cd": 1.2422888608071458,
+      "imp": 0.9544592631381257,
+      "delta_T_extra_K": -0.2048253805987445,
+      "wind_scale": 0.2843597710187729,
+      "wind_rotation_deg": 28.377910775508745,
+      "environment": {
+        "CD_SCALE": 1.2422888608071458,
+        "IMP_SCALE": 0.9544592631381257,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -0.2048253805987445,
+        "WIND_SCALE": 0.2843597710187729,
+        "WIND_ROT_DEG": 28.377910775508745,
+        "WEATHER_WEIGHT": 0.5831937655371546
+      }
+    },
+    {
+      "sample": 123,
+      "cd": 1.079441106034178,
+      "imp": 1.048390982930995,
+      "delta_T_extra_K": -0.6148721342903303,
+      "wind_scale": 0.6736707866531855,
+      "wind_rotation_deg": -14.403106670827476,
+      "environment": {
+        "CD_SCALE": 1.079441106034178,
+        "IMP_SCALE": 1.048390982930995,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -0.6148721342903303,
+        "WIND_SCALE": 0.6736707866531855,
+        "WIND_ROT_DEG": -14.403106670827476,
+        "WEATHER_WEIGHT": 0.7777762760576277
+      }
+    },
+    {
+      "sample": 124,
+      "cd": 1.0710513377981168,
+      "imp": 1.0138582937826521,
+      "delta_T_extra_K": -0.766350432225072,
+      "wind_scale": 0.553062830195016,
+      "wind_rotation_deg": -21.517830918356843,
+      "environment": {
+        "CD_SCALE": 1.0710513377981168,
+        "IMP_SCALE": 1.0138582937826521,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -0.766350432225072,
+        "WIND_SCALE": 0.553062830195016,
+        "WIND_ROT_DEG": -21.517830918356843,
+        "WEATHER_WEIGHT": 0.20397643744851468
+      }
+    },
+    {
+      "sample": 125,
+      "cd": 0.891756367281043,
+      "imp": 1.018485005970304,
+      "delta_T_extra_K": 2.028029354710018,
+      "wind_scale": 0.30516268478420056,
+      "wind_rotation_deg": -29.31720980159949,
+      "environment": {
+        "CD_SCALE": 0.891756367281043,
+        "IMP_SCALE": 1.018485005970304,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 2.028029354710018,
+        "WIND_SCALE": 0.30516268478420056,
+        "WIND_ROT_DEG": -29.31720980159949,
+        "WEATHER_WEIGHT": 0.3272492320015645
+      }
+    },
+    {
+      "sample": 126,
+      "cd": 0.9279504308847333,
+      "imp": 0.9948284004381397,
+      "delta_T_extra_K": 0.7709855643003924,
+      "wind_scale": 0.8220672512446383,
+      "wind_rotation_deg": -26.20373528830556,
+      "environment": {
+        "CD_SCALE": 0.9279504308847333,
+        "IMP_SCALE": 0.9948284004381397,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.7709855643003924,
+        "WIND_SCALE": 0.8220672512446383,
+        "WIND_ROT_DEG": -26.20373528830556,
+        "WEATHER_WEIGHT": 0.10138776746275924
+      }
+    },
+    {
+      "sample": 127,
+      "cd": 1.3745289470445157,
+      "imp": 0.9936915638589064,
+      "delta_T_extra_K": 1.159251782169495,
+      "wind_scale": 0.13672889753868822,
+      "wind_rotation_deg": -20.17864090303833,
+      "environment": {
+        "CD_SCALE": 1.3745289470445157,
+        "IMP_SCALE": 0.9936915638589064,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 1.159251782169495,
+        "WIND_SCALE": 0.13672889753868822,
+        "WIND_ROT_DEG": -20.17864090303833,
+        "WEATHER_WEIGHT": 0.6954058875975524
+      }
+    },
+    {
+      "sample": 128,
+      "cd": 0.8555797453125918,
+      "imp": 1.020285501524986,
+      "delta_T_extra_K": 1.242411687750138,
+      "wind_scale": 0.8497800963039868,
+      "wind_rotation_deg": -8.56909703578948,
+      "environment": {
+        "CD_SCALE": 0.8555797453125918,
+        "IMP_SCALE": 1.020285501524986,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 1.242411687750138,
+        "WIND_SCALE": 0.8497800963039868,
+        "WIND_ROT_DEG": -8.56909703578948,
+        "WEATHER_WEIGHT": 0.41644538207510984
+      }
+    },
+    {
+      "sample": 129,
+      "cd": 0.933049081123657,
+      "imp": 1.066990738898709,
+      "delta_T_extra_K": -3.8114635113194453,
+      "wind_scale": 0.2958023852564146,
+      "wind_rotation_deg": 13.681901874381346,
+      "environment": {
+        "CD_SCALE": 0.933049081123657,
+        "IMP_SCALE": 1.066990738898709,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -3.8114635113194453,
+        "WIND_SCALE": 0.2958023852564146,
+        "WIND_ROT_DEG": 13.681901874381346,
+        "WEATHER_WEIGHT": 0.20366717086723007
+      }
+    },
+    {
+      "sample": 130,
+      "cd": 1.5017112169373017,
+      "imp": 1.014725446059292,
+      "delta_T_extra_K": 0.6553022527119041,
+      "wind_scale": 1.3242569196752507,
+      "wind_rotation_deg": -2.3456258596236346,
+      "environment": {
+        "CD_SCALE": 1.5017112169373017,
+        "IMP_SCALE": 1.014725446059292,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.6553022527119041,
+        "WIND_SCALE": 1.3242569196752507,
+        "WIND_ROT_DEG": -2.3456258596236346,
+        "WEATHER_WEIGHT": 0.16254457928221744
+      }
+    },
+    {
+      "sample": 131,
+      "cd": 0.816791551072725,
+      "imp": 1.0513498187806223,
+      "delta_T_extra_K": 0.17680758731108237,
+      "wind_scale": 1.364691768549969,
+      "wind_rotation_deg": -24.658133280486837,
+      "environment": {
+        "CD_SCALE": 0.816791551072725,
+        "IMP_SCALE": 1.0513498187806223,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.17680758731108237,
+        "WIND_SCALE": 1.364691768549969,
+        "WIND_ROT_DEG": -24.658133280486837,
+        "WEATHER_WEIGHT": 0.6221945950927403
+      }
+    },
+    {
+      "sample": 132,
+      "cd": 0.8342980867760879,
+      "imp": 1.025958559465794,
+      "delta_T_extra_K": -0.37804694485062984,
+      "wind_scale": 1.3882496848750496,
+      "wind_rotation_deg": -23.472429342388473,
+      "environment": {
+        "CD_SCALE": 0.8342980867760879,
+        "IMP_SCALE": 1.025958559465794,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -0.37804694485062984,
+        "WIND_SCALE": 1.3882496848750496,
+        "WIND_ROT_DEG": -23.472429342388473,
+        "WEATHER_WEIGHT": 0.4905096497651622
+      }
+    },
+    {
+      "sample": 133,
+      "cd": 1.240468872221322,
+      "imp": 1.0280861310669462,
+      "delta_T_extra_K": -3.6858827286418,
+      "wind_scale": 0.18997553181602378,
+      "wind_rotation_deg": 26.58454256214082,
+      "environment": {
+        "CD_SCALE": 1.240468872221322,
+        "IMP_SCALE": 1.0280861310669462,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -3.6858827286418,
+        "WIND_SCALE": 0.18997553181602378,
+        "WIND_ROT_DEG": 26.58454256214082,
+        "WEATHER_WEIGHT": 0.9755465828835862
+      }
+    },
+    {
+      "sample": 134,
+      "cd": 0.9186781365360859,
+      "imp": 1.0287063528132412,
+      "delta_T_extra_K": -2.475754876980321,
+      "wind_scale": 0.9305144513571622,
+      "wind_rotation_deg": 19.473345231028183,
+      "environment": {
+        "CD_SCALE": 0.9186781365360859,
+        "IMP_SCALE": 1.0287063528132412,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -2.475754876980321,
+        "WIND_SCALE": 0.9305144513571622,
+        "WIND_ROT_DEG": 19.473345231028183,
+        "WEATHER_WEIGHT": 0.16027614951375435
+      }
+    },
+    {
+      "sample": 135,
+      "cd": 1.2945481397835545,
+      "imp": 1.0161370949079909,
+      "delta_T_extra_K": -1.0362261520171174,
+      "wind_scale": 1.2695270686907276,
+      "wind_rotation_deg": 19.75126213116431,
+      "environment": {
+        "CD_SCALE": 1.2945481397835545,
+        "IMP_SCALE": 1.0161370949079909,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -1.0362261520171174,
+        "WIND_SCALE": 1.2695270686907276,
+        "WIND_ROT_DEG": 19.75126213116431,
+        "WEATHER_WEIGHT": 0.18296554360857065
+      }
+    },
+    {
+      "sample": 136,
+      "cd": 1.0203863143009217,
+      "imp": 1.0406755734507218,
+      "delta_T_extra_K": -0.5720443679914455,
+      "wind_scale": 0.3705883469882491,
+      "wind_rotation_deg": 13.492961443506061,
+      "environment": {
+        "CD_SCALE": 1.0203863143009217,
+        "IMP_SCALE": 1.0406755734507218,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -0.5720443679914455,
+        "WIND_SCALE": 0.3705883469882491,
+        "WIND_ROT_DEG": 13.492961443506061,
+        "WEATHER_WEIGHT": 0.8972950219556368
+      }
+    },
+    {
+      "sample": 137,
+      "cd": 1.0493647323148916,
+      "imp": 1.0545030753180673,
+      "delta_T_extra_K": 0.4924412563289277,
+      "wind_scale": 0.05719305203739278,
+      "wind_rotation_deg": 20.292255576343592,
+      "environment": {
+        "CD_SCALE": 1.0493647323148916,
+        "IMP_SCALE": 1.0545030753180673,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.4924412563289277,
+        "WIND_SCALE": 0.05719305203739278,
+        "WIND_ROT_DEG": 20.292255576343592,
+        "WEATHER_WEIGHT": 0.1177310153084733
+      }
+    },
+    {
+      "sample": 138,
+      "cd": 0.8004811774115925,
+      "imp": 0.9999691890613263,
+      "delta_T_extra_K": -0.5416301900113054,
+      "wind_scale": 0.8739369911990186,
+      "wind_rotation_deg": -4.45560944562612,
+      "environment": {
+        "CD_SCALE": 0.8004811774115925,
+        "IMP_SCALE": 0.9999691890613263,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -0.5416301900113054,
+        "WIND_SCALE": 0.8739369911990186,
+        "WIND_ROT_DEG": -4.45560944562612,
+        "WEATHER_WEIGHT": 0.6588427079278976
+      }
+    },
+    {
+      "sample": 139,
+      "cd": 1.190486077986725,
+      "imp": 0.9753170183353382,
+      "delta_T_extra_K": 0.5286963673415395,
+      "wind_scale": 0.9283378197193622,
+      "wind_rotation_deg": -0.6299040621788237,
+      "environment": {
+        "CD_SCALE": 1.190486077986725,
+        "IMP_SCALE": 0.9753170183353382,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.5286963673415395,
+        "WIND_SCALE": 0.9283378197193622,
+        "WIND_ROT_DEG": -0.6299040621788237,
+        "WEATHER_WEIGHT": 0.23525092338635667
+      }
+    },
+    {
+      "sample": 140,
+      "cd": 1.0097742287977547,
+      "imp": 0.9698075846399193,
+      "delta_T_extra_K": 0.7272773251318719,
+      "wind_scale": 0.16061410755426425,
+      "wind_rotation_deg": -22.29264720145983,
+      "environment": {
+        "CD_SCALE": 1.0097742287977547,
+        "IMP_SCALE": 0.9698075846399193,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.7272773251318719,
+        "WIND_SCALE": 0.16061410755426425,
+        "WIND_ROT_DEG": -22.29264720145983,
+        "WEATHER_WEIGHT": 0.43059900675216545
+      }
+    },
+    {
+      "sample": 141,
+      "cd": 1.200836945400635,
+      "imp": 1.0382938540665425,
+      "delta_T_extra_K": 0.88281594721366,
+      "wind_scale": 0.06115018621815316,
+      "wind_rotation_deg": 8.186221329988967,
+      "environment": {
+        "CD_SCALE": 1.200836945400635,
+        "IMP_SCALE": 1.0382938540665425,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.88281594721366,
+        "WIND_SCALE": 0.06115018621815316,
+        "WIND_ROT_DEG": 8.186221329988967,
+        "WEATHER_WEIGHT": 0.08224102796708033
+      }
+    },
+    {
+      "sample": 142,
+      "cd": 0.9463039306888538,
+      "imp": 0.9715652595338623,
+      "delta_T_extra_K": 1.673882263559717,
+      "wind_scale": 0.5667939445310717,
+      "wind_rotation_deg": 27.052078746665757,
+      "environment": {
+        "CD_SCALE": 0.9463039306888538,
+        "IMP_SCALE": 0.9715652595338623,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 1.673882263559717,
+        "WIND_SCALE": 0.5667939445310717,
+        "WIND_ROT_DEG": 27.052078746665757,
+        "WEATHER_WEIGHT": 0.13618571330500007
+      }
+    },
+    {
+      "sample": 143,
+      "cd": 1.0605665868548313,
+      "imp": 1.0750184806910685,
+      "delta_T_extra_K": -3.909681932317195,
+      "wind_scale": 1.2224841726152753,
+      "wind_rotation_deg": -18.3775618083995,
+      "environment": {
+        "CD_SCALE": 1.0605665868548313,
+        "IMP_SCALE": 1.0750184806910685,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -3.909681932317195,
+        "WIND_SCALE": 1.2224841726152753,
+        "WIND_ROT_DEG": -18.3775618083995,
+        "WEATHER_WEIGHT": 0.9817280909843366
+      }
+    },
+    {
+      "sample": 144,
+      "cd": 0.5974328741516333,
+      "imp": 1.0307671240212866,
+      "delta_T_extra_K": 1.3440826812718638,
+      "wind_scale": 1.3958752180016798,
+      "wind_rotation_deg": -26.069027409090364,
+      "environment": {
+        "CD_SCALE": 0.5974328741516333,
+        "IMP_SCALE": 1.0307671240212866,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 1.3440826812718638,
+        "WIND_SCALE": 1.3958752180016798,
+        "WIND_ROT_DEG": -26.069027409090364,
+        "WEATHER_WEIGHT": 0.35089739866886016
+      }
+    },
+    {
+      "sample": 145,
+      "cd": 1.3243648744589744,
+      "imp": 1.0274821281260835,
+      "delta_T_extra_K": -0.8813737980651137,
+      "wind_scale": 0.41248888788814303,
+      "wind_rotation_deg": 18.937599266947586,
+      "environment": {
+        "CD_SCALE": 1.3243648744589744,
+        "IMP_SCALE": 1.0274821281260835,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -0.8813737980651137,
+        "WIND_SCALE": 0.41248888788814303,
+        "WIND_ROT_DEG": 18.937599266947586,
+        "WEATHER_WEIGHT": 0.14357229511560043
+      }
+    },
+    {
+      "sample": 146,
+      "cd": 0.6284025236027225,
+      "imp": 1.0054619847953008,
+      "delta_T_extra_K": -0.14387295766668443,
+      "wind_scale": 0.4786162753284009,
+      "wind_rotation_deg": -27.79001659202182,
+      "environment": {
+        "CD_SCALE": 0.6284025236027225,
+        "IMP_SCALE": 1.0054619847953008,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -0.14387295766668443,
+        "WIND_SCALE": 0.4786162753284009,
+        "WIND_ROT_DEG": -27.79001659202182,
+        "WEATHER_WEIGHT": 0.18209638747174628
+      }
+    },
+    {
+      "sample": 147,
+      "cd": 1.239641752028771,
+      "imp": 1.0520854138032962,
+      "delta_T_extra_K": 2.987478707891392,
+      "wind_scale": 1.3431196552907023,
+      "wind_rotation_deg": -19.875477347318462,
+      "environment": {
+        "CD_SCALE": 1.239641752028771,
+        "IMP_SCALE": 1.0520854138032962,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 2.987478707891392,
+        "WIND_SCALE": 1.3431196552907023,
+        "WIND_ROT_DEG": -19.875477347318462,
+        "WEATHER_WEIGHT": 0.7848693152095441
+      }
+    },
+    {
+      "sample": 148,
+      "cd": 1.177088507140595,
+      "imp": 1.0398261981836106,
+      "delta_T_extra_K": -1.9389866030977396,
+      "wind_scale": 0.832770182059547,
+      "wind_rotation_deg": 4.802621165839746,
+      "environment": {
+        "CD_SCALE": 1.177088507140595,
+        "IMP_SCALE": 1.0398261981836106,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -1.9389866030977396,
+        "WIND_SCALE": 0.832770182059547,
+        "WIND_ROT_DEG": 4.802621165839746,
+        "WEATHER_WEIGHT": 0.8825349352963348
+      }
+    },
+    {
+      "sample": 149,
+      "cd": 1.3373864453606772,
+      "imp": 1.0823767319111017,
+      "delta_T_extra_K": 2.8850923744684738,
+      "wind_scale": 0.5913846165454736,
+      "wind_rotation_deg": 17.860236333966057,
+      "environment": {
+        "CD_SCALE": 1.3373864453606772,
+        "IMP_SCALE": 1.0823767319111017,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 2.8850923744684738,
+        "WIND_SCALE": 0.5913846165454736,
+        "WIND_ROT_DEG": 17.860236333966057,
+        "WEATHER_WEIGHT": 0.2647541193346662
+      }
+    },
+    {
+      "sample": 150,
+      "cd": 1.271049612717302,
+      "imp": 1.008828704343308,
+      "delta_T_extra_K": 0.14888821918747605,
+      "wind_scale": 0.26513408812180506,
+      "wind_rotation_deg": 14.615683238795363,
+      "environment": {
+        "CD_SCALE": 1.271049612717302,
+        "IMP_SCALE": 1.008828704343308,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.14888821918747605,
+        "WIND_SCALE": 0.26513408812180506,
+        "WIND_ROT_DEG": 14.615683238795363,
+        "WEATHER_WEIGHT": 0.04829145443725136
+      }
+    },
+    {
+      "sample": 151,
+      "cd": 0.7923755851584435,
+      "imp": 1.0274561621092195,
+      "delta_T_extra_K": -1.0387416428313847,
+      "wind_scale": 1.4760827966440082,
+      "wind_rotation_deg": 5.152219501939065,
+      "environment": {
+        "CD_SCALE": 0.7923755851584435,
+        "IMP_SCALE": 1.0274561621092195,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -1.0387416428313847,
+        "WIND_SCALE": 1.4760827966440082,
+        "WIND_ROT_DEG": 5.152219501939065,
+        "WEATHER_WEIGHT": 0.6636985309103353
+      }
+    },
+    {
+      "sample": 152,
+      "cd": 0.9761310224784433,
+      "imp": 1.0023976177052216,
+      "delta_T_extra_K": 1.2266286800948047,
+      "wind_scale": 0.6483493121454897,
+      "wind_rotation_deg": 0.7606791097368202,
+      "environment": {
+        "CD_SCALE": 0.9761310224784433,
+        "IMP_SCALE": 1.0023976177052216,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 1.2266286800948047,
+        "WIND_SCALE": 0.6483493121454897,
+        "WIND_ROT_DEG": 0.7606791097368202,
+        "WEATHER_WEIGHT": 0.8955424506051567
+      }
+    },
+    {
+      "sample": 153,
+      "cd": 1.2231546048036126,
+      "imp": 1.0319522175211504,
+      "delta_T_extra_K": 0.7944853815842821,
+      "wind_scale": 0.033434283596199266,
+      "wind_rotation_deg": -29.843070402538256,
+      "environment": {
+        "CD_SCALE": 1.2231546048036126,
+        "IMP_SCALE": 1.0319522175211504,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.7944853815842821,
+        "WIND_SCALE": 0.033434283596199266,
+        "WIND_ROT_DEG": -29.843070402538256,
+        "WEATHER_WEIGHT": 0.3549625747184364
+      }
+    },
+    {
+      "sample": 154,
+      "cd": 1.1348608247766763,
+      "imp": 1.021388271625777,
+      "delta_T_extra_K": -1.7309128877943887,
+      "wind_scale": 0.3062765564721211,
+      "wind_rotation_deg": 7.435773534389597,
+      "environment": {
+        "CD_SCALE": 1.1348608247766763,
+        "IMP_SCALE": 1.021388271625777,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -1.7309128877943887,
+        "WIND_SCALE": 0.3062765564721211,
+        "WIND_ROT_DEG": 7.435773534389597,
+        "WEATHER_WEIGHT": 0.4749018114702659
+      }
+    },
+    {
+      "sample": 155,
+      "cd": 0.8589493122166354,
+      "imp": 1.046491653917559,
+      "delta_T_extra_K": 2.638973927532618,
+      "wind_scale": 0.22396962103455992,
+      "wind_rotation_deg": -24.25171983376057,
+      "environment": {
+        "CD_SCALE": 0.8589493122166354,
+        "IMP_SCALE": 1.046491653917559,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 2.638973927532618,
+        "WIND_SCALE": 0.22396962103455992,
+        "WIND_ROT_DEG": -24.25171983376057,
+        "WEATHER_WEIGHT": 0.6382100965432198
+      }
+    },
+    {
+      "sample": 156,
+      "cd": 1.2449555239810894,
+      "imp": 0.9801036802794117,
+      "delta_T_extra_K": -0.02038167733946305,
+      "wind_scale": 0.9674210453876929,
+      "wind_rotation_deg": 3.7398705896779347,
+      "environment": {
+        "CD_SCALE": 1.2449555239810894,
+        "IMP_SCALE": 0.9801036802794117,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -0.02038167733946305,
+        "WIND_SCALE": 0.9674210453876929,
+        "WIND_ROT_DEG": 3.7398705896779347,
+        "WEATHER_WEIGHT": 0.35033270414713213
+      }
+    },
+    {
+      "sample": 157,
+      "cd": 1.0104395554846948,
+      "imp": 1.0111358593943613,
+      "delta_T_extra_K": -1.2874871694096883,
+      "wind_scale": 1.1002835611945203,
+      "wind_rotation_deg": -15.090178922519463,
+      "environment": {
+        "CD_SCALE": 1.0104395554846948,
+        "IMP_SCALE": 1.0111358593943613,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -1.2874871694096883,
+        "WIND_SCALE": 1.1002835611945203,
+        "WIND_ROT_DEG": -15.090178922519463,
+        "WEATHER_WEIGHT": 0.9035034701257912
+      }
+    },
+    {
+      "sample": 158,
+      "cd": 1.2398791262984759,
+      "imp": 1.0206857911364509,
+      "delta_T_extra_K": 0.04027021055483678,
+      "wind_scale": 1.1683083560867364,
+      "wind_rotation_deg": -29.258994335246275,
+      "environment": {
+        "CD_SCALE": 1.2398791262984759,
+        "IMP_SCALE": 1.0206857911364509,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.04027021055483678,
+        "WIND_SCALE": 1.1683083560867364,
+        "WIND_ROT_DEG": -29.258994335246275,
+        "WEATHER_WEIGHT": 0.5509229574859135
+      }
+    },
+    {
+      "sample": 159,
+      "cd": 1.0500886539929069,
+      "imp": 1.0189696463499316,
+      "delta_T_extra_K": -0.3014409831551478,
+      "wind_scale": 0.9121244547072092,
+      "wind_rotation_deg": 0.4168929074391876,
+      "environment": {
+        "CD_SCALE": 1.0500886539929069,
+        "IMP_SCALE": 1.0189696463499316,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -0.3014409831551478,
+        "WIND_SCALE": 0.9121244547072092,
+        "WIND_ROT_DEG": 0.4168929074391876,
+        "WEATHER_WEIGHT": 0.6415699676815011
+      }
+    },
+    {
+      "sample": 160,
+      "cd": 1.0283670106497969,
+      "imp": 0.9948717274827519,
+      "delta_T_extra_K": -0.14689992692102297,
+      "wind_scale": 1.3340286358182065,
+      "wind_rotation_deg": 16.978450780179465,
+      "environment": {
+        "CD_SCALE": 1.0283670106497969,
+        "IMP_SCALE": 0.9948717274827519,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -0.14689992692102297,
+        "WIND_SCALE": 1.3340286358182065,
+        "WIND_ROT_DEG": 16.978450780179465,
+        "WEATHER_WEIGHT": 0.715398613649654
+      }
+    },
+    {
+      "sample": 161,
+      "cd": 1.0405434752743121,
+      "imp": 1.0716215446805648,
+      "delta_T_extra_K": 0.11540884204982589,
+      "wind_scale": 0.6978983254784183,
+      "wind_rotation_deg": 14.505296791582374,
+      "environment": {
+        "CD_SCALE": 1.0405434752743121,
+        "IMP_SCALE": 1.0716215446805648,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.11540884204982589,
+        "WIND_SCALE": 0.6978983254784183,
+        "WIND_ROT_DEG": 14.505296791582374,
+        "WEATHER_WEIGHT": 0.45248723905825405
+      }
+    },
+    {
+      "sample": 162,
+      "cd": 0.9944682242825569,
+      "imp": 1.0187080295184685,
+      "delta_T_extra_K": 1.3160877644806033,
+      "wind_scale": 1.1244810923022575,
+      "wind_rotation_deg": 11.706553523026685,
+      "environment": {
+        "CD_SCALE": 0.9944682242825569,
+        "IMP_SCALE": 1.0187080295184685,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 1.3160877644806033,
+        "WIND_SCALE": 1.1244810923022575,
+        "WIND_ROT_DEG": 11.706553523026685,
+        "WEATHER_WEIGHT": 0.8453333620972822
+      }
+    },
+    {
+      "sample": 163,
+      "cd": 1.023911734998662,
+      "imp": 1.0118481646881514,
+      "delta_T_extra_K": -1.145612566690692,
+      "wind_scale": 0.6540790835663717,
+      "wind_rotation_deg": 17.307001017306085,
+      "environment": {
+        "CD_SCALE": 1.023911734998662,
+        "IMP_SCALE": 1.0118481646881514,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -1.145612566690692,
+        "WIND_SCALE": 0.6540790835663717,
+        "WIND_ROT_DEG": 17.307001017306085,
+        "WEATHER_WEIGHT": 0.5232446340612451
+      }
+    },
+    {
+      "sample": 164,
+      "cd": 0.9542304417992429,
+      "imp": 1.065655087828628,
+      "delta_T_extra_K": 0.6360264905865919,
+      "wind_scale": 0.02284155975769725,
+      "wind_rotation_deg": -14.377880884094903,
+      "environment": {
+        "CD_SCALE": 0.9542304417992429,
+        "IMP_SCALE": 1.065655087828628,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.6360264905865919,
+        "WIND_SCALE": 0.02284155975769725,
+        "WIND_ROT_DEG": -14.377880884094903,
+        "WEATHER_WEIGHT": 0.2361092928180314
+      }
+    },
+    {
+      "sample": 165,
+      "cd": 1.4615635939069394,
+      "imp": 1.020019664418003,
+      "delta_T_extra_K": -3.6066588246637448,
+      "wind_scale": 0.49030709481168877,
+      "wind_rotation_deg": 22.809887851196756,
+      "environment": {
+        "CD_SCALE": 1.4615635939069394,
+        "IMP_SCALE": 1.020019664418003,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -3.6066588246637448,
+        "WIND_SCALE": 0.49030709481168877,
+        "WIND_ROT_DEG": 22.809887851196756,
+        "WEATHER_WEIGHT": 0.3285537257882276
+      }
+    },
+    {
+      "sample": 166,
+      "cd": 1.0098304939764076,
+      "imp": 1.0743827638403598,
+      "delta_T_extra_K": -0.7799274192022458,
+      "wind_scale": 1.468520114604636,
+      "wind_rotation_deg": -1.8304232632485764,
+      "environment": {
+        "CD_SCALE": 1.0098304939764076,
+        "IMP_SCALE": 1.0743827638403598,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -0.7799274192022458,
+        "WIND_SCALE": 1.468520114604636,
+        "WIND_ROT_DEG": -1.8304232632485764,
+        "WEATHER_WEIGHT": 0.8397112677292398
+      }
+    },
+    {
+      "sample": 167,
+      "cd": 0.7453473493654345,
+      "imp": 0.9969555877614399,
+      "delta_T_extra_K": -2.8022393097676384,
+      "wind_scale": 1.086934986343553,
+      "wind_rotation_deg": 4.220428564291609,
+      "environment": {
+        "CD_SCALE": 0.7453473493654345,
+        "IMP_SCALE": 0.9969555877614399,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -2.8022393097676384,
+        "WIND_SCALE": 1.086934986343553,
+        "WIND_ROT_DEG": 4.220428564291609,
+        "WEATHER_WEIGHT": 0.30775083444418305
+      }
+    },
+    {
+      "sample": 168,
+      "cd": 1.046900983008888,
+      "imp": 1.0363231497799732,
+      "delta_T_extra_K": 0.7100524308426307,
+      "wind_scale": 0.040353824703690144,
+      "wind_rotation_deg": -23.599297275258984,
+      "environment": {
+        "CD_SCALE": 1.046900983008888,
+        "IMP_SCALE": 1.0363231497799732,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.7100524308426307,
+        "WIND_SCALE": 0.040353824703690144,
+        "WIND_ROT_DEG": -23.599297275258984,
+        "WEATHER_WEIGHT": 0.9289488357440475
+      }
+    },
+    {
+      "sample": 169,
+      "cd": 0.9245450769103237,
+      "imp": 0.9930927064060071,
+      "delta_T_extra_K": 0.6866017401872214,
+      "wind_scale": 0.06247415920796445,
+      "wind_rotation_deg": 11.557512869035328,
+      "environment": {
+        "CD_SCALE": 0.9245450769103237,
+        "IMP_SCALE": 0.9930927064060071,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.6866017401872214,
+        "WIND_SCALE": 0.06247415920796445,
+        "WIND_ROT_DEG": 11.557512869035328,
+        "WEATHER_WEIGHT": 0.6338781270581955
+      }
+    },
+    {
+      "sample": 170,
+      "cd": 0.8821711874590347,
+      "imp": 0.9632931094852002,
+      "delta_T_extra_K": -1.2013904209148036,
+      "wind_scale": 1.2263424391437667,
+      "wind_rotation_deg": 19.173799991858367,
+      "environment": {
+        "CD_SCALE": 0.8821711874590347,
+        "IMP_SCALE": 0.9632931094852002,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -1.2013904209148036,
+        "WIND_SCALE": 1.2263424391437667,
+        "WIND_ROT_DEG": 19.173799991858367,
+        "WEATHER_WEIGHT": 0.8912802164566774
+      }
+    },
+    {
+      "sample": 171,
+      "cd": 0.8860922574495542,
+      "imp": 1.0747304521197059,
+      "delta_T_extra_K": 1.2148688762708435,
+      "wind_scale": 1.4164887001794875,
+      "wind_rotation_deg": -23.573046663443417,
+      "environment": {
+        "CD_SCALE": 0.8860922574495542,
+        "IMP_SCALE": 1.0747304521197059,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 1.2148688762708435,
+        "WIND_SCALE": 1.4164887001794875,
+        "WIND_ROT_DEG": -23.573046663443417,
+        "WEATHER_WEIGHT": 0.20572341384858217
+      }
+    },
+    {
+      "sample": 172,
+      "cd": 1.0205736561106282,
+      "imp": 1.0298213424996163,
+      "delta_T_extra_K": 0.808118506542141,
+      "wind_scale": 1.2375904033119949,
+      "wind_rotation_deg": 7.892189755555641,
+      "environment": {
+        "CD_SCALE": 1.0205736561106282,
+        "IMP_SCALE": 1.0298213424996163,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.808118506542141,
+        "WIND_SCALE": 1.2375904033119949,
+        "WIND_ROT_DEG": 7.892189755555641,
+        "WEATHER_WEIGHT": 0.28736508993145327
+      }
+    },
+    {
+      "sample": 173,
+      "cd": 0.7562287851203969,
+      "imp": 1.0321139463613884,
+      "delta_T_extra_K": 0.39971952048102444,
+      "wind_scale": 0.30749015466637225,
+      "wind_rotation_deg": -10.851667223938197,
+      "environment": {
+        "CD_SCALE": 0.7562287851203969,
+        "IMP_SCALE": 1.0321139463613884,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.39971952048102444,
+        "WIND_SCALE": 0.30749015466637225,
+        "WIND_ROT_DEG": -10.851667223938197,
+        "WEATHER_WEIGHT": 0.42376538560658406
+      }
+    },
+    {
+      "sample": 174,
+      "cd": 1.1406748417570436,
+      "imp": 1.0110229167800016,
+      "delta_T_extra_K": -0.30675972463404644,
+      "wind_scale": 0.4812422853250521,
+      "wind_rotation_deg": 27.839950294200342,
+      "environment": {
+        "CD_SCALE": 1.1406748417570436,
+        "IMP_SCALE": 1.0110229167800016,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -0.30675972463404644,
+        "WIND_SCALE": 0.4812422853250521,
+        "WIND_ROT_DEG": 27.839950294200342,
+        "WEATHER_WEIGHT": 0.5037373190826384
+      }
+    },
+    {
+      "sample": 175,
+      "cd": 0.814674851564207,
+      "imp": 1.0215846421726524,
+      "delta_T_extra_K": -1.6735332216997612,
+      "wind_scale": 0.6193814057623778,
+      "wind_rotation_deg": -3.813024974485181,
+      "environment": {
+        "CD_SCALE": 0.814674851564207,
+        "IMP_SCALE": 1.0215846421726524,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -1.6735332216997612,
+        "WIND_SCALE": 0.6193814057623778,
+        "WIND_ROT_DEG": -3.813024974485181,
+        "WEATHER_WEIGHT": 0.7730258859567307
+      }
+    },
+    {
+      "sample": 176,
+      "cd": 0.8217508273181676,
+      "imp": 1.0486994015674187,
+      "delta_T_extra_K": 0.6226552229122326,
+      "wind_scale": 0.13633431018748393,
+      "wind_rotation_deg": 19.188669154246007,
+      "environment": {
+        "CD_SCALE": 0.8217508273181676,
+        "IMP_SCALE": 1.0486994015674187,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.6226552229122326,
+        "WIND_SCALE": 0.13633431018748393,
+        "WIND_ROT_DEG": 19.188669154246007,
+        "WEATHER_WEIGHT": 0.17037126001758485
+      }
+    },
+    {
+      "sample": 177,
+      "cd": 1.4420225851429407,
+      "imp": 1.0400451443517849,
+      "delta_T_extra_K": 0.008225579501545694,
+      "wind_scale": 1.466798555709025,
+      "wind_rotation_deg": -29.738299840180428,
+      "environment": {
+        "CD_SCALE": 1.4420225851429407,
+        "IMP_SCALE": 1.0400451443517849,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.008225579501545694,
+        "WIND_SCALE": 1.466798555709025,
+        "WIND_ROT_DEG": -29.738299840180428,
+        "WEATHER_WEIGHT": 0.49082299393183737
+      }
+    },
+    {
+      "sample": 178,
+      "cd": 0.6889100808024573,
+      "imp": 1.0079356344725958,
+      "delta_T_extra_K": -1.3845064175784518,
+      "wind_scale": 1.2477537600152968,
+      "wind_rotation_deg": -14.365495035943068,
+      "environment": {
+        "CD_SCALE": 0.6889100808024573,
+        "IMP_SCALE": 1.0079356344725958,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -1.3845064175784518,
+        "WIND_SCALE": 1.2477537600152968,
+        "WIND_ROT_DEG": -14.365495035943068,
+        "WEATHER_WEIGHT": 0.9438698899663639
+      }
+    },
+    {
+      "sample": 179,
+      "cd": 0.9867043314665136,
+      "imp": 1.0172513872589741,
+      "delta_T_extra_K": 1.0195876890272724,
+      "wind_scale": 0.7474734056643138,
+      "wind_rotation_deg": -23.404605416039534,
+      "environment": {
+        "CD_SCALE": 0.9867043314665136,
+        "IMP_SCALE": 1.0172513872589741,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 1.0195876890272724,
+        "WIND_SCALE": 0.7474734056643138,
+        "WIND_ROT_DEG": -23.404605416039534,
+        "WEATHER_WEIGHT": 0.6365316716343875
+      }
+    },
+    {
+      "sample": 180,
+      "cd": 1.3298779680630068,
+      "imp": 1.0427870580790626,
+      "delta_T_extra_K": 0.4850930942255261,
+      "wind_scale": 0.5334255929494105,
+      "wind_rotation_deg": -5.923765929711795,
+      "environment": {
+        "CD_SCALE": 1.3298779680630068,
+        "IMP_SCALE": 1.0427870580790626,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.4850930942255261,
+        "WIND_SCALE": 0.5334255929494105,
+        "WIND_ROT_DEG": -5.923765929711795,
+        "WEATHER_WEIGHT": 0.3945994592595228
+      }
+    },
+    {
+      "sample": 181,
+      "cd": 0.7477924804604014,
+      "imp": 1.0350668774642113,
+      "delta_T_extra_K": -0.4046533107564179,
+      "wind_scale": 0.03776104791406526,
+      "wind_rotation_deg": -17.632993026163714,
+      "environment": {
+        "CD_SCALE": 0.7477924804604014,
+        "IMP_SCALE": 1.0350668774642113,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -0.4046533107564179,
+        "WIND_SCALE": 0.03776104791406526,
+        "WIND_ROT_DEG": -17.632993026163714,
+        "WEATHER_WEIGHT": 0.26319542101070914
+      }
+    },
+    {
+      "sample": 182,
+      "cd": 1.185780125413764,
+      "imp": 0.9940354070676464,
+      "delta_T_extra_K": 0.8160471096324342,
+      "wind_scale": 0.6913620173209962,
+      "wind_rotation_deg": 1.8926751289166504,
+      "environment": {
+        "CD_SCALE": 1.185780125413764,
+        "IMP_SCALE": 0.9940354070676464,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.8160471096324342,
+        "WIND_SCALE": 0.6913620173209962,
+        "WIND_ROT_DEG": 1.8926751289166504,
+        "WEATHER_WEIGHT": 0.7544756806584804
+      }
+    },
+    {
+      "sample": 183,
+      "cd": 0.890624103291187,
+      "imp": 1.0111386075057778,
+      "delta_T_extra_K": -2.162227213740602,
+      "wind_scale": 0.4899903072610369,
+      "wind_rotation_deg": -20.68039527475914,
+      "environment": {
+        "CD_SCALE": 0.890624103291187,
+        "IMP_SCALE": 1.0111386075057778,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -2.162227213740602,
+        "WIND_SCALE": 0.4899903072610369,
+        "WIND_ROT_DEG": -20.68039527475914,
+        "WEATHER_WEIGHT": 0.843106072025795
+      }
+    },
+    {
+      "sample": 184,
+      "cd": 0.8264330409227946,
+      "imp": 0.9698751590527531,
+      "delta_T_extra_K": -2.3960438427746222,
+      "wind_scale": 0.8687546502540759,
+      "wind_rotation_deg": -22.436577230369863,
+      "environment": {
+        "CD_SCALE": 0.8264330409227946,
+        "IMP_SCALE": 0.9698751590527531,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -2.3960438427746222,
+        "WIND_SCALE": 0.8687546502540759,
+        "WIND_ROT_DEG": -22.436577230369863,
+        "WEATHER_WEIGHT": 0.46201797308549974
+      }
+    },
+    {
+      "sample": 185,
+      "cd": 1.114506296073626,
+      "imp": 1.0196608411610393,
+      "delta_T_extra_K": -0.7306223681920966,
+      "wind_scale": 0.4522615420229917,
+      "wind_rotation_deg": 12.189969789918088,
+      "environment": {
+        "CD_SCALE": 1.114506296073626,
+        "IMP_SCALE": 1.0196608411610393,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -0.7306223681920966,
+        "WIND_SCALE": 0.4522615420229917,
+        "WIND_ROT_DEG": 12.189969789918088,
+        "WEATHER_WEIGHT": 0.8436623634199235
+      }
+    },
+    {
+      "sample": 186,
+      "cd": 1.0465106330884335,
+      "imp": 1.0195377916128838,
+      "delta_T_extra_K": -0.8435324461261252,
+      "wind_scale": 0.24138653169810448,
+      "wind_rotation_deg": -10.315495600196776,
+      "environment": {
+        "CD_SCALE": 1.0465106330884335,
+        "IMP_SCALE": 1.0195377916128838,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -0.8435324461261252,
+        "WIND_SCALE": 0.24138653169810448,
+        "WIND_ROT_DEG": -10.315495600196776,
+        "WEATHER_WEIGHT": 0.18927341147279853
+      }
+    },
+    {
+      "sample": 187,
+      "cd": 1.2138056798506074,
+      "imp": 1.0430680211844066,
+      "delta_T_extra_K": -0.3768117269322451,
+      "wind_scale": 1.4435785672578942,
+      "wind_rotation_deg": -23.90172055567859,
+      "environment": {
+        "CD_SCALE": 1.2138056798506074,
+        "IMP_SCALE": 1.0430680211844066,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -0.3768117269322451,
+        "WIND_SCALE": 1.4435785672578942,
+        "WIND_ROT_DEG": -23.90172055567859,
+        "WEATHER_WEIGHT": 0.38423289471089905
+      }
+    },
+    {
+      "sample": 188,
+      "cd": 1.3924814139367339,
+      "imp": 1.017386897341666,
+      "delta_T_extra_K": -0.9096236152103653,
+      "wind_scale": 0.9569712941877823,
+      "wind_rotation_deg": -23.587817126152935,
+      "environment": {
+        "CD_SCALE": 1.3924814139367339,
+        "IMP_SCALE": 1.017386897341666,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -0.9096236152103653,
+        "WIND_SCALE": 0.9569712941877823,
+        "WIND_ROT_DEG": -23.587817126152935,
+        "WEATHER_WEIGHT": 0.20644396458005987
+      }
+    },
+    {
+      "sample": 189,
+      "cd": 1.0329603223716461,
+      "imp": 1.0068930401392187,
+      "delta_T_extra_K": 0.25438297406449795,
+      "wind_scale": 1.1865064438789492,
+      "wind_rotation_deg": 11.60636107137151,
+      "environment": {
+        "CD_SCALE": 1.0329603223716461,
+        "IMP_SCALE": 1.0068930401392187,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.25438297406449795,
+        "WIND_SCALE": 1.1865064438789492,
+        "WIND_ROT_DEG": 11.60636107137151,
+        "WEATHER_WEIGHT": 0.5004865600234365
+      }
+    },
+    {
+      "sample": 190,
+      "cd": 0.8449921554858912,
+      "imp": 0.9835528629579549,
+      "delta_T_extra_K": -1.2147644144402987,
+      "wind_scale": 1.1114186820643124,
+      "wind_rotation_deg": 24.480233275692754,
+      "environment": {
+        "CD_SCALE": 0.8449921554858912,
+        "IMP_SCALE": 0.9835528629579549,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -1.2147644144402987,
+        "WIND_SCALE": 1.1114186820643124,
+        "WIND_ROT_DEG": 24.480233275692754,
+        "WEATHER_WEIGHT": 0.43002836928637256
+      }
+    },
+    {
+      "sample": 191,
+      "cd": 0.8676688615307228,
+      "imp": 0.9750021956461669,
+      "delta_T_extra_K": -1.1181504415519077,
+      "wind_scale": 0.34284692631545366,
+      "wind_rotation_deg": 13.333175474026149,
+      "environment": {
+        "CD_SCALE": 0.8676688615307228,
+        "IMP_SCALE": 0.9750021956461669,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -1.1181504415519077,
+        "WIND_SCALE": 0.34284692631545366,
+        "WIND_ROT_DEG": 13.333175474026149,
+        "WEATHER_WEIGHT": 0.8800772419393585
+      }
+    },
+    {
+      "sample": 192,
+      "cd": 1.0270116481972902,
+      "imp": 0.9862363827933304,
+      "delta_T_extra_K": -0.9197774355944472,
+      "wind_scale": 0.6808540422379468,
+      "wind_rotation_deg": -11.219143304314578,
+      "environment": {
+        "CD_SCALE": 1.0270116481972902,
+        "IMP_SCALE": 0.9862363827933304,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -0.9197774355944472,
+        "WIND_SCALE": 0.6808540422379468,
+        "WIND_ROT_DEG": -11.219143304314578,
+        "WEATHER_WEIGHT": 0.6282769419301314
+      }
+    },
+    {
+      "sample": 193,
+      "cd": 0.7588228077348212,
+      "imp": 1.045271483778642,
+      "delta_T_extra_K": 0.9026093243117655,
+      "wind_scale": 1.0697257151376696,
+      "wind_rotation_deg": 7.776882271375534,
+      "environment": {
+        "CD_SCALE": 0.7588228077348212,
+        "IMP_SCALE": 1.045271483778642,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.9026093243117655,
+        "WIND_SCALE": 1.0697257151376696,
+        "WIND_ROT_DEG": 7.776882271375534,
+        "WEATHER_WEIGHT": 0.25006098933101784
+      }
+    },
+    {
+      "sample": 194,
+      "cd": 0.8079994944579885,
+      "imp": 1.0316116676383738,
+      "delta_T_extra_K": -1.8944916484116596,
+      "wind_scale": 1.39529606930531,
+      "wind_rotation_deg": -19.01627545304846,
+      "environment": {
+        "CD_SCALE": 0.8079994944579885,
+        "IMP_SCALE": 1.0316116676383738,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -1.8944916484116596,
+        "WIND_SCALE": 1.39529606930531,
+        "WIND_ROT_DEG": -19.01627545304846,
+        "WEATHER_WEIGHT": 0.6544896984700379
+      }
+    },
+    {
+      "sample": 195,
+      "cd": 1.1509331473052447,
+      "imp": 1.0191281626928055,
+      "delta_T_extra_K": -1.4649593003493437,
+      "wind_scale": 1.4619293411044034,
+      "wind_rotation_deg": -27.71126825307767,
+      "environment": {
+        "CD_SCALE": 1.1509331473052447,
+        "IMP_SCALE": 1.0191281626928055,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -1.4649593003493437,
+        "WIND_SCALE": 1.4619293411044034,
+        "WIND_ROT_DEG": -27.71126825307767,
+        "WEATHER_WEIGHT": 0.5433599145552627
+      }
+    },
+    {
+      "sample": 196,
+      "cd": 1.1782175333027454,
+      "imp": 1.0662149294057068,
+      "delta_T_extra_K": -0.6874596600801366,
+      "wind_scale": 0.8618407449511962,
+      "wind_rotation_deg": 2.462119104705117,
+      "environment": {
+        "CD_SCALE": 1.1782175333027454,
+        "IMP_SCALE": 1.0662149294057068,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -0.6874596600801366,
+        "WIND_SCALE": 0.8618407449511962,
+        "WIND_ROT_DEG": 2.462119104705117,
+        "WEATHER_WEIGHT": 0.7172960972468221
+      }
+    },
+    {
+      "sample": 197,
+      "cd": 0.969839333521662,
+      "imp": 0.9883888349749136,
+      "delta_T_extra_K": -0.1639161092100957,
+      "wind_scale": 0.7825324052145908,
+      "wind_rotation_deg": -5.379080887685749,
+      "environment": {
+        "CD_SCALE": 0.969839333521662,
+        "IMP_SCALE": 0.9883888349749136,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": -0.1639161092100957,
+        "WIND_SCALE": 0.7825324052145908,
+        "WIND_ROT_DEG": -5.379080887685749,
+        "WEATHER_WEIGHT": 0.9479726214476644
+      }
+    },
+    {
+      "sample": 198,
+      "cd": 1.0565631211083104,
+      "imp": 1.048986701156759,
+      "delta_T_extra_K": 0.06110642644447435,
+      "wind_scale": 1.4767025181725877,
+      "wind_rotation_deg": -8.671619905128122,
+      "environment": {
+        "CD_SCALE": 1.0565631211083104,
+        "IMP_SCALE": 1.048986701156759,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 0.06110642644447435,
+        "WIND_SCALE": 1.4767025181725877,
+        "WIND_ROT_DEG": -8.671619905128122,
+        "WEATHER_WEIGHT": 0.05661830494148812
+      }
+    },
+    {
+      "sample": 199,
+      "cd": 0.8864886595805855,
+      "imp": 0.9965475559977901,
+      "delta_T_extra_K": 1.4976588063014338,
+      "wind_scale": 0.6278737475957981,
+      "wind_rotation_deg": -4.767176078901546,
+      "environment": {
+        "CD_SCALE": 0.8864886595805855,
+        "IMP_SCALE": 0.9965475559977901,
+        "DT_ABS": "reanalysis",
+        "DT_EXTRA": 1.4976588063014338,
+        "WIND_SCALE": 0.6278737475957981,
+        "WIND_ROT_DEG": -4.767176078901546,
+        "WEATHER_WEIGHT": 0.6982527201986618
+      }
+    }
+  ]
+}

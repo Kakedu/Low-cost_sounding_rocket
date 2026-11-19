@@ -1,0 +1,161 @@
+{
+  "status": "PASS",
+  "command": [
+    "C:\\Users\\Haoran Du\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "C:\\Users\\Haoran Du\\Documents\\Codex\\2026-10-11\\ban\\work\\integrate_prometheus_temperature_fix.py"
+  ],
+  "source_changes": [
+    {
+      "path": "val/flight_temperature.py",
+      "sha256": "4ebb58b674d538fe0425cda8f58716d74ba28fb510e1a0fc4c9c706580ad4909"
+    },
+    {
+      "path": "val/gps_check.py",
+      "sha256": "f5767cf0909f44f9322d52d9b23b2866440f41ada27c2ca54abc2069e123c5f0"
+    },
+    {
+      "path": "val/validation_mc.py",
+      "sha256": "4c67c3157ae7a56bc7cdf4201f1ff380eacf38e19d3c7674d2472bbd5a6a5f53"
+    }
+  ],
+  "unchanged_input_model_and_MC_proof": [
+    {
+      "file": "val/build_prometheus.py",
+      "unchanged": true,
+      "sha256": "bc9bb1ed164d1cca49ed70175d5ef54b08d8d7980b716166effd9660da87292d"
+    },
+    {
+      "file": "val/run_prometheus.py",
+      "unchanged": true,
+      "sha256": "2c9748d6d63c083cbcb3a86934e609f10cfd3e62148fdfb0f411fcd3ab8ab5d6"
+    },
+    {
+      "file": "val/build_cavour.py",
+      "unchanged": true,
+      "sha256": "968ffd4d24c59d6c9e505b79c341ccc7043d1e6f5a06164c2d1337182d4deb2f"
+    },
+    {
+      "file": "val/run_cavour.py",
+      "unchanged": true,
+      "sha256": "17cc07a40a6d9e2d82e576d75bbe7bb56ac7e36411cdc3e14f9b756373b732bc"
+    },
+    {
+      "file": "val/cavour_check.py",
+      "unchanged": true,
+      "sha256": "47a05d344506e055cab288a3f7ce30a56120085540e63f1a362fea3a3cb0a833"
+    },
+    {
+      "file": "val/validation_atmosphere.py",
+      "unchanged": true,
+      "sha256": "6ff6b8e8f40f00667ff0a28c2166e5d462d17cb33b803bb47be0c8a2f628305a"
+    },
+    {
+      "file": "val/prepare_prometheus_weather.py",
+      "unchanged": true,
+      "sha256": "58760a581e9602985385173f19afcc8b49474d9c3b177519be39b655f7c74e28"
+    },
+    {
+      "file": "val/prometheus_inputs_2022.json",
+      "unchanged": true,
+      "sha256": "f6fdb38b3fc85fa88ad2b29fea6b7a591220321760fe6390d00a9e92625b2a79"
+    },
+    {
+      "file": "val/prometheus_inputs.json",
+      "unchanged": true,
+      "sha256": "d503ccb23b2d170a9cd55a94c99eb8d049c83788996e2b57a342b15764e30616"
+    },
+    {
+      "file": "val/prom_mc.json",
+      "unchanged": true,
+      "sha256": "ccee5408bbee409ba2566ed409779465549561cda546de66c14987f2df09b414"
+    },
+    {
+      "file": "val/prom_mc_inputs.json",
+      "unchanged": true,
+      "sha256": "5e61a4a24c20a98f8e49a3e5759ea6e34ee43955147b97b652e7b51d9598b290"
+    },
+    {
+      "file": "val/cavour_mc.json",
+      "unchanged": true,
+      "sha256": "9af802490d4da055ffa5de3902906d10147bbea2268541dd5310bdae7671bd95"
+    },
+    {
+      "file": "val/cavour_mc_inputs.json",
+      "unchanged": true,
+      "sha256": "ff8183857af38f1dc840d6b286a471229d29b0ab111c69ac0d3807a544f87c25"
+    },
+    {
+      "file": "atmosphere_model.py",
+      "unchanged": true,
+      "sha256": "bf26ec9195d0f353b3277dae97684f67b774cfa869e9a66547bb7b0cf9483129"
+    },
+    {
+      "file": "motor_model.py",
+      "unchanged": true,
+      "sha256": "e9d566135a0ff66464acc45ecd56c68dca0dc5a544765f6e0f9ffc996d0caad2"
+    },
+    {
+      "file": "val/validation_mc.py",
+      "function": "fly",
+      "AST_identical": true
+    },
+    {
+      "file": "val/validation_mc.py",
+      "function": "summarize",
+      "AST_identical": true
+    },
+    {
+      "file": "val/validation_mc.py",
+      "function": "monte_carlo",
+      "AST_identical": true
+    }
+  ],
+  "primary_result_fields_unchanged": [
+    "jsbsim_apogee_m",
+    "jsbsim_dT_K",
+    "TeleMetrum_baro_apogee_m",
+    "TeleMetrum_gps_highest_fix_m",
+    "TeleMetrum_gps_apogee_fit_m",
+    "TeleMega_baro_apogee_m",
+    "TeleMega_gps_highest_fix_m",
+    "TeleMega_gps_apogee_fit_m",
+    "gps_mean_m",
+    "baro_mean_m",
+    "jsbsim_as_baro_m",
+    "E_m",
+    "E_pct",
+    "u_input_m",
+    "u_D_m",
+    "u_num_m",
+    "u_val_m",
+    "E_over_u_val",
+    "expanded_validation_halfwidth_m",
+    "expanded_validation_halfwidth_pct",
+    "discrepancy_interval_low_m",
+    "discrepancy_interval_high_m",
+    "interpretation",
+    "mc_mean_m",
+    "mc_p2_5",
+    "mc_p97_5",
+    "flight_in_mc_95",
+    "err_as_baro_vs_baro_pct"
+  ],
+  "column_dT_corrected_K": 16.737700306079773,
+  "legacy_column_dT_K": 17.062295609518713,
+  "default_wrapper_nominal_temperature_matches_recorded_run": true,
+  "nominal_reruns": 3,
+  "MC_reruns": 0,
+  "zero_noop_scope": "Cavour model, observations, output conversions, MC samples; both validation MC sampler and runner; primary 2022 Prometheus plant/wind/weather/MC and all primary comparison metrics",
+  "artifact_sha256": {
+    "val\\gps_check.json": "ce837f9e99630995ff8de248bc099701c6fa41a8f72b3db881f0fbd7f7c8b8b9",
+    "results_revised\\validation\\gps_check.json": "ce837f9e99630995ff8de248bc099701c6fa41a8f72b3db881f0fbd7f7c8b8b9",
+    "results_revised\\fig_validation_gps.png": "567db792119079783fef720b98cc16ebb68be278d90233938c28579eb9fc9f8d",
+    "val\\fig_validation_gps.png": "567db792119079783fef720b98cc16ebb68be278d90233938c28579eb9fc9f8d",
+    "rq2_revision2\\prometheus_temperature\\validation_word_patch.json": "2c3c582711b076be452c11f393c09a31338bd5854dadf8703bda4a1189ecc5d7",
+    "rq2_revision2\\prometheus_temperature\\validation_word_patch_binding.json": "93594fba382d2fc0d1be428a0b2d450eeb3c7c517139ab5f668a2ee82a00e317",
+    "rq2_revision2\\prometheus_temperature\\comparison_summary.json": "4f79c3bb87fa208939efac68d742327f8a63ebf1def8c00b067071db4ccf94f8",
+    "rq2_revision2\\prometheus_temperature\\temperature_inference.json": "a8c03f933e612cf7eef08041ad240a40b578d7db5a3fba6b61665e6bd8f2fc9d"
+  },
+  "historical_manifest_scope": "Inherited validation_run_manifest.json describes the frozen v1 executed source and primary MC; corrected derived diagnostic and new calibration are bound by this supplemental record. The old source/output remains in provenance/revision1_delivery/validation_temperature and original v1.",
+  "original_v1_unchanged": true
+}

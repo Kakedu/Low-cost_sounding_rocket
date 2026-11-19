@@ -2,24 +2,36 @@
 
 import argparse
 import csv
+from pathlib import Path
 
 import jsbsim
+from flight_checks import require, run_checked
 
 ROOT = "."
 DT = 0.001
 IGNITION_S = 0.0
 NO_BRAKE_TARGET = 1.0e9
 
-IMPULSE_PER_MOTOR_NS = 6042.0
+def motor_impulse_ns(path):
+    """Integrate the supplied RASP curve with its implicit (0, 0) point."""
+    lines = [line.split() for line in Path(path).read_text().splitlines()
+             if line.strip() and not line.lstrip().startswith(";")]
+    points = [(0.0, 0.0)] + [(float(t), float(f)) for t, f in lines[1:]]
+    return sum((t1 - t0) * (f0 + f1) / 2.0
+               for (t0, f0), (t1, f1) in zip(points, points[1:]))
+
+
+IMPULSE_PER_MOTOR_NS = motor_impulse_ns(Path(__file__).resolve().with_name("M1670.eng"))
 
 
 def fly(aircraft, sep_time=None, closed_loop=True, ignite_all=False, t_max=200.0):
     fdm = jsbsim.FGFDMExec(ROOT)
     fdm.set_debug_level(0)
-    fdm.load_model(aircraft)
+    require(fdm.load_model(aircraft), "model load")
     fdm.set_dt(DT)
-    fdm.load_ic("reset", True)
-    fdm.run_ic()
+    require(fdm.load_ic("reset", True), "initial conditions load")
+    require(fdm.run_ic(), "initial conditions execution")
+    fdm.disable_output()
 
     if not closed_loop:
         fdm["fcs/target-apogee-ft"] = NO_BRAKE_TARGET
@@ -42,7 +54,7 @@ def fly(aircraft, sep_time=None, closed_loop=True, ignite_all=False, t_max=200.0
                 fdm["propulsion/engine[1]/set-running"] = 1
                 fdm["fcs/throttle-cmd-norm[1]"] = 1.0
             lit = True
-        fdm.run()
+        run_checked(fdm)
         h = fdm["position/h-agl-ft"]
         if h > apogee:
             apogee = h
@@ -61,6 +73,8 @@ def fly(aircraft, sep_time=None, closed_loop=True, ignite_all=False, t_max=200.0
             t_last_thrust = fdm["simulation/sim-time-sec"]
         if fdm["simulation/sim-time-sec"] > 5.0 and h < 1.0:
             break
+    if not (fdm["simulation/sim-time-sec"] > 5 and fdm["position/h-agl-ft"] < 1):
+        raise RuntimeError(f"{aircraft}: landing not reached by {t_max}s")
     return apogee, maxq, vmax, t_last_thrust
 
 
@@ -91,13 +105,9 @@ def main():
 
     rows = []
     for label, ac, sep, closed, motors in cases:
-        try:
-            apogee, maxq, vmax, t_thrust = fly(
-                ac, sep_time=sep, closed_loop=closed,
-                ignite_all=ac.endswith("cluster"))
-        except Exception as e:
-            print(f"{label:32s}  ERROR: {e}")
-            continue
+        apogee, maxq, vmax, t_thrust = fly(
+            ac, sep_time=sep, closed_loop=closed,
+            ignite_all=ac.endswith("cluster"))
         impulse = IMPULSE_PER_MOTOR_NS * motors
         eff = apogee / (impulse / 1000.0)
         rows.append((label, impulse, apogee, eff, maxq, vmax, t_thrust))
@@ -125,8 +135,9 @@ def main():
     r_open = get("series, open loop")
     r_closed = get("series, closed loop")
 
-    print("DECOMPOSITION - three vehicles at 12084 N.s")
-    print("  cluster   two motors together, one airframe, nothing dropped")
+    print(f"ARCHITECTURE COMPARISON - three vehicles at {2 * IMPULSE_PER_MOTOR_NS:.2f} N.s")
+    print("  cluster   idealized simultaneous thrust on a common centerline")
+    print("            packaging and two-motor mounting are not resolved")
     print("  series    two motors in sequence, one airframe, nothing dropped")
     print("  two stage two motors in sequence, two airframes, one dropped")
     print()
@@ -136,7 +147,7 @@ def main():
         print(f"  thrust profile effect, cluster minus series : {d:+9.1f} ft")
     if r_open and t_open:
         d = t_open[2] - r_open[2]
-        print(f"  PURE STAGING EFFECT,   two stage minus series: {d:+9.1f} ft"
+        print(f"  architecture comparison, two stage minus series: {d:+9.1f} ft"
               f"   ({100.0 * d / r_open[2]:+.1f}%)")
         print()
         if d > 0:
@@ -175,9 +186,9 @@ def main():
     if a.csv_out:
         with open(a.csv_out, "w", newline="") as f:
             w = csv.writer(f)
-            w.writerow(["configuration", "impulse_Ns", "apogee_ft", "ft_per_kNs"])
+            w.writerow(["configuration", "impulse_Ns", "apogee_ft", "ft_per_kNs", "max_q_psf", "max_speed_fps", "burn_end_s"])
             for r in rows:
-                w.writerow([r[0], f"{r[1]:.0f}", f"{r[2]:.1f}", f"{r[3]:.1f}"])
+                w.writerow([r[0], f"{r[1]:.2f}", f"{r[2]:.9f}", f"{r[3]:.9f}", f"{r[4]:.9f}", f"{r[5]:.9f}", f"{r[6]:.9f}"])
         print(f"\nwrote {a.csv_out}")
 
 

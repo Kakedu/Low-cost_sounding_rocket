@@ -1,0 +1,162 @@
+{
+  "status": "SUCCESS",
+  "recorded_utc": "2026-10-11T12:19:51.776987+00:00",
+  "command": "python val/validation_mc.py",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "jsbsim": "1.3.1",
+  "monte_carlo": [
+    {
+      "case": "prometheus",
+      "n": 200,
+      "seed": 7,
+      "completed": 200,
+      "failures": 0,
+      "endpoint": "ground",
+      "result": "prom_mc.json",
+      "sha256": "ccee5408bbee409ba2566ed409779465549561cda546de66c14987f2df09b414"
+    },
+    {
+      "case": "cavour",
+      "n": 200,
+      "seed": 11,
+      "completed": 200,
+      "failures": 0,
+      "endpoint": "post-apogee",
+      "result": "cavour_mc.json",
+      "sha256": "9af802490d4da055ffa5de3902906d10147bbea2268541dd5310bdae7671bd95"
+    }
+  ],
+  "nominal_and_checks": {
+    "prometheus_0.001": {
+      "apogee_m": 4259.552950075875,
+      "t_apogee_s": 29.364099999999976,
+      "burnout_s": 4.894099999999815,
+      "impulse_Ns_after_rail": 6986.816170918177,
+      "dt_s": 0.001,
+      "delta_T_K": 19.250000000000696
+    },
+    "prometheus_0.0005": {
+      "apogee_m": 4259.6689239331845,
+      "t_apogee_s": 29.364099999999976,
+      "burnout_s": 4.895600000000194,
+      "impulse_Ns_after_rail": 6986.814756223082,
+      "dt_s": 0.0005,
+      "delta_T_K": 19.250000000000696
+    },
+    "prometheus_0.00025": {
+      "apogee_m": 4259.727108737309,
+      "t_apogee_s": 29.364099999999976,
+      "burnout_s": 4.896349999999743,
+      "impulse_Ns_after_rail": 6986.814359381067,
+      "dt_s": 0.00025,
+      "delta_T_K": 19.250000000000696
+    },
+    "prometheus_isp_scale_test": {
+      "expected_Ns": 8336.989441550002,
+      "integrated_Ns": 8336.991642871168,
+      "rel_error": 2.6404269570790007e-07,
+      "burnout_s": 5.383799999999977
+    },
+    "cavour_0.001": {
+      "apogee_m": 2801.2609741215942,
+      "t_apogee_s": 22.47419999999996,
+      "burnout_s": 3.7961999999997094,
+      "impulse_Ns_after_rail": 3072.7459093003936,
+      "dt_s": 0.001,
+      "delta_T_K": 7.500000000000249
+    },
+    "cavour_0.0005": {
+      "apogee_m": 2801.326595463706,
+      "t_apogee_s": 22.47419999999996,
+      "burnout_s": 3.798200000000224,
+      "impulse_Ns_after_rail": 3072.7457109521097,
+      "dt_s": 0.0005,
+      "delta_T_K": 7.500000000000249
+    },
+    "cavour_0.00025": {
+      "apogee_m": 2801.3594187332505,
+      "t_apogee_s": 22.47419999999996,
+      "burnout_s": 3.799199999999499,
+      "impulse_Ns_after_rail": 3072.7456320561523,
+      "dt_s": 0.00025,
+      "delta_T_K": 7.500000000000249
+    },
+    "cavour_isp_scale_test": {
+      "expected_Ns": 3979.7780000000002,
+      "integrated_Ns": 3979.778228774132,
+      "rel_error": 5.748414411144154e-08,
+      "burnout_s": 4.176299999999667
+    },
+    "prometheus_calibration_proxy": {
+      "apogee_m": 4185.761730575593,
+      "dT_K": 17.1,
+      "role": "apogee/pressure-informed calibration with a 2023 proxy wind; not independent validation"
+    }
+  },
+  "inputs_sha256": {
+    "motor_model.py": "e9d566135a0ff66464acc45ecd56c68dca0dc5a544765f6e0f9ffc996d0caad2",
+    "atmosphere_model.py": "bf26ec9195d0f353b3277dae97684f67b774cfa869e9a66547bb7b0cf9483129",
+    "val/prepare_prometheus_weather.py": "58760a581e9602985385173f19afcc8b49474d9c3b177519be39b655f7c74e28",
+    "val/build_prometheus.py": "bc9bb1ed164d1cca49ed70175d5ef54b08d8d7980b716166effd9660da87292d",
+    "val/run_prometheus.py": "2c9748d6d63c083cbcb3a86934e609f10cfd3e62148fdfb0f411fcd3ab8ab5d6",
+    "val/build_cavour.py": "968ffd4d24c59d6c9e505b79c341ccc7043d1e6f5a06164c2d1337182d4deb2f",
+    "val/run_cavour.py": "17cc07a40a6d9e2d82e576d75bbe7bb56ac7e36411cdc3e14f9b756373b732bc",
+    "val/gps_check.py": "1324f57fedb9dda2a1bc4deb96a1f0c4abb028c2808e0790a6a4c8fccd9b5c15",
+    "val/cavour_check.py": "47a05d344506e055cab288a3f7ce30a56120085540e63f1a362fea3a3cb0a833",
+    "val/validation_atmosphere.py": "6ff6b8e8f40f00667ff0a28c2166e5d462d17cb33b803bb47be0c8a2f628305a",
+    "val/validation_mc.py": "fc806e7df6a38edab1e89a1d870c25b886159e7573b4641fa71d4863a1f53522",
+    "val/prometheus_inputs_2022.json": "f6fdb38b3fc85fa88ad2b29fea6b7a591220321760fe6390d00a9e92625b2a79",
+    "val/prometheus_inputs.json": "d503ccb23b2d170a9cd55a94c99eb8d049c83788996e2b57a342b15764e30616",
+    "val/data/2022-06-24-serial-5115-flight-0001-TeleMetrum.csv": "9fe8d17a25e7944267b34a45ed955303afd5818b3f18479a5f7ffb31a574cecf",
+    "val/data/2022-06-24-serial-6583-flight-0003-TeleMega.csv": "befe40714e6b88b3bd5af8cd51b569a94544c486ced299878f66ab264f9105a6",
+    "val/data/Cesaroni_7579M1520-P.eng": "f38ad06972a07e4ef04164a60718f099d732de6e433185e211dd87083f89e4ca",
+    "val/data/prometheus_2022_igra_excerpt.txt": "ca64b7dfb59f7a2c075b5477c6d5c7ff05703402db0f1019aed55f5d84b2f2bc",
+    "val/data/prometheus_sounding_2022062412.csv": "04752e1e952397e608c2bbf90d3386efbf98a8f81d881b10ca9451a8ba82f137",
+    "val/data/prometheus_sounding_2022062500.csv": "143a474ffc5439ac1a1085bf902e7ad2afa421dd3004d2ca781bd65f55748a30",
+    "val/data/spaceport_america_pressure_levels_2023_hourly.nc": "25d48e9d03554251dc2d0601dcaa1e441ca7e7c502f573fceb4ce5c058da8694",
+    "val/data/cavour/altimeter_cavour.csv": "f912724676eea0ca9ba031c3779e48f861538814170b050b7bda2887c31f29a8",
+    "val/data/cavour/Cesaroni_3618L995-P.eng": "efc04492a3527bdb626d8ec0c18bbbd51f02012393d3b82e00b11d167b2dad2b",
+    "val/data/cavour/drag_coefficient_power_off.csv": "e47b9398b9e7802ac2f6edafe291edc1015fbb1ee6cb02df52404cf1b276f1c9",
+    "val/data/cavour/drag_coefficient_power_on.csv": "5f588e25e43b843470e1882f35e2a3be0b7f1760c6652da0c757ad203e7469ed",
+    "val/data/cavour/euroc_2023_all_windows.nc": "a3d9e08eb3bb4480d1b8ef03b06878a1a1f76397fdc9dcc929fe5cc856f61d56"
+  },
+  "output_sha256": {
+    "results_revised/validation/build_info.json": "b749b3c948a2ae1bf8224c2dc3363aba6600ebfe8c7dabda0b0ebb1af079e9f9",
+    "results_revised/validation/build_info_cavour.json": "919904c2b2161ede26c4ecb138f1407d3f9a36b31df0df41d428b847a8e506fc",
+    "results_revised/validation/cavour_check.json": "8577c5c55476199661724f574d2776f13330364eccb1c2531bbfadeb8dcf9699",
+    "results_revised/validation/cavour_check.py.log": "daebb10235903eb58067318464e89e9b55626c5ce75f59f5b1dfdb0f35c97a2d",
+    "results_revised/validation/cavour_mc.json": "9af802490d4da055ffa5de3902906d10147bbea2268541dd5310bdae7671bd95",
+    "results_revised/validation/convergence_and_scaling.json": "6887a849e486cb2c00ae24af56609ee2390d1c39203dc300f38079df9efec8dd",
+    "results_revised/validation/gps_check.json": "c7cb61465f562d83870805a9f96a25192e9d10cbc77dfc3f616b08203c4bbd45",
+    "results_revised/validation/gps_check.py.log": "454e439c15fa515a3640838168609a9c69e8fbbf80d67745e7c37617165121fa",
+    "results_revised/validation/prom_mc.json": "ccee5408bbee409ba2566ed409779465549561cda546de66c14987f2df09b414",
+    "results_revised/validation/cavour_dt_0.00025/build_info.json": "64b54e4384bb7f031cdb633991e28122296bdfae96abbf722fbe68ad5bcdc946",
+    "results_revised/validation/cavour_dt_0.00025/execution.json": "6e8a6cf64165c36470fb31085280ff3e9b7715ed45bd72d9624a266a2db51617",
+    "results_revised/validation/cavour_dt_0.00025/result.json": "9f0131d4c7b38a7c7c9bcb0099ea1cdccdd782ca34c45751f544582ffecfa373",
+    "results_revised/validation/cavour_dt_0.0005/build_info.json": "1a51e7f7f81768519f9b8f29e45f81d2a695d25f05da50d1a0690e9a7bfae8bd",
+    "results_revised/validation/cavour_dt_0.0005/execution.json": "9ad5e57ae44ec0fe8abbcac6963da06e2710cce2f3f3bd9e109272339e8996f0",
+    "results_revised/validation/cavour_dt_0.0005/result.json": "79b444e308282e27fb540f8308c4cfd20e3598c45f19869d29369f2f3209c088",
+    "results_revised/validation/cavour_dt_0.001/build_info.json": "919904c2b2161ede26c4ecb138f1407d3f9a36b31df0df41d428b847a8e506fc",
+    "results_revised/validation/cavour_dt_0.001/execution.json": "6b24f40d3bece4232a4757ace46c3fcab2f5d019ee67c77b74152761114b6602",
+    "results_revised/validation/cavour_dt_0.001/result.json": "26bdab73ef57c171cdfe393fe1253263a6eb044b9c824643bc6b9370e1b1da53",
+    "results_revised/validation/cavour_isp_1p1/build_info.json": "8ab62e5b54ea84c8f6481adbb3be3866338936f46666bfaf94cd5010ffbe738a",
+    "results_revised/validation/cavour_isp_1p1/execution.json": "ad77201bc40bb9e7d7dda78bc75de168e6c2c0cc1f008e8f79bb5c64864eb0c6",
+    "results_revised/validation/cavour_isp_1p1/result.json": "aa971a4d775a55d4a9d173e9dd5adf3a3f7e412e0ea0d9d3d857259cd61897ec",
+    "results_revised/validation/prometheus_2023_flight_calibrated/build_info.json": "a81907bef80808855170f51aa985fc5f2ce31682313c80c94416544b41eb5e71",
+    "results_revised/validation/prometheus_2023_flight_calibrated/execution.json": "1f1390c17e23106d4ce6666df9bd5079d1cf1f32e2e4e76fe3cd833004faf88b",
+    "results_revised/validation/prometheus_2023_flight_calibrated/result.json": "b0c89639b393435af04f1cad805bf5dd3cb34ffab68d7c435f301a58e3fac52a",
+    "results_revised/validation/prometheus_dt_0.00025/build_info.json": "51357b5bb9a9933f11d873c6654df2bc2874bcd93b1177a76fe13616c58c32a3",
+    "results_revised/validation/prometheus_dt_0.00025/execution.json": "d66b41e8ca0548109e60bec1d8b8c29aab26b75e180b63bc088e47b83ff3ca4b",
+    "results_revised/validation/prometheus_dt_0.00025/result.json": "4ca2970914a495ff1052f46f5b5d7c80ed48a1f6bf2fb5c0cca0eba490e42fff",
+    "results_revised/validation/prometheus_dt_0.0005/build_info.json": "531783c36c20890f85ef8eb0f007bf6951cd95e466a0529db2ea0de29a466da0",
+    "results_revised/validation/prometheus_dt_0.0005/execution.json": "f5cf3853ba923c7737122e6023104cb0be845e1acfd8f6dfd8baccca3597ef8f",
+    "results_revised/validation/prometheus_dt_0.0005/result.json": "054f961041f732b388822edfc967e9f08bf9cf68381de6472d1abda7e505a829",
+    "results_revised/validation/prometheus_dt_0.001/build_info.json": "b749b3c948a2ae1bf8224c2dc3363aba6600ebfe8c7dabda0b0ebb1af079e9f9",
+    "results_revised/validation/prometheus_dt_0.001/execution.json": "993ab489757d3779184db21c78f7c10da3cc057416f0940a700d791733359008",
+    "results_revised/validation/prometheus_dt_0.001/result.json": "bfa42b31dd0850708214346283b274afe73d1ddaf3926fa7a50c1416310ca1a4",
+    "results_revised/validation/prometheus_isp_1p1/build_info.json": "0afc713c953f458ed74451a7a25902ca778144ef5c95361ebdffd7ce9496f80b",
+    "results_revised/validation/prometheus_isp_1p1/execution.json": "4f9730c825304dce95b18e942224440a556a587f0d1d05ff342cd9d68b4d648e",
+    "results_revised/validation/prometheus_isp_1p1/result.json": "3ec5c3d1daba5d2d92cafc44977cdb4b01c53f8c35d3e5290101c8910dfd0c8f"
+  },
+  "source_qualification": "Weather from independent 2022 regional IGRA observations and launch-hour 2023 ERA5. Assigned extra uncertainty distributions are conditional assumptions; no universal accuracy or physical certification is claimed."
+}

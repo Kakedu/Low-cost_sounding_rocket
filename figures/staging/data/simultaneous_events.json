@@ -1,0 +1,112 @@
+{
+  "case": "simultaneous",
+  "configuration": {
+    "aircraft": "myrocket_cluster",
+    "label": "Simultaneous",
+    "coast_s": null,
+    "ignite_both": true,
+    "engine_tanks": [
+      0,
+      1
+    ],
+    "reference": "cluster, open loop"
+  },
+  "status": "SUCCESS",
+  "initial_conditions": {
+    "ic/theta-deg": 89.00000000000047,
+    "ic/psi-true-deg": 0.0,
+    "position/h-agl-ft": 4.3500000014576,
+    "inertia/weight-lbs": 57.163069500706094,
+    "atmosphere/wind-north-fps": 0.0,
+    "atmosphere/wind-east-fps": 0.0
+  },
+  "integration_dt_s": 0.001,
+  "saved_trace_dt_s": 0.002,
+  "full_near_ground_endpoint": {
+    "t_s": 74.3389999999909,
+    "h_agl_ft": 0.7802502306129634,
+    "v_vertical_fps": -678.9282140157495,
+    "mach": 0.6081158255256606,
+    "qbar_psf": 547.798529280253,
+    "weight_lb": 43.489999999999995,
+    "thrust0_lbf": 0.0,
+    "thrust1_lbf": 0.0,
+    "fuel0_lb": 0.0,
+    "fuel1_lb": 0.0,
+    "pitch_deg": -89.8247640290927,
+    "brake_position": 0.0,
+    "staged": 0.0,
+    "second_ignition_flag": 1.0,
+    "lockout": 0.0
+  },
+  "apogee_ft": 20189.640130667078,
+  "reference_apogee_ft": 20189.640130667078,
+  "apogee_difference_ft": 0.0,
+  "reference_result_path": "results_revised/stage_compare_v6.csv",
+  "events": {
+    "motor1_ignition_command": {
+      "observed_time_s": 0.0
+    },
+    "motor2_ignition_command": {
+      "observed_time_s": 0.0
+    },
+    "motor1_first_positive_thrust": {
+      "observed_time_s": 0.001,
+      "h_agl_ft": 4.3500000373576455,
+      "v_vertical_fps": -0.032114103611703734,
+      "definition": "First observed thrust > 0 lbf"
+    },
+    "motor2_first_positive_thrust": {
+      "observed_time_s": 0.001,
+      "h_agl_ft": 4.3500000373576455,
+      "v_vertical_fps": -0.032114103611703734,
+      "definition": "First observed thrust > 0 lbf"
+    },
+    "motor1_propellant_depleted": {
+      "observed_time_s": 3.8999999999996815,
+      "h_agl_ft": 3401.698850976513,
+      "v_vertical_fps": 1439.5731036797765,
+      "definition": "First observed feeding-tank contents < 1e-10 lb"
+    },
+    "motor2_propellant_depleted": {
+      "observed_time_s": 3.8999999999996815,
+      "h_agl_ft": 3401.698850976513,
+      "v_vertical_fps": 1439.5731036797765,
+      "definition": "First observed feeding-tank contents < 1e-10 lb"
+    },
+    "apogee": {
+      "observed_time_s": 34.015000000011426,
+      "h_agl_ft": 20189.640130667078,
+      "v_vertical_fps": 0.005092985958443208,
+      "definition": "Maximum h-agl-ft over 1 ms integration states"
+    }
+  },
+  "last_individual_thrust_gt1_lbf_s": [
+    3.894999999999682,
+    3.894999999999682
+  ],
+  "last_combined_thrust_gt1_lbf_s": 3.8979999999996817,
+  "runtime_s": 1.3560673000029055,
+  "csv_path": "D:\\AAAAA\\2\\ENGG7340\\2026-10-12\\work\\supervisor_revision_2026-10-28\\staging_figure\\data\\simultaneous_trajectory.csv",
+  "csv_sha256": "5c2f5476c5e24935a2489e2197f62f10d5c6bfc29b17c6ea789e4dea42e2d8ce",
+  "actual_modules": {
+    "stage_compare": {
+      "file": "D:\\AAAAA\\2\\ENGG7340\\2026-10-12\\work\\supervisor_revision_2026-10-28\\staging_figure\\source_snapshot\\stage_compare.py",
+      "sha256": "52b876a557631a46ba7235ae18a9d5fa1ea597852e0275ce185c361de1c1f30f"
+    },
+    "flight_checks": {
+      "file": "D:\\AAAAA\\2\\ENGG7340\\2026-10-12\\work\\supervisor_revision_2026-10-28\\staging_figure\\source_snapshot\\flight_checks.py",
+      "sha256": "4ec4baf3d4e1ab987232e9b1e73af9d0316cf5bf69c3c2636431590270c109d6"
+    },
+    "jsbsim": {
+      "file": "D:\\AAAAA\\2\\ENGG7340\\2026-10-12\\work\\audit_deps\\jsbsim\\__init__.py",
+      "version": "1.3.1"
+    },
+    "numpy": {
+      "file": "D:\\AAAAA\\2\\ENGG7340\\2026-10-12\\work\\audit_deps\\numpy\\__init__.py",
+      "version": "2.5.4"
+    }
+  },
+  "actual_aircraft_path": "D:\\AAAAA\\2\\ENGG7340\\2026-10-12\\work\\supervisor_revision_2026-10-28\\staging_figure\\data\\simultaneous\\aircraft\\myrocket_cluster\\myrocket_cluster.xml",
+  "actual_aircraft_sha256": "e26f31ad9f7d8e9a8d70f0186de7385a9c44e0151f824015291310a5133e2aaa"
+}

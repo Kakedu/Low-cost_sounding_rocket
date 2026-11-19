@@ -1,0 +1,12 @@
+{
+  "atmosphere": "JSBSim fixed sea-level pressure and temperature-offset hydrostatic troposphere",
+  "altitude": "geometric; ERA5 geopotential converted with radius 6356766m",
+  "fit": "unweighted density least squares from pad to pad+3000m at 100m spacing",
+  "temperature_search_K": [
+    -60,
+    80
+  ],
+  "quantile": "numpy linear percentile",
+  "persistence": "exact timedifference including midnight",
+  "site_selection": "original fixed local launch windows; site-year subsets are not a universal prior"
+}

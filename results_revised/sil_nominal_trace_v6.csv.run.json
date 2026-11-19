@@ -1,0 +1,96 @@
+{
+  "job": {
+    "name": "sil_nominal_trace_v6.csv",
+    "kind": "trace"
+  },
+  "status": "SUCCESS",
+  "completed": null,
+  "output": "rq2_revision2/nominal_trace_v3/sil_nominal_trace_v6.csv",
+  "sha256": "b2b9f4991786ad139ed1103ca6b4b43fe47266a33ceb2af8e141ba26742b41a8",
+  "nominal_result": {
+    "apogee": 10006.332143531583,
+    "h_rms_m": 3.895115217205567,
+    "v_rms_ms": 1.0907271447134002,
+    "cd_rms": 0.045741452696179234,
+    "h_gate_rms_m": 3.445701053167717,
+    "v_gate_rms_ms": 0.4106307321292482,
+    "h_max_abs_m": 9.936856982576444,
+    "v_max_abs_ms": 4.697317832150503,
+    "cd_low_mach_rms": 0.04620257101763429,
+    "attitude_rms_deg": 0.42016023615663534,
+    "t_apogee": 25.200000000007815,
+    "t_land": 205.20200000061575,
+    "ascent_sensor_samples": 1260,
+    "gate_sensor_samples": 1049,
+    "cd_projected_updates": 0,
+    "coast_guard_s": 4.1925,
+    "controller_coast_detected_s": 4.239999999999751,
+    "filter_coast_detected_s": 4.2399999999999975,
+    "baro_updates": 1260,
+    "accel_updates": 1049,
+    "baro_rejections": 0,
+    "accel_rejections": 0,
+    "baro_max_nis": 11.146761849595249,
+    "accel_max_nis": 8.79837380021768,
+    "cd_true": 0.45,
+    "dT_est": 0.5990751568240298,
+    "port_cp": 0.014286741476526733,
+    "acc_scale": 0.9888775685835882,
+    "acc_bias": -0.018598213597010162,
+    "baro_err_max_m": 53.78253848912277
+  },
+  "source_snapshot": "rq2_revision2/nominal_trace_v3/source",
+  "source_hashes": {
+    "atmosphere_model.py": "bf26ec9195d0f353b3277dae97684f67b774cfa869e9a66547bb7b0cf9483129",
+    "motor_build_info.json": "c1a31d0e831ef89742c7e28fae195396aec2c3052345f1ec231734c09162669b",
+    "motor_model.py": "e9d566135a0ff66464acc45ecd56c68dca0dc5a544765f6e0f9ffc996d0caad2",
+    "sil.py": "cad0e80b7bc0b611869082be8d558ce9f44c5a1e4e27779e558c0e67b09f3230",
+    "study_protocol.json": "5620f1bab2ff6d7a2d50607139ab55b7b83dc9749d56fa0f9210b37b04d4ad7f",
+    "sweep.py": "3cd7afe70c160dac07175d0a86ea35b600e81aafc5a9994b59c8bf35a6b417df",
+    "engine/direct.xml": "246b69d6edc7acfca84395ba5f53b5d7e03409d5ebcf7c89b2c369907a703b24",
+    "engine/M1670.xml": "0160cd7dd8e647791d6323b3d818fa7ff86d99bbbc79e9690d2ee4292f829dc2",
+    "kf/attitude_sensor.py": "696783b128f9276d6fa8b6600b2ec895c236fa8ce41ffd959c49f2dff028b340",
+    "kf/kf_estimator.py": "0e6a33af646e763a16413baf2a98bbc3669f54f408ac8e91dc106bbf21e19780",
+    "kf/test_attitude_sensor.py": "d704e1286990ff62ce1114099962da2c98a570d59466f99d20d21f7f08c727f3",
+    "kf/test_drag_projection.py": "f07e358558b7f67bf99f3db8b049ead49e84471ae285da351db58df32d8ed2ae",
+    "kf/test_kf.py": "5f4d4bedb144e761fe20cce24afe2b969b8e00eb32549e0c90a33521fa5f3e0e",
+    "scripts/launch.xml": "663ab351071e43b16cf1e775e0be5e8afa17c15597370fc8097acbf7e2cc2936",
+    "aircraft/myrocket/myrocket.xml": "5e1c037aa3dddbef8f63bd2502bd0e82a8f2c8a1ee7cc3891e8be48adea22797",
+    "aircraft/myrocket/reset.xml": "bab1ee5bddb92266599429547598210dcbf12374701da6ded108d9524fcf9539",
+    "aircraft/myrocket2/myrocket2.xml": "fe0f7222cfb44ca8d289ec1d417a4a29a5fc44ec9fc9827237ecf05b5146682f",
+    "aircraft/myrocket2/reset.xml": "a6d5e79ff0312edc13f340299cefe066948021ed9468e9141d4e2e55532290db",
+    "aircraft/myrocket_cluster/myrocket_cluster.xml": "bae2d27ec11f0183475edf6eaad2b42d87e342c09191933bbe8d1d719e718695",
+    "aircraft/myrocket_cluster/reset.xml": "19867bc90ac91a71b13429601e7eb1b73f37ce137e757463f7289997393e5b2d",
+    "aircraft/myrocket_series/myrocket_series.xml": "24907fb8c23c8b1b67c7c825df061a54b6ba4a16b27998e6498a288252555e6b",
+    "aircraft/myrocket_series/reset.xml": "19867bc90ac91a71b13429601e7eb1b73f37ce137e757463f7289997393e5b2d"
+  },
+  "loaded_sources": {
+    "sil": {
+      "file": "C:\\Users\\Haoran Du\\Documents\\Codex\\2026-10-11\\ban\\work\\revision2_project\\rq2_revision2\\nominal_trace_v3\\source\\sil.py",
+      "relative_path": "sil.py",
+      "sha256": "cad0e80b7bc0b611869082be8d558ce9f44c5a1e4e27779e558c0e67b09f3230"
+    },
+    "sweep": {
+      "file": "C:\\Users\\Haoran Du\\Documents\\Codex\\2026-10-11\\ban\\work\\revision2_project\\rq2_revision2\\nominal_trace_v3\\source\\sweep.py",
+      "relative_path": "sweep.py",
+      "sha256": "3cd7afe70c160dac07175d0a86ea35b600e81aafc5a9994b59c8bf35a6b417df"
+    },
+    "kf_estimator": {
+      "file": "C:\\Users\\Haoran Du\\Documents\\Codex\\2026-10-11\\ban\\work\\revision2_project\\rq2_revision2\\nominal_trace_v3\\source\\kf\\kf_estimator.py",
+      "relative_path": "kf/kf_estimator.py",
+      "sha256": "0e6a33af646e763a16413baf2a98bbc3669f54f408ac8e91dc106bbf21e19780"
+    },
+    "kf.attitude_sensor": {
+      "file": "C:\\Users\\Haoran Du\\Documents\\Codex\\2026-10-11\\ban\\work\\revision2_project\\rq2_revision2\\nominal_trace_v3\\source\\kf\\attitude_sensor.py",
+      "relative_path": "kf/attitude_sensor.py",
+      "sha256": "696783b128f9276d6fa8b6600b2ec895c236fa8ce41ffd959c49f2dff028b340"
+    },
+    "atmosphere_model": {
+      "file": "C:\\Users\\Haoran Du\\Documents\\Codex\\2026-10-11\\ban\\work\\revision2_project\\rq2_revision2\\nominal_trace_v3\\source\\atmosphere_model.py",
+      "relative_path": "atmosphere_model.py",
+      "sha256": "bf26ec9195d0f353b3277dae97684f67b774cfa869e9a66547bb7b0cf9483129"
+    }
+  },
+  "runner_sha256": "c54916a5c3e16847a91886f8ec0709cda2b52047714d88e5b6c5b221ad943f1e",
+  "elapsed": 2.0013604164123535
+}

@@ -1,0 +1,192 @@
+{
+  "created_utc": "2026-10-27T05:50:34.712974+00:00",
+  "source_package": "D:\\AAAAA\\2\\ENGG7340\\Codex_修订与复跑_2026-10-12\\work\\final_package_v2",
+  "thesis_sha256": "b0ebf1048474f5f1c3cbb4d9d162a479324221ebeb70a811f60f74916c3375bd",
+  "thesis_pdf_sha256": "3936bb81c3e88df8fa682ae1538a3d8b98890e9beae7819e5c029e9f66b1a019",
+  "unit_metadata_supplement_sha256": "8897b51377eeb159f4775f464e448c88dfe825c75fcd180f475478d74c3b98f7",
+  "changes": [
+    {
+      "path": "aircraft/myrocket/myrocket.xml",
+      "source_sha256": "5e1c037aa3dddbef8f63bd2502bd0e82a8f2c8a1ee7cc3891e8be48adea22797",
+      "packaged_sha256": "490444d3490caaae120bd81bb8da8c8c38395201ff32423d53917a3373d69bb0",
+      "change": "Output caption only: pitch rate is rad/s. All numerical model definitions are unchanged.",
+      "details": [
+        {
+          "property": " velocities/q-rad_sec         ",
+          "old_attributes": {
+            "caption": "Pitch rate (deg/s)   "
+          },
+          "new_attributes": {
+            "caption": "Pitch rate (rad/s)   "
+          }
+        }
+      ]
+    },
+    {
+      "path": "aircraft/myrocket2/myrocket2.xml",
+      "source_sha256": "fe0f7222cfb44ca8d289ec1d417a4a29a5fc44ec9fc9827237ecf05b5146682f",
+      "packaged_sha256": "49392f1a9b3161aea26bb00e9ae42a7513595f8e1fcbf00d4e598050b2a96d2e",
+      "change": "Output caption only: pitch rate is rad/s. All numerical model definitions are unchanged.",
+      "details": [
+        {
+          "property": " velocities/q-rad_sec         ",
+          "old_attributes": {
+            "caption": "Pitch rate (deg/s)   "
+          },
+          "new_attributes": {
+            "caption": "Pitch rate (rad/s)   "
+          }
+        }
+      ]
+    },
+    {
+      "path": "aircraft/myrocket_cluster/myrocket_cluster.xml",
+      "source_sha256": "bae2d27ec11f0183475edf6eaad2b42d87e342c09191933bbe8d1d719e718695",
+      "packaged_sha256": "e26f31ad9f7d8e9a8d70f0186de7385a9c44e0151f824015291310a5133e2aaa",
+      "change": "Output caption only: pitch rate is rad/s. All numerical model definitions are unchanged.",
+      "details": [
+        {
+          "property": " velocities/q-rad_sec         ",
+          "old_attributes": {
+            "caption": "Pitch rate (deg/s)   "
+          },
+          "new_attributes": {
+            "caption": "Pitch rate (rad/s)   "
+          }
+        }
+      ]
+    },
+    {
+      "path": "aircraft/myrocket_series/myrocket_series.xml",
+      "source_sha256": "24907fb8c23c8b1b67c7c825df061a54b6ba4a16b27998e6498a288252555e6b",
+      "packaged_sha256": "2647f47c5968f263b41c5ad15a55d3324f2f520d4113308b534fe8f1cea5f242",
+      "change": "Output caption only: pitch rate is rad/s. All numerical model definitions are unchanged.",
+      "details": [
+        {
+          "property": " velocities/q-rad_sec         ",
+          "old_attributes": {
+            "caption": "Pitch rate (deg/s)   "
+          },
+          "new_attributes": {
+            "caption": "Pitch rate (rad/s)   "
+          }
+        }
+      ]
+    },
+    {
+      "path": "plot_margin.py",
+      "source_sha256": "0249129e5e2f23e5af5ea55b668905c4bc1dbac3bcab77ba96a227baeab334ca",
+      "packaged_sha256": "7c1cf04a715e0be9ba0f1fe37328353e4b639f0d260e53f972b50db4de3c6c14",
+      "change": "Thesis legend label aligned; restore output to --dir/fig_margin_v6.png. Numerical CSVs and plotted series are unchanged."
+    },
+    {
+      "path": "results_revised/fig_margin_v6.png",
+      "source_sha256": "40c4b540ee7322f9e37a25609b508352f7f375d047279b2bab78793c08021960",
+      "packaged_sha256": "dc692c0da90f02fc7c58a6cb5e42c71b454c0d8319dea2dd4d98c5d94586f042",
+      "change": "Presentation label aligned with the final thesis; simulation CSVs and plotted series are unchanged."
+    },
+    {
+      "path": "verify_compiled_aero.py",
+      "source_sha256": "5f7d77ddc06f7126ba460f207ca7342c57964f76a1bc4a3bb130af55b2e192c6",
+      "packaged_sha256": "fddc41f17df3014f37fe28dcdec5f2b6592b1dc056c36f031b4e2bad2e1ee218",
+      "change": "CLI default paths only: read the Appendix C analytic report; write fresh sandbox/report under .reproduction. Numerical checks are unchanged.",
+      "matching_current_analytic_report": "results_revised/aero_check.json"
+    }
+  ],
+  "model_numerical_changes": false,
+  "simulation_results_recomputed": false,
+  "historical_snapshots_and_CSVs_modified": false,
+  "original_package_manifest": "provenance/executed_sources/delivery_manifest.json",
+  "omitted_document_layout_artifacts": [
+    {
+      "path": "provenance/document_attempt_history",
+      "reason": "Old Word authoring/formatting/visual-QA or narrative generation, not imported or invoked by physics/staging/load/validation entry points."
+    },
+    {
+      "path": "provenance/document_authoring_v2_source_review",
+      "reason": "Old Word authoring/formatting/visual-QA or narrative generation, not imported or invoked by physics/staging/load/validation entry points."
+    },
+    {
+      "path": "provenance/document_delivery_flow_independent_sources_v2",
+      "reason": "Old Word authoring/formatting/visual-QA or narrative generation, not imported or invoked by physics/staging/load/validation entry points."
+    },
+    {
+      "path": "provenance/document_flow_source_review",
+      "reason": "Old Word authoring/formatting/visual-QA or narrative generation, not imported or invoked by physics/staging/load/validation entry points."
+    },
+    {
+      "path": "provenance/document_review_records",
+      "reason": "Old Word authoring/formatting/visual-QA or narrative generation, not imported or invoked by physics/staging/load/validation entry points."
+    },
+    {
+      "path": "provenance/document_visual_review_before_v2",
+      "reason": "Old Word authoring/formatting/visual-QA or narrative generation, not imported or invoked by physics/staging/load/validation entry points."
+    },
+    {
+      "path": "provenance/revision2_document_review_records",
+      "reason": "Old Word authoring/formatting/visual-QA or narrative generation, not imported or invoked by physics/staging/load/validation entry points."
+    },
+    {
+      "path": "provenance/revision2_appendix_scientific_review_sources",
+      "reason": "Old Word authoring/formatting/visual-QA or narrative generation, not imported or invoked by physics/staging/load/validation entry points."
+    },
+    {
+      "path": "provenance/revision2_delivery_narrative",
+      "reason": "Old Word authoring/formatting/visual-QA or narrative generation, not imported or invoked by physics/staging/load/validation entry points."
+    },
+    {
+      "path": "provenance/document_authoring_v2_independent_review.json",
+      "reason": "Historical Word-only QA; does not establish current thesis DOCX QA and is not a runtime dependency."
+    },
+    {
+      "path": "provenance/document_authoring_v3_version_note.json",
+      "reason": "Historical Word-only QA; does not establish current thesis DOCX QA and is not a runtime dependency."
+    },
+    {
+      "path": "provenance/document_delivery_flow_independent_review_v2.json",
+      "reason": "Historical Word-only QA; does not establish current thesis DOCX QA and is not a runtime dependency."
+    },
+    {
+      "path": "provenance/document_delivery_flow_independent_review.json",
+      "reason": "Historical Word-only QA; does not establish current thesis DOCX QA and is not a runtime dependency."
+    },
+    {
+      "path": "provenance/document_qa_revision2.json",
+      "reason": "Historical Word-only QA; does not establish current thesis DOCX QA and is not a runtime dependency."
+    },
+    {
+      "path": "provenance/document_qa.json",
+      "reason": "Historical Word-only QA; does not establish current thesis DOCX QA and is not a runtime dependency."
+    },
+    {
+      "path": "provenance/toc_check_only_independent_review.json",
+      "reason": "Historical Word-only QA; does not establish current thesis DOCX QA and is not a runtime dependency."
+    },
+    {
+      "path": "provenance/word_figure_binding_independent_review.json",
+      "reason": "Historical Word-only QA; does not establish current thesis DOCX QA and is not a runtime dependency."
+    },
+    {
+      "path": "provenance/word_integration_independent_review.json",
+      "reason": "Historical Word-only QA; does not establish current thesis DOCX QA and is not a runtime dependency."
+    },
+    {
+      "path": "provenance/word_integration_independent_review.md",
+      "reason": "Historical Word-only QA; does not establish current thesis DOCX QA and is not a runtime dependency."
+    },
+    {
+      "path": "provenance/revision2_prose_page_review_source.py",
+      "reason": "Historical Word-only QA; does not establish current thesis DOCX QA and is not a runtime dependency."
+    },
+    {
+      "path": "provenance/revision2_prose_page_review.json",
+      "reason": "Historical Word-only QA; does not establish current thesis DOCX QA and is not a runtime dependency."
+    },
+    {
+      "path": "provenance/revision2_appendix_scientific_review.json",
+      "reason": "Historical Word-only QA; does not establish current thesis DOCX QA and is not a runtime dependency."
+    }
+  ],
+  "omission_scope": "Old Word layout/editorial files are retained in the original workspace. Scientific model sources, run snapshots, protocols, raw CSVs and numerical results are retained in this package.",
+  "current_analytic_report_sha256": "3cf73492a24642667b8fdf9281a1d23dc251ad3420b5b4349dbd605505d8b147"
+}

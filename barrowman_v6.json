@@ -71,11 +71,13 @@
     "xcp_in": 53.046392257488144
    }
   ],
-  "margin_launch_cal": 1.9931633262994526,
-  "margin_burnout_cal": 3.495701397365443,
-  "cmq": -1072.9006297234741,
-  "cg_launch_in": 44.39,
-  "cg_burnout_in": 38.47
+  "aero_limitation": "Fin Mach correction clamped at M=0.8; no validated supersonic normal-force or CP model",
+  "cg_burnout_definition": "all propellant exhausted",
+  "margin_launch_cal": 1.9924184595587842,
+  "margin_burnout_cal": 3.4953481606706918,
+  "cmq": -1072.8758371376175,
+  "cg_launch_in": 44.392934774958235,
+  "cg_burnout_in": 38.47139175257732
  },
  "stack": {
   "name": "stack",
@@ -121,11 +123,13 @@
     "xcp_in": 82.70637499993013
    }
   ],
-  "margin_launch_cal": 2.0046886157310526,
-  "margin_burnout_cal": 2.0046886157310526,
-  "cmq": -3255.7355672238436,
-  "cg_launch_in": 74.04,
-  "cg_burnout_in": 74.04
+  "aero_limitation": "Fin Mach correction clamped at M=0.8; no validated supersonic normal-force or CP model",
+  "cg_burnout_definition": "booster burnout before separation",
+  "margin_launch_cal": 2.006127557277016,
+  "margin_burnout_cal": 4.990313422373665,
+  "cmq": -3341.5659493995986,
+  "cg_launch_in": 74.03433057030891,
+  "cg_burnout_in": 62.27663826182811
  },
  "cluster": {
   "name": "cluster",
@@ -171,11 +175,13 @@
     "xcp_in": 60.958962350807255
    }
   ],
-  "margin_launch_cal": 1.9941376835678317,
-  "margin_burnout_cal": 3.793630069354633,
-  "cmq": -1270.2995637574263,
-  "cg_launch_in": 52.16,
-  "cg_burnout_in": 45.07
+  "aero_limitation": "Fin Mach correction clamped at M=0.8; no validated supersonic normal-force or CP model",
+  "cg_burnout_definition": "all propellant exhausted",
+  "margin_launch_cal": 1.9948391414864681,
+  "margin_burnout_cal": 4.056984851888221,
+  "cmq": -1278.1702953921078,
+  "cg_launch_in": 52.15723625580057,
+  "cg_burnout_in": 44.03238215681766
  },
  "bl": {
   "delta_single_mm": 28.710819640881724,

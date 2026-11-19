@@ -10,11 +10,13 @@ LB2KG = 0.45359237
 FT2M = 0.3048
 LBF2N = 4.4482216
 PA2PSF = 0.0208854
+# This point-mass closure aligns thrust with air-relative velocity after rail exit.
+# It is a particular approximation, not an inherent property of every 3-DOF model.
 G = 9.80665
 
 DRY_LB = 38.8
-PROP_LB = 6.837
-ISP_S = 198.17
+PROP_LB = 3.101 / LB2KG
+ISP_S = 6026.35 / (3.101 * G)
 BURN_S = 3.9
 THRUST_CURVE = [(0.0, 0.0), (0.055, 100), (0.092, 1500), (0.1, 2000),
                 (0.15, 2200), (0.2, 1800), (0.5, 1950), (1.0, 2034),
@@ -22,8 +24,8 @@ THRUST_CURVE = [(0.0, 0.0), (0.055, 100), (0.092, 1500), (0.1, 2000),
                 (3.0, 1650), (3.3, 530), (3.4, 350), (3.9, 0.0)]
 
 
-def thrust_n(t):
-    tb = t - IGNITION_S
+def thrust_n(t, isp_scale=1.0):
+    tb = (t - IGNITION_S) / isp_scale
     if tb <= 0.0 or tb >= BURN_S:
         return 0.0
     for (t0, f0), (t1, f1) in zip(THRUST_CURVE, THRUST_CURVE[1:]):
@@ -108,6 +110,8 @@ def fly(brake_window=None, brake_level=0.0, dt=0.001):
     out = dict(qmax=0.0, t_qmax=0.0, mach_max=0.0)
 
     while st["vh"] >= 0.0 or t < IGNITION_S + 0.2:
+        if t > 150 or not all(math.isfinite(x) for x in (*st.values(), m)):
+            raise RuntimeError("Point-mass ascent endpoint not reached with finite state")
         f = thrust_n(t)
         m -= f / (ISP_S * G) * dt
 
@@ -138,9 +142,13 @@ def fly(brake_window=None, brake_level=0.0, dt=0.001):
 
 def coast_to_apogee(h, vx, vh, m, dt=0.002):
     st = dict(x=0.0, h=h, vx=vx, vh=vh, s=0.0, on_rail=False)
+    elapsed = 0.0
     while st["vh"] > 0.0:
+        if elapsed > 150 or not all(math.isfinite(x) for x in (*st.values(), m)):
+            raise RuntimeError("Point-mass coast endpoint not reached with finite state")
         v = math.hypot(st["vx"], st["vh"])
         _step(st, 0.0, cd_of_mach(v / a_sound(st["h"])), m, dt)
+        elapsed += dt
     return st["h"]
 
 
@@ -149,7 +157,7 @@ MAIN_CDA_FT2 = 81.6
 MAIN_ALT_FT = 1500.0
 
 
-def fly3(elev_deg=None, wind_n=0.0, wind_e=0.0, dt=0.002, descent=True):
+def fly3(elev_deg=None, wind_n=0.0, wind_e=0.0, dt=0.002, descent=True, t_max=600.0):
     th = math.radians(ELEV_DEG if elev_deg is None else elev_deg)
     area = S_FT2 * 0.09290304
     m = (DRY_LB + PROP_LB) * LB2KG
@@ -159,7 +167,9 @@ def fly3(elev_deg=None, wind_n=0.0, wind_e=0.0, dt=0.002, descent=True):
     burn_end = IGNITION_S + BURN_S
     apo = None
     cda = 0.0
-    while True:
+    while t < t_max:
+        if not all(math.isfinite(x) for x in (n,e,h,vn,ve,vh,m)):
+            raise RuntimeError("Point-mass integration produced non-finite state")
         f = thrust_n(t)
         m -= f / (ISP_S * G) * dt
         if on_rail:
@@ -197,6 +207,8 @@ def fly3(elev_deg=None, wind_n=0.0, wind_e=0.0, dt=0.002, descent=True):
                 break
         if apo is not None and h <= 0.0:
             break
+    else:
+        raise RuntimeError(f"Point-mass endpoint not reached by {t_max}s")
     out = dict(apogee_ft=apo[0], apo_n=apo[1], apo_e=apo[2])
     if descent:
         out.update(land_n=n, land_e=e, land_dist=math.hypot(n, e), t_land=t)
@@ -315,12 +327,12 @@ def _closed_loop(estimator, kp=0.001, target_ft=10000.0, k_cd=1.0, k_T=1.0,
                  k_m=1.0, rate=2.0, dt=0.001):
     area = S_FT2 * 0.09290304
     m = (DRY_LB * k_m + PROP_LB) * LB2KG
-    burn_end = IGNITION_S + BURN_S
+    burn_end = IGNITION_S + BURN_S * k_T
     st, t, brake = _state0(), 0.0, 0.0
     while st["vh"] >= 0.0 or t < IGNITION_S + 0.2:
         powered = IGNITION_S <= t < burn_end
-        f = thrust_n(t) * k_T
-        m -= thrust_n(t) / (ISP_S * G) * dt
+        f = thrust_n(t, k_T)
+        m -= f / (ISP_S * k_T * G) * dt
         h, v = st["h"], st["vh"]
         cmd = 0.0
         if not powered and t > burn_end and v > 0 and h > 1500 * FT2M:
@@ -340,8 +352,8 @@ def _closed_loop(estimator, kp=0.001, target_ft=10000.0, k_cd=1.0, k_T=1.0,
 
 def cmd_control(csv_out=None):
     cases = [("nominal", 1.0, 1.0, 1.0), ("Cd +10%", 1.1, 1.0, 1.0),
-             ("Cd -10%", 0.9, 1.0, 1.0), ("thrust +5%", 1.0, 1.05, 1.0),
-             ("thrust -5%", 1.0, 0.95, 1.0), ("dry mass +5%", 1.0, 1.0, 1.05),
+             ("Cd -10%", 0.9, 1.0, 1.0), ("Isp +5%", 1.0, 1.05, 1.0),
+             ("Isp -5%", 1.0, 0.95, 1.0), ("dry mass +5%", 1.0, 1.0, 1.05),
              ("dry mass -5%", 1.0, 1.0, 0.95)]
     print("Closed-loop apogee error, target 10000 ft, in feet.")
     print("The estimator always assumes the nominal drag coefficient.\n")

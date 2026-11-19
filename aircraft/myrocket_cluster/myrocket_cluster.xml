@@ -1,0 +1,632 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="http://jsbsim.sourceforge.net/JSBSim.xsl"?>
+<fdm_config name="myrocket_cluster" version="2.0" release="ALPHA"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:noNamespaceSchemaLocation="http://jsbsim.sourceforge.net/JSBSim.xsd">
+
+ <fileheader>
+  <author> Aeromatic v0.96, rocket conversion by Haoran Du </author>
+  <filecreationdate>2026-09-17</filecreationdate>
+  <version>cluster-v1</version>
+  <description> Single-stage cluster: one airframe, two M1670 burning together. The unstaged control for the staging comparison. </description>
+ </fileheader>
+
+ <metrics>
+   <wingarea  unit="FT2">    0.0845 </wingarea>
+   <wingspan  unit="FT" >    0.328 </wingspan>
+   <wing_incidence>          0.00 </wing_incidence>
+   <chord     unit="FT" >    0.328 </chord>
+   <htailarea unit="FT2">    0.00 </htailarea>
+   <htailarm  unit="FT" >    0.00 </htailarm>
+   <vtailarea unit="FT2">    0.00 </vtailarea>
+   <vtailarm  unit="FT" >    0.00 </vtailarm>
+   <location name="AERORP" unit="IN">
+     <x>  60.37 </x>
+     <y>   0.00 </y>
+     <z>   0.00 </z>
+   </location>
+   <location name="EYEPOINT" unit="IN">
+     <x>  20.00 </x>
+     <y>   0.00 </y>
+     <z>   0.00 </z>
+   </location>
+   <location name="VRP" unit="IN">
+     <x>0</x>
+     <y>0</y>
+     <z>0</z>
+   </location>
+ </metrics>
+
+ <mass_balance>
+
+   <ixx unit="SLUG*FT2">      0.02 </ixx>
+   <iyy unit="SLUG*FT2">      7.70 </iyy>
+   <izz unit="SLUG*FT2">      7.70 </izz>
+   <emptywt unit="LBS" >     41.69 </emptywt>
+   <location name="CG" unit="IN">
+     <x>  45.07 </x>
+     <y>   0.00 </y>
+     <z>   0.00 </z>
+   </location>
+   <pointmass name="Payload">
+    <description> Nose-mounted payload </description>
+    <weight unit="LBS">      1.8 </weight>
+    <location name="POINTMASS" unit="IN">
+      <x>  20.00 </x>
+      <y>   0.00 </y>
+      <z>   0.00 </z>
+    </location>
+  </pointmass>
+ </mass_balance>
+
+ <ground_reactions>
+
+  <contact type="STRUCTURE" name="TAIL">
+    <location unit="IN">
+      <x>  98.40 </x>
+      <y>   0.00 </y>
+      <z>   0.00 </z>
+    </location>
+    <static_friction>  0.60 </static_friction>
+    <dynamic_friction> 0.50 </dynamic_friction>
+    <spring_coeff unit="LBS/FT">       500.00 </spring_coeff>
+    <damping_coeff unit="LBS/FT/SEC">  100.00 </damping_coeff>
+  </contact>
+
+  <contact type="STRUCTURE" name="NOSE">
+    <location unit="IN">
+      <x>   0.00 </x>
+      <y>   0.00 </y>
+      <z>   0.00 </z>
+    </location>
+    <static_friction>  0.60 </static_friction>
+    <dynamic_friction> 0.50 </dynamic_friction>
+    <spring_coeff unit="LBS/FT">       500.00 </spring_coeff>
+    <damping_coeff unit="LBS/FT/SEC">  100.00 </damping_coeff>
+  </contact>
+
+  <contact type="STRUCTURE" name="BODY_LEFT">
+    <location unit="IN">
+      <x>  49.20 </x>
+      <y>  -1.97 </y>
+      <z>   0.00 </z>
+    </location>
+    <static_friction>  0.60 </static_friction>
+    <dynamic_friction> 0.50 </dynamic_friction>
+    <spring_coeff unit="LBS/FT">       500.00 </spring_coeff>
+    <damping_coeff unit="LBS/FT/SEC">  100.00 </damping_coeff>
+  </contact>
+
+  <contact type="STRUCTURE" name="BODY_RIGHT">
+    <location unit="IN">
+      <x>  49.20 </x>
+      <y>   1.97 </y>
+      <z>   0.00 </z>
+    </location>
+    <static_friction>  0.60 </static_friction>
+    <dynamic_friction> 0.50 </dynamic_friction>
+    <spring_coeff unit="LBS/FT">       500.00 </spring_coeff>
+    <damping_coeff unit="LBS/FT/SEC">  100.00 </damping_coeff>
+  </contact>
+
+ </ground_reactions>
+
+ <propulsion>
+
+   <engine file="M1670">
+    <location unit="IN">
+      <x>  98.40 </x>
+      <y>   0.00 </y>
+      <z>   0.00 </z>
+    </location>
+    <orient unit="DEG">
+      <pitch> 0.00 </pitch>
+      <roll>  0.00 </roll>
+      <yaw>   0.00 </yaw>
+    </orient>
+    <feed>0</feed>
+    <thruster file="direct">
+     <location unit="IN">
+       <x>  98.40 </x>
+       <y>   0.00 </y>
+       <z>   0.00 </z>
+     </location>
+     <orient unit="DEG">
+       <pitch> 0.00 </pitch>
+       <roll>  0.00 </roll>
+       <yaw>   0.00 </yaw>
+     </orient>
+    </thruster>
+  </engine>
+
+   <engine file="M1670">
+    <location unit="IN">
+      <x>  98.40 </x>
+      <y>   0.00 </y>
+      <z>   0.00 </z>
+    </location>
+    <orient unit="DEG">
+      <pitch> 0.00 </pitch>
+      <roll>  0.00 </roll>
+      <yaw>   0.00 </yaw>
+    </orient>
+    <feed>1</feed>
+    <thruster file="direct">
+     <location unit="IN">
+       <x>  98.40 </x>
+       <y>   0.00 </y>
+       <z>   0.00 </z>
+     </location>
+     <orient unit="DEG">
+       <pitch> 0.00 </pitch>
+       <roll>  0.00 </roll>
+       <yaw>   0.00 </yaw>
+     </orient>
+    </thruster>
+  </engine>
+
+  <tank type="FUEL" number="0">
+     <location unit="IN">
+       <x>  78.00 </x>
+       <y>   0.00 </y>
+       <z>   0.00 </z>
+     </location>
+     <capacity unit="LBS">   6.83653475035305 </capacity>
+     <contents unit="LBS">   6.83653475035305 </contents>
+  </tank>
+
+  <tank type="FUEL" number="2">
+     <location unit="IN">
+       <x>  78.00 </x>
+       <y>   0.00 </y>
+       <z>   0.00 </z>
+     </location>
+     <capacity unit="LBS">   6.83653475035305 </capacity>
+     <contents unit="LBS">   6.83653475035305 </contents>
+  </tank>
+
+ </propulsion>
+
+ <flight_control name="FCS: myrocket">
+
+  <property value="12.65">fcs/rail-travel-ft</property>
+  <channel name="Rail">
+   <fcs_function name="fcs/rail-margin-ft">
+     <function>
+       <difference>
+         <difference>
+           <property>position/h-agl-ft</property>
+           <property>ic/h-agl-ft</property>
+         </difference>
+         <product>
+           <property>fcs/rail-travel-ft</property>
+           <sin><property>attitude/theta-rad</property></sin>
+         </product>
+       </difference>
+     </function>
+   </fcs_function>
+   <switch name="fcs/off-rail">
+     <default value="0.0"/>
+     <test logic="OR" value="1.0">
+       fcs/rail-margin-ft gt 0.0
+       simulation/sim-time-sec gt 2.0
+     </test>
+   </switch>
+  </channel>
+
+  <property value="10000.0">fcs/target-apogee-ft</property>
+
+  <channel name="Airbrakes">
+
+   <fcs_function name="fcs/coast-vt2">
+     <description>Terminal-velocity squared for the coast, ft2/s2.
+       vt2 = 2*W / (rho * S * Cd), built from live weight and density so the
+       estimate adapts to mass and altitude without being told about them.
+
+       Cd IS THE STOWED VALUE ON PURPOSE. The estimate therefore answers
+       "where do I go if I stow the brake now", and the loop's job is to drive
+       that quantity to the target: the moment it reaches the target, stowing
+       the brake delivers the target, which is exactly when braking should
+       stop.
+
+       A version including the current brake position in Cd was tried and is
+       much worse: nominal-day error went from +28 ft to +383 ft and peak
+       deployment fell from 1.00 to 0.38. The mechanism is that proportional
+       control needs a standing error to hold the brake out at all, since the
+       command is kp times the error. With the brake in the estimate that
+       standing error is a real apogee error, so the loop reads its own
+       deployment as the problem being solved and retracts early. With the
+       stowed form the standing error is measured against a prediction that is
+       deliberately higher than the truth, and costs nothing.
+
+       0.45 is the nominal stowed figure and is deliberately not adjusted to
+       the true drag of the as-built airframe, which a flight computer would
+       not know.</description>
+     <function>
+       <quotient>
+         <product>
+           <value> 2.0 </value>
+           <property>inertia/weight-lbs</property>
+         </product>
+         <product>
+           <property>atmosphere/rho-slugs_ft3</property>
+           <property>metrics/Sw-sqft</property>
+           <value> 0.45 </value>
+         </product>
+       </quotient>
+     </function>
+   </fcs_function>
+
+   <fcs_function name="fcs/coast-x">
+     <description>v^2 / vt2, the argument of the log term.</description>
+     <function>
+       <quotient>
+         <product>
+           <property>velocities/h-dot-fps</property>
+           <property>velocities/h-dot-fps</property>
+         </product>
+         <property>fcs/coast-vt2</property>
+       </quotient>
+     </function>
+   </fcs_function>
+
+   <fcs_function name="fcs/coast-ln">
+     <description>ln(1+x) as a lookup rather than a natural-log operator, so
+       the file does not depend on which maths elements a given JSBSim build
+       exposes.</description>
+     <function>
+       <table>
+         <independentVar lookup="row">fcs/coast-x</independentVar>
+         <tableData>
+                0.000    0.0000
+                0.050    0.0488
+                0.100    0.0953
+                0.150    0.1398
+                0.200    0.1823
+                0.300    0.2624
+                0.400    0.3365
+                0.500    0.4055
+                0.600    0.4700
+                0.700    0.5306
+                0.800    0.5878
+                0.900    0.6419
+                1.000    0.6931
+                1.250    0.8109
+                1.500    0.9163
+                2.000    1.0986
+                2.500    1.2528
+                3.000    1.3863
+                4.000    1.6094
+                6.000    1.9459
+         </tableData>
+       </table>
+     </function>
+   </fcs_function>
+
+   <fcs_function name="fcs/apogee-estimate-ft">
+     <description>Closed-form apogee for a ballistic coast against quadratic
+       drag at constant density:
+
+           h_apogee = h + (vt2 / 2g) * ln(1 + v^2 / vt2)
+
+       This replaces an energy estimate h + k*v^2/2g with a fixed k. A fixed
+       factor cannot work: the share of kinetic energy lost to drag is not
+       constant along the coast. With k = 0.75 the estimate runs about 535 ft
+       high at burnout and about 615 ft low in mid-coast, changing sign in
+       between. Mean absolute error over the coast falls from 314 ft to 20 ft
+       with the form below.
+
+       That error profile mattered because control authority is not spread
+       evenly: holding the brake fully out for the first 4 s of coast gives
+       most of the total authority (crosscheck.py authority gives the
+       numbers). The estimator therefore has to be right early,
+       which is exactly where the fixed-factor form was worst.
+
+       Under +/-10% drag, +/-5% thrust and +/-5% mass, closed-loop apogee
+       spread falls from 364 ft to 66 ft and worst-case error from 412 ft to
+       35 ft. Open loop is 1480 ft.</description>
+     <function>
+       <sum>
+         <property>position/h-agl-ft</property>
+         <product>
+           <quotient>
+             <property>fcs/coast-vt2</property>
+             <value> 64.348 </value>
+           </quotient>
+           <property>fcs/coast-ln</property>
+         </product>
+       </sum>
+     </function>
+   </fcs_function>
+
+   <fcs_function name="fcs/apogee-error-ft">
+     <function>
+       <difference>
+         <property>fcs/apogee-estimate-ft</property>
+         <property>fcs/target-apogee-ft</property>
+       </difference>
+     </function>
+   </fcs_function>
+
+   <pure_gain name="fcs/brake-cmd-raw">
+
+     <input>fcs/apogee-error-ft</input>
+     <gain> 0.001 </gain>
+     <clipto>
+       <min> 0.0 </min>
+       <max> 1.0 </max>
+     </clipto>
+   </pure_gain>
+
+   <switch name="fcs/brake-cmd-gated">
+     <default value="0.0"/>
+     <test logic="AND" value="fcs/brake-cmd-raw">
+       propulsion/engine[0]/thrust-lbs lt 1.0
+       propulsion/engine[1]/thrust-lbs lt 1.0
+       velocities/h-dot-fps gt 0.0
+       position/h-agl-ft gt 1500.0
+     </test>
+   </switch>
+
+   <kinematic name="fcs/airbrake-actuator">
+     <input>fcs/brake-cmd-gated</input>
+     <traverse>
+       <setting>
+         <position> 0.0 </position>
+         <time>     0.0 </time>
+       </setting>
+       <setting>
+         <position> 1.0 </position>
+         <time>     0.5 </time>
+       </setting>
+     </traverse>
+     <output>fcs/airbrake-pos-norm</output>
+   </kinematic>
+
+  </channel>
+
+ </flight_control>
+
+ <aerodynamics>
+
+  <axis name="DRAG">
+
+    <function name="aero/force/Drag_mach">
+       <description>Axial drag coefficient vs Mach number</description>
+       <product>
+          <property>aero/qbar-psf</property>
+          <property>metrics/Sw-sqft</property>
+          <table>
+            <independentVar lookup="row">velocities/mach</independentVar>
+            <tableData>
+              0.00   0.45
+              0.50   0.45
+              0.80   0.48
+              0.95   0.72
+              1.05   0.78
+              1.30   0.70
+              2.00   0.58
+              3.00   0.48
+            </tableData>
+          </table>
+       </product>
+    </function>
+
+    <function name="aero/force/Drag_airbrake">
+       <description>Air-brake drag increment. dCd = 2.0 at full deployment,
+       referenced to body cross-section. Control authority (apogee lost if
+       held fully deployed through the coast): crosscheck.py authority.</description>
+       <product>
+          <property>aero/qbar-psf</property>
+          <property>metrics/Sw-sqft</property>
+          <property>fcs/airbrake-pos-norm</property>
+          <value> 2.0 </value>
+       </product>
+    </function>
+
+    <function name="aero/force/Drag_crossflow">
+       <description>Crossflow drag (alpha), c = 25.29: c sin^2|sin| (v6).</description>
+       <product>
+          <property>fcs/off-rail</property>
+          <property>aero/qbar-psf</property>
+          <property>metrics/Sw-sqft</property>
+          <product>
+            <value> 25.2937498613835 </value>
+            <sin><property>aero/alpha-rad</property></sin>
+            <abs><sin><property>aero/alpha-rad</property></sin></abs>
+            <sin><property>aero/alpha-rad</property></sin>
+          </product>
+       </product>
+    </function>
+
+    <function name="aero/force/Drag_beta">
+       <description>Crossflow drag (beta), c = 25.29: c sin^2|sin| (v6).</description>
+       <product>
+          <property>fcs/off-rail</property>
+          <property>aero/qbar-psf</property>
+          <property>metrics/Sw-sqft</property>
+          <product><value>25.2937498613835</value><abs><sin><property>aero/beta-rad</property></sin></abs><abs><sin><property>aero/beta-rad</property></sin></abs><abs><sin><property>aero/beta-rad</property></sin></abs></product>
+       </product>
+    </function>
+
+  </axis>
+
+  <axis name="LIFT">
+
+    <function name="aero/force/Lift_alpha">
+       <description>Normal force, Barrowman CN_alpha(Mach) x 0.5 sin(2 alpha); cluster fin set (v5).</description>
+       <product>
+          <property>fcs/off-rail</property>
+          <property>aero/qbar-psf</property>
+          <property>metrics/Sw-sqft</property>
+          <table>
+            <independentVar lookup="row">velocities/mach</independentVar>
+            <tableData>
+              0.00   5.035
+              0.30   5.053
+              0.50   5.087
+              0.60   5.111
+              0.80   5.176
+              0.90   5.176
+              1.00   5.176
+              1.20   5.176
+            </tableData>
+          </table>
+          <product><value>0.5</value><sin><product><value>2</value><property>aero/alpha-rad</property></product></sin></product>
+       </product>
+    </function>
+
+      <function name="aero/force/Lift_crossflow">
+       <description>Crossflow normal force, lift component: c sin|sin| cos (v6).</description>
+       <product>
+          <property>fcs/off-rail</property>
+          <property>aero/qbar-psf</property>
+          <property>metrics/Sw-sqft</property>
+          <product>
+            <value> 25.2937498613835 </value>
+            <sin><property>aero/alpha-rad</property></sin>
+            <abs><sin><property>aero/alpha-rad</property></sin></abs>
+            <cos><property>aero/alpha-rad</property></cos>
+          </product>
+       </product>
+    </function>
+  </axis>
+
+  <axis name="SIDE">
+
+    <function name="aero/force/Side_beta">
+       <description>Side force, same magnitude as the normal force.</description>
+       <product>
+          <property>fcs/off-rail</property>
+          <property>aero/qbar-psf</property>
+          <property>metrics/Sw-sqft</property>
+          <table>
+            <independentVar lookup="row">velocities/mach</independentVar>
+            <tableData>
+              0.00   5.035
+              0.30   5.053
+              0.50   5.087
+              0.60   5.111
+              0.80   5.176
+              0.90   5.176
+              1.00   5.176
+              1.20   5.176
+            </tableData>
+          </table>
+          <product><value>-0.5</value><sin><product><value>2</value><property>aero/beta-rad</property></product></sin></product>
+       </product>
+    </function>
+
+      <function name="aero/force/Side_crossflow">
+       <description>Crossflow side force: -c sin|sin| cos of beta (v6).</description>
+       <product>
+          <property>fcs/off-rail</property>
+          <property>aero/qbar-psf</property>
+          <property>metrics/Sw-sqft</property>
+          <product>
+            <value> -25.2937498613835 </value>
+            <sin><property>aero/beta-rad</property></sin>
+            <abs><sin><property>aero/beta-rad</property></sin></abs>
+            <cos><property>aero/beta-rad</property></cos>
+          </product>
+       </product>
+    </function>
+  </axis>
+
+  <axis name="PITCH">
+
+    <function name="aero/moment/Pitch_damp">
+       <description>Pitch damping due to pitch rate</description>
+       <product>
+          <property>aero/qbar-psf</property>
+          <property>metrics/Sw-sqft</property>
+          <property>metrics/cbarw-ft</property>
+          <property>aero/ci2vel</property>
+          <property>velocities/q-aero-rad_sec</property>
+          <value> -1278.2 </value>
+       </product>
+    </function>
+
+      <function name="aero/moment/Pitch_crossflow_cp">
+       <description>Exact body-axis reference-point couple for the cluster crossflow force family. Wind forces are transformed with the live alpha and beta; pitch = dx*Fz_body, yaw = -dx*Fy_body, where dx is the structural-coordinate force-centroid minus AERORP offset in ft.</description>
+       <product><value>-0.71960000000000002</value><sum><product><value>-1</value><sum><property>aero/force/Drag_crossflow</property><property>aero/force/Drag_beta</property></sum><sin><property>aero/alpha-rad</property></sin><cos><property>aero/beta-rad</property></cos></product><product><value>-1</value><property>aero/force/Side_crossflow</property><sin><property>aero/alpha-rad</property></sin><sin><property>aero/beta-rad</property></sin></product><product><value>-1</value><property>aero/force/Lift_crossflow</property><cos><property>aero/alpha-rad</property></cos></product></sum></product>
+    </function>
+  </axis>
+
+  <axis name="YAW">
+
+    <function name="aero/moment/Yaw_damp">
+       <description>Yaw damping due to yaw rate</description>
+       <product>
+          <property>aero/qbar-psf</property>
+          <property>metrics/Sw-sqft</property>
+          <property>metrics/bw-ft</property>
+          <property>aero/bi2vel</property>
+          <property>velocities/r-aero-rad_sec</property>
+          <value> -1278.2 </value>
+       </product>
+    </function>
+
+      <function name="aero/moment/Yaw_crossflow_cp">
+       <description>Exact body-axis reference-point couple for the cluster crossflow force family. Wind forces are transformed with the live alpha and beta; pitch = dx*Fz_body, yaw = -dx*Fy_body, where dx is the structural-coordinate force-centroid minus AERORP offset in ft.</description>
+       <product><value>0.71960000000000002</value><sum><product><value>-1</value><sum><property>aero/force/Drag_crossflow</property><property>aero/force/Drag_beta</property></sum><sin><property>aero/beta-rad</property></sin></product><product><property>aero/force/Side_crossflow</property><cos><property>aero/beta-rad</property></cos></product></sum></product>
+    </function>
+  </axis>
+
+  <axis name="ROLL">
+
+    <function name="aero/moment/Roll_damp">
+       <description>Roll damping due to roll rate</description>
+       <product>
+          <property>aero/qbar-psf</property>
+          <property>metrics/Sw-sqft</property>
+          <property>metrics/bw-ft</property>
+          <property>aero/bi2vel</property>
+          <property>velocities/p-aero-rad_sec</property>
+          <value> -0.8 </value>
+       </product>
+    </function>
+
+  </axis>
+
+ </aerodynamics>
+
+ <output name="data_output/rocket.csv" type="CSV" rate="50">
+
+  <property caption="Altitude AGL (ft)    "> position/h-agl-ft            </property>
+  <property caption="Altitude ASL (ft)    "> position/h-sl-ft             </property>
+  <property caption="Mach                 "> velocities/mach              </property>
+  <property caption="Vertical speed (fps) "> velocities/h-dot-fps         </property>
+  <property caption="True airspeed (fps)  "> velocities/vtrue-fps         </property>
+  <property caption="Pitch angle (deg)    "> attitude/theta-deg           </property>
+  <property caption="Alpha (deg)          "> aero/alpha-deg               </property>
+  <property caption="Beta (deg)           "> aero/beta-deg                </property>
+  <property caption="Pitch rate (rad/s)   "> velocities/q-rad_sec         </property>
+  <property caption="Thrust (lbf)         "> propulsion/engine[0]/thrust-lbs </property>
+  <property caption="Total mass (lb)      "> inertia/weight-lbs           </property>
+  <property caption="CG x (in)            "> inertia/cg-x-in              </property>
+  <property caption="Dynamic pressure(psf)"> aero/qbar-psf                </property>
+  <property caption="Axial force (lbf)    "> forces/fbx-aero-lbs          </property>
+  <property caption="Normal force (lbf)   "> forces/fbz-aero-lbs          </property>
+  <property caption="Airbrake position    "> fcs/airbrake-pos-norm        </property>
+  <property caption="Ground track (m)     "> position/distance-from-start-mag-mt </property>
+  <property caption="Apogee estimate (ft) "> fcs/apogee-estimate-ft       </property>
+  <property caption="vt2 (ft2/s2)         "> fcs/coast-vt2                </property>
+  <property caption="Apogee error (ft)    "> fcs/apogee-error-ft          </property>
+ </output>
+
+ <external_reactions>
+  <force name="rail-normal" frame="BODY" unit="LBS">
+   <function>
+     <product>
+       <difference><value>1.0</value><property>fcs/off-rail</property></difference>
+       <property>inertia/weight-lbs</property>
+       <cos><property>attitude/theta-rad</property></cos>
+     </product>
+   </function>
+   <location unit="IN"><x> 52.16 </x><y> 0.0 </y><z> 0.0 </z></location>
+   <direction><x> 0.0 </x><y> 0.0 </y><z> -1.0 </z></direction>
+  </force>
+ </external_reactions>
+
+</fdm_config>

@@ -1,0 +1,846 @@
+{
+  "schema": 1,
+  "description": "Corrected studies; original counts and seed1 retained. Isp scales main impulse at fixed fuel; iyy means coupled transverse inertia; attitude and baseline-noise ablations added.",
+  "jobs": [
+    {
+      "name": "mc_closed_i01_v6.csv",
+      "n": 300,
+      "seed": 1,
+      "kind": "xml",
+      "open": false,
+      "oracle": false,
+      "imp_sigma": 0.01
+    },
+    {
+      "name": "mc_closed_i05_v6.csv",
+      "n": 300,
+      "seed": 1,
+      "kind": "xml",
+      "open": false,
+      "oracle": false,
+      "imp_sigma": 0.05
+    },
+    {
+      "name": "mc_closed_s10_v6.csv",
+      "n": 300,
+      "seed": 1,
+      "kind": "xml",
+      "open": false,
+      "oracle": false,
+      "cd_sigma": 0.1
+    },
+    {
+      "name": "mc_closed_s30_v6.csv",
+      "n": 300,
+      "seed": 1,
+      "kind": "xml",
+      "open": false,
+      "oracle": false,
+      "cd_sigma": 0.3
+    },
+    {
+      "name": "mc_closed_t10200_v6.csv",
+      "n": 300,
+      "seed": 1,
+      "kind": "xml",
+      "open": false,
+      "oracle": false,
+      "target": 10200
+    },
+    {
+      "name": "mc_closed_t10400_v6.csv",
+      "n": 300,
+      "seed": 1,
+      "kind": "xml",
+      "open": false,
+      "oracle": false,
+      "target": 10400
+    },
+    {
+      "name": "mc_closed_t9600_v6.csv",
+      "n": 300,
+      "seed": 1,
+      "kind": "xml",
+      "open": false,
+      "oracle": false,
+      "target": 9600
+    },
+    {
+      "name": "mc_closed_t9800_v6.csv",
+      "n": 300,
+      "seed": 1,
+      "kind": "xml",
+      "open": false,
+      "oracle": false,
+      "target": 9800
+    },
+    {
+      "name": "mc_closed_v6.csv",
+      "n": 500,
+      "seed": 1,
+      "kind": "xml",
+      "open": false,
+      "oracle": false
+    },
+    {
+      "name": "mc_open_i01_v6.csv",
+      "n": 300,
+      "seed": 1,
+      "kind": "xml",
+      "open": true,
+      "oracle": false,
+      "imp_sigma": 0.01
+    },
+    {
+      "name": "mc_open_i05_v6.csv",
+      "n": 300,
+      "seed": 1,
+      "kind": "xml",
+      "open": true,
+      "oracle": false,
+      "imp_sigma": 0.05
+    },
+    {
+      "name": "mc_open_s10_v6.csv",
+      "n": 300,
+      "seed": 1,
+      "kind": "xml",
+      "open": true,
+      "oracle": false,
+      "cd_sigma": 0.1
+    },
+    {
+      "name": "mc_open_s30_v6.csv",
+      "n": 300,
+      "seed": 1,
+      "kind": "xml",
+      "open": true,
+      "oracle": false,
+      "cd_sigma": 0.3
+    },
+    {
+      "name": "mc_open_v6.csv",
+      "n": 500,
+      "seed": 1,
+      "kind": "xml",
+      "open": true,
+      "oracle": false
+    },
+    {
+      "name": "mc_oracle_v6.csv",
+      "n": 500,
+      "seed": 1,
+      "kind": "xml",
+      "open": false,
+      "oracle": true
+    },
+    {
+      "name": "mc_sil_kf4_est_ideal_fixbrake_v6.csv",
+      "n": 300,
+      "seed": 1,
+      "kind": "sil",
+      "est": "kf4",
+      "cd": "estimated",
+      "ideal": true,
+      "fix_brake": true,
+      "isa": false,
+      "qaware": false
+    },
+    {
+      "name": "mc_sil_kf4_est_ideal_v6.csv",
+      "n": 500,
+      "seed": 1,
+      "kind": "sil",
+      "est": "kf4",
+      "cd": "estimated",
+      "ideal": true,
+      "fix_brake": false,
+      "isa": false,
+      "qaware": false
+    },
+    {
+      "name": "mc_sil_kf4_est_isa_v6.csv",
+      "n": 500,
+      "seed": 1,
+      "kind": "sil",
+      "est": "kf4",
+      "cd": "estimated",
+      "ideal": false,
+      "fix_brake": false,
+      "isa": true,
+      "qaware": false
+    },
+    {
+      "name": "mc_sil_kf4_est_notemp_t10200_v6.csv",
+      "n": 300,
+      "seed": 1,
+      "kind": "sil",
+      "est": "kf4",
+      "cd": "estimated",
+      "ideal": false,
+      "fix_brake": false,
+      "isa": false,
+      "qaware": false,
+      "errors": [
+        "port",
+        "scale",
+        "quant",
+        "lat",
+        "att"
+      ],
+      "target": 10200
+    },
+    {
+      "name": "mc_sil_kf4_est_notemp_t10400_v6.csv",
+      "n": 300,
+      "seed": 1,
+      "kind": "sil",
+      "est": "kf4",
+      "cd": "estimated",
+      "ideal": false,
+      "fix_brake": false,
+      "isa": false,
+      "qaware": false,
+      "errors": [
+        "port",
+        "scale",
+        "quant",
+        "lat",
+        "att"
+      ],
+      "target": 10400
+    },
+    {
+      "name": "mc_sil_kf4_est_notemp_t9600_v6.csv",
+      "n": 300,
+      "seed": 1,
+      "kind": "sil",
+      "est": "kf4",
+      "cd": "estimated",
+      "ideal": false,
+      "fix_brake": false,
+      "isa": false,
+      "qaware": false,
+      "errors": [
+        "port",
+        "scale",
+        "quant",
+        "lat",
+        "att"
+      ],
+      "target": 9600
+    },
+    {
+      "name": "mc_sil_kf4_est_notemp_t9800_v6.csv",
+      "n": 300,
+      "seed": 1,
+      "kind": "sil",
+      "est": "kf4",
+      "cd": "estimated",
+      "ideal": false,
+      "fix_brake": false,
+      "isa": false,
+      "qaware": false,
+      "errors": [
+        "port",
+        "scale",
+        "quant",
+        "lat",
+        "att"
+      ],
+      "target": 9800
+    },
+    {
+      "name": "mc_sil_kf4_est_notemp_v6.csv",
+      "n": 500,
+      "seed": 1,
+      "kind": "sil",
+      "est": "kf4",
+      "cd": "estimated",
+      "ideal": false,
+      "fix_brake": false,
+      "isa": false,
+      "qaware": false,
+      "errors": [
+        "port",
+        "scale",
+        "quant",
+        "lat",
+        "att"
+      ]
+    },
+    {
+      "name": "mc_sil_kf4_est_s10_v6.csv",
+      "n": 300,
+      "seed": 1,
+      "kind": "sil",
+      "est": "kf4",
+      "cd": "estimated",
+      "ideal": false,
+      "fix_brake": false,
+      "isa": false,
+      "qaware": false,
+      "cd_sigma": 0.1
+    },
+    {
+      "name": "mc_sil_kf4_est_s30_v6.csv",
+      "n": 300,
+      "seed": 1,
+      "kind": "sil",
+      "est": "kf4",
+      "cd": "estimated",
+      "ideal": false,
+      "fix_brake": false,
+      "isa": false,
+      "qaware": false,
+      "cd_sigma": 0.3
+    },
+    {
+      "name": "mc_sil_kf4_est_t10200_v6.csv",
+      "n": 300,
+      "seed": 1,
+      "kind": "sil",
+      "est": "kf4",
+      "cd": "estimated",
+      "ideal": false,
+      "fix_brake": false,
+      "isa": false,
+      "qaware": false,
+      "target": 10200
+    },
+    {
+      "name": "mc_sil_kf4_est_t10400_v6.csv",
+      "n": 300,
+      "seed": 1,
+      "kind": "sil",
+      "est": "kf4",
+      "cd": "estimated",
+      "ideal": false,
+      "fix_brake": false,
+      "isa": false,
+      "qaware": false,
+      "target": 10400
+    },
+    {
+      "name": "mc_sil_kf4_est_T1_v6.csv",
+      "n": 300,
+      "seed": 1,
+      "kind": "sil",
+      "est": "kf4",
+      "cd": "estimated",
+      "ideal": false,
+      "fix_brake": false,
+      "isa": false,
+      "qaware": false,
+      "pad_temp_sd": 1
+    },
+    {
+      "name": "mc_sil_kf4_est_T2_v6.csv",
+      "n": 300,
+      "seed": 1,
+      "kind": "sil",
+      "est": "kf4",
+      "cd": "estimated",
+      "ideal": false,
+      "fix_brake": false,
+      "isa": false,
+      "qaware": false,
+      "pad_temp_sd": 2
+    },
+    {
+      "name": "mc_sil_kf4_est_T5_v6.csv",
+      "n": 300,
+      "seed": 1,
+      "kind": "sil",
+      "est": "kf4",
+      "cd": "estimated",
+      "ideal": false,
+      "fix_brake": false,
+      "isa": false,
+      "qaware": false,
+      "pad_temp_sd": 5
+    },
+    {
+      "name": "mc_sil_kf4_est_t9600_v6.csv",
+      "n": 300,
+      "seed": 1,
+      "kind": "sil",
+      "est": "kf4",
+      "cd": "estimated",
+      "ideal": false,
+      "fix_brake": false,
+      "isa": false,
+      "qaware": false,
+      "target": 9600
+    },
+    {
+      "name": "mc_sil_kf4_est_t9800_v6.csv",
+      "n": 300,
+      "seed": 1,
+      "kind": "sil",
+      "est": "kf4",
+      "cd": "estimated",
+      "ideal": false,
+      "fix_brake": false,
+      "isa": false,
+      "qaware": false,
+      "target": 9800
+    },
+    {
+      "name": "mc_sil_kf4_est_v6.csv",
+      "n": 500,
+      "seed": 1,
+      "kind": "sil",
+      "est": "kf4",
+      "cd": "estimated",
+      "ideal": false,
+      "fix_brake": false,
+      "isa": false,
+      "qaware": false
+    },
+    {
+      "name": "mc_sil_kf4_nom_T1_v6.csv",
+      "n": 300,
+      "seed": 1,
+      "kind": "sil",
+      "est": "kf4",
+      "cd": "nominal",
+      "ideal": false,
+      "fix_brake": false,
+      "isa": false,
+      "qaware": false,
+      "pad_temp_sd": 1
+    },
+    {
+      "name": "mc_sil_kf4_nom_T2_v6.csv",
+      "n": 300,
+      "seed": 1,
+      "kind": "sil",
+      "est": "kf4",
+      "cd": "nominal",
+      "ideal": false,
+      "fix_brake": false,
+      "isa": false,
+      "qaware": false,
+      "pad_temp_sd": 2
+    },
+    {
+      "name": "mc_sil_kf4_nom_T5_v6.csv",
+      "n": 300,
+      "seed": 1,
+      "kind": "sil",
+      "est": "kf4",
+      "cd": "nominal",
+      "ideal": false,
+      "fix_brake": false,
+      "isa": false,
+      "qaware": false,
+      "pad_temp_sd": 5
+    },
+    {
+      "name": "mc_sil_kf4_nom_v6.csv",
+      "n": 500,
+      "seed": 1,
+      "kind": "sil",
+      "est": "kf4",
+      "cd": "nominal",
+      "ideal": false,
+      "fix_brake": false,
+      "isa": false,
+      "qaware": false
+    },
+    {
+      "name": "mc_sil_kf4_orc_v6.csv",
+      "n": 500,
+      "seed": 1,
+      "kind": "sil",
+      "est": "kf4",
+      "cd": "oracle",
+      "ideal": false,
+      "fix_brake": false,
+      "isa": false,
+      "qaware": false
+    },
+    {
+      "name": "mc_sil_kf_est_ideal_fixbrake_v6.csv",
+      "n": 300,
+      "seed": 1,
+      "kind": "sil",
+      "est": "kf",
+      "cd": "estimated",
+      "ideal": true,
+      "fix_brake": true,
+      "isa": false,
+      "qaware": false
+    },
+    {
+      "name": "mc_sil_kf_est_ideal_t10200_v6.csv",
+      "n": 300,
+      "seed": 1,
+      "kind": "sil",
+      "est": "kf",
+      "cd": "estimated",
+      "ideal": true,
+      "fix_brake": false,
+      "isa": false,
+      "qaware": false,
+      "target": 10200
+    },
+    {
+      "name": "mc_sil_kf_est_ideal_t10400_v6.csv",
+      "n": 300,
+      "seed": 1,
+      "kind": "sil",
+      "est": "kf",
+      "cd": "estimated",
+      "ideal": true,
+      "fix_brake": false,
+      "isa": false,
+      "qaware": false,
+      "target": 10400
+    },
+    {
+      "name": "mc_sil_kf_est_ideal_t9600_v6.csv",
+      "n": 300,
+      "seed": 1,
+      "kind": "sil",
+      "est": "kf",
+      "cd": "estimated",
+      "ideal": true,
+      "fix_brake": false,
+      "isa": false,
+      "qaware": false,
+      "target": 9600
+    },
+    {
+      "name": "mc_sil_kf_est_ideal_t9800_v6.csv",
+      "n": 300,
+      "seed": 1,
+      "kind": "sil",
+      "est": "kf",
+      "cd": "estimated",
+      "ideal": true,
+      "fix_brake": false,
+      "isa": false,
+      "qaware": false,
+      "target": 9800
+    },
+    {
+      "name": "mc_sil_kf_est_ideal_v6.csv",
+      "n": 500,
+      "seed": 1,
+      "kind": "sil",
+      "est": "kf",
+      "cd": "estimated",
+      "ideal": true,
+      "fix_brake": false,
+      "isa": false,
+      "qaware": false
+    },
+    {
+      "name": "mc_sil_kf_est_isa_v6.csv",
+      "n": 500,
+      "seed": 1,
+      "kind": "sil",
+      "est": "kf",
+      "cd": "estimated",
+      "ideal": false,
+      "fix_brake": false,
+      "isa": true,
+      "qaware": false
+    },
+    {
+      "name": "mc_sil_kf_est_only_lat_v6.csv",
+      "n": 300,
+      "seed": 1,
+      "kind": "sil",
+      "est": "kf",
+      "cd": "estimated",
+      "ideal": false,
+      "fix_brake": false,
+      "isa": false,
+      "qaware": false,
+      "errors": [
+        "lat"
+      ]
+    },
+    {
+      "name": "mc_sil_kf_est_only_port_v6.csv",
+      "n": 300,
+      "seed": 1,
+      "kind": "sil",
+      "est": "kf",
+      "cd": "estimated",
+      "ideal": false,
+      "fix_brake": false,
+      "isa": false,
+      "qaware": false,
+      "errors": [
+        "port"
+      ]
+    },
+    {
+      "name": "mc_sil_kf_est_only_quant_v6.csv",
+      "n": 300,
+      "seed": 1,
+      "kind": "sil",
+      "est": "kf",
+      "cd": "estimated",
+      "ideal": false,
+      "fix_brake": false,
+      "isa": false,
+      "qaware": false,
+      "errors": [
+        "quant"
+      ]
+    },
+    {
+      "name": "mc_sil_kf_est_only_scale_v6.csv",
+      "n": 300,
+      "seed": 1,
+      "kind": "sil",
+      "est": "kf",
+      "cd": "estimated",
+      "ideal": false,
+      "fix_brake": false,
+      "isa": false,
+      "qaware": false,
+      "errors": [
+        "scale"
+      ]
+    },
+    {
+      "name": "mc_sil_kf_est_only_temp_v6.csv",
+      "n": 300,
+      "seed": 1,
+      "kind": "sil",
+      "est": "kf",
+      "cd": "estimated",
+      "ideal": false,
+      "fix_brake": false,
+      "isa": false,
+      "qaware": false,
+      "errors": [
+        "temp"
+      ]
+    },
+    {
+      "name": "mc_sil_kf_est_qaware_v6.csv",
+      "n": 300,
+      "seed": 1,
+      "kind": "sil",
+      "est": "kf",
+      "cd": "estimated",
+      "ideal": false,
+      "fix_brake": false,
+      "isa": false,
+      "qaware": true
+    },
+    {
+      "name": "mc_sil_kf_est_s10_v6.csv",
+      "n": 300,
+      "seed": 1,
+      "kind": "sil",
+      "est": "kf",
+      "cd": "estimated",
+      "ideal": false,
+      "fix_brake": false,
+      "isa": false,
+      "qaware": false,
+      "cd_sigma": 0.1
+    },
+    {
+      "name": "mc_sil_kf_est_s30_v6.csv",
+      "n": 300,
+      "seed": 1,
+      "kind": "sil",
+      "est": "kf",
+      "cd": "estimated",
+      "ideal": false,
+      "fix_brake": false,
+      "isa": false,
+      "qaware": false,
+      "cd_sigma": 0.3
+    },
+    {
+      "name": "mc_sil_kf_est_t10200_v6.csv",
+      "n": 300,
+      "seed": 1,
+      "kind": "sil",
+      "est": "kf",
+      "cd": "estimated",
+      "ideal": false,
+      "fix_brake": false,
+      "isa": false,
+      "qaware": false,
+      "target": 10200
+    },
+    {
+      "name": "mc_sil_kf_est_t10400_v6.csv",
+      "n": 300,
+      "seed": 1,
+      "kind": "sil",
+      "est": "kf",
+      "cd": "estimated",
+      "ideal": false,
+      "fix_brake": false,
+      "isa": false,
+      "qaware": false,
+      "target": 10400
+    },
+    {
+      "name": "mc_sil_kf_est_t9600_v6.csv",
+      "n": 300,
+      "seed": 1,
+      "kind": "sil",
+      "est": "kf",
+      "cd": "estimated",
+      "ideal": false,
+      "fix_brake": false,
+      "isa": false,
+      "qaware": false,
+      "target": 9600
+    },
+    {
+      "name": "mc_sil_kf_est_t9800_v6.csv",
+      "n": 300,
+      "seed": 1,
+      "kind": "sil",
+      "est": "kf",
+      "cd": "estimated",
+      "ideal": false,
+      "fix_brake": false,
+      "isa": false,
+      "qaware": false,
+      "target": 9800
+    },
+    {
+      "name": "mc_sil_kf_est_v6.csv",
+      "n": 500,
+      "seed": 1,
+      "kind": "sil",
+      "est": "kf",
+      "cd": "estimated",
+      "ideal": false,
+      "fix_brake": false,
+      "isa": false,
+      "qaware": false
+    },
+    {
+      "name": "mc_sil_kf_nom_v6.csv",
+      "n": 500,
+      "seed": 1,
+      "kind": "sil",
+      "est": "kf",
+      "cd": "nominal",
+      "ideal": false,
+      "fix_brake": false,
+      "isa": false,
+      "qaware": false
+    },
+    {
+      "name": "mc_sil_kf_orc_v6.csv",
+      "n": 500,
+      "seed": 1,
+      "kind": "sil",
+      "est": "kf",
+      "cd": "oracle",
+      "ideal": false,
+      "fix_brake": false,
+      "isa": false,
+      "qaware": false
+    },
+    {
+      "name": "mc_sil_truth_nom_v6.csv",
+      "n": 500,
+      "seed": 1,
+      "kind": "sil",
+      "est": "truth",
+      "cd": "nominal",
+      "ideal": false,
+      "fix_brake": false,
+      "isa": false,
+      "qaware": false
+    },
+    {
+      "name": "mc_sil_kf_est_basenoise_v6.csv",
+      "n": 300,
+      "seed": 1,
+      "kind": "sil",
+      "est": "kf",
+      "cd": "estimated",
+      "errors": []
+    },
+    {
+      "name": "mc_sil_kf_est_only_att_v6.csv",
+      "n": 300,
+      "seed": 1,
+      "kind": "sil",
+      "est": "kf",
+      "cd": "estimated",
+      "errors": [
+        "att"
+      ]
+    },
+    {
+      "name": "nominal_closed_v6.csv",
+      "kind": "nominal",
+      "open": false
+    },
+    {
+      "name": "oat_closed_v6.csv",
+      "kind": "oat",
+      "open": false,
+      "metric": "apogee"
+    },
+    {
+      "name": "oat_closed_drift_v6.csv",
+      "kind": "oat",
+      "open": false,
+      "metric": "drift"
+    },
+    {
+      "name": "morris_closed_v6.csv",
+      "kind": "morris",
+      "open": false,
+      "n": 20,
+      "seed": 1
+    },
+    {
+      "name": "nominal_open_v6.csv",
+      "kind": "nominal",
+      "open": true
+    },
+    {
+      "name": "oat_open_v6.csv",
+      "kind": "oat",
+      "open": true,
+      "metric": "apogee"
+    },
+    {
+      "name": "oat_open_drift_v6.csv",
+      "kind": "oat",
+      "open": true,
+      "metric": "drift"
+    },
+    {
+      "name": "morris_open_v6.csv",
+      "kind": "morris",
+      "open": true,
+      "n": 20,
+      "seed": 1
+    },
+    {
+      "name": "recovery_v6.csv",
+      "kind": "recovery"
+    },
+    {
+      "name": "dmap_v6.csv",
+      "kind": "dmap"
+    },
+    {
+      "name": "sil_nominal_trace_v6.csv",
+      "kind": "trace"
+    }
+  ]
+}

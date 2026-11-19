@@ -1,0 +1,146 @@
+{
+  "status": "COMPLETE_READONLY_DIAGNOSTIC",
+  "recorded_UTC": "2026-10-11T17:25:32.545182+00:00",
+  "analysis_source_sha256": "84ea1e5d675f0518b78b4de2d85def64699379f214315fe12fcedd96707e2a3f",
+  "calculation_module": {
+    "file": "val/flight_temperature.py",
+    "sha256": "4ebb58b674d538fe0425cda8f58716d74ba28fb510e1a0fc4c9c706580ad4909"
+  },
+  "temperature_inference_sha256": "a8c03f933e612cf7eef08041ad240a40b578d7db5a3fba6b61665e6bd8f2fc9d",
+  "results": [
+    {
+      "name": "TeleMetrum",
+      "raw_file": "val/data/2022-06-24-serial-5115-flight-0001-TeleMetrum.csv",
+      "raw_sha256": "9fe8d17a25e7944267b34a45ed955303afd5818b3f18479a5f7ffb31a574cecf",
+      "fitted_GPS_apex_s": 29.84940435568876,
+      "selection_window_s": [
+        28.84940435568876,
+        30.84940435568876
+      ],
+      "minimum_pressure_Pa": 52425.0,
+      "minimum_rows": [
+        {
+          "t": 29.61,
+          "p": 52425.0,
+          "state": "coast"
+        }
+      ],
+      "states_in_window": [
+        "coast",
+        "drogue"
+      ],
+      "sensitivity": [
+        {
+          "method": "minimum_in_apex_window",
+          "available": true,
+          "n": 136,
+          "time_interval_s": [
+            28.85,
+            30.84
+          ],
+          "pressure_Pa": 52425.0,
+          "inferred_offset_K": 16.70550909780087
+        },
+        {
+          "method": "median_in_apex_window",
+          "available": true,
+          "n": 136,
+          "time_interval_s": [
+            28.85,
+            30.84
+          ],
+          "pressure_Pa": 52511.0,
+          "inferred_offset_K": 17.632499735239037
+        },
+        {
+          "method": "minimum_of_coast_state_in_apex_window",
+          "available": true,
+          "n": 116,
+          "time_interval_s": [
+            28.85,
+            29.92
+          ],
+          "pressure_Pa": 52425.0,
+          "inferred_offset_K": 16.70550909780087
+        },
+        {
+          "method": "median_of_coast_state_in_apex_window",
+          "available": true,
+          "n": 116,
+          "time_interval_s": [
+            28.85,
+            29.92
+          ],
+          "pressure_Pa": 52509.0,
+          "inferred_offset_K": 17.610889827995095
+        }
+      ]
+    },
+    {
+      "name": "TeleMega",
+      "raw_file": "val/data/2022-06-24-serial-6583-flight-0003-TeleMega.csv",
+      "raw_sha256": "befe40714e6b88b3bd5af8cd51b569a94544c486ced299878f66ab264f9105a6",
+      "fitted_GPS_apex_s": 29.52682833985704,
+      "selection_window_s": [
+        28.52682833985704,
+        30.52682833985704
+      ],
+      "minimum_pressure_Pa": 52393.0,
+      "minimum_rows": [
+        {
+          "t": 28.81,
+          "p": 52393.0,
+          "state": "drogue"
+        },
+        {
+          "t": 28.82,
+          "p": 52393.0,
+          "state": "drogue"
+        }
+      ],
+      "states_in_window": [
+        "drogue"
+      ],
+      "sensitivity": [
+        {
+          "method": "minimum_in_apex_window",
+          "available": true,
+          "n": 30,
+          "time_interval_s": [
+            28.61,
+            30.51
+          ],
+          "pressure_Pa": 52393.0,
+          "inferred_offset_K": 16.769891514358676
+        },
+        {
+          "method": "median_in_apex_window",
+          "available": true,
+          "n": 30,
+          "time_interval_s": [
+            28.61,
+            30.51
+          ],
+          "pressure_Pa": 52417.5,
+          "inferred_offset_K": 17.034059257289186
+        },
+        {
+          "method": "minimum_of_coast_state_in_apex_window",
+          "available": false
+        },
+        {
+          "method": "median_of_coast_state_in_apex_window",
+          "available": false
+        }
+      ]
+    }
+  ],
+  "scope": "Pressure-selector sensitivity only. Accepted 16.74 K remains the mean of the original apex-window pressure minima after a consistent geometric/geopotential conversion. No flight/MC reruns or model/source changes.",
+  "limitations": [
+    "CSV state_name is the recorder state, not independently measured physical charge/deployment timing.",
+    "The TeleMetrum minimum is close to the plotted 29.6 s pressure-disturbance marker; the TeleMega minimum has recorder state drogue. Selection/ejection/static-port behaviour can contribute to the inferred column offset.",
+    "A minimum-pressure selector is an apex-window diagnostic, not an independent mean air-temperature observation. Correcting the height convention does not validate its accuracy.",
+    "Median and coast-state alternatives are post-hoc sensitivity calculations, not replacement accepted calibration or uncertainty bounds."
+  ],
+  "issues": []
+}

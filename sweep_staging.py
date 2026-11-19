@@ -5,6 +5,7 @@ import csv
 import math
 
 import jsbsim
+from flight_checks import require, run_checked
 
 ROOT = "."
 DT = 0.001
@@ -12,11 +13,11 @@ IGNITION_S = 0.0
 NO_BRAKE_TARGET = 1.0e9
 SEP_TIME = 0.2
 
-PROP_PER_MOTOR = 6.837
+PROP_PER_MOTOR = 3.101 / 0.45359237
 SUSTAINER_DRY = 37.00
 PAYLOAD = 1.80
-ISP_S = 198.17
-G0_FPS2 = 32.174
+ISP_S = 6026.35 / (3.101 * 9.80665)
+G0_FPS2 = 9.80665 / 0.3048
 
 SERIES_APOGEE_FT = None
 COAST_S = 0.0
@@ -27,11 +28,12 @@ SERIES_DRY = 41.69
 def fly_two_stage(stage1_dry_lb, t_max=200.0):
     fdm = jsbsim.FGFDMExec(ROOT)
     fdm.set_debug_level(0)
-    fdm.load_model("myrocket2")
+    require(fdm.load_model("myrocket2"), "model load")
     fdm.set_dt(DT)
-    fdm.load_ic("reset", True)
+    require(fdm.load_ic("reset", True), "initial conditions load")
     fdm["ic/h-agl-ft"] = 11.5
-    fdm.run_ic()
+    require(fdm.run_ic(), "initial conditions execution")
+    fdm.disable_output()
 
     fdm["fcs/target-apogee-ft"] = NO_BRAKE_TARGET
     fdm["fcs/sep-delay-sec"] = SEP_TIME
@@ -46,12 +48,14 @@ def fly_two_stage(stage1_dry_lb, t_max=200.0):
             fdm["propulsion/engine[0]/set-running"] = 1
             fdm["fcs/throttle-cmd-norm"] = 1.0
             lit = True
-        fdm.run()
+        run_checked(fdm)
         h = fdm["position/h-agl-ft"]
         if h > apogee:
             apogee = h
         if fdm["simulation/sim-time-sec"] > 5.0 and h < 1.0:
             break
+    if not (fdm["simulation/sim-time-sec"] > 5 and fdm["position/h-agl-ft"] < 1):
+        raise RuntimeError(f"Landing not reached by {t_max}s")
     return apogee
 
 
@@ -116,11 +120,7 @@ def main():
     masses, apogees, dvs = [], [], []
     for i in range(a.steps):
         m = a.lo + (a.hi - a.lo) * i / max(a.steps - 1, 1)
-        try:
-            ap_ft = fly_two_stage(m)
-        except Exception as e:
-            print(f"{m:12.2f}  ERROR {e}")
-            continue
+        ap_ft = fly_two_stage(m)
         dv = ideal_dv_two_stage(m)
         masses.append(m)
         apogees.append(ap_ft)

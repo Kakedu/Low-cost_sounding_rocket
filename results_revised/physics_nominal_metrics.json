@@ -1,0 +1,60 @@
+{
+  "rail": {
+    "simulation/sim-time-sec": 0.3840000000000003,
+    "position/h-agl-ft": 17.03651113896564,
+    "velocities/h-dot-fps": 80.60435080503657,
+    "velocities/vt-fps": 80.61664326163773,
+    "velocities/mach": 0.07221234216082932,
+    "aero/qbar-psf": 7.719976300677107,
+    "position/lat-geod-deg": -27.49999942209118,
+    "position/long-gc-deg": 152.9999999995243
+  },
+  "depleted": {
+    "simulation/sim-time-sec": 3.8999999999996815,
+    "position/h-agl-ft": 2005.3182908134588,
+    "velocities/h-dot-fps": 859.294496054165,
+    "velocities/vt-fps": 859.4984300784879,
+    "velocities/mach": 0.7752127219909213,
+    "aero/qbar-psf": 827.5881758409829,
+    "position/lat-geod-deg": -27.49988666469483,
+    "position/long-gc-deg": 152.99999848301104
+  },
+  "last_thrust_gt1lbf": {
+    "simulation/sim-time-sec": 3.894999999999682,
+    "position/h-agl-ft": 2001.0210762015363,
+    "velocities/h-dot-fps": 859.5907416049606,
+    "velocities/vt-fps": 859.7946701911012,
+    "velocities/mach": 0.7754682978513667,
+    "aero/qbar-psf": 828.264334671544,
+    "position/lat-geod-deg": -27.499886922129306,
+    "position/long-gc-deg": 152.99999848866707
+  },
+  "apogee": {
+    "simulation/sim-time-sec": 25.987000000008777,
+    "position/h-agl-ft": 10547.621803038921,
+    "velocities/h-dot-fps": 0.006838849972865102,
+    "velocities/vt-fps": 13.775106791518432,
+    "velocities/mach": 0.01281137413479674,
+    "aero/qbar-psf": 0.16371746478813745,
+    "position/lat-geod-deg": -27.49894871800399,
+    "position/long-gc-deg": 152.99993149138822
+  },
+  "max_q_psf": 865.4981336993653,
+  "max_mach": 0.7866321382512541,
+  "land": {
+    "simulation/sim-time-sec": 212.04500000064843,
+    "position/h-agl-ft": 0.9864238398798231,
+    "velocities/h-dot-fps": -7.884265381223906,
+    "velocities/vt-fps": 8.483516977763019,
+    "velocities/mach": 0.007598689334116848,
+    "aero/qbar-psf": 0.08553077224530345,
+    "position/lat-geod-deg": -27.498793385526202,
+    "position/long-gc-deg": 152.99992530152355
+  },
+  "land_n": 134.3197088085562,
+  "land_e": -7.3758466550954545,
+  "land_dist_m": 134.5220698929912,
+  "apo_n": 117.02817647745383,
+  "apo_e": -6.764649548456468,
+  "runtime_s": 4.8499920000031125
+}

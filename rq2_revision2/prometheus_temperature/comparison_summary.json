@@ -1,0 +1,329 @@
+{
+  "status": "COMPLETE",
+  "command": [
+    "work/run_prometheus_temperature_comparison.py"
+  ],
+  "script_sha256": "becd3fd38978ccce30c0c9e7c23a1e285b48ef916225879ac6ac346385edfa77",
+  "temperature_inference_sha256": "a8c03f933e612cf7eef08041ad240a40b578d7db5a3fba6b61665e6bd8f2fc9d",
+  "cases": [
+    {
+      "name": "regional_2022",
+      "role": "independent regional weather",
+      "status": "SUCCESS",
+      "input_dT_K": 19.250000000000696,
+      "executed_dT_R_in_XML": 34.65,
+      "apogee_geometric_m": 4259.552950075875,
+      "apogee_barometric_model_m": 3988.3799019873204,
+      "gps_reference_m": 4132.379110035123,
+      "barometric_reference_m": 3901.0699999999997,
+      "geometric_error_m": 127.17384004075211,
+      "geometric_error_pct": 3.077496925001899,
+      "barometric_error_m": 87.3099019873207,
+      "barometric_error_pct": 2.2381013923697957,
+      "t_apogee_s": 29.364099999999976,
+      "burnout_s": 4.894099999999815,
+      "terminal": {
+        "t_s": 220.5351000006871,
+        "h_agl_ft": 2.984574751852051,
+        "v_vertical_fps": -9.294310170964202,
+        "terminated": 1.0,
+        "fuel_lb": 0.0
+      },
+      "max_mach": 0.9605012811635145,
+      "runtime_s": 3.512164354324341,
+      "environment": {
+        "PROM_INPUTS": "prometheus_inputs_2022.json",
+        "DT_ABS": "19.250000000000696",
+        "SIM_DT": ".001"
+      },
+      "logs": [
+        {
+          "command": [
+            "C:\\Users\\Haoran Du\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+            "C:\\Users\\Haoran Du\\Documents\\Codex\\2026-10-11\\ban\\work\\revision2_project\\rq2_revision2\\prometheus_temperature\\source_snapshot\\val\\build_prometheus.py"
+          ],
+          "exit_code": 0,
+          "stdout": "delta-T 19.25 K (profile density fit 19.25 K), density error vs reanalysis -0.9% to +0.6%\nrail exit t 0.384 s  v 25.19 m/s\n{'t_exit': 0.384099999999974, 'v_exit': 25.190324303125788, 'dT': 19.250000000000696, 'isp': 206.8105991917274, 'impulse': 7579.0813105, 'cmq': -447.633412145752, 'motor': {'output': 'C:\\\\Users\\\\Haoran Du\\\\Documents\\\\Codex\\\\2026-10-11\\\\ban\\\\work\\\\revision2_project\\\\rq2_revision2\\\\prometheus_temperature\\\\runs\\\\regional_2022\\\\model\\\\engine\\\\M1520.xml', 'impulse_Ns': 7579.081310500001, 'source_impulse_Ns': 7579.081310500001, 'prop_kg': 3.737, 'prop_lb': 8.238674737848875, 'burned_kg': 0.2920277742638369, 'remaining_prop_lb': 7.594863700498672, 'isp_s': 206.81059919172748, 'isp_scale': 1.0, 'start_time_s': 0.384099999999974, 'sample_dt_s': 0.002, 'rows': 2265, 'burn_end_s': 4.897, 'initial_regularized_thrust_N': 1661.8761608391608, 'terminal_regularized_thrust_N': 0.6368324380309888}, 'input_file': 'prometheus_inputs_2022.json', 'weather': {'station': 'USM00072364', 'station_latitude': 31.8728, 'station_longitude': -106.698, 'station_pad_distance_m': 120287.17600983239, 'bracketing_times_utc': ['2022-06-24 12:00', '2022-06-25 00:00'], 'nominal_hour_weight': 0.2736111111111111, 'fit_dT_K': 19.20000000000769, 'source_url': 'https://www.ncei.noaa.gov/pub/data/igra/data/data-por/USM00072364-data.txt.zip', 'excerpt_sha256': 'ca64b7dfb59f7a2c075b5477c6d5c7ff05703402db0f1019aed55f5d84b2f2bc', 'profiles': {'2022062412': {'thermodynamic_levels': 99, 'wind_levels': 181, 'release_time_HHMM_UTC': '1106'}, '2022062500': {'thermodynamic_levels': 95, 'wind_levels': 185, 'release_time_HHMM_UTC': '2313'}}, 'processing': 'Separate valid thermodynamic/wind masks; logarithmic vertical pressure interpolation; meteorological FROM-wind converted to east/north; nominal-hour interpolation', 'limitation': 'Regional proxy about 120km away, not launch-site weather; whole-profile nominal-time interpolation ignores balloon ascent time; spatial and profile-shape representativeness unquantified'}, 'cg_dry_in': 54.88688751503756, 'x_cp_in': 64.95766674367104, 'static_margin_cal': 1.8310497800755692}\n",
+          "stderr": ""
+        },
+        {
+          "command": [
+            "C:\\Users\\Haoran Du\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+            "C:\\Users\\Haoran Du\\Documents\\Codex\\2026-10-11\\ban\\work\\revision2_project\\rq2_revision2\\prometheus_temperature\\source_snapshot\\val\\run_prometheus.py"
+          ],
+          "exit_code": 0,
+          "stdout": "\n\n     JSBSim Flight Dynamics Model v1.3.1 [GitHub build 1837/commit 3b25f25e49b42d0489c04ac805674fc1450ca579] May 17 2026 14:28:34\n            [JSBSim-ML v2.0]\n\nJSBSim startup beginning ...\n\n\nApogee (Event 1) executed at time: 28.983\n    position/h-agl-ft = 13974.9\n\nCompleted prometheus: apogee 4259.552950075875 m; burnout 4.894099999999815 s; terminal {'t_s': 220.5351000006871, 'h_agl_ft': 2.984574751852051, 'v_vertical_fps': -9.294310170964202, 'terminated': 1.0, 'fuel_lb': 0.0}\n",
+          "stderr": ""
+        }
+      ],
+      "used_source_sha256": {
+        "atmosphere_model.py": "bf26ec9195d0f353b3277dae97684f67b774cfa869e9a66547bb7b0cf9483129",
+        "motor_model.py": "e9d566135a0ff66464acc45ecd56c68dca0dc5a544765f6e0f9ffc996d0caad2",
+        "val\\build_cavour.py": "968ffd4d24c59d6c9e505b79c341ccc7043d1e6f5a06164c2d1337182d4deb2f",
+        "val\\build_info.json": "b749b3c948a2ae1bf8224c2dc3363aba6600ebfe8c7dabda0b0ebb1af079e9f9",
+        "val\\build_info_cavour.json": "919904c2b2161ede26c4ecb138f1407d3f9a36b31df0df41d428b847a8e506fc",
+        "val\\build_prometheus.py": "bc9bb1ed164d1cca49ed70175d5ef54b08d8d7980b716166effd9660da87292d",
+        "val\\cavour_check.json": "8577c5c55476199661724f574d2776f13330364eccb1c2531bbfadeb8dcf9699",
+        "val\\cavour_check.py": "47a05d344506e055cab288a3f7ce30a56120085540e63f1a362fea3a3cb0a833",
+        "val\\cavour_mc.json": "9af802490d4da055ffa5de3902906d10147bbea2268541dd5310bdae7671bd95",
+        "val\\cavour_mc.py": "3631a89074bd2576932dbe2b1fa8036ce53703edb40eab3b3ab25b8078585261",
+        "val\\cavour_mc_inputs.json": "ff8183857af38f1dc840d6b286a471229d29b0ab111c69ac0d3807a544f87c25",
+        "val\\gps_check.json": "c7cb61465f562d83870805a9f96a25192e9d10cbc77dfc3f616b08203c4bbd45",
+        "val\\gps_check.py": "1324f57fedb9dda2a1bc4deb96a1f0c4abb028c2808e0790a6a4c8fccd9b5c15",
+        "val\\jsb_result.json": "bfa42b31dd0850708214346283b274afe73d1ddaf3926fa7a50c1416310ca1a4",
+        "val\\jsb_result_cavour.json": "26bdab73ef57c171cdfe393fe1253263a6eb044b9c824643bc6b9370e1b1da53",
+        "val\\plot_validation.py": "d4f55b66a85fb2a6a77d6444818bd7f9da1fced96fb08d0276040f4b20ec52ed",
+        "val\\prepare_prometheus_weather.py": "58760a581e9602985385173f19afcc8b49474d9c3b177519be39b655f7c74e28",
+        "val\\prometheus_inputs.json": "d503ccb23b2d170a9cd55a94c99eb8d049c83788996e2b57a342b15764e30616",
+        "val\\prometheus_inputs.py": "cbce9c7a14697c5d4e5a71378ed9ba28b1c3cec01b65384a3d6ffaab3f894d1f",
+        "val\\prometheus_inputs_2022.json": "f6fdb38b3fc85fa88ad2b29fea6b7a591220321760fe6390d00a9e92625b2a79",
+        "val\\prom_mc.json": "ccee5408bbee409ba2566ed409779465549561cda546de66c14987f2df09b414",
+        "val\\prom_mc.py": "15e27947e8df281b1efbfbd999ec708c5307c1faaa120a063232fd75ac7e956b",
+        "val\\prom_mc_inputs.json": "5e61a4a24c20a98f8e49a3e5759ea6e34ee43955147b97b652e7b51d9598b290",
+        "val\\run_cavour.py": "17cc07a40a6d9e2d82e576d75bbe7bb56ac7e36411cdc3e14f9b756373b732bc",
+        "val\\run_prometheus.py": "2c9748d6d63c083cbcb3a86934e609f10cfd3e62148fdfb0f411fcd3ab8ab5d6",
+        "val\\validation_atmosphere.py": "6ff6b8e8f40f00667ff0a28c2166e5d462d17cb33b803bb47be0c8a2f628305a",
+        "val\\validation_mc.py": "fc806e7df6a38edab1e89a1d870c25b886159e7573b4641fa71d4863a1f53522",
+        "val\\data\\2022-06-24-serial-5115-flight-0001-TeleMetrum.csv": "9fe8d17a25e7944267b34a45ed955303afd5818b3f18479a5f7ffb31a574cecf",
+        "val\\data\\2022-06-24-serial-6583-flight-0003-TeleMega.csv": "befe40714e6b88b3bd5af8cd51b569a94544c486ced299878f66ab264f9105a6",
+        "val\\data\\Cesaroni_7579M1520-P.eng": "f38ad06972a07e4ef04164a60718f099d732de6e433185e211dd87083f89e4ca",
+        "val\\data\\prometheus_2022_igra_excerpt.txt": "ca64b7dfb59f7a2c075b5477c6d5c7ff05703402db0f1019aed55f5d84b2f2bc",
+        "val\\data\\prometheus_sounding_2022062412.csv": "04752e1e952397e608c2bbf90d3386efbf98a8f81d881b10ca9451a8ba82f137",
+        "val\\data\\prometheus_sounding_2022062500.csv": "143a474ffc5439ac1a1085bf902e7ad2afa421dd3004d2ca781bd65f55748a30",
+        "val\\data\\spaceport_america_pressure_levels_2023_hourly.nc": "25d48e9d03554251dc2d0601dcaa1e441ca7e7c502f573fceb4ce5c058da8694",
+        "val\\data\\cavour\\altimeter_cavour.csv": "f912724676eea0ca9ba031c3779e48f861538814170b050b7bda2887c31f29a8",
+        "val\\data\\cavour\\Cesaroni_3618L995-P.eng": "efc04492a3527bdb626d8ec0c18bbbd51f02012393d3b82e00b11d167b2dad2b",
+        "val\\data\\cavour\\drag_coefficient_power_off.csv": "e47b9398b9e7802ac2f6edafe291edc1015fbb1ee6cb02df52404cf1b276f1c9",
+        "val\\data\\cavour\\drag_coefficient_power_on.csv": "5f588e25e43b843470e1882f35e2a3be0b7f1760c6652da0c757ad203e7469ed",
+        "val\\data\\cavour\\euroc_2023_all_windows.nc": "a3d9e08eb3bb4480d1b8ef03b06878a1a1f76397fdc9dcc929fe5cc856f61d56"
+      },
+      "output_sha256": {
+        "build_info.json": "3e56159e4e12a7d6e101874a45c7f8605ffdf2a1fc629b1e80c9ceebe99c1bb2",
+        "result.json": "f424d656639b661bc2ee591ac8464fdab1c0eab2108e0d5bf8c5c635b1f04d82",
+        "model\\data_output\\prometheus.csv": "3f21a2f88bc3a627d8dd8dbb94b68069369986a7c48b4edb3e5707d021143d53",
+        "model\\engine\\direct.xml": "f116b6f6d25d4b2b46c2f0faa713e85d0064db7a634105bc96e391fb52e4dde5",
+        "model\\engine\\M1520.xml": "6fab2ffdfc99466a24d8e80c7bec6be168be9582c017961f964f55d82c4f2f0b",
+        "model\\scripts\\prometheus.xml": "bcb3d2f2c26e9d1f4701a81ab7e781a0794f31c3c9eea10615e004a44ddfab06",
+        "model\\aircraft\\prometheus\\prometheus.xml": "4545c42e3f975ff25dad2c669e63a3ddbfe8f24f86a94b0b5c21585ee348f975",
+        "model\\aircraft\\prometheus\\rail_exit.xml": "76a10051acf0d24f68815c2cc6d9db35417e277aa57d16cfc3c2eb1987ef13f4"
+      }
+    },
+    {
+      "name": "flight_geometric",
+      "role": "flight-informed calibration",
+      "status": "SUCCESS",
+      "input_dT_K": 16.737700306079773,
+      "executed_dT_R_in_XML": 30.128,
+      "apogee_geometric_m": 4249.3417910928465,
+      "apogee_barometric_model_m": 4011.6110412397084,
+      "gps_reference_m": 4132.379110035123,
+      "barometric_reference_m": 3901.0699999999997,
+      "geometric_error_m": 116.96268105772378,
+      "geometric_error_pct": 2.8303957101537547,
+      "barometric_error_m": 110.54104123970865,
+      "barometric_error_pct": 2.8336082469606616,
+      "t_apogee_s": 29.324099999999977,
+      "burnout_s": 4.894099999999815,
+      "terminal": {
+        "t_s": 220.724100000688,
+        "h_agl_ft": 2.984268549389526,
+        "v_vertical_fps": -9.252183542739612,
+        "terminated": 1.0,
+        "fuel_lb": 0.0
+      },
+      "max_mach": 0.9640345109125387,
+      "runtime_s": 3.2242960929870605,
+      "environment": {
+        "PROM_INPUTS": "prometheus_inputs_2022.json",
+        "DT_ABS": "16.737700306079773",
+        "SIM_DT": ".001"
+      },
+      "logs": [
+        {
+          "command": [
+            "C:\\Users\\Haoran Du\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+            "C:\\Users\\Haoran Du\\Documents\\Codex\\2026-10-11\\ban\\work\\revision2_project\\rq2_revision2\\prometheus_temperature\\source_snapshot\\val\\build_prometheus.py"
+          ],
+          "exit_code": 0,
+          "stdout": "delta-T 16.74 K (profile density fit 19.25 K), density error vs reanalysis -0.4% to +1.3%\nrail exit t 0.384 s  v 25.19 m/s\n{'t_exit': 0.384099999999974, 'v_exit': 25.190236571570754, 'dT': 16.737700306079773, 'isp': 206.8105991917274, 'impulse': 7579.0813105, 'cmq': -447.633412145752, 'motor': {'output': 'C:\\\\Users\\\\Haoran Du\\\\Documents\\\\Codex\\\\2026-10-11\\\\ban\\\\work\\\\revision2_project\\\\rq2_revision2\\\\prometheus_temperature\\\\runs\\\\flight_geometric\\\\model\\\\engine\\\\M1520.xml', 'impulse_Ns': 7579.081310500001, 'source_impulse_Ns': 7579.081310500001, 'prop_kg': 3.737, 'prop_lb': 8.238674737848875, 'burned_kg': 0.2920277742638369, 'remaining_prop_lb': 7.594863700498672, 'isp_s': 206.81059919172748, 'isp_scale': 1.0, 'start_time_s': 0.384099999999974, 'sample_dt_s': 0.002, 'rows': 2265, 'burn_end_s': 4.897, 'initial_regularized_thrust_N': 1661.8761608391608, 'terminal_regularized_thrust_N': 0.6368324380309888}, 'input_file': 'prometheus_inputs_2022.json', 'weather': {'station': 'USM00072364', 'station_latitude': 31.8728, 'station_longitude': -106.698, 'station_pad_distance_m': 120287.17600983239, 'bracketing_times_utc': ['2022-06-24 12:00', '2022-06-25 00:00'], 'nominal_hour_weight': 0.2736111111111111, 'fit_dT_K': 19.20000000000769, 'source_url': 'https://www.ncei.noaa.gov/pub/data/igra/data/data-por/USM00072364-data.txt.zip', 'excerpt_sha256': 'ca64b7dfb59f7a2c075b5477c6d5c7ff05703402db0f1019aed55f5d84b2f2bc', 'profiles': {'2022062412': {'thermodynamic_levels': 99, 'wind_levels': 181, 'release_time_HHMM_UTC': '1106'}, '2022062500': {'thermodynamic_levels': 95, 'wind_levels': 185, 'release_time_HHMM_UTC': '2313'}}, 'processing': 'Separate valid thermodynamic/wind masks; logarithmic vertical pressure interpolation; meteorological FROM-wind converted to east/north; nominal-hour interpolation', 'limitation': 'Regional proxy about 120km away, not launch-site weather; whole-profile nominal-time interpolation ignores balloon ascent time; spatial and profile-shape representativeness unquantified'}, 'cg_dry_in': 54.88688751503756, 'x_cp_in': 64.95766674367104, 'static_margin_cal': 1.8310497800755692}\n",
+          "stderr": ""
+        },
+        {
+          "command": [
+            "C:\\Users\\Haoran Du\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+            "C:\\Users\\Haoran Du\\Documents\\Codex\\2026-10-11\\ban\\work\\revision2_project\\rq2_revision2\\prometheus_temperature\\source_snapshot\\val\\run_prometheus.py"
+          ],
+          "exit_code": 0,
+          "stdout": "\n\n     JSBSim Flight Dynamics Model v1.3.1 [GitHub build 1837/commit 3b25f25e49b42d0489c04ac805674fc1450ca579] May 17 2026 14:28:34\n            [JSBSim-ML v2.0]\n\nJSBSim startup beginning ...\n\n\nApogee (Event 1) executed at time: 28.944\n    position/h-agl-ft = 13941.4\n\nCompleted prometheus: apogee 4249.3417910928465 m; burnout 4.894099999999815 s; terminal {'t_s': 220.724100000688, 'h_agl_ft': 2.984268549389526, 'v_vertical_fps': -9.252183542739612, 'terminated': 1.0, 'fuel_lb': 0.0}\n",
+          "stderr": ""
+        }
+      ],
+      "used_source_sha256": {
+        "atmosphere_model.py": "bf26ec9195d0f353b3277dae97684f67b774cfa869e9a66547bb7b0cf9483129",
+        "motor_model.py": "e9d566135a0ff66464acc45ecd56c68dca0dc5a544765f6e0f9ffc996d0caad2",
+        "val\\build_cavour.py": "968ffd4d24c59d6c9e505b79c341ccc7043d1e6f5a06164c2d1337182d4deb2f",
+        "val\\build_info.json": "b749b3c948a2ae1bf8224c2dc3363aba6600ebfe8c7dabda0b0ebb1af079e9f9",
+        "val\\build_info_cavour.json": "919904c2b2161ede26c4ecb138f1407d3f9a36b31df0df41d428b847a8e506fc",
+        "val\\build_prometheus.py": "bc9bb1ed164d1cca49ed70175d5ef54b08d8d7980b716166effd9660da87292d",
+        "val\\cavour_check.json": "8577c5c55476199661724f574d2776f13330364eccb1c2531bbfadeb8dcf9699",
+        "val\\cavour_check.py": "47a05d344506e055cab288a3f7ce30a56120085540e63f1a362fea3a3cb0a833",
+        "val\\cavour_mc.json": "9af802490d4da055ffa5de3902906d10147bbea2268541dd5310bdae7671bd95",
+        "val\\cavour_mc.py": "3631a89074bd2576932dbe2b1fa8036ce53703edb40eab3b3ab25b8078585261",
+        "val\\cavour_mc_inputs.json": "ff8183857af38f1dc840d6b286a471229d29b0ab111c69ac0d3807a544f87c25",
+        "val\\gps_check.json": "c7cb61465f562d83870805a9f96a25192e9d10cbc77dfc3f616b08203c4bbd45",
+        "val\\gps_check.py": "1324f57fedb9dda2a1bc4deb96a1f0c4abb028c2808e0790a6a4c8fccd9b5c15",
+        "val\\jsb_result.json": "bfa42b31dd0850708214346283b274afe73d1ddaf3926fa7a50c1416310ca1a4",
+        "val\\jsb_result_cavour.json": "26bdab73ef57c171cdfe393fe1253263a6eb044b9c824643bc6b9370e1b1da53",
+        "val\\plot_validation.py": "d4f55b66a85fb2a6a77d6444818bd7f9da1fced96fb08d0276040f4b20ec52ed",
+        "val\\prepare_prometheus_weather.py": "58760a581e9602985385173f19afcc8b49474d9c3b177519be39b655f7c74e28",
+        "val\\prometheus_inputs.json": "d503ccb23b2d170a9cd55a94c99eb8d049c83788996e2b57a342b15764e30616",
+        "val\\prometheus_inputs.py": "cbce9c7a14697c5d4e5a71378ed9ba28b1c3cec01b65384a3d6ffaab3f894d1f",
+        "val\\prometheus_inputs_2022.json": "f6fdb38b3fc85fa88ad2b29fea6b7a591220321760fe6390d00a9e92625b2a79",
+        "val\\prom_mc.json": "ccee5408bbee409ba2566ed409779465549561cda546de66c14987f2df09b414",
+        "val\\prom_mc.py": "15e27947e8df281b1efbfbd999ec708c5307c1faaa120a063232fd75ac7e956b",
+        "val\\prom_mc_inputs.json": "5e61a4a24c20a98f8e49a3e5759ea6e34ee43955147b97b652e7b51d9598b290",
+        "val\\run_cavour.py": "17cc07a40a6d9e2d82e576d75bbe7bb56ac7e36411cdc3e14f9b756373b732bc",
+        "val\\run_prometheus.py": "2c9748d6d63c083cbcb3a86934e609f10cfd3e62148fdfb0f411fcd3ab8ab5d6",
+        "val\\validation_atmosphere.py": "6ff6b8e8f40f00667ff0a28c2166e5d462d17cb33b803bb47be0c8a2f628305a",
+        "val\\validation_mc.py": "fc806e7df6a38edab1e89a1d870c25b886159e7573b4641fa71d4863a1f53522",
+        "val\\data\\2022-06-24-serial-5115-flight-0001-TeleMetrum.csv": "9fe8d17a25e7944267b34a45ed955303afd5818b3f18479a5f7ffb31a574cecf",
+        "val\\data\\2022-06-24-serial-6583-flight-0003-TeleMega.csv": "befe40714e6b88b3bd5af8cd51b569a94544c486ced299878f66ab264f9105a6",
+        "val\\data\\Cesaroni_7579M1520-P.eng": "f38ad06972a07e4ef04164a60718f099d732de6e433185e211dd87083f89e4ca",
+        "val\\data\\prometheus_2022_igra_excerpt.txt": "ca64b7dfb59f7a2c075b5477c6d5c7ff05703402db0f1019aed55f5d84b2f2bc",
+        "val\\data\\prometheus_sounding_2022062412.csv": "04752e1e952397e608c2bbf90d3386efbf98a8f81d881b10ca9451a8ba82f137",
+        "val\\data\\prometheus_sounding_2022062500.csv": "143a474ffc5439ac1a1085bf902e7ad2afa421dd3004d2ca781bd65f55748a30",
+        "val\\data\\spaceport_america_pressure_levels_2023_hourly.nc": "25d48e9d03554251dc2d0601dcaa1e441ca7e7c502f573fceb4ce5c058da8694",
+        "val\\data\\cavour\\altimeter_cavour.csv": "f912724676eea0ca9ba031c3779e48f861538814170b050b7bda2887c31f29a8",
+        "val\\data\\cavour\\Cesaroni_3618L995-P.eng": "efc04492a3527bdb626d8ec0c18bbbd51f02012393d3b82e00b11d167b2dad2b",
+        "val\\data\\cavour\\drag_coefficient_power_off.csv": "e47b9398b9e7802ac2f6edafe291edc1015fbb1ee6cb02df52404cf1b276f1c9",
+        "val\\data\\cavour\\drag_coefficient_power_on.csv": "5f588e25e43b843470e1882f35e2a3be0b7f1760c6652da0c757ad203e7469ed",
+        "val\\data\\cavour\\euroc_2023_all_windows.nc": "a3d9e08eb3bb4480d1b8ef03b06878a1a1f76397fdc9dcc929fe5cc856f61d56"
+      },
+      "output_sha256": {
+        "build_info.json": "51f0a1db40bdb3d7466fb3b25d93c10f441468f2ffbfe4ff071e17c0997219f8",
+        "result.json": "0a68660ea5b7ed042ed3fcad4799a5f94ed4d72760a9a09fb5e5257fc5672a79",
+        "model\\data_output\\prometheus.csv": "2bd4581ac7db6296c96ddf53854bdf08b360e692d685c6dd25122e71868f49c9",
+        "model\\engine\\direct.xml": "f116b6f6d25d4b2b46c2f0faa713e85d0064db7a634105bc96e391fb52e4dde5",
+        "model\\engine\\M1520.xml": "6fab2ffdfc99466a24d8e80c7bec6be168be9582c017961f964f55d82c4f2f0b",
+        "model\\scripts\\prometheus.xml": "4b9f01774787d31a5ae4a6541a3c77fa094ed3fd84c60c40fe21f7162ab893ca",
+        "model\\aircraft\\prometheus\\prometheus.xml": "4545c42e3f975ff25dad2c669e63a3ddbfe8f24f86a94b0b5c21585ee348f975",
+        "model\\aircraft\\prometheus\\rail_exit.xml": "76a10051acf0d24f68815c2cc6d9db35417e277aa57d16cfc3c2eb1987ef13f4"
+      }
+    },
+    {
+      "name": "historical_flat",
+      "role": "superseded geometric-as-geopotential sensitivity",
+      "status": "SUCCESS",
+      "input_dT_K": 17.062295609518713,
+      "executed_dT_R_in_XML": 30.712,
+      "apogee_geometric_m": 4250.673020107794,
+      "apogee_barometric_model_m": 4008.599243950109,
+      "gps_reference_m": 4132.379110035123,
+      "barometric_reference_m": 3901.0699999999997,
+      "geometric_error_m": 118.29391007267168,
+      "geometric_error_pct": 2.8626103008169146,
+      "barometric_error_m": 107.5292439501095,
+      "barometric_error_pct": 2.756403857149703,
+      "t_apogee_s": 29.324099999999977,
+      "burnout_s": 4.894099999999815,
+      "terminal": {
+        "t_s": 220.69810000068787,
+        "h_agl_ft": 2.9900689588248497,
+        "v_vertical_fps": -9.240225921264702,
+        "terminated": 1.0,
+        "fuel_lb": 0.0
+      },
+      "max_mach": 0.963576538033151,
+      "runtime_s": 3.2292113304138184,
+      "environment": {
+        "PROM_INPUTS": "prometheus_inputs_2022.json",
+        "DT_ABS": "17.062295609518713",
+        "SIM_DT": ".001"
+      },
+      "logs": [
+        {
+          "command": [
+            "C:\\Users\\Haoran Du\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+            "C:\\Users\\Haoran Du\\Documents\\Codex\\2026-10-11\\ban\\work\\revision2_project\\rq2_revision2\\prometheus_temperature\\source_snapshot\\val\\build_prometheus.py"
+          ],
+          "exit_code": 0,
+          "stdout": "delta-T 17.06 K (profile density fit 19.25 K), density error vs reanalysis -0.5% to +1.2%\nrail exit t 0.384 s  v 25.19 m/s\n{'t_exit': 0.384099999999974, 'v_exit': 25.19024797629633, 'dT': 17.062295609518713, 'isp': 206.8105991917274, 'impulse': 7579.0813105, 'cmq': -447.633412145752, 'motor': {'output': 'C:\\\\Users\\\\Haoran Du\\\\Documents\\\\Codex\\\\2026-10-11\\\\ban\\\\work\\\\revision2_project\\\\rq2_revision2\\\\prometheus_temperature\\\\runs\\\\historical_flat\\\\model\\\\engine\\\\M1520.xml', 'impulse_Ns': 7579.081310500001, 'source_impulse_Ns': 7579.081310500001, 'prop_kg': 3.737, 'prop_lb': 8.238674737848875, 'burned_kg': 0.2920277742638369, 'remaining_prop_lb': 7.594863700498672, 'isp_s': 206.81059919172748, 'isp_scale': 1.0, 'start_time_s': 0.384099999999974, 'sample_dt_s': 0.002, 'rows': 2265, 'burn_end_s': 4.897, 'initial_regularized_thrust_N': 1661.8761608391608, 'terminal_regularized_thrust_N': 0.6368324380309888}, 'input_file': 'prometheus_inputs_2022.json', 'weather': {'station': 'USM00072364', 'station_latitude': 31.8728, 'station_longitude': -106.698, 'station_pad_distance_m': 120287.17600983239, 'bracketing_times_utc': ['2022-06-24 12:00', '2022-06-25 00:00'], 'nominal_hour_weight': 0.2736111111111111, 'fit_dT_K': 19.20000000000769, 'source_url': 'https://www.ncei.noaa.gov/pub/data/igra/data/data-por/USM00072364-data.txt.zip', 'excerpt_sha256': 'ca64b7dfb59f7a2c075b5477c6d5c7ff05703402db0f1019aed55f5d84b2f2bc', 'profiles': {'2022062412': {'thermodynamic_levels': 99, 'wind_levels': 181, 'release_time_HHMM_UTC': '1106'}, '2022062500': {'thermodynamic_levels': 95, 'wind_levels': 185, 'release_time_HHMM_UTC': '2313'}}, 'processing': 'Separate valid thermodynamic/wind masks; logarithmic vertical pressure interpolation; meteorological FROM-wind converted to east/north; nominal-hour interpolation', 'limitation': 'Regional proxy about 120km away, not launch-site weather; whole-profile nominal-time interpolation ignores balloon ascent time; spatial and profile-shape representativeness unquantified'}, 'cg_dry_in': 54.88688751503756, 'x_cp_in': 64.95766674367104, 'static_margin_cal': 1.8310497800755692}\n",
+          "stderr": ""
+        },
+        {
+          "command": [
+            "C:\\Users\\Haoran Du\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+            "C:\\Users\\Haoran Du\\Documents\\Codex\\2026-10-11\\ban\\work\\revision2_project\\rq2_revision2\\prometheus_temperature\\source_snapshot\\val\\run_prometheus.py"
+          ],
+          "exit_code": 0,
+          "stdout": "\n\n     JSBSim Flight Dynamics Model v1.3.1 [GitHub build 1837/commit 3b25f25e49b42d0489c04ac805674fc1450ca579] May 17 2026 14:28:34\n            [JSBSim-ML v2.0]\n\nJSBSim startup beginning ...\n\n\nApogee (Event 1) executed at time: 28.949\n    position/h-agl-ft = 13945.8\n\nCompleted prometheus: apogee 4250.673020107794 m; burnout 4.894099999999815 s; terminal {'t_s': 220.69810000068787, 'h_agl_ft': 2.9900689588248497, 'v_vertical_fps': -9.240225921264702, 'terminated': 1.0, 'fuel_lb': 0.0}\n",
+          "stderr": ""
+        }
+      ],
+      "used_source_sha256": {
+        "atmosphere_model.py": "bf26ec9195d0f353b3277dae97684f67b774cfa869e9a66547bb7b0cf9483129",
+        "motor_model.py": "e9d566135a0ff66464acc45ecd56c68dca0dc5a544765f6e0f9ffc996d0caad2",
+        "val\\build_cavour.py": "968ffd4d24c59d6c9e505b79c341ccc7043d1e6f5a06164c2d1337182d4deb2f",
+        "val\\build_info.json": "b749b3c948a2ae1bf8224c2dc3363aba6600ebfe8c7dabda0b0ebb1af079e9f9",
+        "val\\build_info_cavour.json": "919904c2b2161ede26c4ecb138f1407d3f9a36b31df0df41d428b847a8e506fc",
+        "val\\build_prometheus.py": "bc9bb1ed164d1cca49ed70175d5ef54b08d8d7980b716166effd9660da87292d",
+        "val\\cavour_check.json": "8577c5c55476199661724f574d2776f13330364eccb1c2531bbfadeb8dcf9699",
+        "val\\cavour_check.py": "47a05d344506e055cab288a3f7ce30a56120085540e63f1a362fea3a3cb0a833",
+        "val\\cavour_mc.json": "9af802490d4da055ffa5de3902906d10147bbea2268541dd5310bdae7671bd95",
+        "val\\cavour_mc.py": "3631a89074bd2576932dbe2b1fa8036ce53703edb40eab3b3ab25b8078585261",
+        "val\\cavour_mc_inputs.json": "ff8183857af38f1dc840d6b286a471229d29b0ab111c69ac0d3807a544f87c25",
+        "val\\gps_check.json": "c7cb61465f562d83870805a9f96a25192e9d10cbc77dfc3f616b08203c4bbd45",
+        "val\\gps_check.py": "1324f57fedb9dda2a1bc4deb96a1f0c4abb028c2808e0790a6a4c8fccd9b5c15",
+        "val\\jsb_result.json": "bfa42b31dd0850708214346283b274afe73d1ddaf3926fa7a50c1416310ca1a4",
+        "val\\jsb_result_cavour.json": "26bdab73ef57c171cdfe393fe1253263a6eb044b9c824643bc6b9370e1b1da53",
+        "val\\plot_validation.py": "d4f55b66a85fb2a6a77d6444818bd7f9da1fced96fb08d0276040f4b20ec52ed",
+        "val\\prepare_prometheus_weather.py": "58760a581e9602985385173f19afcc8b49474d9c3b177519be39b655f7c74e28",
+        "val\\prometheus_inputs.json": "d503ccb23b2d170a9cd55a94c99eb8d049c83788996e2b57a342b15764e30616",
+        "val\\prometheus_inputs.py": "cbce9c7a14697c5d4e5a71378ed9ba28b1c3cec01b65384a3d6ffaab3f894d1f",
+        "val\\prometheus_inputs_2022.json": "f6fdb38b3fc85fa88ad2b29fea6b7a591220321760fe6390d00a9e92625b2a79",
+        "val\\prom_mc.json": "ccee5408bbee409ba2566ed409779465549561cda546de66c14987f2df09b414",
+        "val\\prom_mc.py": "15e27947e8df281b1efbfbd999ec708c5307c1faaa120a063232fd75ac7e956b",
+        "val\\prom_mc_inputs.json": "5e61a4a24c20a98f8e49a3e5759ea6e34ee43955147b97b652e7b51d9598b290",
+        "val\\run_cavour.py": "17cc07a40a6d9e2d82e576d75bbe7bb56ac7e36411cdc3e14f9b756373b732bc",
+        "val\\run_prometheus.py": "2c9748d6d63c083cbcb3a86934e609f10cfd3e62148fdfb0f411fcd3ab8ab5d6",
+        "val\\validation_atmosphere.py": "6ff6b8e8f40f00667ff0a28c2166e5d462d17cb33b803bb47be0c8a2f628305a",
+        "val\\validation_mc.py": "fc806e7df6a38edab1e89a1d870c25b886159e7573b4641fa71d4863a1f53522",
+        "val\\data\\2022-06-24-serial-5115-flight-0001-TeleMetrum.csv": "9fe8d17a25e7944267b34a45ed955303afd5818b3f18479a5f7ffb31a574cecf",
+        "val\\data\\2022-06-24-serial-6583-flight-0003-TeleMega.csv": "befe40714e6b88b3bd5af8cd51b569a94544c486ced299878f66ab264f9105a6",
+        "val\\data\\Cesaroni_7579M1520-P.eng": "f38ad06972a07e4ef04164a60718f099d732de6e433185e211dd87083f89e4ca",
+        "val\\data\\prometheus_2022_igra_excerpt.txt": "ca64b7dfb59f7a2c075b5477c6d5c7ff05703402db0f1019aed55f5d84b2f2bc",
+        "val\\data\\prometheus_sounding_2022062412.csv": "04752e1e952397e608c2bbf90d3386efbf98a8f81d881b10ca9451a8ba82f137",
+        "val\\data\\prometheus_sounding_2022062500.csv": "143a474ffc5439ac1a1085bf902e7ad2afa421dd3004d2ca781bd65f55748a30",
+        "val\\data\\spaceport_america_pressure_levels_2023_hourly.nc": "25d48e9d03554251dc2d0601dcaa1e441ca7e7c502f573fceb4ce5c058da8694",
+        "val\\data\\cavour\\altimeter_cavour.csv": "f912724676eea0ca9ba031c3779e48f861538814170b050b7bda2887c31f29a8",
+        "val\\data\\cavour\\Cesaroni_3618L995-P.eng": "efc04492a3527bdb626d8ec0c18bbbd51f02012393d3b82e00b11d167b2dad2b",
+        "val\\data\\cavour\\drag_coefficient_power_off.csv": "e47b9398b9e7802ac2f6edafe291edc1015fbb1ee6cb02df52404cf1b276f1c9",
+        "val\\data\\cavour\\drag_coefficient_power_on.csv": "5f588e25e43b843470e1882f35e2a3be0b7f1760c6652da0c757ad203e7469ed",
+        "val\\data\\cavour\\euroc_2023_all_windows.nc": "a3d9e08eb3bb4480d1b8ef03b06878a1a1f76397fdc9dcc929fe5cc856f61d56"
+      },
+      "output_sha256": {
+        "build_info.json": "fb0d4043d7b189fd0078626e71bee235bd11b1bbb13b0c0cd2e484fc0acacf0a",
+        "result.json": "10287f576ca549c296325abb555ef3f1fc37c01a1b005db5fb59fce6d4360dee",
+        "model\\data_output\\prometheus.csv": "551ba63e2074e5f98d34563dc8a6d81b2b8ebc394520ac6a313c6d84235e8aca",
+        "model\\engine\\direct.xml": "f116b6f6d25d4b2b46c2f0faa713e85d0064db7a634105bc96e391fb52e4dde5",
+        "model\\engine\\M1520.xml": "6fab2ffdfc99466a24d8e80c7bec6be168be9582c017961f964f55d82c4f2f0b",
+        "model\\scripts\\prometheus.xml": "608cbc9a553f0b90f50d0d4145edc2e979cbe8c2eaa11fa000c41ceb98c6b784",
+        "model\\aircraft\\prometheus\\prometheus.xml": "4545c42e3f975ff25dad2c669e63a3ddbfe8f24f86a94b0b5c21585ee348f975",
+        "model\\aircraft\\prometheus\\rail_exit.xml": "76a10051acf0d24f68815c2cc6d9db35417e277aa57d16cfc3c2eb1987ef13f4"
+      }
+    }
+  ],
+  "primary_MC_reuse": {
+    "path": "val/prom_mc.json",
+    "sha256": "ccee5408bbee409ba2566ed409779465549561cda546de66c14987f2df09b414",
+    "n": 200,
+    "seed": 7,
+    "failed": 0,
+    "reason": "Primary independent 2022 weather/motor/model inputs unchanged; flight-informed temperature is a deterministic calibration sensitivity, not a second independent MC validation",
+    "mean": 4330.403323427128,
+    "sd": 327.15600776474633,
+    "p2_5": 3731.29951621511,
+    "p97_5": 4915.858160425202
+  },
+  "interpretation": "Same plant, 2022 regional wind and 1ms integration; only the assigned constant temperature offset changes. Flight-derived temperature uses observations already compared with the model and is not independent validation."
+}

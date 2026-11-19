@@ -1,0 +1,12 @@
+{
+  "job": {
+    "name": "recovery_v6.csv",
+    "kind": "recovery"
+  },
+  "worker": 76,
+  "start_unix": 1791731148.7991614,
+  "status": "SUCCESS",
+  "completed": null,
+  "elapsed": 120.09372973442078,
+  "sha256": "76f9837f024cd787240f072428591dec40d76b8cdabd1b8af8d53b5ecf664fc6"
+}

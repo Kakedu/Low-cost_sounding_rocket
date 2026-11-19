@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "checks": {
+    "2022062412": {
+      "retained_thermo_with_missing_wind": 5,
+      "retained_wind_with_missing_thermo": 87,
+      "thermodynamic_levels": 99,
+      "wind_levels": 181
+    },
+    "2022062500": {
+      "retained_thermo_with_missing_wind": 2,
+      "retained_wind_with_missing_thermo": 92,
+      "thermodynamic_levels": 95,
+      "wind_levels": 185
+    }
+  },
+  "source_sha256": "58760a581e9602985385173f19afcc8b49474d9c3b177519be39b655f7c74e28"
+}

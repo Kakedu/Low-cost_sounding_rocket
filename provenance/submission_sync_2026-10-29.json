@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-29",
+  "advisor_review_date": "28.10.2026",
+  "source_archive_sha256": "b99a0711843f274b421a64e1f7a1f674f8bff1dcf41fd303d099abec9b338fda",
+  "thesis": {
+    "docx": "thesis/Haoran_Du.docx",
+    "docx_sha256": "a29ff3bac298573a992954b775ac92282c436e118829592e60163dcbd20e1a85",
+    "pdf": "thesis/Haoran_Du.pdf",
+    "pdf_sha256": "e57a4af4f2e3498a7c95f711dac938715b9e83e7b8a6d3a3317f29cc1dd26f36"
+  },
+  "figure_images": {
+    "3.1": "131643f13053bb9ee7cc4bf3c210dbd474a54b15453f3ab2057d4105a25d3d52",
+    "7.1": "5ba2daa60c61de2b188c128eb4e0aa03d9ca1105df0b7af96f9c316bfcb648d8"
+  },
+  "added_figure_sources": "figures/",
+  "new_flight_simulations": 0,
+  "new_Monte_Carlo_simulations": 0,
+  "existing_model_and_result_files_changed": false,
+  "figure_source_checks": "provenance/figure_sources_2026-10-29.json"
+}

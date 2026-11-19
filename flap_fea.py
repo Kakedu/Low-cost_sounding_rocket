@@ -2,6 +2,8 @@
 
 import json
 import math
+import argparse
+from pathlib import Path
 
 import numpy as np
 from scipy.sparse.linalg import eigsh
@@ -13,10 +15,6 @@ from skfem.models.elasticity import lame_parameters, linear_elasticity
 B, L, T = 0.060, 0.055, 0.003
 E, NU, RHO, SY = 68.9e9, 0.33, 2700.0, 276e6
 F_FLAP = 186.0
-import os as _os
-if _os.path.exists("results_v6/loads_v6.json"):
-    _c = json.load(open("results_v6/loads_v6.json"))["cases"]
-    F_FLAP = max(c["brake_per_flap_N"] for c in _c if c["case"].startswith("impulse"))
 P = F_FLAP / (B * L)
 LAM, MU = lame_parameters(E, NU)
 
@@ -70,7 +68,7 @@ def dynamics(f1_plate):
     band = {}
     for v in (100.0, 200.0, 270.0):
         band[f"V={v:.0f} m/s"] = {f"h={h * 1e3:.0f} mm": ST_PLATE * v / h for h in (0.010, 0.025, 0.055)}
-    return dict(I_hinge_kgm2=I_h, hinge_mode_Hz=hinge, k_for_2x_f1_Nm_per_rad=k_req, shedding_Hz=band)
+    return dict(I_hinge_kgm2=I_h, hinge_mode_Hz=hinge, k_for_2x_f1_Nm_per_rad=k_req, shedding_Hz=band, hinge_overlap_shedding={key:any(min(v.values())<=freq<=max(v.values()) for v in band.values()) for key,freq in hinge.items()}, limitation="Mode and shedding overlap is a screening calculation; no aeroelastic instability or complete hinge/actuator assembly certification")
 
 
 def beam_theory():
@@ -82,6 +80,11 @@ def beam_theory():
 
 
 if __name__ == "__main__":
+    parser=argparse.ArgumentParser();parser.add_argument('--loads',default='results_revised/loads_v6.json');parser.add_argument('--json',default='results_revised/flap_fea_v6.json');args=parser.parse_args()
+    cases=json.loads(Path(args.loads).read_text())['cases']
+    F_FLAP=max(c['brake_per_flap_N'] for c in cases)
+    if not math.isfinite(F_FLAP) or F_FLAP<=0: raise ValueError('Invalid flap design load')
+    P=F_FLAP/(B*L)
     print(f"pressure {P / 1e3:.1f} kPa on {B * 1e3:.0f} x {L * 1e3:.0f} x {T * 1e3:.0f} mm plate")
     res = [run(6, 6, 1), run(12, 11, 2), run(24, 22, 3), run(30, 28, 4, modes=True)]
     for r in res:
@@ -98,12 +101,16 @@ if __name__ == "__main__":
     dyn = dynamics(fine["f_Hz"][0])
     lf = FACTORS["dcd_2sd"] * FACTORS["ultimate"]
     summary.update(dynamics=dyn, load_factor=lf, factors=FACTORS,
-                   sf_ultimate_beam=summary["sf_yield_beam"] / lf,
+                   sf_yield_factored_beam=summary["sf_yield_beam"] / lf,
                    margin_of_safety_beam=summary["sf_yield_beam"] / lf - 1)
     print("hinge (rigid-body) mode, Hz:", {k: round(v) for k, v in dyn["hinge_mode_Hz"].items()},
           f" stiffness for a hinge mode above 2 x f1: {dyn['k_for_2x_f1_Nm_per_rad']:.0f} N.m/rad")
     print("shedding frequency St V / h, Hz:", {k: {kk: round(vv) for kk, vv in v.items()}
                                                for k, v in dyn["shedding_Hz"].items()})
     print(f"load factor {lf:.2f} (dCd 2 sd x ultimate 1.5): yield SF at factored load "
-          f"{summary['sf_ultimate_beam']:.2f}, margin of safety {summary['margin_of_safety_beam']:+.2f}")
-    json.dump(summary, open("results_v6/flap_fea_v6.json", "w"), indent=1)
+          f"{summary['sf_yield_factored_beam']:.2f}, margin of safety {summary['margin_of_safety_beam']:+.2f}")
+    summary["stress_limitation"]="Beam nominal root stress is a section-resultant comparison, not an upper bound on the FE clamp-corner singularity"
+    summary["thickness_for_yield_sf2_at_factored_load_mm"] = T * 1e3 * math.sqrt(2 / summary["sf_yield_factored_beam"])
+    summary["thickness_screening_limitation"] = "Uniform-pressure beam stress scales as inverse thickness squared; this preliminary thickness estimate does not verify the hinge, mounting, actuator, fatigue or aeroelastic response"
+    Path(args.json).parent.mkdir(parents=True,exist_ok=True)
+    json.dump(summary, open(args.json, "w"), indent=1)

@@ -1,0 +1,282 @@
+{
+  "job": {
+    "name": "mc_sil_kf_est_only_temp_v6.csv",
+    "n": 300,
+    "seed": 1,
+    "kind": "sil",
+    "est": "kf",
+    "cd": "estimated",
+    "ideal": false,
+    "fix_brake": false,
+    "isa": false,
+    "qaware": false,
+    "errors": [
+      "temp"
+    ]
+  },
+  "status": "SUCCESS",
+  "completed": 300,
+  "sha256": "d11352bfd3cbad8fdb3e8f1d36013d990384aeea03b92c66dbcfe058388cb3bc",
+  "output": "rq2_revision2/repaired_runs_v3/mc_sil_kf_est_only_temp_v6.csv",
+  "chunks": [
+    {
+      "job": {
+        "name": "mc_sil_kf_est_only_temp_v6.csv",
+        "n": 300,
+        "seed": 1,
+        "kind": "sil",
+        "est": "kf",
+        "cd": "estimated",
+        "ideal": false,
+        "fix_brake": false,
+        "isa": false,
+        "qaware": false,
+        "errors": [
+          "temp"
+        ]
+      },
+      "start_sample": 0,
+      "stop_sample": 100,
+      "status": "SUCCESS",
+      "completed": 100,
+      "source_snapshot": "rq2_revision2/repaired_runs_v3/chunks/mc_sil_kf_est_only_temp_v6/0000_0100/source",
+      "source_hashes": {
+        "atmosphere_model.py": "bf26ec9195d0f353b3277dae97684f67b774cfa869e9a66547bb7b0cf9483129",
+        "motor_build_info.json": "c1a31d0e831ef89742c7e28fae195396aec2c3052345f1ec231734c09162669b",
+        "motor_model.py": "e9d566135a0ff66464acc45ecd56c68dca0dc5a544765f6e0f9ffc996d0caad2",
+        "sil.py": "cad0e80b7bc0b611869082be8d558ce9f44c5a1e4e27779e558c0e67b09f3230",
+        "study_protocol.json": "5620f1bab2ff6d7a2d50607139ab55b7b83dc9749d56fa0f9210b37b04d4ad7f",
+        "sweep.py": "3cd7afe70c160dac07175d0a86ea35b600e81aafc5a9994b59c8bf35a6b417df",
+        "engine/direct.xml": "246b69d6edc7acfca84395ba5f53b5d7e03409d5ebcf7c89b2c369907a703b24",
+        "engine/M1670.xml": "0160cd7dd8e647791d6323b3d818fa7ff86d99bbbc79e9690d2ee4292f829dc2",
+        "kf/attitude_sensor.py": "696783b128f9276d6fa8b6600b2ec895c236fa8ce41ffd959c49f2dff028b340",
+        "kf/kf_estimator.py": "0e6a33af646e763a16413baf2a98bbc3669f54f408ac8e91dc106bbf21e19780",
+        "kf/test_attitude_sensor.py": "d704e1286990ff62ce1114099962da2c98a570d59466f99d20d21f7f08c727f3",
+        "kf/test_drag_projection.py": "f07e358558b7f67bf99f3db8b049ead49e84471ae285da351db58df32d8ed2ae",
+        "kf/test_kf.py": "5f4d4bedb144e761fe20cce24afe2b969b8e00eb32549e0c90a33521fa5f3e0e",
+        "scripts/launch.xml": "663ab351071e43b16cf1e775e0be5e8afa17c15597370fc8097acbf7e2cc2936",
+        "aircraft/myrocket/myrocket.xml": "5e1c037aa3dddbef8f63bd2502bd0e82a8f2c8a1ee7cc3891e8be48adea22797",
+        "aircraft/myrocket/reset.xml": "bab1ee5bddb92266599429547598210dcbf12374701da6ded108d9524fcf9539",
+        "aircraft/myrocket2/myrocket2.xml": "fe0f7222cfb44ca8d289ec1d417a4a29a5fc44ec9fc9827237ecf05b5146682f",
+        "aircraft/myrocket2/reset.xml": "a6d5e79ff0312edc13f340299cefe066948021ed9468e9141d4e2e55532290db",
+        "aircraft/myrocket_cluster/myrocket_cluster.xml": "bae2d27ec11f0183475edf6eaad2b42d87e342c09191933bbe8d1d719e718695",
+        "aircraft/myrocket_cluster/reset.xml": "19867bc90ac91a71b13429601e7eb1b73f37ce137e757463f7289997393e5b2d",
+        "aircraft/myrocket_series/myrocket_series.xml": "24907fb8c23c8b1b67c7c825df061a54b6ba4a16b27998e6498a288252555e6b",
+        "aircraft/myrocket_series/reset.xml": "19867bc90ac91a71b13429601e7eb1b73f37ce137e757463f7289997393e5b2d"
+      },
+      "loaded_sources": {
+        "sil": {
+          "file": "C:\\Users\\Haoran Du\\Documents\\Codex\\2026-10-11\\ban\\work\\revision2_project\\rq2_revision2\\repaired_runs_v3\\chunks\\mc_sil_kf_est_only_temp_v6\\0000_0100\\source\\sil.py",
+          "relative_path": "sil.py",
+          "sha256": "cad0e80b7bc0b611869082be8d558ce9f44c5a1e4e27779e558c0e67b09f3230"
+        },
+        "sweep": {
+          "file": "C:\\Users\\Haoran Du\\Documents\\Codex\\2026-10-11\\ban\\work\\revision2_project\\rq2_revision2\\repaired_runs_v3\\chunks\\mc_sil_kf_est_only_temp_v6\\0000_0100\\source\\sweep.py",
+          "relative_path": "sweep.py",
+          "sha256": "3cd7afe70c160dac07175d0a86ea35b600e81aafc5a9994b59c8bf35a6b417df"
+        },
+        "kf_estimator": {
+          "file": "C:\\Users\\Haoran Du\\Documents\\Codex\\2026-10-11\\ban\\work\\revision2_project\\rq2_revision2\\repaired_runs_v3\\chunks\\mc_sil_kf_est_only_temp_v6\\0000_0100\\source\\kf\\kf_estimator.py",
+          "relative_path": "kf/kf_estimator.py",
+          "sha256": "0e6a33af646e763a16413baf2a98bbc3669f54f408ac8e91dc106bbf21e19780"
+        },
+        "kf.attitude_sensor": {
+          "file": "C:\\Users\\Haoran Du\\Documents\\Codex\\2026-10-11\\ban\\work\\revision2_project\\rq2_revision2\\repaired_runs_v3\\chunks\\mc_sil_kf_est_only_temp_v6\\0000_0100\\source\\kf\\attitude_sensor.py",
+          "relative_path": "kf/attitude_sensor.py",
+          "sha256": "696783b128f9276d6fa8b6600b2ec895c236fa8ce41ffd959c49f2dff028b340"
+        },
+        "atmosphere_model": {
+          "file": "C:\\Users\\Haoran Du\\Documents\\Codex\\2026-10-11\\ban\\work\\revision2_project\\rq2_revision2\\repaired_runs_v3\\chunks\\mc_sil_kf_est_only_temp_v6\\0000_0100\\source\\atmosphere_model.py",
+          "relative_path": "atmosphere_model.py",
+          "sha256": "bf26ec9195d0f353b3277dae97684f67b774cfa869e9a66547bb7b0cf9483129"
+        }
+      },
+      "runner_sha256": "9d0a189640b3d882b7b8ef5e7a8e624b1e4018fe3c0193854383856c630b9f7f",
+      "started_unix": 1791745355.304625,
+      "elapsed": 387.58289766311646,
+      "output": "rq2_revision2/repaired_runs_v3/chunks/mc_sil_kf_est_only_temp_v6/0000_0100/metrics.csv",
+      "output_sha256": "ae18ec14b1ae1846a7876e0d33750f6cac59e815e43a022560081a95392cf3b6"
+    },
+    {
+      "job": {
+        "name": "mc_sil_kf_est_only_temp_v6.csv",
+        "n": 300,
+        "seed": 1,
+        "kind": "sil",
+        "est": "kf",
+        "cd": "estimated",
+        "ideal": false,
+        "fix_brake": false,
+        "isa": false,
+        "qaware": false,
+        "errors": [
+          "temp"
+        ]
+      },
+      "start_sample": 100,
+      "stop_sample": 200,
+      "status": "SUCCESS",
+      "completed": 100,
+      "source_snapshot": "rq2_revision2/repaired_runs_v3/chunks/mc_sil_kf_est_only_temp_v6/0100_0200/source",
+      "source_hashes": {
+        "atmosphere_model.py": "bf26ec9195d0f353b3277dae97684f67b774cfa869e9a66547bb7b0cf9483129",
+        "motor_build_info.json": "c1a31d0e831ef89742c7e28fae195396aec2c3052345f1ec231734c09162669b",
+        "motor_model.py": "e9d566135a0ff66464acc45ecd56c68dca0dc5a544765f6e0f9ffc996d0caad2",
+        "sil.py": "cad0e80b7bc0b611869082be8d558ce9f44c5a1e4e27779e558c0e67b09f3230",
+        "study_protocol.json": "5620f1bab2ff6d7a2d50607139ab55b7b83dc9749d56fa0f9210b37b04d4ad7f",
+        "sweep.py": "3cd7afe70c160dac07175d0a86ea35b600e81aafc5a9994b59c8bf35a6b417df",
+        "engine/direct.xml": "246b69d6edc7acfca84395ba5f53b5d7e03409d5ebcf7c89b2c369907a703b24",
+        "engine/M1670.xml": "0160cd7dd8e647791d6323b3d818fa7ff86d99bbbc79e9690d2ee4292f829dc2",
+        "kf/attitude_sensor.py": "696783b128f9276d6fa8b6600b2ec895c236fa8ce41ffd959c49f2dff028b340",
+        "kf/kf_estimator.py": "0e6a33af646e763a16413baf2a98bbc3669f54f408ac8e91dc106bbf21e19780",
+        "kf/test_attitude_sensor.py": "d704e1286990ff62ce1114099962da2c98a570d59466f99d20d21f7f08c727f3",
+        "kf/test_drag_projection.py": "f07e358558b7f67bf99f3db8b049ead49e84471ae285da351db58df32d8ed2ae",
+        "kf/test_kf.py": "5f4d4bedb144e761fe20cce24afe2b969b8e00eb32549e0c90a33521fa5f3e0e",
+        "scripts/launch.xml": "663ab351071e43b16cf1e775e0be5e8afa17c15597370fc8097acbf7e2cc2936",
+        "aircraft/myrocket/myrocket.xml": "5e1c037aa3dddbef8f63bd2502bd0e82a8f2c8a1ee7cc3891e8be48adea22797",
+        "aircraft/myrocket/reset.xml": "bab1ee5bddb92266599429547598210dcbf12374701da6ded108d9524fcf9539",
+        "aircraft/myrocket2/myrocket2.xml": "fe0f7222cfb44ca8d289ec1d417a4a29a5fc44ec9fc9827237ecf05b5146682f",
+        "aircraft/myrocket2/reset.xml": "a6d5e79ff0312edc13f340299cefe066948021ed9468e9141d4e2e55532290db",
+        "aircraft/myrocket_cluster/myrocket_cluster.xml": "bae2d27ec11f0183475edf6eaad2b42d87e342c09191933bbe8d1d719e718695",
+        "aircraft/myrocket_cluster/reset.xml": "19867bc90ac91a71b13429601e7eb1b73f37ce137e757463f7289997393e5b2d",
+        "aircraft/myrocket_series/myrocket_series.xml": "24907fb8c23c8b1b67c7c825df061a54b6ba4a16b27998e6498a288252555e6b",
+        "aircraft/myrocket_series/reset.xml": "19867bc90ac91a71b13429601e7eb1b73f37ce137e757463f7289997393e5b2d"
+      },
+      "loaded_sources": {
+        "sil": {
+          "file": "C:\\Users\\Haoran Du\\Documents\\Codex\\2026-10-11\\ban\\work\\revision2_project\\rq2_revision2\\repaired_runs_v3\\chunks\\mc_sil_kf_est_only_temp_v6\\0100_0200\\source\\sil.py",
+          "relative_path": "sil.py",
+          "sha256": "cad0e80b7bc0b611869082be8d558ce9f44c5a1e4e27779e558c0e67b09f3230"
+        },
+        "sweep": {
+          "file": "C:\\Users\\Haoran Du\\Documents\\Codex\\2026-10-11\\ban\\work\\revision2_project\\rq2_revision2\\repaired_runs_v3\\chunks\\mc_sil_kf_est_only_temp_v6\\0100_0200\\source\\sweep.py",
+          "relative_path": "sweep.py",
+          "sha256": "3cd7afe70c160dac07175d0a86ea35b600e81aafc5a9994b59c8bf35a6b417df"
+        },
+        "kf_estimator": {
+          "file": "C:\\Users\\Haoran Du\\Documents\\Codex\\2026-10-11\\ban\\work\\revision2_project\\rq2_revision2\\repaired_runs_v3\\chunks\\mc_sil_kf_est_only_temp_v6\\0100_0200\\source\\kf\\kf_estimator.py",
+          "relative_path": "kf/kf_estimator.py",
+          "sha256": "0e6a33af646e763a16413baf2a98bbc3669f54f408ac8e91dc106bbf21e19780"
+        },
+        "kf.attitude_sensor": {
+          "file": "C:\\Users\\Haoran Du\\Documents\\Codex\\2026-10-11\\ban\\work\\revision2_project\\rq2_revision2\\repaired_runs_v3\\chunks\\mc_sil_kf_est_only_temp_v6\\0100_0200\\source\\kf\\attitude_sensor.py",
+          "relative_path": "kf/attitude_sensor.py",
+          "sha256": "696783b128f9276d6fa8b6600b2ec895c236fa8ce41ffd959c49f2dff028b340"
+        },
+        "atmosphere_model": {
+          "file": "C:\\Users\\Haoran Du\\Documents\\Codex\\2026-10-11\\ban\\work\\revision2_project\\rq2_revision2\\repaired_runs_v3\\chunks\\mc_sil_kf_est_only_temp_v6\\0100_0200\\source\\atmosphere_model.py",
+          "relative_path": "atmosphere_model.py",
+          "sha256": "bf26ec9195d0f353b3277dae97684f67b774cfa869e9a66547bb7b0cf9483129"
+        }
+      },
+      "runner_sha256": "9d0a189640b3d882b7b8ef5e7a8e624b1e4018fe3c0193854383856c630b9f7f",
+      "started_unix": 1791745358.6923735,
+      "elapsed": 388.62478613853455,
+      "output": "rq2_revision2/repaired_runs_v3/chunks/mc_sil_kf_est_only_temp_v6/0100_0200/metrics.csv",
+      "output_sha256": "0fdd071b6db73d58ae1b733259ababba4acb02435ff751882b54182e070e615f"
+    },
+    {
+      "job": {
+        "name": "mc_sil_kf_est_only_temp_v6.csv",
+        "n": 300,
+        "seed": 1,
+        "kind": "sil",
+        "est": "kf",
+        "cd": "estimated",
+        "ideal": false,
+        "fix_brake": false,
+        "isa": false,
+        "qaware": false,
+        "errors": [
+          "temp"
+        ]
+      },
+      "start_sample": 200,
+      "stop_sample": 300,
+      "status": "SUCCESS",
+      "completed": 100,
+      "source_snapshot": "rq2_revision2/repaired_runs_v3/chunks/mc_sil_kf_est_only_temp_v6/0200_0300/source",
+      "source_hashes": {
+        "atmosphere_model.py": "bf26ec9195d0f353b3277dae97684f67b774cfa869e9a66547bb7b0cf9483129",
+        "motor_build_info.json": "c1a31d0e831ef89742c7e28fae195396aec2c3052345f1ec231734c09162669b",
+        "motor_model.py": "e9d566135a0ff66464acc45ecd56c68dca0dc5a544765f6e0f9ffc996d0caad2",
+        "sil.py": "cad0e80b7bc0b611869082be8d558ce9f44c5a1e4e27779e558c0e67b09f3230",
+        "study_protocol.json": "5620f1bab2ff6d7a2d50607139ab55b7b83dc9749d56fa0f9210b37b04d4ad7f",
+        "sweep.py": "3cd7afe70c160dac07175d0a86ea35b600e81aafc5a9994b59c8bf35a6b417df",
+        "engine/direct.xml": "246b69d6edc7acfca84395ba5f53b5d7e03409d5ebcf7c89b2c369907a703b24",
+        "engine/M1670.xml": "0160cd7dd8e647791d6323b3d818fa7ff86d99bbbc79e9690d2ee4292f829dc2",
+        "kf/attitude_sensor.py": "696783b128f9276d6fa8b6600b2ec895c236fa8ce41ffd959c49f2dff028b340",
+        "kf/kf_estimator.py": "0e6a33af646e763a16413baf2a98bbc3669f54f408ac8e91dc106bbf21e19780",
+        "kf/test_attitude_sensor.py": "d704e1286990ff62ce1114099962da2c98a570d59466f99d20d21f7f08c727f3",
+        "kf/test_drag_projection.py": "f07e358558b7f67bf99f3db8b049ead49e84471ae285da351db58df32d8ed2ae",
+        "kf/test_kf.py": "5f4d4bedb144e761fe20cce24afe2b969b8e00eb32549e0c90a33521fa5f3e0e",
+        "scripts/launch.xml": "663ab351071e43b16cf1e775e0be5e8afa17c15597370fc8097acbf7e2cc2936",
+        "aircraft/myrocket/myrocket.xml": "5e1c037aa3dddbef8f63bd2502bd0e82a8f2c8a1ee7cc3891e8be48adea22797",
+        "aircraft/myrocket/reset.xml": "bab1ee5bddb92266599429547598210dcbf12374701da6ded108d9524fcf9539",
+        "aircraft/myrocket2/myrocket2.xml": "fe0f7222cfb44ca8d289ec1d417a4a29a5fc44ec9fc9827237ecf05b5146682f",
+        "aircraft/myrocket2/reset.xml": "a6d5e79ff0312edc13f340299cefe066948021ed9468e9141d4e2e55532290db",
+        "aircraft/myrocket_cluster/myrocket_cluster.xml": "bae2d27ec11f0183475edf6eaad2b42d87e342c09191933bbe8d1d719e718695",
+        "aircraft/myrocket_cluster/reset.xml": "19867bc90ac91a71b13429601e7eb1b73f37ce137e757463f7289997393e5b2d",
+        "aircraft/myrocket_series/myrocket_series.xml": "24907fb8c23c8b1b67c7c825df061a54b6ba4a16b27998e6498a288252555e6b",
+        "aircraft/myrocket_series/reset.xml": "19867bc90ac91a71b13429601e7eb1b73f37ce137e757463f7289997393e5b2d"
+      },
+      "loaded_sources": {
+        "sil": {
+          "file": "C:\\Users\\Haoran Du\\Documents\\Codex\\2026-10-11\\ban\\work\\revision2_project\\rq2_revision2\\repaired_runs_v3\\chunks\\mc_sil_kf_est_only_temp_v6\\0200_0300\\source\\sil.py",
+          "relative_path": "sil.py",
+          "sha256": "cad0e80b7bc0b611869082be8d558ce9f44c5a1e4e27779e558c0e67b09f3230"
+        },
+        "sweep": {
+          "file": "C:\\Users\\Haoran Du\\Documents\\Codex\\2026-10-11\\ban\\work\\revision2_project\\rq2_revision2\\repaired_runs_v3\\chunks\\mc_sil_kf_est_only_temp_v6\\0200_0300\\source\\sweep.py",
+          "relative_path": "sweep.py",
+          "sha256": "3cd7afe70c160dac07175d0a86ea35b600e81aafc5a9994b59c8bf35a6b417df"
+        },
+        "kf_estimator": {
+          "file": "C:\\Users\\Haoran Du\\Documents\\Codex\\2026-10-11\\ban\\work\\revision2_project\\rq2_revision2\\repaired_runs_v3\\chunks\\mc_sil_kf_est_only_temp_v6\\0200_0300\\source\\kf\\kf_estimator.py",
+          "relative_path": "kf/kf_estimator.py",
+          "sha256": "0e6a33af646e763a16413baf2a98bbc3669f54f408ac8e91dc106bbf21e19780"
+        },
+        "kf.attitude_sensor": {
+          "file": "C:\\Users\\Haoran Du\\Documents\\Codex\\2026-10-11\\ban\\work\\revision2_project\\rq2_revision2\\repaired_runs_v3\\chunks\\mc_sil_kf_est_only_temp_v6\\0200_0300\\source\\kf\\attitude_sensor.py",
+          "relative_path": "kf/attitude_sensor.py",
+          "sha256": "696783b128f9276d6fa8b6600b2ec895c236fa8ce41ffd959c49f2dff028b340"
+        },
+        "atmosphere_model": {
+          "file": "C:\\Users\\Haoran Du\\Documents\\Codex\\2026-10-11\\ban\\work\\revision2_project\\rq2_revision2\\repaired_runs_v3\\chunks\\mc_sil_kf_est_only_temp_v6\\0200_0300\\source\\atmosphere_model.py",
+          "relative_path": "atmosphere_model.py",
+          "sha256": "bf26ec9195d0f353b3277dae97684f67b774cfa869e9a66547bb7b0cf9483129"
+        }
+      },
+      "runner_sha256": "9d0a189640b3d882b7b8ef5e7a8e624b1e4018fe3c0193854383856c630b9f7f",
+      "started_unix": 1791745359.566863,
+      "elapsed": 393.93985199928284,
+      "output": "rq2_revision2/repaired_runs_v3/chunks/mc_sil_kf_est_only_temp_v6/0200_0300/metrics.csv",
+      "output_sha256": "bbd6ae26ac40814a3992f598af934e57c20b852c788999d3953f4124df995274"
+    }
+  ],
+  "source_snapshot": "rq2_revision2/repair_source_v3",
+  "source_hashes": {
+    "atmosphere_model.py": "bf26ec9195d0f353b3277dae97684f67b774cfa869e9a66547bb7b0cf9483129",
+    "motor_build_info.json": "c1a31d0e831ef89742c7e28fae195396aec2c3052345f1ec231734c09162669b",
+    "motor_model.py": "e9d566135a0ff66464acc45ecd56c68dca0dc5a544765f6e0f9ffc996d0caad2",
+    "sil.py": "cad0e80b7bc0b611869082be8d558ce9f44c5a1e4e27779e558c0e67b09f3230",
+    "study_protocol.json": "5620f1bab2ff6d7a2d50607139ab55b7b83dc9749d56fa0f9210b37b04d4ad7f",
+    "sweep.py": "3cd7afe70c160dac07175d0a86ea35b600e81aafc5a9994b59c8bf35a6b417df",
+    "engine/direct.xml": "246b69d6edc7acfca84395ba5f53b5d7e03409d5ebcf7c89b2c369907a703b24",
+    "engine/M1670.xml": "0160cd7dd8e647791d6323b3d818fa7ff86d99bbbc79e9690d2ee4292f829dc2",
+    "kf/attitude_sensor.py": "696783b128f9276d6fa8b6600b2ec895c236fa8ce41ffd959c49f2dff028b340",
+    "kf/kf_estimator.py": "0e6a33af646e763a16413baf2a98bbc3669f54f408ac8e91dc106bbf21e19780",
+    "kf/test_attitude_sensor.py": "d704e1286990ff62ce1114099962da2c98a570d59466f99d20d21f7f08c727f3",
+    "kf/test_drag_projection.py": "f07e358558b7f67bf99f3db8b049ead49e84471ae285da351db58df32d8ed2ae",
+    "kf/test_kf.py": "5f4d4bedb144e761fe20cce24afe2b969b8e00eb32549e0c90a33521fa5f3e0e",
+    "scripts/launch.xml": "663ab351071e43b16cf1e775e0be5e8afa17c15597370fc8097acbf7e2cc2936",
+    "aircraft/myrocket/myrocket.xml": "5e1c037aa3dddbef8f63bd2502bd0e82a8f2c8a1ee7cc3891e8be48adea22797",
+    "aircraft/myrocket/reset.xml": "bab1ee5bddb92266599429547598210dcbf12374701da6ded108d9524fcf9539",
+    "aircraft/myrocket2/myrocket2.xml": "fe0f7222cfb44ca8d289ec1d417a4a29a5fc44ec9fc9827237ecf05b5146682f",
+    "aircraft/myrocket2/reset.xml": "a6d5e79ff0312edc13f340299cefe066948021ed9468e9141d4e2e55532290db",
+    "aircraft/myrocket_cluster/myrocket_cluster.xml": "bae2d27ec11f0183475edf6eaad2b42d87e342c09191933bbe8d1d719e718695",
+    "aircraft/myrocket_cluster/reset.xml": "19867bc90ac91a71b13429601e7eb1b73f37ce137e757463f7289997393e5b2d",
+    "aircraft/myrocket_series/myrocket_series.xml": "24907fb8c23c8b1b67c7c825df061a54b6ba4a16b27998e6498a288252555e6b",
+    "aircraft/myrocket_series/reset.xml": "19867bc90ac91a71b13429601e7eb1b73f37ce137e757463f7289997393e5b2d"
+  }
+}

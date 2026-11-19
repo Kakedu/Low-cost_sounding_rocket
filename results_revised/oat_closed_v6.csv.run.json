@@ -1,0 +1,14 @@
+{
+  "job": {
+    "name": "oat_closed_v6.csv",
+    "kind": "oat",
+    "open": false,
+    "metric": "apogee"
+  },
+  "worker": 77,
+  "start_unix": 1791731172.59302,
+  "status": "SUCCESS",
+  "completed": null,
+  "elapsed": 239.86741852760315,
+  "sha256": "aad99b63fa9aae5f262ea2e8d8d05bcbf9310269e3da5666ecf80361ce140fe4"
+}

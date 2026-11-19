@@ -1,0 +1,17 @@
+{
+  "job": {
+    "name": "mc_closed_t10400_v6.csv",
+    "n": 300,
+    "seed": 1,
+    "kind": "xml",
+    "open": false,
+    "oracle": false,
+    "target": 10400
+  },
+  "worker": 78,
+  "start_unix": 1791725778.8548183,
+  "status": "SUCCESS",
+  "completed": 300,
+  "elapsed": 1578.1389598846436,
+  "sha256": "6fa8af1c12fd02cb70944a95a74c81b186e2888f7f13c0239ee391c85017c203"
+}

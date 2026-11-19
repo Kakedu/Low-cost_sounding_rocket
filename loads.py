@@ -55,7 +55,9 @@ def run(name, factors, wind=None, force_brake=False):
     i_be = col("Beta")
     i_h = col("Altitude AGL")
     apo_i = max(range(len(rows)), key=lambda j: rows[j][i_h])
-    asc = rows[:apo_i]
+    asc = rows[:apo_i+1]
+    if not asc:
+        raise RuntimeError("No ascent samples")
     cna_f0, fac = fin_share()
     fin = []
     for x in asc:
@@ -72,6 +74,9 @@ def run(name, factors, wind=None, force_brake=False):
                fin_set_N=fin[jf], fin_per_fin_N=fin[jf] / 2, fin_root_moment_Nm=fin[jf] / 2 * arm,
                fin_t_s=asc[jf][i_t], fin_mach=asc[jf][i_m], fin_q_kPa=asc[jf][i_q] * PSF / 1e3,
                fin_alpha_deg=math.hypot(asc[jf][i_a], asc[jf][i_be]),
+               fin_screen_angle_used_deg=min(math.hypot(asc[jf][i_a], asc[jf][i_be]),15.0),
+               fin_peak_angle_exceeds_screen=math.hypot(asc[jf][i_a], asc[jf][i_be])>15.0,
+               fin_ascent_angle_exceeds_screen_samples=sum(math.hypot(x[i_a],x[i_be])>15.0 for x in asc),
                max_q_kPa=max(x[i_q] for x in asc) * PSF / 1e3)
     print({k: (round(v, 2) if isinstance(v, float) else v) for k, v in out.items()}, flush=True)
     return out
@@ -85,13 +90,16 @@ def main():
     for k, v in sweep._reroot(Path(a.root)).items():
         setattr(sweep, k, v)
     cases = [run("nominal", {}),
-             run("impulse +10%", {"prop_mass": 1.10}),
-             run("impulse +20%", {"prop_mass": 1.20}),
-             run("impulse +30%", {"prop_mass": 1.30}),
+             run("impulse +10%", {"isp": 1.10}),
+             run("impulse +20%", {"isp": 1.20}),
+             run("impulse +30%", {"isp": 1.30}),
              run("full brake at burnout (fault)", {}, force_brake=True),
              run("gust 40 ft/s at 2.5 s", {"gust": 40.0}),
              run("crosswind 30 ft/s", {"wind": 30.0})]
-    json.dump(dict(fin=B.FIN, n_flaps=N_FLAPS, cases=cases), open(a.json, "w"), indent=1)
+    json.dump(dict(fin=B.FIN, n_flaps=N_FLAPS, cases=cases,
+                   fin_load_scope="Small-angle Barrowman structural screen: combined incidence hypot(alpha,beta) capped at 15 deg; fin_alpha_deg records the actual angle at the screened load peak, while fin_screen_angle_used_deg records the capped calculation angle.",
+                   fin_sharing_assumption="Four-fin set load divided by two represents a conservative maximum-single-fin screening envelope for two fins sharing an incidence plane. For combined alpha/beta it is an upper bound, not the resolved load on each physical fin.",
+                   fin_range_limit="Angles exceeding 15 deg are explicitly flagged; capped loads are not uncapped flight measurements or a validated large-angle structural design envelope."), open(a.json, "w"), indent=1)
     print("wrote", a.json)
 
 

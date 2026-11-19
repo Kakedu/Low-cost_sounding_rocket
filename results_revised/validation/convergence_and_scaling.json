@@ -1,0 +1,67 @@
+{
+  "prometheus_0.001": {
+    "apogee_m": 4259.552950075875,
+    "t_apogee_s": 29.364099999999976,
+    "burnout_s": 4.894099999999815,
+    "impulse_Ns_after_rail": 6986.816170918177,
+    "dt_s": 0.001,
+    "delta_T_K": 19.250000000000696
+  },
+  "prometheus_0.0005": {
+    "apogee_m": 4259.6689239331845,
+    "t_apogee_s": 29.364099999999976,
+    "burnout_s": 4.895600000000194,
+    "impulse_Ns_after_rail": 6986.814756223082,
+    "dt_s": 0.0005,
+    "delta_T_K": 19.250000000000696
+  },
+  "prometheus_0.00025": {
+    "apogee_m": 4259.727108737309,
+    "t_apogee_s": 29.364099999999976,
+    "burnout_s": 4.896349999999743,
+    "impulse_Ns_after_rail": 6986.814359381067,
+    "dt_s": 0.00025,
+    "delta_T_K": 19.250000000000696
+  },
+  "prometheus_isp_scale_test": {
+    "expected_Ns": 8336.989441550002,
+    "integrated_Ns": 8336.991642871168,
+    "rel_error": 2.6404269570790007e-07,
+    "burnout_s": 5.383799999999977
+  },
+  "cavour_0.001": {
+    "apogee_m": 2801.2609741215942,
+    "t_apogee_s": 22.47419999999996,
+    "burnout_s": 3.7961999999997094,
+    "impulse_Ns_after_rail": 3072.7459093003936,
+    "dt_s": 0.001,
+    "delta_T_K": 7.500000000000249
+  },
+  "cavour_0.0005": {
+    "apogee_m": 2801.326595463706,
+    "t_apogee_s": 22.47419999999996,
+    "burnout_s": 3.798200000000224,
+    "impulse_Ns_after_rail": 3072.7457109521097,
+    "dt_s": 0.0005,
+    "delta_T_K": 7.500000000000249
+  },
+  "cavour_0.00025": {
+    "apogee_m": 2801.3594187332505,
+    "t_apogee_s": 22.47419999999996,
+    "burnout_s": 3.799199999999499,
+    "impulse_Ns_after_rail": 3072.7456320561523,
+    "dt_s": 0.00025,
+    "delta_T_K": 7.500000000000249
+  },
+  "cavour_isp_scale_test": {
+    "expected_Ns": 3979.7780000000002,
+    "integrated_Ns": 3979.778228774132,
+    "rel_error": 5.748414411144154e-08,
+    "burnout_s": 4.176299999999667
+  },
+  "prometheus_calibration_proxy": {
+    "apogee_m": 4185.761730575593,
+    "dT_K": 17.1,
+    "role": "apogee/pressure-informed calibration with a 2023 proxy wind; not independent validation"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "job": {
+    "name": "mc_closed_v6.csv",
+    "n": 500,
+    "seed": 1,
+    "kind": "xml",
+    "open": false,
+    "oracle": false
+  },
+  "worker": 70,
+  "start_unix": 1791723187.8027318,
+  "status": "SUCCESS",
+  "completed": 500,
+  "elapsed": 3026.842438697815,
+  "sha256": "c29c12f21747fcbd20325800cae7992bf2bf4272ee661a749f650767d6f8adba"
+}

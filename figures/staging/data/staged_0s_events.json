@@ -1,0 +1,121 @@
+{
+  "case": "staged_0s",
+  "configuration": {
+    "aircraft": "myrocket2",
+    "label": "Staged: 0 s coast",
+    "coast_s": 0.0,
+    "ignite_both": false,
+    "engine_tanks": [
+      1,
+      0
+    ],
+    "reference": "two stage, open loop"
+  },
+  "status": "SUCCESS",
+  "initial_conditions": {
+    "ic/theta-deg": 89.00000000000047,
+    "ic/psi-true-deg": 0.0,
+    "position/h-agl-ft": 10.729999995980497,
+    "inertia/weight-lbs": 61.4730695007061,
+    "atmosphere/wind-north-fps": 0.0,
+    "atmosphere/wind-east-fps": 0.0
+  },
+  "integration_dt_s": 0.001,
+  "saved_trace_dt_s": 0.002,
+  "full_near_ground_endpoint": {
+    "t_s": 76.44600000000096,
+    "h_agl_ft": 0.7533749020719985,
+    "v_vertical_fps": -666.0284931675435,
+    "mach": 0.5965615031757648,
+    "qbar_psf": 527.180237410154,
+    "weight_lb": 38.8,
+    "thrust0_lbf": 0.0,
+    "thrust1_lbf": 0.0,
+    "fuel0_lb": 0.0,
+    "fuel1_lb": 0.0,
+    "pitch_deg": -89.71739667386979,
+    "brake_position": 0.0,
+    "staged": 1.0,
+    "second_ignition_flag": 1.0,
+    "lockout": 0.0
+  },
+  "apogee_ft": 20032.58128497692,
+  "reference_apogee_ft": 20032.58128497692,
+  "apogee_difference_ft": 0.0,
+  "reference_result_path": "results_revised/stage_compare_v6.csv",
+  "events": {
+    "motor1_ignition_command": {
+      "observed_time_s": 0.0
+    },
+    "motor1_first_positive_thrust": {
+      "observed_time_s": 0.001,
+      "h_agl_ft": 10.730000035144014,
+      "v_vertical_fps": -0.03211408391721103,
+      "definition": "First observed thrust > 0 lbf"
+    },
+    "motor1_propellant_depleted": {
+      "observed_time_s": 3.8999999999996815,
+      "h_agl_ft": 1415.3929580030492,
+      "v_vertical_fps": 599.784426590699,
+      "definition": "First observed feeding-tank contents < 1e-10 lb"
+    },
+    "separation": {
+      "observed_time_s": 4.0959999999997025,
+      "h_agl_ft": 1532.0622307922881,
+      "v_vertical_fps": 590.7344014016461,
+      "definition": "First observed fcs/staged > 0.5; recorded at end of 1 ms step"
+    },
+    "motor2_ignition_command": {
+      "observed_time_s": 4.0959999999997025,
+      "h_agl_ft": 1532.0622307922881,
+      "v_vertical_fps": 590.7344014016461,
+      "definition": "First observed second-burn or sust-lit flag > 0.5"
+    },
+    "motor2_first_positive_thrust": {
+      "observed_time_s": 4.096999999999703,
+      "h_agl_ft": 1532.6529422292779,
+      "v_vertical_fps": 590.6931301457442,
+      "definition": "First observed thrust > 0 lbf"
+    },
+    "motor2_propellant_depleted": {
+      "observed_time_s": 7.996000000001005,
+      "h_agl_ft": 5592.276508554766,
+      "v_vertical_fps": 1281.7789128868792,
+      "definition": "First observed feeding-tank contents < 1e-10 lb"
+    },
+    "apogee": {
+      "observed_time_s": 36.135000000006485,
+      "h_agl_ft": 20032.58128497692,
+      "v_vertical_fps": -0.009094849433308738,
+      "definition": "Maximum h-agl-ft over 1 ms integration states"
+    }
+  },
+  "last_individual_thrust_gt1_lbf_s": [
+    3.894999999999682,
+    7.991000000001003
+  ],
+  "last_combined_thrust_gt1_lbf_s": 7.991000000001003,
+  "runtime_s": 1.5854547999988426,
+  "csv_path": "D:\\AAAAA\\2\\ENGG7340\\2026-10-12\\work\\supervisor_revision_2026-10-28\\staging_figure\\data\\staged_0s_trajectory.csv",
+  "csv_sha256": "eaadadfe74e39b5ab0c917264eb18decc73b98f5aac8e5c118971168d5dd83c3",
+  "actual_modules": {
+    "stage_compare": {
+      "file": "D:\\AAAAA\\2\\ENGG7340\\2026-10-12\\work\\supervisor_revision_2026-10-28\\staging_figure\\source_snapshot\\stage_compare.py",
+      "sha256": "52b876a557631a46ba7235ae18a9d5fa1ea597852e0275ce185c361de1c1f30f"
+    },
+    "flight_checks": {
+      "file": "D:\\AAAAA\\2\\ENGG7340\\2026-10-12\\work\\supervisor_revision_2026-10-28\\staging_figure\\source_snapshot\\flight_checks.py",
+      "sha256": "4ec4baf3d4e1ab987232e9b1e73af9d0316cf5bf69c3c2636431590270c109d6"
+    },
+    "jsbsim": {
+      "file": "D:\\AAAAA\\2\\ENGG7340\\2026-10-12\\work\\audit_deps\\jsbsim\\__init__.py",
+      "version": "1.3.1"
+    },
+    "numpy": {
+      "file": "D:\\AAAAA\\2\\ENGG7340\\2026-10-12\\work\\audit_deps\\numpy\\__init__.py",
+      "version": "2.5.4"
+    }
+  },
+  "actual_aircraft_path": "D:\\AAAAA\\2\\ENGG7340\\2026-10-12\\work\\supervisor_revision_2026-10-28\\staging_figure\\data\\staged_0s\\aircraft\\myrocket2\\myrocket2.xml",
+  "actual_aircraft_sha256": "49392f1a9b3161aea26bb00e9ae42a7513595f8e1fcbf00d4e598050b2a96d2e"
+}

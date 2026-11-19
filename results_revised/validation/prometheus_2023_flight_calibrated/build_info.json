@@ -1,0 +1,33 @@
+{
+  "t_exit": 0.384099999999974,
+  "v_exit": 25.190249299701577,
+  "dT": 17.1,
+  "isp": 206.8105991917274,
+  "impulse": 7579.0813105,
+  "cmq": -447.633412145752,
+  "motor": {
+    "output": "C:\\Users\\Haoran Du\\AppData\\Local\\Temp\\validation_prometheus_7xlsb55f\\jsb\\engine\\M1520.xml",
+    "impulse_Ns": 7579.081310500001,
+    "source_impulse_Ns": 7579.081310500001,
+    "prop_kg": 3.737,
+    "prop_lb": 8.238674737848875,
+    "burned_kg": 0.2920277742638369,
+    "remaining_prop_lb": 7.594863700498672,
+    "isp_s": 206.81059919172748,
+    "isp_scale": 1.0,
+    "start_time_s": 0.384099999999974,
+    "sample_dt_s": 0.002,
+    "rows": 2265,
+    "burn_end_s": 4.897,
+    "initial_regularized_thrust_N": 1661.8761608391608,
+    "terminal_regularized_thrust_N": 0.6368324380309888
+  },
+  "input_file": "prometheus_inputs.json",
+  "weather": {
+    "time_utc": "2023-06-24 15:00:00",
+    "role": "calibration proxy"
+  },
+  "cg_dry_in": 54.88688751503756,
+  "x_cp_in": 64.95766674367104,
+  "static_margin_cal": 1.8310497800755692
+}

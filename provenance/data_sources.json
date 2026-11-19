@@ -1,0 +1,84 @@
+[
+  {
+    "url": "https://raw.githubusercontent.com/RocketPy-Team/RocketPy/9bd6ad3af8f97bafa3201d4e70eba2877e66e040/data/weather/EuroC_pressure_levels_reanalysis_2001-2021.nc",
+    "path": "revised_project\\atmos\\EuroC_pressure_levels_reanalysis_2001-2021.nc",
+    "bytes": 27544187,
+    "sha256": "39d374ec64ea449139ebb1326e6c9f3711ac30bfe99dc30ecf0d9406aa538224",
+    "rocketpy_commit": "9bd6ad3af8f97bafa3201d4e70eba2877e66e040",
+    "download_verified": true,
+    "package_path": "atmos/EuroC_pressure_levels_reanalysis_2001-2021.nc",
+    "included": true
+  },
+  {
+    "url": "https://raw.githubusercontent.com/RocketPy-Team/RocketPy/9bd6ad3af8f97bafa3201d4e70eba2877e66e040/data/weather/EuroC_single_level_reanalysis_2002_2021.nc",
+    "path": "revised_project\\atmos\\EuroC_single_level_reanalysis_2002_2021.nc",
+    "bytes": 4357984,
+    "sha256": "17fdc224e8167f1ed7c0d5daa9aa296547ee76760a33cd49666e02c751c09c33",
+    "rocketpy_commit": "9bd6ad3af8f97bafa3201d4e70eba2877e66e040",
+    "download_verified": true,
+    "package_path": "atmos/EuroC_single_level_reanalysis_2002_2021.nc",
+    "included": true
+  },
+  {
+    "url": "https://raw.githubusercontent.com/RocketPy-Team/RocketPy/9bd6ad3af8f97bafa3201d4e70eba2877e66e040/data/weather/SpaceportAmerica_2018_ERA-5.nc",
+    "path": "revised_project\\atmos\\SpaceportAmerica_2018_ERA-5.nc",
+    "bytes": 21265680,
+    "sha256": "baa65fd8bee05a5d517a27b7adec31e07bdcbe2b8660e71193cfc18ba139404d",
+    "rocketpy_commit": "9bd6ad3af8f97bafa3201d4e70eba2877e66e040",
+    "download_verified": true,
+    "package_path": "atmos/SpaceportAmerica_2018_ERA-5.nc",
+    "included": true
+  },
+  {
+    "url": "https://raw.githubusercontent.com/RocketPy-Team/RocketPy/9bd6ad3af8f97bafa3201d4e70eba2877e66e040/data/weather/spaceport_america_pressure_levels_2023_hourly.nc",
+    "path": "revised_project\\val\\data\\spaceport_america_pressure_levels_2023_hourly.nc",
+    "bytes": 21826516,
+    "sha256": "25d48e9d03554251dc2d0601dcaa1e441ca7e7c502f573fceb4ce5c058da8694",
+    "rocketpy_commit": "9bd6ad3af8f97bafa3201d4e70eba2877e66e040",
+    "download_verified": true,
+    "package_path": "val/data/spaceport_america_pressure_levels_2023_hourly.nc",
+    "included": true
+  },
+  {
+    "url": "https://www.ncei.noaa.gov/pub/data/igra/data/data-por/USM00072364-data.txt.zip",
+    "path": "weather_sources\\USM00072364-data.txt.zip",
+    "bytes": 94809974,
+    "sha256": "d13eb4e5a60dcf312d642e86732b3c7d0ae45e15290bea218c6ae360923bbea7",
+    "rocketpy_commit": null,
+    "download_verified": true,
+    "package_path": null,
+    "included": false,
+    "explanation": "Full NOAA station archive omitted; exact 2022 excerpt is included with its hash."
+  },
+  {
+    "url": "https://www.ncei.noaa.gov/pub/data/igra/igra2-station-list.txt",
+    "path": "weather_sources\\igra2-station-list.txt",
+    "bytes": 260950,
+    "sha256": "8ff2dc070248e778307613aa2ab2dfb7b745e5ff29e9d50c58bc5dc8193d0e9d",
+    "rocketpy_commit": null,
+    "download_verified": true,
+    "package_path": "provenance/igra2-station-list.txt",
+    "included": true
+  },
+  {
+    "url": "https://www.ncei.noaa.gov/pub/data/igra/data/igra2-data-format.txt",
+    "path": "weather_sources\\igra2-data-format.txt",
+    "bytes": 13740,
+    "sha256": "dfd7b4d2dd18a255477455a7caefd12cb21c30549a1e70cbc3a51db9f41c1dfe",
+    "rocketpy_commit": null,
+    "download_verified": true,
+    "package_path": "provenance/igra2-data-format.txt",
+    "included": true
+  },
+  {
+    "package_path": "val/data/prometheus_2022_igra_excerpt.txt",
+    "included": true,
+    "sha256": "ca64b7dfb59f7a2c075b5477c6d5c7ff05703402db0f1019aed55f5d84b2f2bc",
+    "relationship": "Exact raw sounding records from the downloaded NOAA archive",
+    "observations": [
+      "2022062412",
+      "2022062500"
+    ],
+    "parent_download_sha256": "d13eb4e5a60dcf312d642e86732b3c7d0ae45e15290bea218c6ae360923bbea7"
+  }
+]

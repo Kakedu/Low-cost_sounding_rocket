@@ -1,0 +1,160 @@
+{
+  "status": "PASS",
+  "figure": "D:\\AAAAA\\2\\ENGG7340\\2026-10-12\\work\\supervisor_revision_2026-10-28\\staging_figure\\Figure_7_1_staging_trajectories.png",
+  "figure_sha256": "5ba2daa60c61de2b188c128eb4e0aa03d9ca1105df0b7af96f9c316bfcb648d8",
+  "pdf": "D:\\AAAAA\\2\\ENGG7340\\2026-10-12\\work\\supervisor_revision_2026-10-28\\staging_figure\\Figure_7_1_staging_trajectories.pdf",
+  "pdf_sha256": "374c49de3ac4c5a7ed32f849f57aa406ed277600617193fa40d83d74fe8945a0",
+  "dpi": 300,
+  "figure_inches": [
+    7.4,
+    6.5
+  ],
+  "source_manifest_sha256": "6f85edcace4a37abe6a952a2d8ae7f0a1ca9fc06255697a46b7d2e6743deb269",
+  "script_sha256": "8e3093240acad8e310ad907a5e68393186d116778d493d4919a7099639d40613",
+  "input_csv_sha256": {
+    "data\\simultaneous_trajectory.csv": "5c2f5476c5e24935a2489e2197f62f10d5c6bfc29b17c6ea789e4dea42e2d8ce",
+    "data\\series_trajectory.csv": "867919b5217461472bb584a85e437b0fa0e407e6eda09e704dac6da418520e77",
+    "data\\staged_0s_trajectory.csv": "eaadadfe74e39b5ab0c917264eb18decc73b98f5aac8e5c118971168d5dd83c3",
+    "data\\staged_5s_trajectory.csv": "5a48d540dd18acfdef69fffb13606f4caded771eaa68753694f4d0a1e3250df2"
+  },
+  "axes_limits": {
+    "height": [
+      [
+        0.0,
+        45.0
+      ],
+      [
+        0.0,
+        23.0
+      ]
+    ],
+    "vertical_speed": [
+      [
+        0.0,
+        45.0
+      ],
+      [
+        -369.4464597390486,
+        1564.8183187959953
+      ]
+    ],
+    "events": [
+      [
+        -0.15,
+        14.0
+      ],
+      [
+        -0.55,
+        3.55
+      ]
+    ]
+  },
+  "curve_data_summary": {
+    "simultaneous": {
+      "plotted_samples": 22501,
+      "t_min_s": 0.0,
+      "t_max_s": 44.999999999985825,
+      "h_min_kft": 0.004294380942541226,
+      "h_max_kft": 20.18964011978317,
+      "v_min_fps": -281.5253334420011,
+      "v_max_fps": 1476.8971924989478
+    },
+    "series": {
+      "plotted_samples": 22501,
+      "t_min_s": 0.0,
+      "t_max_s": 44.999999999985825,
+      "h_min_kft": 0.004266997076044455,
+      "h_max_kft": 20.57059164077923,
+      "v_min_fps": -225.86747062927742,
+      "v_max_fps": 1314.0842302961246
+    },
+    "staged_0s": {
+      "plotted_samples": 22501,
+      "t_min_s": 0.0,
+      "t_max_s": 44.999999999985825,
+      "h_min_kft": 0.01064369290751067,
+      "h_max_kft": 20.03258127813704,
+      "v_min_fps": -233.6648855196746,
+      "v_max_fps": 1330.40146432147
+    },
+    "staged_5s": {
+      "plotted_samples": 22501,
+      "t_min_s": 0.0,
+      "t_max_s": 44.999999999985825,
+      "h_min_kft": 0.01064369290751067,
+      "h_max_kft": 20.491062244434005,
+      "v_min_fps": -142.34922377965248,
+      "v_max_fps": 1194.00734659505
+    }
+  },
+  "event_markers": {
+    "simultaneous": [
+      {
+        "motor": 1,
+        "ignition_command_observed_s": 0.0,
+        "propellant_depleted_observed_s": 3.8999999999996815
+      },
+      {
+        "motor": 2,
+        "ignition_command_observed_s": 0.0,
+        "propellant_depleted_observed_s": 3.8999999999996815
+      }
+    ],
+    "series": [
+      {
+        "motor": 1,
+        "ignition_command_observed_s": 0.0,
+        "propellant_depleted_observed_s": 3.8999999999996815
+      },
+      {
+        "motor": 2,
+        "ignition_command_observed_s": 3.896999999999682,
+        "propellant_depleted_observed_s": 7.7970000000009385
+      }
+    ],
+    "staged_0s": [
+      {
+        "motor": 1,
+        "ignition_command_observed_s": 0.0,
+        "propellant_depleted_observed_s": 3.8999999999996815
+      },
+      {
+        "motor": 2,
+        "ignition_command_observed_s": 4.0959999999997025,
+        "propellant_depleted_observed_s": 7.996000000001005
+      }
+    ],
+    "staged_5s": [
+      {
+        "motor": 1,
+        "ignition_command_observed_s": 0.0,
+        "propellant_depleted_observed_s": 3.8999999999996815
+      },
+      {
+        "motor": 2,
+        "ignition_command_observed_s": 9.096000000000398,
+        "propellant_depleted_observed_s": 12.995999999998237
+      }
+    ]
+  },
+  "max_abs_apogee_difference_ft": 0.0,
+  "caption_suggestion": "Nominal still-air trajectories for idealised simultaneous burn, series burn without mass release, and two-stage flight with 0 s or 5 s coast after separation. The launch tilt is 1 degree from vertical and the air brake is disabled. Panels (a) and (b) show height and vertical speed; panel (c) shows motor operation, second-motor ignition and separation. Motor-end symbols denote propellant depletion, not the thrust-below-1-lbf sequencing criterion. The staged cases apply a 0.2 s separation delay after the model's low-thrust detector, followed by the stated coast. Events are sampled at 1 ms. The configurations and apogees correspond to Tables 7.1 and 7.2; the unstaged references do not specify a buildable motor installation.",
+  "provenance_note": "Four new deterministic reruns; this is not a recovered original trajectory record. Only plotting data windows are cropped; full near-ground CSVs are saved. No source model, accepted result, Monte Carlo draw, ignition gate or load factor was changed.",
+  "native_image_inspection": {
+    "actually_viewed_native_image": true,
+    "method": "view_image full native2220x1950PNG, no resized/contact-sheet substitute",
+    "issues": [],
+    "notes": "All4curves,axes,case/eventlegends and eventtracks are complete. Separation markers are vertically offset to keep0s-coast coincident ignition/separation visible."
+  },
+  "pixel_dimensions": [
+    2220,
+    1950
+  ],
+  "source_original_bytes_unchanged": true,
+  "events_summary_path": "D:\\AAAAA\\2\\ENGG7340\\2026-10-12\\work\\supervisor_revision_2026-10-28\\staging_figure\\events_summary.json",
+  "events_summary_sha256": "435e90c125422a3430efa1288d7554edeb060f41026cb405d43d41c4ed4132db",
+  "comparison_csv": "D:\\AAAAA\\2\\ENGG7340\\2026-10-12\\work\\supervisor_revision_2026-10-28\\staging_figure\\apogee_and_events_comparison.csv",
+  "comparison_csv_sha256": "6503a97974179121fa0ac7bee98bfa22140fd3eb2399366d4f7663c7c69805c1",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "recorded_utc": "2026-10-28T06:37:48.589192+00:00"
+}

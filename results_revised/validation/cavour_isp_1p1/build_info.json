@@ -1,0 +1,37 @@
+{
+  "motor": {
+    "output": "C:\\Users\\Haoran Du\\AppData\\Local\\Temp\\validation_cavour_nhxb541t\\jsb\\engine\\L995.xml",
+    "impulse_Ns": 3979.7780000000002,
+    "source_impulse_Ns": 3617.98,
+    "prop_kg": 1.996,
+    "prop_lb": 4.400426753210156,
+    "burned_kg": 0.273806592351939,
+    "remaining_prop_lb": 3.7967865456997454,
+    "isp_s": 203.3188452230899,
+    "isp_scale": 1.1,
+    "start_time_s": 0.5212999999999589,
+    "sample_dt_s": 0.002,
+    "rows": 1838,
+    "burn_end_s": 4.18,
+    "initial_regularized_thrust_N": 1214.1002797202798,
+    "terminal_regularized_thrust_N": 0.07111575449305824
+  },
+  "t_exit": 0.5212999999999589,
+  "v_exit": 49.17187726636675,
+  "dT": 7.500000000000249,
+  "dT_reanalysis": 7.500000000000249,
+  "T_pad_reanalysis_C": 23.837698407669166,
+  "isp": 203.31884522308985,
+  "impulse": 3617.98,
+  "m_prop": 1.996,
+  "cmq": -2454.980753901015,
+  "cna0": 10.504949247965664,
+  "cp_sub_from_tail": 0.5485377349420639,
+  "static_margin_cal": 6.258291010172463,
+  "static_margin_launch_cal": 4.379943707939698,
+  "weather": [
+    "2023-10-13 13:00:00",
+    "2023-10-13 14:00:00"
+  ],
+  "pad_m": 150.0
+}

@@ -1,0 +1,12 @@
+{
+  "job": {
+    "name": "dmap_v6.csv",
+    "kind": "dmap"
+  },
+  "worker": 77,
+  "start_unix": 1791731412.4734402,
+  "status": "SUCCESS",
+  "completed": null,
+  "elapsed": 572.861376285553,
+  "sha256": "ce3c804eb4f58267c88212db1569b60e8d6052d1e0af0e41cd4d4a2bfe3daa04"
+}

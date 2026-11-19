@@ -1,0 +1,132 @@
+{
+  "status": "RECOMPUTED_DIAGNOSTIC",
+  "regional_density_fit_dT_K": 19.250000000000696,
+  "flight_apogee_column_mean_legacy_dT_K": 17.062295609518713,
+  "flight_apogee_column_mean_geometric_dT_K": 16.737700306079773,
+  "difference_regional_minus_legacy_flight_K": 2.187704390481983,
+  "flight_datasets": [
+    {
+      "name": "TeleMetrum",
+      "source_file": "2022-06-24-serial-5115-flight-0001-TeleMetrum.csv",
+      "source_sha256": "9fe8d17a25e7944267b34a45ed955303afd5818b3f18479a5f7ffb31a574cecf",
+      "rows": 7081,
+      "unique_altitude_fixes": 226,
+      "pad_gps_first_fix_m": 1390.0,
+      "assumed_geometric_pad_ASL_m": 1401.0,
+      "p_pad_Pa": 86442.8,
+      "p_pad_samples": 5,
+      "pad_pressure_time_interval_s": [
+        -0.3,
+        -0.26
+      ],
+      "gps_fit_peak_m": 4134.277474331567,
+      "gps_fit_peak_time_s": 29.84940435568876,
+      "gps_fit_points": 9,
+      "gps_fit_window_s": [
+        25.45,
+        33.45
+      ],
+      "pressure_selection_window_s": [
+        28.84940435568876,
+        30.84940435568876
+      ],
+      "apogee_window_min_pressure_Pa": 52425.0,
+      "legacy_apogee_column_dT_K": 17.030157647545764,
+      "consistent_geometric_apogee_column_dT_K": 16.70550909780087,
+      "barometric_apogee_m": 3903.77,
+      "coast_full_track_sensitivity": {
+        "selection": "Unique GPS-altitude changes at CSV t in [6,26]s, GPS height>=1000m; pressure interpolated from every full-rate record",
+        "n": 19,
+        "fit_dT_K": 13.918000000053674,
+        "median_inverted_dT_K": 14.126418562763035,
+        "dT_p10_K": 7.710823700730362,
+        "dT_p90_K": 15.395655429018097,
+        "gps_fit_RMS_m": 32.8847395582919
+      }
+    },
+    {
+      "name": "TeleMega",
+      "source_file": "2022-06-24-serial-6583-flight-0003-TeleMega.csv",
+      "source_sha256": "befe40714e6b88b3bd5af8cd51b569a94544c486ced299878f66ab264f9105a6",
+      "rows": 6234,
+      "unique_altitude_fixes": 228,
+      "pad_gps_first_fix_m": 1394.0,
+      "assumed_geometric_pad_ASL_m": 1401.0,
+      "p_pad_Pa": 86338.6,
+      "p_pad_samples": 5,
+      "pad_pressure_time_interval_s": [
+        -0.3,
+        -0.26
+      ],
+      "gps_fit_peak_m": 4130.480745738678,
+      "gps_fit_peak_time_s": 29.52682833985704,
+      "gps_fit_points": 8,
+      "gps_fit_window_s": [
+        25.31,
+        33.31
+      ],
+      "pressure_selection_window_s": [
+        28.52682833985704,
+        30.52682833985704
+      ],
+      "apogee_window_min_pressure_Pa": 52393.0,
+      "legacy_apogee_column_dT_K": 17.094433571491663,
+      "consistent_geometric_apogee_column_dT_K": 16.769891514358676,
+      "barometric_apogee_m": 3898.37,
+      "coast_full_track_sensitivity": {
+        "selection": "Unique GPS-altitude changes at CSV t in [6,26]s, GPS height>=1000m; pressure interpolated from every full-rate record",
+        "n": 20,
+        "fit_dT_K": 16.011000000056228,
+        "median_inverted_dT_K": 15.719529460617196,
+        "dT_p10_K": 14.986703635760716,
+        "dT_p90_K": 23.86167629464605,
+        "gps_fit_RMS_m": 25.22128882460834
+      }
+    }
+  ],
+  "regional_metadata": {
+    "station": "USM00072364",
+    "station_latitude": 31.8728,
+    "station_longitude": -106.698,
+    "station_pad_distance_m": 120287.17600983239,
+    "bracketing_times_utc": [
+      "2022-06-24 12:00",
+      "2022-06-25 00:00"
+    ],
+    "nominal_hour_weight": 0.2736111111111111,
+    "fit_dT_K": 19.20000000000769,
+    "source_url": "https://www.ncei.noaa.gov/pub/data/igra/data/data-por/USM00072364-data.txt.zip",
+    "excerpt_sha256": "ca64b7dfb59f7a2c075b5477c6d5c7ff05703402db0f1019aed55f5d84b2f2bc",
+    "profiles": {
+      "2022062412": {
+        "thermodynamic_levels": 99,
+        "wind_levels": 181,
+        "release_time_HHMM_UTC": "1106"
+      },
+      "2022062500": {
+        "thermodynamic_levels": 95,
+        "wind_levels": 185,
+        "release_time_HHMM_UTC": "2313"
+      }
+    },
+    "processing": "Separate valid thermodynamic/wind masks; logarithmic vertical pressure interpolation; meteorological FROM-wind converted to east/north; nominal-hour interpolation",
+    "limitation": "Regional proxy about 120km away, not launch-site weather; whole-profile nominal-time interpolation ignores balloon ascent time; spatial and profile-shape representativeness unquantified"
+  },
+  "regional_fit": {
+    "height_ASL_m": [
+      1401.0,
+      5701.0
+    ],
+    "level_spacing_m": 100.0,
+    "objective": "Unweighted sum of squared density residuals at uniform geometric heights, not time-weighted along flight",
+    "temperature_grid_spacing_K": 0.05,
+    "source_file": "val/prometheus_inputs_2022.json",
+    "source_sha256": "f6fdb38b3fc85fa88ad2b29fea6b7a591220321760fe6390d00a9e92625b2a79"
+  },
+  "interpretation": "19.25K is an independent spatial/temporal regional density-profile proxy. 17.06K is the mean of two flight-informed apogee pressure/GPS column inversions in the legacy flat-height diagnostic. Full-track fits are sensitivity checks and not independent validation/weather. Different weighting/profile shapes, 120km representativeness, pressure port/offset and unsynchronised GPS timestamps can contribute; no unique cause is identified.",
+  "script_sha256": "527e6da066456725be6af2690738f6f7b59cca081b55cdddc232910a1514b6df",
+  "inputs_sha256": {
+    "val\\data\\2022-06-24-serial-5115-flight-0001-TeleMetrum.csv": "9fe8d17a25e7944267b34a45ed955303afd5818b3f18479a5f7ffb31a574cecf",
+    "val\\data\\2022-06-24-serial-6583-flight-0003-TeleMega.csv": "befe40714e6b88b3bd5af8cd51b569a94544c486ced299878f66ab264f9105a6"
+  }
+}

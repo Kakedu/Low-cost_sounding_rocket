@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<runscript name="myrocket launch">
+
+  <use aircraft="myrocket" initialize="reset"/>
+  <run start="0.0" end="600" dt="0.001">
+
+    <event name="Ignition">
+      <condition> simulation/sim-time-sec ge 0.0 </condition>
+      <set name="propulsion/engine[0]/set-running" value="1"/>
+      <set name="fcs/throttle-cmd-norm" value="1.0"/>
+      <notify>
+        <property>propulsion/engine[0]/thrust-lbs</property>
+        <property>position/h-agl-ft</property>
+      </notify>
+    </event>
+
+    <event name="Burnout">
+      <condition>
+        simulation/sim-time-sec gt 1.0
+        propulsion/engine[0]/thrust-lbs lt 1.0
+      </condition>
+      <notify>
+        <property>simulation/sim-time-sec</property>
+        <property>position/h-agl-ft</property>
+        <property>velocities/mach</property>
+        <property>velocities/h-dot-fps</property>
+        <property>attitude/theta-deg</property>
+        <property>inertia/cg-x-in</property>
+      </notify>
+    </event>
+
+    <event name="Brakes deploying">
+      <condition>
+        fcs/airbrake-pos-norm gt 0.05
+      </condition>
+      <notify>
+        <property>simulation/sim-time-sec</property>
+        <property>position/h-agl-ft</property>
+        <property>fcs/apogee-estimate-ft</property>
+        <property>fcs/airbrake-pos-norm</property>
+      </notify>
+    </event>
+
+    <event name="Apogee">
+      <condition>
+        simulation/sim-time-sec gt 5.0
+        velocities/h-dot-fps lt 0.0
+      </condition>
+      <notify>
+        <property>simulation/sim-time-sec</property>
+        <property>position/h-agl-ft</property>
+        <property>attitude/theta-deg</property>
+        <property>aero/alpha-deg</property>
+        <property>fcs/airbrake-pos-norm</property>
+      </notify>
+      <set name="fcs/drogue-cmd" value="1"/>
+    </event>
+
+    <event name="Main deploy">
+      <description>Main parachute at 1500 ft AGL (assumed dual-deploy altitude)</description>
+      <condition>
+        fcs/drogue-cmd ge 1.0
+        position/h-agl-ft lt 1500.0
+      </condition>
+      <set name="fcs/main-cmd" value="1"/>
+      <notify>
+        <property>simulation/sim-time-sec</property>
+        <property>position/h-agl-ft</property>
+      </notify>
+    </event>
+
+    <event name="Stop at ground">
+      <condition>
+        simulation/sim-time-sec gt 5.0
+        position/h-agl-ft lt 1.0
+      </condition>
+      <notify>
+        <property>simulation/sim-time-sec</property>
+        <property>position/h-agl-ft</property>
+        <property>velocities/h-dot-fps</property>
+      </notify>
+      <set name="simulation/terminate" value="1"/>
+    </event>
+
+  </run>
+</runscript>

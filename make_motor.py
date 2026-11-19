@@ -1,35 +1,32 @@
-# Converts the RASP .eng thrust curve into a JSBSim engine table.
-# JSBSim looks thrust up by propellant burned, not by time.
+"""Convert time-linear RASP thrust to a convergent mass-indexed JSBSim table.
 
-LBF=4.4482216; LB=0.45359237
-eng=[l.split() for l in open("M1670.eng") if l.strip() and not l.startswith(";")]
-hdr=eng[0]; pts=[(0.0,0.0)]+[(float(a),float(b)) for a,b in eng[1:]]
-prop_kg=float(hdr[4]); total_kg=float(hdr[5])
-prop_lb=prop_kg/LB
-I=0.0; cum=[0.0]
-for (t0,f0),(t1,f1) in zip(pts,pts[1:]):
-    I+=0.5*(f0+f1)*(t1-t0); cum.append(I)
-I_lbfs=I/LBF; isp=I_lbfs/prop_lb
-print(f"impulse {I:.1f} N.s  prop {prop_kg*1000:.0f} g = {prop_lb:.4f} lb  Isp {isp:.2f} s  burnout mass {(total_kg-prop_kg)*1000:.0f} g")
-rows=[(prop_lb*c/I, f/LBF, t) for (t,f),c in zip(pts,cum)]
-first=rows[1]; build=first[2]
-table=[(0.0,first[1],first[2])]+rows[2:-1]
-last_nonzero=rows[-2][1]
-table.append((prop_lb, rows[-1][1] if rows[-1][1]>0 else last_nonzero*0.5, rows[-1][2]))
-lines="\n".join(f"      {p:9.4f}  {F:9.2f}   <!-- t = {t:5.3f} s -->" for p,F,t in table)
-xml=f'''<?xml version="1.0"?>
-<!-- Cesaroni 6026M1670-P, {I:.0f} N.s, Isp {isp:.1f} s. Thrust indexed by propellant burned (lb). -->
-<rocket_engine name="M1670">
+The curve is resampled because a time-linear segment is nonlinear in burned
+mass. End values use the resolution-dependent fraction r satisfying
+log(1/r)=2(1-r), preserving the small end-interval durations without a
+zero-flow equilibrium. The end regularization vanishes as sampling tends
+to zero. Tanks must use the returned prop_lb without three-decimal rounding.
+"""
 
-  <isp> {isp:.3f} </isp>
-  <builduptime> {build:.3f} </builduptime>
+import argparse
+import json
+from pathlib import Path
+from motor_model import convert_rasp, read_rasp, thrust_at, LBF, LB
 
-  <thrust_table name="propulsion/thrust_prop_remain" type="internal">
-    <tableData>
-{lines}
-    </tableData>
-  </thrust_table>
 
-</rocket_engine>
-'''
-open("M1670_new.xml","w").write(xml)
+def main():
+    ap = argparse.ArgumentParser()
+    here = Path(__file__).resolve().parent
+    ap.add_argument('--input', default=str(here / 'M1670.eng'))
+    ap.add_argument('--output', default=str(here / 'engine/M1670.xml'))
+    ap.add_argument('--sample-dt', type=float, default=0.002)
+    ap.add_argument('--name', default='M1670')
+    ap.add_argument('--json')
+    a = ap.parse_args()
+    info = convert_rasp(a.input, a.output, a.sample_dt, a.name)
+    print(json.dumps(info, indent=2))
+    if a.json:
+        Path(a.json).write_text(json.dumps(info, indent=2), encoding='utf-8')
+
+
+if __name__ == '__main__':
+    main()

@@ -3,6 +3,7 @@
 import csv
 import math
 import os
+from pathlib import Path
 
 import matplotlib
 matplotlib.use("Agg")
@@ -28,7 +29,7 @@ plt.rcParams.update({
 
 
 import sys as _sys
-DIR = _sys.argv[1] if __name__ == "__main__" and len(_sys.argv) > 1 else "results_v6"
+DIR = _sys.argv[1] if __name__ == "__main__" and len(_sys.argv) > 1 else str(Path(__file__).resolve().parent/'results_revised')
 
 
 def _p(name):
@@ -46,15 +47,15 @@ def fig_recovery():
     f = [x["impulse_factor"] * 100 - 100 for x in r]
     fig, ax = plt.subplots(figsize=(6.4, 4.0))
     ax.axhline(TARGET, color=INK2, lw=1, ls="--")
-    ax.text(f[0], TARGET + 120, "target 10,000 ft", color=INK2, fontsize=9)
+    ax.text(f[0], TARGET + 120, "target 10,000 ft", color=INK2, fontsize=10)
     ax.plot(f, [x["open_apogee_ft"] for x in r], color=OPEN, marker="o", ms=5,
             label="open loop (no brake)")
     ax.plot(f, [x["closed_apogee_ft"] for x in r], color=CLOSED, marker="s", ms=5,
             label="closed loop (air brake)")
     ok = [fi for fi, x in zip(f, r) if abs(x["error_ft"]) <= 100]
     ax.axvspan(min(ok), max(ok), color=CLOSED, alpha=0.07, lw=0)
-    ax.text((min(ok) + max(ok)) / 2, 8750, f"within 100 ft:\n{min(ok):+.0f}% to {max(ok):+.0f}%",
-            ha="center", color=INK2, fontsize=9)
+    ax.text((min(ok) + max(ok)) / 2, 8750, f"sampled points within 100 ft:\n{min(ok):+.1f}% to {max(ok):+.1f}%",
+            ha="center", color=INK2, fontsize=10)
     ax.set_xlabel("total impulse error (%)")
     ax.set_ylabel("apogee (ft)")
     ax.legend(loc="upper left")
@@ -83,7 +84,7 @@ def fig_dmap():
                     color=INK if v < 150 else "#ffffff")
     i0, j0 = dcds.index(2.0), kps.index(1.0)
     ax.add_patch(plt.Rectangle((j0 - 0.5, i0 - 0.5), 1, 1, fill=False, ec=OPEN, lw=2))
-    ax.text(j0, i0 - 0.32, "current design", color=INK, fontsize=7.5, ha="center")
+    ax.set_title("Orange box: current design", color=INK, fontsize=10, loc="left")
     ax.set_xticks(range(len(kps)), [f"{k * 0.001:g}" for k in kps])
     ax.set_yticks(range(len(dcds)), [f"{d:g}" for d in dcds])
     ax.set_xlabel("proportional gain kp (per ft)")
@@ -107,7 +108,8 @@ def _ellipse(N, E, k):
 def fig_mc():
     o, c = read(_p("mc_open_v6.csv")), read(_p("mc_closed_v6.csv"))
     fig, ax = plt.subplots(figsize=(6.4, 3.8))
-    bins = np.arange(8800, 12000, 50)
+    all_apogees = [x["apogee"] for x in o + c]
+    bins = np.arange(50 * math.floor(min(all_apogees) / 50), 50 * math.ceil(max(all_apogees) / 50) + 51, 50)
     ax.hist([x["apogee"] for x in o], bins=bins, color=OPEN, alpha=0.85,
             label="open loop", edgecolor=SURF, linewidth=0.5)
     ax.hist([x["apogee"] for x in c], bins=bins, color=CLOSED, alpha=0.85,
@@ -124,16 +126,20 @@ def fig_mc():
         N = [x["land_n"] for x in rows]
         E = [x["land_e"] for x in rows]
         ax.scatter(E, N, s=9, color=col, alpha=0.45, marker=mk, linewidths=0, label=lab)
-        for k, ls in ((1, "-"), (2, "--")):
-            ex, ny = _ellipse(N, E, k)
+        points = np.column_stack([E, N]); centered = points - points.mean(axis=0)
+        C = np.cov(points.T)
+        mahalanobis = np.sqrt(np.einsum("ij,jk,ik->i", centered, np.linalg.pinv(C), centered))
+        for coverage, ls in ((0.68, "-"), (0.95, "--")):
+            radius = float(np.percentile(mahalanobis, 100 * coverage, method="linear"))
+            ex, ny = _ellipse(N, E, radius)
             ax.plot(ex, ny, color=col, lw=1.6, ls=ls)
     ax.plot(0, 0, marker="^", color=INK, ms=9)
     ax.annotate("pad", (0, 0), xytext=(8, -12), textcoords="offset points", color=INK)
     ax.set_aspect("equal")
     ax.set_xlabel("east (m)")
     ax.set_ylabel("north (m)")
-    lg = ax.legend(loc="upper right", title="ellipses: 1σ solid, 2σ dashed",
-                   title_fontsize=8, markerscale=2.5)
+    lg = ax.legend(loc="upper right", title="sample coverage: 68% solid, 95% dashed",
+                   title_fontsize=10, markerscale=2.5)
     for h in lg.legend_handles:
         h.set_alpha(1)
     fig.tight_layout()

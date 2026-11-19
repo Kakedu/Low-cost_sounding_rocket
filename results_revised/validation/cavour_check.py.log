@@ -1,0 +1,25 @@
+  record_max_m                    2789.00
+  record_fit_m                    2785.36
+  t_fit_s                           23.38
+  n_fit                        37
+  jsbsim_geometric_m              2801.26
+  jsbsim_t_apogee_s                 22.47
+  dT_K                               7.50
+  jsbsim_as_baro_m                2728.87
+  E_m                              -56.49
+  E_pct                             -2.03
+  E_vs_official_pct                 -2.16
+  u_input_m                        288.81
+  u_D_m                              5.00
+  u_val_m                          288.86
+  E_over_u_val                      -0.20
+  expanded_validation_halfwidth_m     577.71
+  expanded_validation_halfwidth_pct      20.74
+  discrepancy_interval_low_m      -634.20
+  discrepancy_interval_high_m      521.22
+  interpretation               Conditional expanded uncertainty interval, not a pass/fail or detection threshold
+  mc_baro_mean_m                  2764.68
+  mc_baro_p2_5                    2172.47
+  mc_baro_p97_5                   3329.36
+  flight_in_mc_95              1
+

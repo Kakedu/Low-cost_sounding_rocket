@@ -1,0 +1,27 @@
+parameter,low,high,range,pct_of_base,per_sigma,baseline,metric,loop,description
+isp,-1563.686,1490.600,3054.286,28.9571,381.786,10547.621,apogee,open,"specific impulse (thrust curve kept, propellant burns slower: impulse and burn time scale)"
+prop_mass,-1450.647,1370.316,2820.963,26.7450,,10547.621,apogee,open,independent propellant-loading perturbation (tank and mass-indexed curve scale together; fixed Isp)
+dry_mass,1105.444,-1121.122,2226.566,21.1096,-48.207,10547.621,apogee,open,dry mass
+cd0,292.018,-272.534,564.552,5.3524,-564.552,10547.621,apogee,open,zero-incidence drag coefficient (whole Mach table)
+wind,0.000,-166.059,166.059,1.5744,,10547.621,apogee,open,"crosswind, fps (0 / 30, not +/-10%)"
+mdot,-66.512,52.746,119.258,1.1307,,10547.621,apogee,open,"thrust level at fixed isp (flow scales with it, burn shortens, impulse unchanged)"
+payload,57.186,-56.957,114.142,1.0822,,10547.621,apogee,open,payload mass
+launch_elev,-11.703,3.876,15.579,0.1477,,10547.621,apogee,open,"launch elevation angle, deg (88 / 89.9, not +/-10%)"
+gust,0.000,-14.727,14.727,0.1396,,10547.621,apogee,open,"discrete gust at t=2.5 s, fps (0 / 40, not +/-10%)"
+cg_shift,-2.439,2.077,4.516,0.0428,,10547.621,apogee,open,dry centre of gravity station
+cp_x,0.155,-0.091,0.246,0.0023,-0.062,10547.621,apogee,open,centre of pressure station (drives static margin)
+iyy,-0.027,0.024,0.051,0.0005,,10547.621,apogee,open,transverse moment of inertia (Iyy and Izz scaled together)
+pitch_damp,-0.006,0.006,0.012,0.0001,,10547.621,apogee,open,pitch damping derivative
+cn_alpha,0.005,-0.005,0.010,0.0001,-0.005,10547.621,apogee,open,normal-force slope CNalpha (lift and side scaled together)
+yaw_damp,-0.000,0.000,0.000,0.0000,,10547.621,apogee,open,yaw damping derivative (the axis a crosswind actually excites)
+roll_damp,0.000,-0.000,0.000,0.0000,,10547.621,apogee,open,roll damping derivative
+airbrake_dcd,0.000,0.000,0.000,0.0000,,10547.621,apogee,open,air-brake drag increment at full deployment
+launch_az,0.000,0.000,0.000,0.0000,,10547.621,apogee,open,"launch azimuth, deg (Monte Carlo only)"
+rail_travel,0.000,0.000,0.000,0.0000,,10547.621,apogee,open,"guided rail travel, ft (absolute; anglesweep.py rail variant, not OAT)"
+drogue_cda,0.000,0.000,0.000,0.0000,0.000,10547.621,apogee,open,"drogue parachute CdA (assumed sizing, ~75 fps descent)"
+main_cda,0.000,0.000,0.000,0.0000,0.000,10547.621,apogee,open,"main parachute CdA (assumed sizing, ~20 fps descent)"
+act_time,0.000,0.000,0.000,0.0000,,10547.621,apogee,open,"actuator travel time, stowed to fully deployed"
+gate_alt,0.000,0.000,0.000,0.0000,,10547.621,apogee,open,minimum altitude before the brake is allowed to act
+kp,0.000,0.000,0.000,0.0000,,10547.621,apogee,open,proportional gain
+target,0.000,0.000,0.000,0.0000,,10547.621,apogee,open,"target apogee, ft (absolute; used by the margin curve, not OAT)"
+cd_est,0.000,0.000,0.000,0.0000,,10547.621,apogee,open,"Cd the on-board estimator assumes (a wrong belief, not a real change)"

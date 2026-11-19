@@ -1,0 +1,138 @@
+{
+  "status": "SCREEN_ONLY",
+  "hinge_inertia_kg_m2": 2.6952749999999997e-05,
+  "first_plate_frequency_Hz": 843.4359683453255,
+  "shedding_envelope_Hz": [
+    265.45454545454544,
+    3941.9999999999995
+  ],
+  "formula": "f_h=sqrt(k_theta/I_h)/(2*pi); k_theta(target)=I_h*(2*pi*f_target)^2",
+  "stiffness_table": [
+    {
+      "label": "assumed k=1",
+      "hinge_stiffness_Nm_per_rad": 1.0,
+      "rigid_hinge_frequency_Hz": 30.656219016491605,
+      "frequency_over_plate_f1": 0.03634682437913309,
+      "frequency_over_twice_plate_f1": 0.018173412189566546,
+      "within_shedding_envelope": false
+    },
+    {
+      "label": "assumed k=10",
+      "hinge_stiffness_Nm_per_rad": 10.0,
+      "rigid_hinge_frequency_Hz": 96.94347654108044,
+      "frequency_over_plate_f1": 0.114938750752196,
+      "frequency_over_twice_plate_f1": 0.057469375376098,
+      "within_shedding_envelope": false
+    },
+    {
+      "label": "lower shedding-envelope threshold",
+      "hinge_stiffness_Nm_per_rad": 74.97960571421442,
+      "rigid_hinge_frequency_Hz": 265.45454545454544,
+      "frequency_over_plate_f1": 0.3147299325819849,
+      "frequency_over_twice_plate_f1": 0.15736496629099245,
+      "within_shedding_envelope": true
+    },
+    {
+      "label": "assumed k=100",
+      "hinge_stiffness_Nm_per_rad": 100.0,
+      "rigid_hinge_frequency_Hz": 306.56219016491605,
+      "frequency_over_plate_f1": 0.3634682437913309,
+      "frequency_over_twice_plate_f1": 0.18173412189566546,
+      "within_shedding_envelope": true
+    },
+    {
+      "label": "first plate-mode threshold",
+      "hinge_stiffness_Nm_per_rad": 756.9497587217586,
+      "rigid_hinge_frequency_Hz": 843.4359683453255,
+      "frequency_over_plate_f1": 1.0,
+      "frequency_over_twice_plate_f1": 0.5,
+      "within_shedding_envelope": true
+    },
+    {
+      "label": "assumed k=1000",
+      "hinge_stiffness_Nm_per_rad": 1000.0,
+      "rigid_hinge_frequency_Hz": 969.4347654108044,
+      "frequency_over_plate_f1": 1.14938750752196,
+      "frequency_over_twice_plate_f1": 0.57469375376098,
+      "within_shedding_envelope": true
+    },
+    {
+      "label": "twice first plate-mode threshold",
+      "hinge_stiffness_Nm_per_rad": 3027.7990348870344,
+      "rigid_hinge_frequency_Hz": 1686.871936690651,
+      "frequency_over_plate_f1": 2.0,
+      "frequency_over_twice_plate_f1": 1.0,
+      "within_shedding_envelope": true
+    },
+    {
+      "label": "upper shedding-envelope threshold",
+      "hinge_stiffness_Nm_per_rad": 16534.690101112847,
+      "rigid_hinge_frequency_Hz": 3941.9999999999995,
+      "frequency_over_plate_f1": 4.673739498842475,
+      "frequency_over_twice_plate_f1": 2.3368697494212376,
+      "within_shedding_envelope": true
+    }
+  ],
+  "load_factor_choice": {
+    "coefficient_factor": 1.4,
+    "additional_load_factor": 1.5,
+    "combined_factor": 2.1,
+    "coefficient_cv_assumed": 0.2,
+    "coefficient_distribution": "B=max(0.5,X), X~Normal(mean=1,SD=0.20)",
+    "underlying_normal_mean": 1.0,
+    "underlying_normal_sd": 0.2,
+    "lower_clip": 0.5,
+    "lower_clip_probability": 0.006209665325776139,
+    "actual_clipped_mean": 1.0004008274358256,
+    "actual_clipped_sd": 0.19887443024789,
+    "actual_clipped_cv": 0.19879474785885015,
+    "marginal_coefficient_coverage_at_1p4_nominal": 0.9772498680518207,
+    "coverage_formula": "P(B<=1.4)=Phi((1.4-1)/0.20)=Phi(2), because 1.4 is above the 0.5 lower clip.",
+    "scope": "Engineering choices of this study. 1.4 is nominal mean plus 2 assigned SD and has 97.725% marginal coefficient coverage under the chosen clipped-normal model. Lower clipping slightly changes its actual mean and CV. This coefficient probability does not cover complete flight loads, temporal maxima or all uncertain inputs, and the additional 1.5 multiplier and 2.1 product are not calibrated global reliability or capacity bounds."
+  },
+  "source_sha256": {
+    "results_revised\\flap_fea_v6.json": "ae1c4c10a8cc727df6fe7494e55e189d4f957d04d283a0f4b6f80f2a5ae066e6",
+    "results_revised\\loads_v6.json": "65d7b017894b9bd16471bb58d407311fb59b987e6a9701537777249b4ddaed4e",
+    "structure_screen.py": "ce5f253601c22d7eca58acfdf3890c5f58e546db8391a9b93058c7915ca12bf4",
+    "provenance/brake_coefficient_distribution_clarification.json": "02a066abe74a9a6ad9bcb6fd348a30eddef4eec4eccdf413609367862fdca959"
+  },
+  "load_allocation": "Four flaps share modeled brake force equally. Four-fin set divided by two is a conservative maximum-single-fin envelope for two fins in an incidence plane; combined alpha/beta loads do not resolve each physical fin. Fin incidence is capped at 15deg, and actual/used angles and exceedance flags are separate.",
+  "limitations": [
+    "Frequency overlap is an envelope screen; trajectory-synchronous speed, deployment height and forcing spectrum are not jointly evaluated.",
+    "Rigid hinge frequency assumes a single flap inertia and linear rotational spring. Coupled plate, hinge, servo, linkage and body modes can differ.",
+    "The factor two relative to plate frequency is a stated screening separation criterion, not an established stability or certification threshold.",
+    "Uniform pressure and a fully fixed edge do not establish hinge-pin, lug, fastener, contact, actuator, fatigue or aeroelastic capacity."
+  ],
+  "verification_plan": [
+    {
+      "step": 1,
+      "measure": "Actual geometry and mass",
+      "method": "Record flap thickness/width/length, hinge axis and pin diameter, lug spacing, fastener locations, servo arm, linkage angles, and deployed projected height. Weigh each flap and measure or compute its hinge-axis inertia from the actual assembly.",
+      "output": "Dimensioned assembly, mass/inertia uncertainty, and load-path coordinates."
+    },
+    {
+      "step": 2,
+      "measure": "Effective rotational stiffness and backlash",
+      "method": "Measure applied hinge torque versus angle through the relevant deployment range with the actuator powered and unpowered. Repeat loading/unloading to identify backlash, hysteresis and compliance; calculate the local derivative dM/dtheta in N m/rad.",
+      "output": "Measured k_theta(theta), backlash/hysteresis curves, and an updated coupled-mode model."
+    },
+    {
+      "step": 3,
+      "measure": "Assembly modes and damping",
+      "method": "Measure a low-amplitude impulse or frequency-response test of the assembled flap/hinge/linkage/body in representative deployed states. Fit observed natural frequencies and damping; compare to the plate-only and rigid-hinge predictions.",
+      "output": "Measured coupled-mode frequencies, damping and mode shapes; no stability claim from frequency separation alone."
+    },
+    {
+      "step": 4,
+      "measure": "Static load path and actuator torque",
+      "method": "Use the accepted modeled load as a calculation input and compare distributed-pressure and representative linkage/fastener load paths in an assembly model. Instrument a bench specimen to compare deflection, strain and actuator torque with those predictions under a separately approved hardware test procedure.",
+      "output": "Load/deflection and torque data with geometry, fixture and force distribution documented. The existing 2.1 factor remains a screen, not certified capacity."
+    },
+    {
+      "step": 5,
+      "measure": "Flow forcing at matched deployment states",
+      "method": "Use synchronized flight-model velocity and projected deployed height to replace the rectangular shedding envelope. Representative flow testing should measure pressure/force spectra and response before any flutter claim.",
+      "output": "Matched velocity/deployment/forcing spectra and a coupled aeroelastic assessment."
+    }
+  ]
+}

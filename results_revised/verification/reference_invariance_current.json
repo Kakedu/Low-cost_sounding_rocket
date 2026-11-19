@@ -1,0 +1,4671 @@
+{
+  "status": "PASS",
+  "jsbsim_version": "1.3.1",
+  "cases": 108,
+  "compiled_models": 216,
+  "max_force_error_lbf": 0.0,
+  "max_moment_error_lbf_ft": 1.1368683772161603e-13,
+  "tolerance_lbf_or_lbf_ft": 1e-09,
+  "fixture": "300 fps,1000ft; zero-dt fixed kinematics; isolated active force family; compare current reference-point couple to force at shifted AERORP",
+  "limitation": "Large-angle cases test coordinate consistency only, not empirical aerodynamic accuracy.",
+  "xml_sha256": {
+    "myrocket": "5e1c037aa3dddbef8f63bd2502bd0e82a8f2c8a1ee7cc3891e8be48adea22797",
+    "myrocket2": "fe0f7222cfb44ca8d289ec1d417a4a29a5fc44ec9fc9827237ecf05b5146682f",
+    "myrocket_cluster": "bae2d27ec11f0183475edf6eaad2b42d87e342c09191933bbe8d1d719e718695",
+    "myrocket_series": "24907fb8c23c8b1b67c7c825df061a54b6ba4a16b27998e6498a288252555e6b"
+  },
+  "engine_sha256": "0160cd7dd8e647791d6323b3d818fa7ff86d99bbbc79e9690d2ee4292f829dc2",
+  "source_sha256": "c1cbb9794d4142592bcb64aea2476c7acae6a74dbf9817302f68bfb556581449",
+  "official_sources": {
+    "version": "JSBSim v1.3.1",
+    "wind_to_body": "https://raw.githubusercontent.com/JSBSim-Team/jsbsim/v1.3.1/src/models/FGAuxiliary.cpp",
+    "force_and_moment_frames": "https://raw.githubusercontent.com/JSBSim-Team/jsbsim/v1.3.1/src/models/FGAerodynamics.cpp",
+    "implementation_lines": "FGAuxiliary.cpp 296-328; FGAerodynamics.cpp 192-201, 246-267, 391-407, 468-470 (zero-based online raw lines)"
+  },
+  "values": [
+    {
+      "family": "stack_normal",
+      "axis": "alpha",
+      "alpha_deg": -45,
+      "beta_deg": 0,
+      "dx_structural_ft": 2.4738,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -0.7853981633974484,
+          "aero/beta-rad": 4.736951571734008e-17,
+          "aero/qbar-psf": 103.86614770167583,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 16.24305960402652,
+          "forces/fby-aero-lbs": -2.1762649932998946e-15,
+          "forces/fbz-aero-lbs": 16.243059604026516,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 11.101142347929429,
+          "moments/n-aero-lbsft": 1.4873446300381124e-15
+        },
+        "reference": {
+          "aero/alpha-rad": -0.7853981633974484,
+          "aero/beta-rad": 4.736951571734008e-17,
+          "aero/qbar-psf": 103.86614770167583,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 16.24305960402652,
+          "forces/fby-aero-lbs": -2.1762649932998946e-15,
+          "forces/fbz-aero-lbs": 16.243059604026516,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 11.101142347929436,
+          "moments/n-aero-lbsft": 1.4873446300381126e-15
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": -7.105427357601002e-15,
+        "moments/n-aero-lbsft": -1.9721522630525295e-31
+      }
+    },
+    {
+      "family": "stack_normal",
+      "axis": "beta",
+      "alpha_deg": 0,
+      "beta_deg": -45,
+      "dx_structural_ft": 2.4738,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": 6.147531481792056e-18,
+          "aero/beta-rad": -0.7853981633974483,
+          "aero/qbar-psf": 103.86614770167586,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 16.243059604026524,
+          "forces/fby-aero-lbs": 16.243059604026524,
+          "forces/fbz-aero-lbs": -1.8257707908727263e-16,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -1.2478031810672877e-16,
+          "moments/n-aero-lbsft": -11.10114234792944
+        },
+        "reference": {
+          "aero/alpha-rad": 6.147531481792056e-18,
+          "aero/beta-rad": -0.7853981633974483,
+          "aero/qbar-psf": 103.86614770167586,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 16.243059604026524,
+          "forces/fby-aero-lbs": 16.243059604026524,
+          "forces/fbz-aero-lbs": -1.8257707908727263e-16,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -1.2478031810672874e-16,
+          "moments/n-aero-lbsft": -11.101142347929441
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": -2.465190328815662e-32,
+        "moments/n-aero-lbsft": 1.7763568394002505e-15
+      }
+    },
+    {
+      "family": "stack_normal",
+      "axis": "combined",
+      "alpha_deg": -45,
+      "beta_deg": -45,
+      "dx_structural_ft": 2.4738,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -0.7853981633974485,
+          "aero/beta-rad": -0.7853981633974486,
+          "aero/qbar-psf": 103.8661477016759,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 27.72863719725097,
+          "forces/fby-aero-lbs": 16.243059604026524,
+          "forces/fbz-aero-lbs": 4.757482010802082,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 3.2514493147913797,
+          "moments/n-aero-lbsft": -11.10114234792944
+        },
+        "reference": {
+          "aero/alpha-rad": -0.7853981633974485,
+          "aero/beta-rad": -0.7853981633974486,
+          "aero/qbar-psf": 103.8661477016759,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 27.72863719725097,
+          "forces/fby-aero-lbs": 16.243059604026524,
+          "forces/fbz-aero-lbs": 4.757482010802082,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 3.2514493147913752,
+          "moments/n-aero-lbsft": -11.101142347929441
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 4.440892098500626e-15,
+        "moments/n-aero-lbsft": 1.7763568394002505e-15
+      }
+    },
+    {
+      "family": "stack_normal",
+      "axis": "alpha",
+      "alpha_deg": -15,
+      "beta_deg": 0,
+      "dx_structural_ft": 2.4738,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -0.26179938779914924,
+          "aero/beta-rad": 9.473903143468006e-17,
+          "aero/qbar-psf": 103.8661477016759,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 2.972686225129253,
+          "forces/fby-aero-lbs": -4.352529986599787e-15,
+          "forces/fbz-aero-lbs": 11.094216027142515,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 7.582221229149418,
+          "moments/n-aero-lbsft": 2.9746892600762217e-15
+        },
+        "reference": {
+          "aero/alpha-rad": -0.26179938779914924,
+          "aero/beta-rad": 9.473903143468006e-17,
+          "aero/qbar-psf": 103.8661477016759,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 2.972686225129253,
+          "forces/fby-aero-lbs": -4.352529986599787e-15,
+          "forces/fbz-aero-lbs": 11.094216027142515,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 7.582221229149421,
+          "moments/n-aero-lbsft": 2.9746892600762233e-15
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": -2.6645352591003757e-15,
+        "moments/n-aero-lbsft": -1.5777218104420236e-30
+      }
+    },
+    {
+      "family": "stack_normal",
+      "axis": "beta",
+      "alpha_deg": 0,
+      "beta_deg": -15,
+      "dx_structural_ft": 2.4738,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -5.102829343732417e-17,
+          "aero/beta-rad": -0.2617993877991494,
+          "aero/qbar-psf": 103.86614770167586,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 2.9726862251292556,
+          "forces/fby-aero-lbs": 11.094216027142517,
+          "forces/fbz-aero-lbs": 2.1926665899038604e-15,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 1.4985541227736317e-15,
+          "moments/n-aero-lbsft": -7.582221229149418
+        },
+        "reference": {
+          "aero/alpha-rad": -5.102829343732417e-17,
+          "aero/beta-rad": -0.2617993877991494,
+          "aero/qbar-psf": 103.86614770167586,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 2.9726862251292556,
+          "forces/fby-aero-lbs": 11.094216027142517,
+          "forces/fbz-aero-lbs": 2.1926665899038604e-15,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 1.4985541227736317e-15,
+          "moments/n-aero-lbsft": -7.582221229149422
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 0.0,
+        "moments/n-aero-lbsft": 3.552713678800501e-15
+      }
+    },
+    {
+      "family": "stack_normal",
+      "axis": "combined",
+      "alpha_deg": -15,
+      "beta_deg": -15,
+      "dx_structural_ft": 2.4738,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -0.2617993877991493,
+          "aero/beta-rad": -0.2617993877991495,
+          "aero/qbar-psf": 103.86614770167587,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 5.844080623435364,
+          "forces/fby-aero-lbs": 11.094216027142522,
+          "forces/fbz-aero-lbs": 10.324828216965145,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 7.056391501884033,
+          "moments/n-aero-lbsft": -7.582221229149422
+        },
+        "reference": {
+          "aero/alpha-rad": -0.2617993877991493,
+          "aero/beta-rad": -0.2617993877991495,
+          "aero/qbar-psf": 103.86614770167587,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 5.844080623435364,
+          "forces/fby-aero-lbs": 11.094216027142522,
+          "forces/fbz-aero-lbs": 10.324828216965145,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 7.056391501884033,
+          "moments/n-aero-lbsft": -7.582221229149425
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 0.0,
+        "moments/n-aero-lbsft": 3.552713678800501e-15
+      }
+    },
+    {
+      "family": "stack_normal",
+      "axis": "alpha",
+      "alpha_deg": -1,
+      "beta_deg": 0,
+      "dx_structural_ft": 2.4738,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -0.017453292519943292,
+          "aero/beta-rad": 1.8947806286936006e-16,
+          "aero/qbar-psf": 103.86614770167587,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.013991275816066797,
+          "forces/fby-aero-lbs": -8.70505997319957e-15,
+          "forces/fbz-aero-lbs": 0.8015596546678393,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 0.5478172243250925,
+          "moments/n-aero-lbsft": 5.949378520152443e-15
+        },
+        "reference": {
+          "aero/alpha-rad": -0.017453292519943292,
+          "aero/beta-rad": 1.8947806286936006e-16,
+          "aero/qbar-psf": 103.86614770167587,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.013991275816066797,
+          "forces/fby-aero-lbs": -8.70505997319957e-15,
+          "forces/fbz-aero-lbs": 0.8015596546678393,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 0.5478172243250927,
+          "moments/n-aero-lbsft": 5.949378520152445e-15
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": -2.220446049250313e-16,
+        "moments/n-aero-lbsft": -1.5777218104420236e-30
+      }
+    },
+    {
+      "family": "stack_normal",
+      "axis": "beta",
+      "alpha_deg": 0,
+      "beta_deg": -1,
+      "dx_structural_ft": 2.4738,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": 4.249581343091416e-17,
+          "aero/beta-rad": -0.017453292519943413,
+          "aero/qbar-psf": 103.8661477016759,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.013991275816066994,
+          "forces/fby-aero-lbs": 0.8015596546678451,
+          "forces/fbz-aero-lbs": -1.9517612795450747e-15,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -1.3339100096656516e-15,
+          "moments/n-aero-lbsft": -0.5478172243250965
+        },
+        "reference": {
+          "aero/alpha-rad": 4.249581343091416e-17,
+          "aero/beta-rad": -0.017453292519943413,
+          "aero/qbar-psf": 103.8661477016759,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.013991275816066994,
+          "forces/fby-aero-lbs": 0.8015596546678451,
+          "forces/fbz-aero-lbs": -1.9517612795450747e-15,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -1.333910009665652e-15,
+          "moments/n-aero-lbsft": -0.5478172243250966
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 3.944304526105059e-31,
+        "moments/n-aero-lbsft": 1.1102230246251565e-16
+      }
+    },
+    {
+      "family": "stack_normal",
+      "axis": "combined",
+      "alpha_deg": -1,
+      "beta_deg": -1,
+      "dx_structural_ft": 2.4738,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -0.01745329251994328,
+          "aero/beta-rad": -0.017453292519943465,
+          "aero/qbar-psf": 103.8661477016759,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.027980420693058807,
+          "forces/fby-aero-lbs": 0.8015596546678474,
+          "forces/fbz-aero-lbs": 0.8013154732357208,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 0.5476503411822149,
+          "moments/n-aero-lbsft": -0.547817224325098
+        },
+        "reference": {
+          "aero/alpha-rad": -0.01745329251994328,
+          "aero/beta-rad": -0.017453292519943465,
+          "aero/qbar-psf": 103.8661477016759,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.027980420693058807,
+          "forces/fby-aero-lbs": 0.8015596546678474,
+          "forces/fbz-aero-lbs": 0.8013154732357208,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 0.5476503411822151,
+          "moments/n-aero-lbsft": -0.5478172243250983
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": -2.220446049250313e-16,
+        "moments/n-aero-lbsft": 2.220446049250313e-16
+      }
+    },
+    {
+      "family": "stack_normal",
+      "axis": "alpha",
+      "alpha_deg": 1,
+      "beta_deg": 0,
+      "dx_structural_ft": 2.4738,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": 0.01745329251994327,
+          "aero/beta-rad": -9.473903143467991e-17,
+          "aero/qbar-psf": 103.86614770167587,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.013991275816066765,
+          "forces/fby-aero-lbs": 4.35252998659978e-15,
+          "forces/fbz-aero-lbs": -0.8015596546678384,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -0.5478172243250918,
+          "moments/n-aero-lbsft": -2.974689260076217e-15
+        },
+        "reference": {
+          "aero/alpha-rad": 0.01745329251994327,
+          "aero/beta-rad": -9.473903143467991e-17,
+          "aero/qbar-psf": 103.86614770167587,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.013991275816066765,
+          "forces/fby-aero-lbs": 4.35252998659978e-15,
+          "forces/fbz-aero-lbs": -0.8015596546678384,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -0.5478172243250921,
+          "moments/n-aero-lbsft": -2.9746892600762185e-15
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 2.220446049250313e-16,
+        "moments/n-aero-lbsft": 1.5777218104420236e-30
+      }
+    },
+    {
+      "family": "stack_normal",
+      "axis": "beta",
+      "alpha_deg": 0,
+      "beta_deg": 1,
+      "dx_structural_ft": 2.4738,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -4.880917992095902e-18,
+          "aero/beta-rad": 0.01745329251994356,
+          "aero/qbar-psf": 103.86614770167587,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.013991275816067227,
+          "forces/fby-aero-lbs": -0.8015596546678516,
+          "forces/fbz-aero-lbs": 2.241723590276677e-16,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 1.5320815958961248e-16,
+          "moments/n-aero-lbsft": 0.5478172243251009
+        },
+        "reference": {
+          "aero/alpha-rad": -4.880917992095902e-18,
+          "aero/beta-rad": 0.01745329251994356,
+          "aero/qbar-psf": 103.86614770167587,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.013991275816067227,
+          "forces/fby-aero-lbs": -0.8015596546678516,
+          "forces/fbz-aero-lbs": 2.241723590276677e-16,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 1.5320815958961256e-16,
+          "moments/n-aero-lbsft": 0.547817224325101
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": -7.395570986446986e-32,
+        "moments/n-aero-lbsft": -1.1102230246251565e-16
+      }
+    },
+    {
+      "family": "stack_normal",
+      "axis": "combined",
+      "alpha_deg": 1,
+      "beta_deg": 1,
+      "dx_structural_ft": 2.4738,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": 0.017453292519943254,
+          "aero/beta-rad": 0.01745329251994342,
+          "aero/qbar-psf": 103.86614770167586,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.02798042069305868,
+          "forces/fby-aero-lbs": -0.8015596546678451,
+          "forces/fbz-aero-lbs": -0.8013154732357193,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -0.5476503411822138,
+          "moments/n-aero-lbsft": 0.5478172243250965
+        },
+        "reference": {
+          "aero/alpha-rad": 0.017453292519943254,
+          "aero/beta-rad": 0.01745329251994342,
+          "aero/qbar-psf": 103.86614770167586,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.02798042069305868,
+          "forces/fby-aero-lbs": -0.8015596546678451,
+          "forces/fbz-aero-lbs": -0.8013154732357193,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -0.547650341182214,
+          "moments/n-aero-lbsft": 0.5478172243250966
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 2.220446049250313e-16,
+        "moments/n-aero-lbsft": -1.1102230246251565e-16
+      }
+    },
+    {
+      "family": "stack_normal",
+      "axis": "alpha",
+      "alpha_deg": 15,
+      "beta_deg": 0,
+      "dx_structural_ft": 2.4738,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": 0.26179938779914935,
+          "aero/beta-rad": 2.3684757858670016e-16,
+          "aero/qbar-psf": 103.86614770167577,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 2.9726862251292516,
+          "forces/fby-aero-lbs": -1.0881324966499455e-14,
+          "forces/fbz-aero-lbs": -11.094216027142505,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -7.582221229149411,
+          "moments/n-aero-lbsft": 7.436723150190547e-15
+        },
+        "reference": {
+          "aero/alpha-rad": 0.26179938779914935,
+          "aero/beta-rad": 2.3684757858670016e-16,
+          "aero/qbar-psf": 103.86614770167577,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 2.9726862251292516,
+          "forces/fby-aero-lbs": -1.0881324966499455e-14,
+          "forces/fbz-aero-lbs": -11.094216027142505,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -7.582221229149414,
+          "moments/n-aero-lbsft": 7.43672315019055e-15
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 2.6645352591003757e-15,
+        "moments/n-aero-lbsft": -3.1554436208840472e-30
+      }
+    },
+    {
+      "family": "stack_normal",
+      "axis": "beta",
+      "alpha_deg": 0,
+      "beta_deg": 15,
+      "dx_structural_ft": 2.4738,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -1.9877621376010327e-18,
+          "aero/beta-rad": 0.2617993877991493,
+          "aero/qbar-psf": 103.86614770167586,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 2.9726862251292534,
+          "forces/fby-aero-lbs": -11.094216027142513,
+          "forces/fbz-aero-lbs": 8.541339194788122e-17,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 5.837485335569854e-17,
+          "moments/n-aero-lbsft": 7.582221229149418
+        },
+        "reference": {
+          "aero/alpha-rad": -1.9877621376010327e-18,
+          "aero/beta-rad": 0.2617993877991493,
+          "aero/qbar-psf": 103.86614770167586,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 2.9726862251292534,
+          "forces/fby-aero-lbs": -11.094216027142513,
+          "forces/fbz-aero-lbs": 8.541339194788122e-17,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 5.837485335569858e-17,
+          "moments/n-aero-lbsft": 7.58222122914942
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": -3.697785493223493e-32,
+        "moments/n-aero-lbsft": -1.7763568394002505e-15
+      }
+    },
+    {
+      "family": "stack_normal",
+      "axis": "combined",
+      "alpha_deg": 15,
+      "beta_deg": 15,
+      "dx_structural_ft": 2.4738,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": 0.26179938779914946,
+          "aero/beta-rad": 0.26179938779914946,
+          "aero/qbar-psf": 103.86614770167591,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 5.844080623435369,
+          "forces/fby-aero-lbs": -11.094216027142526,
+          "forces/fbz-aero-lbs": -10.324828216965154,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -7.056391501884036,
+          "moments/n-aero-lbsft": 7.582221229149425
+        },
+        "reference": {
+          "aero/alpha-rad": 0.26179938779914946,
+          "aero/beta-rad": 0.26179938779914946,
+          "aero/qbar-psf": 103.86614770167591,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 5.844080623435369,
+          "forces/fby-aero-lbs": -11.094216027142526,
+          "forces/fbz-aero-lbs": -10.324828216965154,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -7.056391501884039,
+          "moments/n-aero-lbsft": 7.582221229149428
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 2.6645352591003757e-15,
+        "moments/n-aero-lbsft": -2.6645352591003757e-15
+      }
+    },
+    {
+      "family": "stack_normal",
+      "axis": "alpha",
+      "alpha_deg": 45,
+      "beta_deg": 0,
+      "dx_structural_ft": 2.4738,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": 0.7853981633974484,
+          "aero/beta-rad": -1.4210854715201994e-16,
+          "aero/qbar-psf": 103.8661477016758,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 16.243059604026516,
+          "forces/fby-aero-lbs": 6.528794979899668e-15,
+          "forces/fbz-aero-lbs": -16.243059604026513,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -11.101142347929429,
+          "moments/n-aero-lbsft": -4.462033890114327e-15
+        },
+        "reference": {
+          "aero/alpha-rad": 0.7853981633974484,
+          "aero/beta-rad": -1.4210854715201994e-16,
+          "aero/qbar-psf": 103.8661477016758,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 16.243059604026516,
+          "forces/fby-aero-lbs": 6.528794979899668e-15,
+          "forces/fbz-aero-lbs": -16.243059604026513,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -11.101142347929434,
+          "moments/n-aero-lbsft": -4.462033890114327e-15
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 5.329070518200751e-15,
+        "moments/n-aero-lbsft": 0.0
+      }
+    },
+    {
+      "family": "stack_normal",
+      "axis": "beta",
+      "alpha_deg": 0,
+      "beta_deg": 45,
+      "dx_structural_ft": 2.4738,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -6.084308008871573e-17,
+          "aero/beta-rad": 0.7853981633974487,
+          "aero/qbar-psf": 103.86614770167587,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 16.24305960402653,
+          "forces/fby-aero-lbs": -16.24305960402652,
+          "forces/fbz-aero-lbs": 1.806993893105283e-15,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 1.2349703145969062e-15,
+          "moments/n-aero-lbsft": 11.10114234792944
+        },
+        "reference": {
+          "aero/alpha-rad": -6.084308008871573e-17,
+          "aero/beta-rad": 0.7853981633974487,
+          "aero/qbar-psf": 103.86614770167587,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 16.24305960402653,
+          "forces/fby-aero-lbs": -16.24305960402652,
+          "forces/fbz-aero-lbs": 1.806993893105283e-15,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 1.2349703145969066e-15,
+          "moments/n-aero-lbsft": 11.101142347929438
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": -3.944304526105059e-31,
+        "moments/n-aero-lbsft": 1.7763568394002505e-15
+      }
+    },
+    {
+      "family": "stack_normal",
+      "axis": "combined",
+      "alpha_deg": 45,
+      "beta_deg": 45,
+      "dx_structural_ft": 2.4738,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": 0.7853981633974483,
+          "aero/beta-rad": 0.7853981633974486,
+          "aero/qbar-psf": 103.86614770167586,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 27.728637197250958,
+          "forces/fby-aero-lbs": -16.24305960402652,
+          "forces/fbz-aero-lbs": -4.757482010802089,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -3.2514493147913797,
+          "moments/n-aero-lbsft": 11.10114234792944
+        },
+        "reference": {
+          "aero/alpha-rad": 0.7853981633974483,
+          "aero/beta-rad": 0.7853981633974486,
+          "aero/qbar-psf": 103.86614770167586,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 27.728637197250958,
+          "forces/fby-aero-lbs": -16.24305960402652,
+          "forces/fbz-aero-lbs": -4.757482010802089,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -3.25144931479138,
+          "moments/n-aero-lbsft": 11.101142347929438
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 4.440892098500626e-16,
+        "moments/n-aero-lbsft": 1.7763568394002505e-15
+      }
+    },
+    {
+      "family": "stack_crossflow",
+      "axis": "alpha",
+      "alpha_deg": -45,
+      "beta_deg": 0,
+      "dx_structural_ft": 4.0356,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -0.7853981633974484,
+          "aero/beta-rad": 4.736951571734008e-17,
+          "aero/qbar-psf": 103.86614770167583,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.0,
+          "forces/fby-aero-lbs": -7.644106669378764e-15,
+          "forces/fbz-aero-lbs": 228.21426734799445,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 512.3956005958025,
+          "moments/n-aero-lbsft": 1.7162847324975246e-14
+        },
+        "reference": {
+          "aero/alpha-rad": -0.7853981633974484,
+          "aero/beta-rad": 4.736951571734008e-17,
+          "aero/qbar-psf": 103.86614770167583,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.0,
+          "forces/fby-aero-lbs": -7.644106669378764e-15,
+          "forces/fbz-aero-lbs": 228.21426734799445,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 512.3956005958026,
+          "moments/n-aero-lbsft": 1.7162847324975246e-14
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": -1.1368683772161603e-13,
+        "moments/n-aero-lbsft": 0.0
+      }
+    },
+    {
+      "family": "stack_crossflow",
+      "axis": "beta",
+      "alpha_deg": 0,
+      "beta_deg": -45,
+      "dx_structural_ft": 4.0356,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": 6.147531481792056e-18,
+          "aero/beta-rad": -0.7853981633974483,
+          "aero/qbar-psf": 103.86614770167586,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 1.0604130699106603e-49,
+          "forces/fby-aero-lbs": 228.21426734799454,
+          "forces/fbz-aero-lbs": -1.7249412598396992e-32,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -3.872905594812323e-32,
+          "moments/n-aero-lbsft": -512.3956005958028
+        },
+        "reference": {
+          "aero/alpha-rad": 6.147531481792056e-18,
+          "aero/beta-rad": -0.7853981633974483,
+          "aero/qbar-psf": 103.86614770167586,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 1.0604130699106603e-49,
+          "forces/fby-aero-lbs": 228.21426734799454,
+          "forces/fbz-aero-lbs": -1.7249412598396992e-32,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -3.872905594812323e-32,
+          "moments/n-aero-lbsft": -512.3956005958028
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 0.0,
+        "moments/n-aero-lbsft": 0.0
+      }
+    },
+    {
+      "family": "stack_crossflow",
+      "axis": "combined",
+      "alpha_deg": -45,
+      "beta_deg": -45,
+      "dx_structural_ft": 4.0356,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -0.7853981633974485,
+          "aero/beta-rad": -0.7853981633974486,
+          "aero/qbar-psf": 103.8661477016759,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 33.42120567135399,
+          "forces/fby-aero-lbs": 342.321401021992,
+          "forces/fbz-aero-lbs": 194.79306167664066,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 437.3570022136246,
+          "moments/n-aero-lbsft": -768.5934008937046
+        },
+        "reference": {
+          "aero/alpha-rad": -0.7853981633974485,
+          "aero/beta-rad": -0.7853981633974486,
+          "aero/qbar-psf": 103.8661477016759,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 33.42120567135399,
+          "forces/fby-aero-lbs": 342.321401021992,
+          "forces/fbz-aero-lbs": 194.79306167664066,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 437.3570022136245,
+          "moments/n-aero-lbsft": -768.5934008937047
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 5.684341886080802e-14,
+        "moments/n-aero-lbsft": 1.1368683772161603e-13
+      }
+    },
+    {
+      "family": "stack_crossflow",
+      "axis": "alpha",
+      "alpha_deg": -15,
+      "beta_deg": 0,
+      "dx_structural_ft": 4.0356,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -0.26179938779914924,
+          "aero/beta-rad": 9.473903143468006e-17,
+          "aero/qbar-psf": 103.8661477016759,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 8.881784197001252e-16,
+          "forces/fby-aero-lbs": -7.497050213132855e-16,
+          "forces/fbz-aero-lbs": 30.574914318577694,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 68.64799369245264,
+          "moments/n-aero-lbsft": 1.6832670416689695e-15
+        },
+        "reference": {
+          "aero/alpha-rad": -0.26179938779914924,
+          "aero/beta-rad": 9.473903143468006e-17,
+          "aero/qbar-psf": 103.8661477016759,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 8.881784197001252e-16,
+          "forces/fby-aero-lbs": -7.497050213132855e-16,
+          "forces/fbz-aero-lbs": 30.574914318577694,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 68.64799369245263,
+          "moments/n-aero-lbsft": 1.6832670416689695e-15
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 1.4210854715202004e-14,
+        "moments/n-aero-lbsft": 0.0
+      }
+    },
+    {
+      "family": "stack_crossflow",
+      "axis": "beta",
+      "alpha_deg": 0,
+      "beta_deg": -15,
+      "dx_structural_ft": 4.0356,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -5.102829343732417e-17,
+          "aero/beta-rad": -0.2617993877991494,
+          "aero/qbar-psf": 103.86614770167586,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": -8.881784197001252e-16,
+          "forces/fby-aero-lbs": 30.574914318577726,
+          "forces/fbz-aero-lbs": 1.237792011778327e-30,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 2.5801686043854748e-30,
+          "moments/n-aero-lbsft": -68.6479936924527
+        },
+        "reference": {
+          "aero/alpha-rad": -5.102829343732417e-17,
+          "aero/beta-rad": -0.2617993877991494,
+          "aero/qbar-psf": 103.86614770167586,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": -8.881784197001252e-16,
+          "forces/fby-aero-lbs": 30.574914318577726,
+          "forces/fbz-aero-lbs": 1.237792011778327e-30,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 2.7791390462048443e-30,
+          "moments/n-aero-lbsft": -68.6479936924527
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": -1.9897044181936947e-31,
+        "moments/n-aero-lbsft": 0.0
+      }
+    },
+    {
+      "family": "stack_crossflow",
+      "axis": "combined",
+      "alpha_deg": -15,
+      "beta_deg": -15,
+      "dx_structural_ft": 4.0356,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -0.2617993877991493,
+          "aero/beta-rad": -0.2617993877991495,
+          "aero/qbar-psf": 103.86614770167587,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.26045373542201755,
+          "forces/fby-aero-lbs": 32.623045218656166,
+          "forces/fbz-aero-lbs": 30.5051259505057,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 68.49130211839639,
+          "moments/n-aero-lbsft": -73.24653731043014
+        },
+        "reference": {
+          "aero/alpha-rad": -0.2617993877991493,
+          "aero/beta-rad": -0.2617993877991495,
+          "aero/qbar-psf": 103.86614770167587,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.26045373542201755,
+          "forces/fby-aero-lbs": 32.623045218656166,
+          "forces/fbz-aero-lbs": 30.5051259505057,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 68.49130211839639,
+          "moments/n-aero-lbsft": -73.24653731043013
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 0.0,
+        "moments/n-aero-lbsft": -1.4210854715202004e-14
+      }
+    },
+    {
+      "family": "stack_crossflow",
+      "axis": "alpha",
+      "alpha_deg": -1,
+      "beta_deg": 0,
+      "dx_structural_ft": 4.0356,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -0.017453292519943292,
+          "aero/beta-rad": 1.8947806286936006e-16,
+          "aero/qbar-psf": 103.86614770167587,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.0,
+          "forces/fby-aero-lbs": -4.597245314894599e-19,
+          "forces/fbz-aero-lbs": 0.13902196552526178,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 0.3121375554171787,
+          "moments/n-aero-lbsft": 1.0321915021288693e-18
+        },
+        "reference": {
+          "aero/alpha-rad": -0.017453292519943292,
+          "aero/beta-rad": 1.8947806286936006e-16,
+          "aero/qbar-psf": 103.86614770167587,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.0,
+          "forces/fby-aero-lbs": -4.597245314894599e-19,
+          "forces/fbz-aero-lbs": 0.13902196552526178,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 0.3121375554171788,
+          "moments/n-aero-lbsft": 1.0321915021288693e-18
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": -1.1102230246251565e-16,
+        "moments/n-aero-lbsft": 0.0
+      }
+    },
+    {
+      "family": "stack_crossflow",
+      "axis": "beta",
+      "alpha_deg": 0,
+      "beta_deg": -1,
+      "dx_structural_ft": 4.0356,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": 4.249581343091416e-17,
+          "aero/beta-rad": -0.017453292519943413,
+          "aero/qbar-psf": 103.8661477016759,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 3.502766822912827e-47,
+          "forces/fby-aero-lbs": 0.13902196552526375,
+          "forces/fbz-aero-lbs": -8.242616248791913e-31,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -1.850615867817401e-30,
+          "moments/n-aero-lbsft": -0.3121375554171832
+        },
+        "reference": {
+          "aero/alpha-rad": 4.249581343091416e-17,
+          "aero/beta-rad": -0.017453292519943413,
+          "aero/qbar-psf": 103.8661477016759,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 3.502766822912827e-47,
+          "forces/fby-aero-lbs": 0.13902196552526375,
+          "forces/fbz-aero-lbs": -8.242616248791913e-31,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -1.850664444585423e-30,
+          "moments/n-aero-lbsft": -0.3121375554171832
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 4.857676802199148e-35,
+        "moments/n-aero-lbsft": 0.0
+      }
+    },
+    {
+      "family": "stack_crossflow",
+      "axis": "combined",
+      "alpha_deg": -1,
+      "beta_deg": -1,
+      "dx_structural_ft": 4.0356,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -0.01745329251994328,
+          "aero/beta-rad": -0.017453292519943465,
+          "aero/qbar-psf": 103.8661477016759,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 3.6947606328044044e-07,
+          "forces/fby-aero-lbs": 0.13906430973783968,
+          "forces/fbz-aero-lbs": 0.13902195907603293,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 0.31213754093711793,
+          "moments/n-aero-lbsft": -0.31223262829972787
+        },
+        "reference": {
+          "aero/alpha-rad": -0.01745329251994328,
+          "aero/beta-rad": -0.017453292519943465,
+          "aero/qbar-psf": 103.8661477016759,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 3.6947606328044044e-07,
+          "forces/fby-aero-lbs": 0.13906430973783968,
+          "forces/fbz-aero-lbs": 0.13902195907603293,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 0.3121375409371179,
+          "moments/n-aero-lbsft": -0.3122326282997279
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 5.551115123125783e-17,
+        "moments/n-aero-lbsft": 5.551115123125783e-17
+      }
+    },
+    {
+      "family": "stack_crossflow",
+      "axis": "alpha",
+      "alpha_deg": 1,
+      "beta_deg": 0,
+      "dx_structural_ft": 4.0356,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": 0.01745329251994327,
+          "aero/beta-rad": -9.473903143467991e-17,
+          "aero/qbar-psf": 103.86614770167587,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.0,
+          "forces/fby-aero-lbs": 2.298622657406321e-19,
+          "forces/fbz-aero-lbs": -0.13902196552526144,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -0.312137555417178,
+          "moments/n-aero-lbsft": -5.160957510552339e-19
+        },
+        "reference": {
+          "aero/alpha-rad": 0.01745329251994327,
+          "aero/beta-rad": -9.473903143467991e-17,
+          "aero/qbar-psf": 103.86614770167587,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.0,
+          "forces/fby-aero-lbs": 2.298622657406321e-19,
+          "forces/fbz-aero-lbs": -0.13902196552526144,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -0.312137555417178,
+          "moments/n-aero-lbsft": -5.16095751055234e-19
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 0.0,
+        "moments/n-aero-lbsft": 9.62964972193618e-35
+      }
+    },
+    {
+      "family": "stack_crossflow",
+      "axis": "beta",
+      "alpha_deg": 0,
+      "beta_deg": 1,
+      "dx_structural_ft": 4.0356,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -4.880917992095902e-18,
+          "aero/beta-rad": 0.01745329251994356,
+          "aero/qbar-psf": 103.86614770167587,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 4.336808689942018e-19,
+          "forces/fby-aero-lbs": -0.13902196552526605,
+          "forces/fbz-aero-lbs": 1.087215686693479e-32,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 2.441666400308142e-32,
+          "moments/n-aero-lbsft": 0.3121375554171884
+        },
+        "reference": {
+          "aero/alpha-rad": -4.880917992095902e-18,
+          "aero/beta-rad": 0.01745329251994356,
+          "aero/qbar-psf": 103.86614770167587,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 4.336808689942018e-19,
+          "forces/fby-aero-lbs": -0.13902196552526605,
+          "forces/fbz-aero-lbs": 1.087215686693479e-32,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 2.4410591907078626e-32,
+          "moments/n-aero-lbsft": 0.31213755541718835
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 6.072096002792726e-36,
+        "moments/n-aero-lbsft": 5.551115123125783e-17
+      }
+    },
+    {
+      "family": "stack_crossflow",
+      "axis": "combined",
+      "alpha_deg": 1,
+      "beta_deg": 1,
+      "dx_structural_ft": 4.0356,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": 0.017453292519943254,
+          "aero/beta-rad": 0.01745329251994342,
+          "aero/qbar-psf": 103.86614770167586,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 3.6947606328044044e-07,
+          "forces/fby-aero-lbs": -0.1390643097378389,
+          "forces/fbz-aero-lbs": -0.13902195907603246,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -0.31213754093711676,
+          "moments/n-aero-lbsft": 0.3122326282997261
+        },
+        "reference": {
+          "aero/alpha-rad": 0.017453292519943254,
+          "aero/beta-rad": 0.01745329251994342,
+          "aero/qbar-psf": 103.86614770167586,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 3.6947606328044044e-07,
+          "forces/fby-aero-lbs": -0.1390643097378389,
+          "forces/fbz-aero-lbs": -0.13902195907603246,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -0.3121375409371168,
+          "moments/n-aero-lbsft": 0.31223262829972614
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 5.551115123125783e-17,
+        "moments/n-aero-lbsft": -5.551115123125783e-17
+      }
+    },
+    {
+      "family": "stack_crossflow",
+      "axis": "alpha",
+      "alpha_deg": 15,
+      "beta_deg": 0,
+      "dx_structural_ft": 4.0356,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": 0.26179938779914935,
+          "aero/beta-rad": 2.3684757858670016e-16,
+          "aero/qbar-psf": 103.86614770167577,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.0,
+          "forces/fby-aero-lbs": -1.8742625532832294e-15,
+          "forces/fbz-aero-lbs": -30.574914318577683,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -68.64799369245262,
+          "moments/n-aero-lbsft": 4.208167604172459e-15
+        },
+        "reference": {
+          "aero/alpha-rad": 0.26179938779914935,
+          "aero/beta-rad": 2.3684757858670016e-16,
+          "aero/qbar-psf": 103.86614770167577,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.0,
+          "forces/fby-aero-lbs": -1.8742625532832294e-15,
+          "forces/fbz-aero-lbs": -30.574914318577683,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -68.64799369245262,
+          "moments/n-aero-lbsft": 4.2081676041724584e-15
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 0.0,
+        "moments/n-aero-lbsft": 7.888609052210118e-31
+      }
+    },
+    {
+      "family": "stack_crossflow",
+      "axis": "beta",
+      "alpha_deg": 0,
+      "beta_deg": 15,
+      "dx_structural_ft": 4.0356,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -1.9877621376010327e-18,
+          "aero/beta-rad": 0.2617993877991493,
+          "aero/qbar-psf": 103.86614770167586,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": -8.881784197001252e-16,
+          "forces/fby-aero-lbs": -30.57491431857769,
+          "forces/fbz-aero-lbs": 4.8849275685387626e-33,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 1.0967830471053193e-32,
+          "moments/n-aero-lbsft": 68.64799369245263
+        },
+        "reference": {
+          "aero/alpha-rad": -1.9877621376010327e-18,
+          "aero/beta-rad": 0.2617993877991493,
+          "aero/qbar-psf": 103.86614770167586,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": -8.881784197001252e-16,
+          "forces/fby-aero-lbs": -30.57491431857769,
+          "forces/fbz-aero-lbs": 4.8849275685387626e-33,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 1.0967830471053192e-32,
+          "moments/n-aero-lbsft": 68.64799369245263
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 1.3684555315672042e-48,
+        "moments/n-aero-lbsft": 0.0
+      }
+    },
+    {
+      "family": "stack_crossflow",
+      "axis": "combined",
+      "alpha_deg": 15,
+      "beta_deg": 15,
+      "dx_structural_ft": 4.0356,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": 0.26179938779914946,
+          "aero/beta-rad": 0.26179938779914946,
+          "aero/qbar-psf": 103.86614770167591,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.26045373542201933,
+          "forces/fby-aero-lbs": -32.62304521865618,
+          "forces/fbz-aero-lbs": -30.50512595050576,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -68.4913021183965,
+          "moments/n-aero-lbsft": 73.24653731043017
+        },
+        "reference": {
+          "aero/alpha-rad": 0.26179938779914946,
+          "aero/beta-rad": 0.26179938779914946,
+          "aero/qbar-psf": 103.86614770167591,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.26045373542201933,
+          "forces/fby-aero-lbs": -32.62304521865618,
+          "forces/fbz-aero-lbs": -30.50512595050576,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -68.49130211839652,
+          "moments/n-aero-lbsft": 73.24653731043017
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 1.4210854715202004e-14,
+        "moments/n-aero-lbsft": 0.0
+      }
+    },
+    {
+      "family": "stack_crossflow",
+      "axis": "alpha",
+      "alpha_deg": 45,
+      "beta_deg": 0,
+      "dx_structural_ft": 4.0356,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": 0.7853981633974484,
+          "aero/beta-rad": -1.4210854715201994e-16,
+          "aero/qbar-psf": 103.8661477016758,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.0,
+          "forces/fby-aero-lbs": 2.2932320008136244e-14,
+          "forces/fbz-aero-lbs": -228.2142673479944,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -512.3956005958024,
+          "moments/n-aero-lbsft": -5.148854197492562e-14
+        },
+        "reference": {
+          "aero/alpha-rad": 0.7853981633974484,
+          "aero/beta-rad": -1.4210854715201994e-16,
+          "aero/qbar-psf": 103.8661477016758,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.0,
+          "forces/fby-aero-lbs": 2.2932320008136244e-14,
+          "forces/fbz-aero-lbs": -228.2142673479944,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -512.3956005958024,
+          "moments/n-aero-lbsft": -5.148854197492563e-14
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 0.0,
+        "moments/n-aero-lbsft": 6.310887241768095e-30
+      }
+    },
+    {
+      "family": "stack_crossflow",
+      "axis": "beta",
+      "alpha_deg": 0,
+      "beta_deg": 45,
+      "dx_structural_ft": 4.0356,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -6.084308008871573e-17,
+          "aero/beta-rad": 0.7853981633974487,
+          "aero/qbar-psf": 103.86614770167587,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": -1.4210854715202004e-14,
+          "forces/fby-aero-lbs": -228.21426734799468,
+          "forces/fbz-aero-lbs": 1.689643844164459e-30,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 1.0160708594553523e-29,
+          "moments/n-aero-lbsft": 512.395600595803
+        },
+        "reference": {
+          "aero/alpha-rad": -6.084308008871573e-17,
+          "aero/beta-rad": 0.7853981633974487,
+          "aero/qbar-psf": 103.86614770167587,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": -1.4210854715202004e-14,
+          "forces/fby-aero-lbs": -228.21426734799468,
+          "forces/fbz-aero-lbs": 1.689643844164459e-30,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 3.793654456333696e-30,
+          "moments/n-aero-lbsft": 512.3956005958031
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 6.367054138219827e-30,
+        "moments/n-aero-lbsft": -1.1368683772161603e-13
+      }
+    },
+    {
+      "family": "stack_crossflow",
+      "axis": "combined",
+      "alpha_deg": 45,
+      "beta_deg": 45,
+      "dx_structural_ft": 4.0356,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": 0.7853981633974483,
+          "aero/beta-rad": 0.7853981633974486,
+          "aero/qbar-psf": 103.86614770167586,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 33.421205671353974,
+          "forces/fby-aero-lbs": -342.32140102199185,
+          "forces/fbz-aero-lbs": -194.79306167664055,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -437.35700221362424,
+          "moments/n-aero-lbsft": 768.5934008937043
+        },
+        "reference": {
+          "aero/alpha-rad": 0.7853981633974483,
+          "aero/beta-rad": 0.7853981633974486,
+          "aero/qbar-psf": 103.86614770167586,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 33.421205671353974,
+          "forces/fby-aero-lbs": -342.32140102199185,
+          "forces/fbz-aero-lbs": -194.79306167664055,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -437.3570022136243,
+          "moments/n-aero-lbsft": 768.5934008937043
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 5.684341886080802e-14,
+        "moments/n-aero-lbsft": 0.0
+      }
+    },
+    {
+      "family": "sust_crossflow",
+      "axis": "alpha",
+      "alpha_deg": -45,
+      "beta_deg": 0,
+      "dx_structural_ft": -0.0675,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -0.7853981633974484,
+          "aero/beta-rad": 4.736951571734008e-17,
+          "aero/qbar-psf": 103.86614770167583,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.0,
+          "forces/fby-aero-lbs": -3.717901707651746e-15,
+          "forces/fbz-aero-lbs": 110.9976941690894,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -206.2182738623106,
+          "moments/n-aero-lbsft": -6.907344141525331e-15
+        },
+        "reference": {
+          "aero/alpha-rad": -0.7853981633974484,
+          "aero/beta-rad": 4.736951571734008e-17,
+          "aero/qbar-psf": 103.86614770167583,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.0,
+          "forces/fby-aero-lbs": -3.717901707651746e-15,
+          "forces/fbz-aero-lbs": 110.9976941690894,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -206.21827386231067,
+          "moments/n-aero-lbsft": -6.907344141525333e-15
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 5.684341886080802e-14,
+        "moments/n-aero-lbsft": 1.5777218104420236e-30
+      }
+    },
+    {
+      "family": "sust_crossflow",
+      "axis": "beta",
+      "alpha_deg": 0,
+      "beta_deg": -45,
+      "dx_structural_ft": -0.0675,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": 6.147531481792056e-18,
+          "aero/beta-rad": -0.7853981633974483,
+          "aero/qbar-psf": 103.86614770167586,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 5.157583134246714e-50,
+          "forces/fby-aero-lbs": 110.99769416908944,
+          "forces/fbz-aero-lbs": -8.389681532372138e-33,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 1.558686112186001e-32,
+          "moments/n-aero-lbsft": 206.2182738623107
+        },
+        "reference": {
+          "aero/alpha-rad": 6.147531481792056e-18,
+          "aero/beta-rad": -0.7853981633974483,
+          "aero/qbar-psf": 103.86614770167586,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 5.157583134246714e-50,
+          "forces/fby-aero-lbs": 110.99769416908944,
+          "forces/fbz-aero-lbs": -8.389681532372138e-33,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 1.5586861121860013e-32,
+          "moments/n-aero-lbsft": 206.21827386231072
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": -2.7369110631344083e-48,
+        "moments/n-aero-lbsft": -2.842170943040401e-14
+      }
+    },
+    {
+      "family": "sust_crossflow",
+      "axis": "combined",
+      "alpha_deg": -45,
+      "beta_deg": -45,
+      "dx_structural_ft": -0.0675,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -0.7853981633974485,
+          "aero/beta-rad": -0.7853981633974486,
+          "aero/qbar-psf": 103.8661477016759,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 16.2552359630279,
+          "forces/fby-aero-lbs": 166.4965412536343,
+          "forces/fbz-aero-lbs": 94.7424582060616,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -176.01830685746768,
+          "moments/n-aero-lbsft": 309.3274107934663
+        },
+        "reference": {
+          "aero/alpha-rad": -0.7853981633974485,
+          "aero/beta-rad": -0.7853981633974486,
+          "aero/qbar-psf": 103.8661477016759,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 16.2552359630279,
+          "forces/fby-aero-lbs": 166.4965412536343,
+          "forces/fbz-aero-lbs": 94.7424582060616,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -176.0183068574677,
+          "moments/n-aero-lbsft": 309.32741079346636
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 2.842170943040401e-14,
+        "moments/n-aero-lbsft": -5.684341886080802e-14
+      }
+    },
+    {
+      "family": "sust_crossflow",
+      "axis": "alpha",
+      "alpha_deg": -15,
+      "beta_deg": 0,
+      "dx_structural_ft": -0.0675,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -0.26179938779914924,
+          "aero/beta-rad": 9.473903143468006e-17,
+          "aero/qbar-psf": 103.8661477016759,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 4.440892098500626e-16,
+          "forces/fby-aero-lbs": -3.646377136705077e-16,
+          "forces/fbz-aero-lbs": 14.870871257162106,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -27.62800997297309,
+          "moments/n-aero-lbsft": -6.774461439143285e-16
+        },
+        "reference": {
+          "aero/alpha-rad": -0.26179938779914924,
+          "aero/beta-rad": 9.473903143468006e-17,
+          "aero/qbar-psf": 103.8661477016759,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 4.440892098500626e-16,
+          "forces/fby-aero-lbs": -3.646377136705077e-16,
+          "forces/fbz-aero-lbs": 14.870871257162106,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -27.628009972973093,
+          "moments/n-aero-lbsft": -6.774461439143286e-16
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 3.552713678800501e-15,
+        "moments/n-aero-lbsft": 9.860761315262648e-32
+      }
+    },
+    {
+      "family": "sust_crossflow",
+      "axis": "beta",
+      "alpha_deg": 0,
+      "beta_deg": -15,
+      "dx_structural_ft": -0.0675,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -5.102829343732417e-17,
+          "aero/beta-rad": -0.2617993877991494,
+          "aero/qbar-psf": 103.86614770167586,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 2.94969481946918e-47,
+          "forces/fby-aero-lbs": 14.870871257162118,
+          "forces/fbz-aero-lbs": 6.027027493530288e-31,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -1.1180738573372536e-30,
+          "moments/n-aero-lbsft": 27.62800997297311
+        },
+        "reference": {
+          "aero/alpha-rad": -5.102829343732417e-17,
+          "aero/beta-rad": -0.2617993877991494,
+          "aero/qbar-psf": 103.86614770167586,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 2.94969481946918e-47,
+          "forces/fby-aero-lbs": 14.870871257162118,
+          "forces/fbz-aero-lbs": 6.027027493530288e-31,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -1.1197378608092044e-30,
+          "moments/n-aero-lbsft": 27.628009972973114
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 1.66400347195081e-33,
+        "moments/n-aero-lbsft": -3.552713678800501e-15
+      }
+    },
+    {
+      "family": "sust_crossflow",
+      "axis": "combined",
+      "alpha_deg": -15,
+      "beta_deg": -15,
+      "dx_structural_ft": -0.0675,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -0.2617993877991493,
+          "aero/beta-rad": -0.2617993877991495,
+          "aero/qbar-psf": 103.86614770167587,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.12667816261236053,
+          "forces/fby-aero-lbs": 15.86703074318808,
+          "forces/fbz-aero-lbs": 14.836927945791468,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -27.564948022610757,
+          "moments/n-aero-lbsft": 29.478735713157427
+        },
+        "reference": {
+          "aero/alpha-rad": -0.2617993877991493,
+          "aero/beta-rad": -0.2617993877991495,
+          "aero/qbar-psf": 103.86614770167587,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.12667816261236053,
+          "forces/fby-aero-lbs": 15.86703074318808,
+          "forces/fbz-aero-lbs": 14.836927945791468,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -27.564948022610764,
+          "moments/n-aero-lbsft": 29.47873571315743
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 7.105427357601002e-15,
+        "moments/n-aero-lbsft": -3.552713678800501e-15
+      }
+    },
+    {
+      "family": "sust_crossflow",
+      "axis": "alpha",
+      "alpha_deg": -1,
+      "beta_deg": 0,
+      "dx_structural_ft": -0.0675,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -0.017453292519943292,
+          "aero/beta-rad": 1.8947806286936006e-16,
+          "aero/qbar-psf": 103.86614770167587,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.0,
+          "forces/fby-aero-lbs": -2.2359847848813036e-19,
+          "forces/fbz-aero-lbs": 0.06761679623048467,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -0.12562260060563682,
+          "moments/n-aero-lbsft": -4.1541486620270675e-19
+        },
+        "reference": {
+          "aero/alpha-rad": -0.017453292519943292,
+          "aero/beta-rad": 1.8947806286936006e-16,
+          "aero/qbar-psf": 103.86614770167587,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.0,
+          "forces/fby-aero-lbs": -2.2359847848813036e-19,
+          "forces/fbz-aero-lbs": 0.06761679623048467,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -0.12562260060563682,
+          "moments/n-aero-lbsft": -4.154148662027068e-19
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 0.0,
+        "moments/n-aero-lbsft": 4.81482486096809e-35
+      }
+    },
+    {
+      "family": "sust_crossflow",
+      "axis": "beta",
+      "alpha_deg": 0,
+      "beta_deg": -1,
+      "dx_structural_ft": -0.0675,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": 4.249581343091416e-17,
+          "aero/beta-rad": -0.017453292519943413,
+          "aero/qbar-psf": 103.8661477016759,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 1.7036579047989463e-47,
+          "forces/fby-aero-lbs": 0.06761679623048564,
+          "forces/fbz-aero-lbs": -4.009061936903537e-31,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 7.448279341514193e-31,
+          "moments/n-aero-lbsft": 0.12562260060563862
+        },
+        "reference": {
+          "aero/alpha-rad": 4.249581343091416e-17,
+          "aero/beta-rad": -0.017453292519943413,
+          "aero/qbar-psf": 103.8661477016759,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 1.7036579047989463e-47,
+          "forces/fby-aero-lbs": 0.06761679623048564,
+          "forces/fbz-aero-lbs": -4.009061936903537e-31,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 7.448279341514195e-31,
+          "moments/n-aero-lbsft": 0.12562260060563862
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": -1.7516230804060213e-46,
+        "moments/n-aero-lbsft": 0.0
+      }
+    },
+    {
+      "family": "sust_crossflow",
+      "axis": "combined",
+      "alpha_deg": -1,
+      "beta_deg": -1,
+      "dx_structural_ft": -0.0675,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -0.01745329251994328,
+          "aero/beta-rad": -0.017453292519943465,
+          "aero/qbar-psf": 103.8661477016759,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 1.7970388771666734e-07,
+          "forces/fby-aero-lbs": 0.0676373913931455,
+          "forces/fbz-aero-lbs": 0.06761679309374159,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -0.12562259477800455,
+          "moments/n-aero-lbsft": 0.1256608635526793
+        },
+        "reference": {
+          "aero/alpha-rad": -0.01745329251994328,
+          "aero/beta-rad": -0.017453292519943465,
+          "aero/qbar-psf": 103.8661477016759,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 1.7970388771666734e-07,
+          "forces/fby-aero-lbs": 0.0676373913931455,
+          "forces/fbz-aero-lbs": 0.06761679309374159,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -0.12562259477800458,
+          "moments/n-aero-lbsft": 0.1256608635526793
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 2.7755575615628914e-17,
+        "moments/n-aero-lbsft": 0.0
+      }
+    },
+    {
+      "family": "sust_crossflow",
+      "axis": "alpha",
+      "alpha_deg": 1,
+      "beta_deg": 0,
+      "dx_structural_ft": -0.0675,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": 0.01745329251994327,
+          "aero/beta-rad": -9.473903143467991e-17,
+          "aero/qbar-psf": 103.86614770167587,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 2.168404344971009e-19,
+          "forces/fby-aero-lbs": 1.117992392420721e-19,
+          "forces/fbz-aero-lbs": -0.06761679623048451,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 0.12562260060563651,
+          "moments/n-aero-lbsft": 2.077074330976505e-19
+        },
+        "reference": {
+          "aero/alpha-rad": 0.01745329251994327,
+          "aero/beta-rad": -9.473903143467991e-17,
+          "aero/qbar-psf": 103.86614770167587,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 2.168404344971009e-19,
+          "forces/fby-aero-lbs": 1.117992392420721e-19,
+          "forces/fbz-aero-lbs": -0.06761679623048451,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 0.12562260060563654,
+          "moments/n-aero-lbsft": 2.0770743309765056e-19
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": -2.7755575615628914e-17,
+        "moments/n-aero-lbsft": -4.81482486096809e-35
+      }
+    },
+    {
+      "family": "sust_crossflow",
+      "axis": "beta",
+      "alpha_deg": 0,
+      "beta_deg": 1,
+      "dx_structural_ft": -0.0675,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -4.880917992095902e-18,
+          "aero/beta-rad": 0.01745329251994356,
+          "aero/qbar-psf": 103.86614770167587,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 2.168404344971009e-19,
+          "forces/fby-aero-lbs": -0.06761679623048676,
+          "forces/fbz-aero-lbs": 5.2886761536337216e-33,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -9.82562453736833e-33,
+          "moments/n-aero-lbsft": -0.1256226006056407
+        },
+        "reference": {
+          "aero/alpha-rad": -4.880917992095902e-18,
+          "aero/beta-rad": 0.01745329251994356,
+          "aero/qbar-psf": 103.86614770167587,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 2.168404344971009e-19,
+          "forces/fby-aero-lbs": -0.06761679623048676,
+          "forces/fbz-aero-lbs": 5.2886761536337216e-33,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -9.825624537368332e-33,
+          "moments/n-aero-lbsft": -0.12562260060564073
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 1.3684555315672042e-48,
+        "moments/n-aero-lbsft": 2.7755575615628914e-17
+      }
+    },
+    {
+      "family": "sust_crossflow",
+      "axis": "combined",
+      "alpha_deg": 1,
+      "beta_deg": 1,
+      "dx_structural_ft": -0.0675,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": 0.017453292519943254,
+          "aero/beta-rad": 0.01745329251994342,
+          "aero/qbar-psf": 103.86614770167586,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 1.7970388771623366e-07,
+          "forces/fby-aero-lbs": -0.06763739139314512,
+          "forces/fbz-aero-lbs": -0.06761679309374134,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 0.12562259477800408,
+          "moments/n-aero-lbsft": -0.12566086355267858
+        },
+        "reference": {
+          "aero/alpha-rad": 0.017453292519943254,
+          "aero/beta-rad": 0.01745329251994342,
+          "aero/qbar-psf": 103.86614770167586,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 1.7970388771623366e-07,
+          "forces/fby-aero-lbs": -0.06763739139314512,
+          "forces/fbz-aero-lbs": -0.06761679309374134,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 0.1256225947780041,
+          "moments/n-aero-lbsft": -0.1256608635526786
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": -2.7755575615628914e-17,
+        "moments/n-aero-lbsft": 2.7755575615628914e-17
+      }
+    },
+    {
+      "family": "sust_crossflow",
+      "axis": "alpha",
+      "alpha_deg": 15,
+      "beta_deg": 0,
+      "dx_structural_ft": -0.0675,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": 0.26179938779914935,
+          "aero/beta-rad": 2.3684757858670016e-16,
+          "aero/qbar-psf": 103.86614770167577,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": -4.440892098500626e-16,
+          "forces/fby-aero-lbs": -9.11594284176277e-16,
+          "forces/fbz-aero-lbs": -14.8708712571621,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 27.628009972973075,
+          "moments/n-aero-lbsft": -1.6936153597858358e-15
+        },
+        "reference": {
+          "aero/alpha-rad": 0.26179938779914935,
+          "aero/beta-rad": 2.3684757858670016e-16,
+          "aero/qbar-psf": 103.86614770167577,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": -4.440892098500626e-16,
+          "forces/fby-aero-lbs": -9.11594284176277e-16,
+          "forces/fbz-aero-lbs": -14.8708712571621,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 27.628009972973082,
+          "moments/n-aero-lbsft": -1.693615359785836e-15
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": -7.105427357601002e-15,
+        "moments/n-aero-lbsft": 1.9721522630525295e-31
+      }
+    },
+    {
+      "family": "sust_crossflow",
+      "axis": "beta",
+      "alpha_deg": 0,
+      "beta_deg": 15,
+      "dx_structural_ft": -0.0675,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -1.9877621376010327e-18,
+          "aero/beta-rad": 0.2617993877991493,
+          "aero/qbar-psf": 103.86614770167586,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 1.7435611948462678e-51,
+          "forces/fby-aero-lbs": -14.870871257162106,
+          "forces/fbz-aero-lbs": 8.7714780449059e-34,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -1.629618592694491e-33,
+          "moments/n-aero-lbsft": -27.62800997297309
+        },
+        "reference": {
+          "aero/alpha-rad": -1.9877621376010327e-18,
+          "aero/beta-rad": 0.2617993877991493,
+          "aero/qbar-psf": 103.86614770167586,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 1.7435611948462678e-51,
+          "forces/fby-aero-lbs": -14.870871257162106,
+          "forces/fbz-aero-lbs": 8.7714780449059e-34,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -1.6296185926944914e-33,
+          "moments/n-aero-lbsft": -27.628009972973093
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 3.4211388289180104e-49,
+        "moments/n-aero-lbsft": 3.552713678800501e-15
+      }
+    },
+    {
+      "family": "sust_crossflow",
+      "axis": "combined",
+      "alpha_deg": 15,
+      "beta_deg": 15,
+      "dx_structural_ft": -0.0675,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": 0.26179938779914946,
+          "aero/beta-rad": 0.26179938779914946,
+          "aero/qbar-psf": 103.86614770167591,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.12667816261236142,
+          "forces/fby-aero-lbs": -15.867030743188081,
+          "forces/fbz-aero-lbs": -14.836927945791494,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 27.56494802261081,
+          "moments/n-aero-lbsft": -29.47873571315743
+        },
+        "reference": {
+          "aero/alpha-rad": 0.26179938779914946,
+          "aero/beta-rad": 0.26179938779914946,
+          "aero/qbar-psf": 103.86614770167591,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.12667816261236142,
+          "forces/fby-aero-lbs": -15.867030743188081,
+          "forces/fbz-aero-lbs": -14.836927945791494,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 27.564948022610814,
+          "moments/n-aero-lbsft": -29.478735713157434
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": -3.552713678800501e-15,
+        "moments/n-aero-lbsft": 3.552713678800501e-15
+      }
+    },
+    {
+      "family": "sust_crossflow",
+      "axis": "alpha",
+      "alpha_deg": 45,
+      "beta_deg": 0,
+      "dx_structural_ft": -0.0675,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": 0.7853981633974484,
+          "aero/beta-rad": -1.4210854715201994e-16,
+          "aero/qbar-psf": 103.8661477016758,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.0,
+          "forces/fby-aero-lbs": 1.1153705122955214e-14,
+          "forces/fbz-aero-lbs": -110.99769416908936,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 206.21827386231053,
+          "moments/n-aero-lbsft": 2.0722032424575948e-14
+        },
+        "reference": {
+          "aero/alpha-rad": 0.7853981633974484,
+          "aero/beta-rad": -1.4210854715201994e-16,
+          "aero/qbar-psf": 103.8661477016758,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.0,
+          "forces/fby-aero-lbs": 1.1153705122955214e-14,
+          "forces/fbz-aero-lbs": -110.99769416908936,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 206.21827386231058,
+          "moments/n-aero-lbsft": 2.072203242457595e-14
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": -5.684341886080802e-14,
+        "moments/n-aero-lbsft": -3.1554436208840472e-30
+      }
+    },
+    {
+      "family": "sust_crossflow",
+      "axis": "beta",
+      "alpha_deg": 0,
+      "beta_deg": 45,
+      "dx_structural_ft": -0.0675,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -6.084308008871573e-17,
+          "aero/beta-rad": 0.7853981633974487,
+          "aero/qbar-psf": 103.86614770167587,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 5.000086608166881e-47,
+          "forces/fby-aero-lbs": -110.99769416908953,
+          "forces/fbz-aero-lbs": 4.273699231883883e-31,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -8.206179174986633e-31,
+          "moments/n-aero-lbsft": -206.21827386231087
+        },
+        "reference": {
+          "aero/alpha-rad": -6.084308008871573e-17,
+          "aero/beta-rad": 0.7853981633974487,
+          "aero/qbar-psf": 103.86614770167587,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 5.000086608166881e-47,
+          "forces/fby-aero-lbs": -110.99769416908953,
+          "forces/fbz-aero-lbs": 4.273699231883883e-31,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -7.939938619474544e-31,
+          "moments/n-aero-lbsft": -206.2182738623109
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": -2.662405555120893e-32,
+        "moments/n-aero-lbsft": 2.842170943040401e-14
+      }
+    },
+    {
+      "family": "sust_crossflow",
+      "axis": "combined",
+      "alpha_deg": 45,
+      "beta_deg": 45,
+      "dx_structural_ft": -0.0675,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": 0.7853981633974483,
+          "aero/beta-rad": 0.7853981633974486,
+          "aero/qbar-psf": 103.86614770167586,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 16.255235963027893,
+          "forces/fby-aero-lbs": -166.4965412536342,
+          "forces/fbz-aero-lbs": -94.74245820606154,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 176.01830685746756,
+          "moments/n-aero-lbsft": -309.32741079346613
+        },
+        "reference": {
+          "aero/alpha-rad": 0.7853981633974483,
+          "aero/beta-rad": 0.7853981633974486,
+          "aero/qbar-psf": 103.86614770167586,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 16.255235963027893,
+          "forces/fby-aero-lbs": -166.4965412536342,
+          "forces/fbz-aero-lbs": -94.74245820606154,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 176.0183068574676,
+          "moments/n-aero-lbsft": -309.3274107934662
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": -2.842170943040401e-14,
+        "moments/n-aero-lbsft": 5.684341886080802e-14
+      }
+    },
+    {
+      "family": "single_crossflow",
+      "axis": "alpha",
+      "alpha_deg": -45,
+      "beta_deg": 0,
+      "dx_structural_ft": -0.0675,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -0.7853981633974484,
+          "aero/beta-rad": 4.736951571734008e-17,
+          "aero/qbar-psf": 103.86614770167583,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.0,
+          "forces/fby-aero-lbs": -3.717901707651746e-15,
+          "forces/fbz-aero-lbs": 110.9976941690894,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 67.95894157412812,
+          "moments/n-aero-lbsft": 2.276305528867627e-15
+        },
+        "reference": {
+          "aero/alpha-rad": -0.7853981633974484,
+          "aero/beta-rad": 4.736951571734008e-17,
+          "aero/qbar-psf": 103.86614770167583,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.0,
+          "forces/fby-aero-lbs": -3.717901707651746e-15,
+          "forces/fbz-aero-lbs": 110.9976941690894,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 67.9589415741281,
+          "moments/n-aero-lbsft": 2.2763055288676266e-15
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 1.4210854715202004e-14,
+        "moments/n-aero-lbsft": 3.944304526105059e-31
+      }
+    },
+    {
+      "family": "single_crossflow",
+      "axis": "beta",
+      "alpha_deg": 0,
+      "beta_deg": -45,
+      "dx_structural_ft": -0.0675,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": 6.147531481792056e-18,
+          "aero/beta-rad": -0.7853981633974483,
+          "aero/qbar-psf": 103.86614770167586,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 5.157583134246714e-50,
+          "forces/fby-aero-lbs": 110.99769416908944,
+          "forces/fbz-aero-lbs": -8.389681532372138e-33,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -5.1366281196388675e-33,
+          "moments/n-aero-lbsft": -67.95894157412815
+        },
+        "reference": {
+          "aero/alpha-rad": 6.147531481792056e-18,
+          "aero/beta-rad": -0.7853981633974483,
+          "aero/qbar-psf": 103.86614770167586,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 5.157583134246714e-50,
+          "forces/fby-aero-lbs": 110.99769416908944,
+          "forces/fbz-aero-lbs": -8.389681532372138e-33,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -5.136628119638866e-33,
+          "moments/n-aero-lbsft": -67.95894157412812
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": -1.3684555315672042e-48,
+        "moments/n-aero-lbsft": -2.842170943040401e-14
+      }
+    },
+    {
+      "family": "single_crossflow",
+      "axis": "combined",
+      "alpha_deg": -45,
+      "beta_deg": -45,
+      "dx_structural_ft": -0.0675,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -0.7853981633974485,
+          "aero/beta-rad": -0.7853981633974486,
+          "aero/qbar-psf": 103.8661477016759,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 16.2552359630279,
+          "forces/fby-aero-lbs": 166.4965412536343,
+          "forces/fbz-aero-lbs": 94.7424582060616,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 58.00658500172731,
+          "moments/n-aero-lbsft": -101.9384123611923
+        },
+        "reference": {
+          "aero/alpha-rad": -0.7853981633974485,
+          "aero/beta-rad": -0.7853981633974486,
+          "aero/qbar-psf": 103.8661477016759,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 16.2552359630279,
+          "forces/fby-aero-lbs": 166.4965412536343,
+          "forces/fbz-aero-lbs": 94.7424582060616,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 58.00658500172729,
+          "moments/n-aero-lbsft": -101.93841236119226
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 2.1316282072803006e-14,
+        "moments/n-aero-lbsft": -4.263256414560601e-14
+      }
+    },
+    {
+      "family": "single_crossflow",
+      "axis": "alpha",
+      "alpha_deg": -15,
+      "beta_deg": 0,
+      "dx_structural_ft": -0.0675,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -0.26179938779914924,
+          "aero/beta-rad": 9.473903143468006e-17,
+          "aero/qbar-psf": 103.8661477016759,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 4.440892098500626e-16,
+          "forces/fby-aero-lbs": -3.646377136705077e-16,
+          "forces/fbz-aero-lbs": 14.870871257162106,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 9.104771756630731,
+          "moments/n-aero-lbsft": 2.232514221539435e-16
+        },
+        "reference": {
+          "aero/alpha-rad": -0.26179938779914924,
+          "aero/beta-rad": 9.473903143468006e-17,
+          "aero/qbar-psf": 103.8661477016759,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 4.440892098500626e-16,
+          "forces/fby-aero-lbs": -3.646377136705077e-16,
+          "forces/fbz-aero-lbs": 14.870871257162106,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 9.104771756630727,
+          "moments/n-aero-lbsft": 2.232514221539434e-16
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 3.552713678800501e-15,
+        "moments/n-aero-lbsft": 9.860761315262648e-32
+      }
+    },
+    {
+      "family": "single_crossflow",
+      "axis": "beta",
+      "alpha_deg": 0,
+      "beta_deg": -15,
+      "dx_structural_ft": -0.0675,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -5.102829343732417e-17,
+          "aero/beta-rad": -0.2617993877991494,
+          "aero/qbar-psf": 103.86614770167586,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 2.94969481946918e-47,
+          "forces/fby-aero-lbs": 14.870871257162118,
+          "forces/fbz-aero-lbs": 6.027027493530288e-31,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 3.706720377060088e-31,
+          "moments/n-aero-lbsft": -9.104771756630738
+        },
+        "reference": {
+          "aero/alpha-rad": -5.102829343732417e-17,
+          "aero/beta-rad": -0.2617993877991494,
+          "aero/qbar-psf": 103.86614770167586,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 2.94969481946918e-47,
+          "forces/fby-aero-lbs": 14.870871257162118,
+          "forces/fbz-aero-lbs": 6.027027493530288e-31,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 3.690080342340581e-31,
+          "moments/n-aero-lbsft": -9.104771756630736
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 1.6640034719507224e-33,
+        "moments/n-aero-lbsft": -1.7763568394002505e-15
+      }
+    },
+    {
+      "family": "single_crossflow",
+      "axis": "combined",
+      "alpha_deg": -15,
+      "beta_deg": -15,
+      "dx_structural_ft": -0.0675,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -0.2617993877991493,
+          "aero/beta-rad": -0.2617993877991495,
+          "aero/qbar-psf": 103.86614770167587,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.12667816261236053,
+          "forces/fby-aero-lbs": 15.86703074318808,
+          "forces/fbz-aero-lbs": 14.836927945791468,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 9.083989779747899,
+          "moments/n-aero-lbsft": -9.714675816495474
+        },
+        "reference": {
+          "aero/alpha-rad": -0.2617993877991493,
+          "aero/beta-rad": -0.2617993877991495,
+          "aero/qbar-psf": 103.86614770167587,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.12667816261236053,
+          "forces/fby-aero-lbs": 15.86703074318808,
+          "forces/fbz-aero-lbs": 14.836927945791468,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 9.083989779747895,
+          "moments/n-aero-lbsft": -9.71467581649547
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 3.552713678800501e-15,
+        "moments/n-aero-lbsft": -3.552713678800501e-15
+      }
+    },
+    {
+      "family": "single_crossflow",
+      "axis": "alpha",
+      "alpha_deg": -1,
+      "beta_deg": 0,
+      "dx_structural_ft": -0.0675,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -0.017453292519943292,
+          "aero/beta-rad": 1.8947806286936006e-16,
+          "aero/qbar-psf": 103.86614770167587,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.0,
+          "forces/fby-aero-lbs": -2.2359847848813036e-19,
+          "forces/fbz-aero-lbs": 0.06761679623048467,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 0.04139875101781073,
+          "moments/n-aero-lbsft": 1.3689938380603258e-19
+        },
+        "reference": {
+          "aero/alpha-rad": -0.017453292519943292,
+          "aero/beta-rad": 1.8947806286936006e-16,
+          "aero/qbar-psf": 103.86614770167587,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.0,
+          "forces/fby-aero-lbs": -2.2359847848813036e-19,
+          "forces/fbz-aero-lbs": 0.06761679623048467,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 0.041398751017810716,
+          "moments/n-aero-lbsft": 1.3689938380603253e-19
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 1.3877787807814457e-17,
+        "moments/n-aero-lbsft": 4.81482486096809e-35
+      }
+    },
+    {
+      "family": "single_crossflow",
+      "axis": "beta",
+      "alpha_deg": 0,
+      "beta_deg": -1,
+      "dx_structural_ft": -0.0675,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": 4.249581343091416e-17,
+          "aero/beta-rad": -0.017453292519943413,
+          "aero/qbar-psf": 103.8661477016759,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 1.7036579047989463e-47,
+          "forces/fby-aero-lbs": 0.06761679623048564,
+          "forces/fbz-aero-lbs": -4.009061936903537e-31,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -2.4545699618052125e-31,
+          "moments/n-aero-lbsft": -0.041398751017811326
+        },
+        "reference": {
+          "aero/alpha-rad": 4.249581343091416e-17,
+          "aero/beta-rad": -0.017453292519943413,
+          "aero/qbar-psf": 103.8661477016759,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 1.7036579047989463e-47,
+          "forces/fby-aero-lbs": 0.06761679623048564,
+          "forces/fbz-aero-lbs": -4.009061936903537e-31,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -2.4545699618052116e-31,
+          "moments/n-aero-lbsft": -0.04139875101781131
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": -8.758115402030107e-47,
+        "moments/n-aero-lbsft": -1.3877787807814457e-17
+      }
+    },
+    {
+      "family": "single_crossflow",
+      "axis": "combined",
+      "alpha_deg": -1,
+      "beta_deg": -1,
+      "dx_structural_ft": -0.0675,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -0.01745329251994328,
+          "aero/beta-rad": -0.017453292519943465,
+          "aero/qbar-psf": 103.8661477016759,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 1.7970388771666734e-07,
+          "forces/fby-aero-lbs": 0.0676373913931455,
+          "forces/fbz-aero-lbs": 0.06761679309374159,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 0.04139874909732274,
+          "moments/n-aero-lbsft": -0.04141136051809319
+        },
+        "reference": {
+          "aero/alpha-rad": -0.01745329251994328,
+          "aero/beta-rad": -0.017453292519943465,
+          "aero/qbar-psf": 103.8661477016759,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 1.7970388771666734e-07,
+          "forces/fby-aero-lbs": 0.0676373913931455,
+          "forces/fbz-aero-lbs": 0.06761679309374159,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 0.04139874909732272,
+          "moments/n-aero-lbsft": -0.04141136051809317
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 2.0816681711721685e-17,
+        "moments/n-aero-lbsft": -2.0816681711721685e-17
+      }
+    },
+    {
+      "family": "single_crossflow",
+      "axis": "alpha",
+      "alpha_deg": 1,
+      "beta_deg": 0,
+      "dx_structural_ft": -0.0675,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": 0.01745329251994327,
+          "aero/beta-rad": -9.473903143467991e-17,
+          "aero/qbar-psf": 103.86614770167587,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 2.168404344971009e-19,
+          "forces/fby-aero-lbs": 1.117992392420721e-19,
+          "forces/fbz-aero-lbs": -0.06761679623048451,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -0.04139875101781064,
+          "moments/n-aero-lbsft": -6.844969190179602e-20
+        },
+        "reference": {
+          "aero/alpha-rad": 0.01745329251994327,
+          "aero/beta-rad": -9.473903143467991e-17,
+          "aero/qbar-psf": 103.86614770167587,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 2.168404344971009e-19,
+          "forces/fby-aero-lbs": 1.117992392420721e-19,
+          "forces/fbz-aero-lbs": -0.06761679623048451,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -0.041398751017810625,
+          "moments/n-aero-lbsft": -6.8449691901796e-20
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": -1.3877787807814457e-17,
+        "moments/n-aero-lbsft": -2.407412430484045e-35
+      }
+    },
+    {
+      "family": "single_crossflow",
+      "axis": "beta",
+      "alpha_deg": 0,
+      "beta_deg": 1,
+      "dx_structural_ft": -0.0675,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -4.880917992095902e-18,
+          "aero/beta-rad": 0.01745329251994356,
+          "aero/qbar-psf": 103.86614770167587,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 2.168404344971009e-19,
+          "forces/fby-aero-lbs": -0.06761679623048676,
+          "forces/fbz-aero-lbs": 5.2886761536337216e-33,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 3.238020721239161e-33,
+          "moments/n-aero-lbsft": 0.04139875101781201
+        },
+        "reference": {
+          "aero/alpha-rad": -4.880917992095902e-18,
+          "aero/beta-rad": 0.01745329251994356,
+          "aero/qbar-psf": 103.86614770167587,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 2.168404344971009e-19,
+          "forces/fby-aero-lbs": -0.06761679623048676,
+          "forces/fbz-aero-lbs": 5.2886761536337216e-33,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 3.23802072123916e-33,
+          "moments/n-aero-lbsft": 0.041398751017812
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 6.842277657836021e-49,
+        "moments/n-aero-lbsft": 1.3877787807814457e-17
+      }
+    },
+    {
+      "family": "single_crossflow",
+      "axis": "combined",
+      "alpha_deg": 1,
+      "beta_deg": 1,
+      "dx_structural_ft": -0.0675,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": 0.017453292519943254,
+          "aero/beta-rad": 0.01745329251994342,
+          "aero/qbar-psf": 103.86614770167586,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 1.7970388771623366e-07,
+          "forces/fby-aero-lbs": -0.06763739139314512,
+          "forces/fbz-aero-lbs": -0.06761679309374134,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -0.04139874909732258,
+          "moments/n-aero-lbsft": 0.04141136051809295
+        },
+        "reference": {
+          "aero/alpha-rad": 0.017453292519943254,
+          "aero/beta-rad": 0.01745329251994342,
+          "aero/qbar-psf": 103.86614770167586,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 1.7970388771623366e-07,
+          "forces/fby-aero-lbs": -0.06763739139314512,
+          "forces/fbz-aero-lbs": -0.06761679309374134,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -0.041398749097322565,
+          "moments/n-aero-lbsft": 0.04141136051809294
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": -1.3877787807814457e-17,
+        "moments/n-aero-lbsft": 1.3877787807814457e-17
+      }
+    },
+    {
+      "family": "single_crossflow",
+      "axis": "alpha",
+      "alpha_deg": 15,
+      "beta_deg": 0,
+      "dx_structural_ft": -0.0675,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": 0.26179938779914935,
+          "aero/beta-rad": 2.3684757858670016e-16,
+          "aero/qbar-psf": 103.86614770167577,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": -4.440892098500626e-16,
+          "forces/fby-aero-lbs": -9.11594284176277e-16,
+          "forces/fbz-aero-lbs": -14.8708712571621,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -9.104771756630727,
+          "moments/n-aero-lbsft": 5.581285553848636e-16
+        },
+        "reference": {
+          "aero/alpha-rad": 0.26179938779914935,
+          "aero/beta-rad": 2.3684757858670016e-16,
+          "aero/qbar-psf": 103.86614770167577,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": -4.440892098500626e-16,
+          "forces/fby-aero-lbs": -9.11594284176277e-16,
+          "forces/fbz-aero-lbs": -14.8708712571621,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -9.104771756630726,
+          "moments/n-aero-lbsft": 5.581285553848634e-16
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": -1.7763568394002505e-15,
+        "moments/n-aero-lbsft": 1.9721522630525295e-31
+      }
+    },
+    {
+      "family": "single_crossflow",
+      "axis": "beta",
+      "alpha_deg": 0,
+      "beta_deg": 15,
+      "dx_structural_ft": -0.0675,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -1.9877621376010327e-18,
+          "aero/beta-rad": 0.2617993877991493,
+          "aero/qbar-psf": 103.86614770167586,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 1.7435611948462678e-51,
+          "forces/fby-aero-lbs": -14.870871257162106,
+          "forces/fbz-aero-lbs": 8.7714780449059e-34,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 5.37038510966212e-34,
+          "moments/n-aero-lbsft": 9.104771756630731
+        },
+        "reference": {
+          "aero/alpha-rad": -1.9877621376010327e-18,
+          "aero/beta-rad": 0.2617993877991493,
+          "aero/qbar-psf": 103.86614770167586,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 1.7435611948462678e-51,
+          "forces/fby-aero-lbs": -14.870871257162106,
+          "forces/fbz-aero-lbs": 8.7714780449059e-34,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 5.370385109662118e-34,
+          "moments/n-aero-lbsft": 9.104771756630727
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 1.7105694144590052e-49,
+        "moments/n-aero-lbsft": 3.552713678800501e-15
+      }
+    },
+    {
+      "family": "single_crossflow",
+      "axis": "combined",
+      "alpha_deg": 15,
+      "beta_deg": 15,
+      "dx_structural_ft": -0.0675,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": 0.26179938779914946,
+          "aero/beta-rad": 0.26179938779914946,
+          "aero/qbar-psf": 103.86614770167591,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.12667816261236142,
+          "forces/fby-aero-lbs": -15.867030743188081,
+          "forces/fbz-aero-lbs": -14.836927945791494,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -9.083989779747917,
+          "moments/n-aero-lbsft": 9.714675816495475
+        },
+        "reference": {
+          "aero/alpha-rad": 0.26179938779914946,
+          "aero/beta-rad": 0.26179938779914946,
+          "aero/qbar-psf": 103.86614770167591,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.12667816261236142,
+          "forces/fby-aero-lbs": -15.867030743188081,
+          "forces/fbz-aero-lbs": -14.836927945791494,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -9.083989779747913,
+          "moments/n-aero-lbsft": 9.714675816495472
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": -3.552713678800501e-15,
+        "moments/n-aero-lbsft": 3.552713678800501e-15
+      }
+    },
+    {
+      "family": "single_crossflow",
+      "axis": "alpha",
+      "alpha_deg": 45,
+      "beta_deg": 0,
+      "dx_structural_ft": -0.0675,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": 0.7853981633974484,
+          "aero/beta-rad": -1.4210854715201994e-16,
+          "aero/qbar-psf": 103.8661477016758,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.0,
+          "forces/fby-aero-lbs": 1.1153705122955214e-14,
+          "forces/fbz-aero-lbs": -110.99769416908936,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -67.9589415741281,
+          "moments/n-aero-lbsft": -6.828916586602866e-15
+        },
+        "reference": {
+          "aero/alpha-rad": 0.7853981633974484,
+          "aero/beta-rad": -1.4210854715201994e-16,
+          "aero/qbar-psf": 103.8661477016758,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.0,
+          "forces/fby-aero-lbs": 1.1153705122955214e-14,
+          "forces/fbz-aero-lbs": -110.99769416908936,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -67.95894157412808,
+          "moments/n-aero-lbsft": -6.828916586602864e-15
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": -2.842170943040401e-14,
+        "moments/n-aero-lbsft": -2.3665827156630354e-30
+      }
+    },
+    {
+      "family": "single_crossflow",
+      "axis": "beta",
+      "alpha_deg": 0,
+      "beta_deg": 45,
+      "dx_structural_ft": -0.0675,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -6.084308008871573e-17,
+          "aero/beta-rad": 0.7853981633974487,
+          "aero/qbar-psf": 103.86614770167587,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 5.000086608166881e-47,
+          "forces/fby-aero-lbs": -110.99769416908953,
+          "forces/fbz-aero-lbs": 4.273699231883883e-31,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 2.350355028559722e-31,
+          "moments/n-aero-lbsft": 67.9589415741282
+        },
+        "reference": {
+          "aero/alpha-rad": -6.084308008871573e-17,
+          "aero/beta-rad": 0.7853981633974487,
+          "aero/qbar-psf": 103.86614770167587,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 5.000086608166881e-47,
+          "forces/fby-aero-lbs": -110.99769416908953,
+          "forces/fbz-aero-lbs": 4.273699231883883e-31,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 2.6165955840718127e-31,
+          "moments/n-aero-lbsft": 67.95894157412818
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": -2.662405555120906e-32,
+        "moments/n-aero-lbsft": 2.842170943040401e-14
+      }
+    },
+    {
+      "family": "single_crossflow",
+      "axis": "combined",
+      "alpha_deg": 45,
+      "beta_deg": 45,
+      "dx_structural_ft": -0.0675,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": 0.7853981633974483,
+          "aero/beta-rad": 0.7853981633974486,
+          "aero/qbar-psf": 103.86614770167586,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 16.255235963027893,
+          "forces/fby-aero-lbs": -166.4965412536342,
+          "forces/fbz-aero-lbs": -94.74245820606154,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -58.00658500172727,
+          "moments/n-aero-lbsft": 101.93841236119223
+        },
+        "reference": {
+          "aero/alpha-rad": 0.7853981633974483,
+          "aero/beta-rad": 0.7853981633974486,
+          "aero/qbar-psf": 103.86614770167586,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 16.255235963027893,
+          "forces/fby-aero-lbs": -166.4965412536342,
+          "forces/fbz-aero-lbs": -94.74245820606154,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -58.00658500172725,
+          "moments/n-aero-lbsft": 101.9384123611922
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": -1.4210854715202004e-14,
+        "moments/n-aero-lbsft": 2.842170943040401e-14
+      }
+    },
+    {
+      "family": "cluster_crossflow",
+      "axis": "alpha",
+      "alpha_deg": -45,
+      "beta_deg": 0,
+      "dx_structural_ft": -0.7196,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -0.7853981633974484,
+          "aero/beta-rad": -6.578125145301936e-17,
+          "aero/qbar-psf": 103.86614770167591,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.0,
+          "forces/fby-aero-lbs": 5.1629877022180145e-15,
+          "forces/fbz-aero-lbs": 110.9976941690895,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -3.9074541939405947,
+          "moments/n-aero-lbsft": 1.8175276613911529e-16
+        },
+        "reference": {
+          "aero/alpha-rad": -0.7853981633974484,
+          "aero/beta-rad": -6.578125145301936e-17,
+          "aero/qbar-psf": 103.86614770167591,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.0,
+          "forces/fby-aero-lbs": 5.1629877022180145e-15,
+          "forces/fbz-aero-lbs": 110.9976941690895,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -3.9074541939406378,
+          "moments/n-aero-lbsft": 1.8175276613911667e-16
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 4.3076653355456074e-14,
+        "moments/n-aero-lbsft": -1.3805065841367707e-30
+      }
+    },
+    {
+      "family": "cluster_crossflow",
+      "axis": "beta",
+      "alpha_deg": 0,
+      "beta_deg": -45,
+      "dx_structural_ft": -0.7196,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": 7.313814305229946e-17,
+          "aero/beta-rad": -0.7853981633974483,
+          "aero/qbar-psf": 103.86614770167589,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 8.685118360895589e-47,
+          "forces/fby-aero-lbs": 110.99769416908946,
+          "forces/fbz-aero-lbs": -1.1874950605028424e-30,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 4.1803413928374716e-32,
+          "moments/n-aero-lbsft": 3.9074541939405947
+        },
+        "reference": {
+          "aero/alpha-rad": 7.313814305229946e-17,
+          "aero/beta-rad": -0.7853981633974483,
+          "aero/qbar-psf": 103.86614770167589,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 8.685118360895589e-47,
+          "forces/fby-aero-lbs": 110.99769416908946,
+          "forces/fbz-aero-lbs": -1.1874950605028424e-30,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 4.1803413928374984e-32,
+          "moments/n-aero-lbsft": 3.9074541939406364
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": -2.68217284187172e-46,
+        "moments/n-aero-lbsft": -4.1744385725905886e-14
+      }
+    },
+    {
+      "family": "cluster_crossflow",
+      "axis": "combined",
+      "alpha_deg": -45,
+      "beta_deg": -45,
+      "dx_structural_ft": -0.7196,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -0.7853981633974485,
+          "aero/beta-rad": -0.7853981633974486,
+          "aero/qbar-psf": 103.86614770167597,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 16.255235963027914,
+          "forces/fby-aero-lbs": 166.49654125363443,
+          "forces/fbz-aero-lbs": 94.74245820606167,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -3.3352207758259027,
+          "moments/n-aero-lbsft": 5.861181290910906
+        },
+        "reference": {
+          "aero/alpha-rad": -0.7853981633974485,
+          "aero/beta-rad": -0.7853981633974486,
+          "aero/qbar-psf": 103.86614770167597,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 16.255235963027914,
+          "forces/fby-aero-lbs": 166.49654125363443,
+          "forces/fbz-aero-lbs": 94.74245820606167,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -3.335220775825942,
+          "moments/n-aero-lbsft": 5.861181290910963
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 3.907985046680551e-14,
+        "moments/n-aero-lbsft": -5.684341886080802e-14
+      }
+    },
+    {
+      "family": "cluster_crossflow",
+      "axis": "alpha",
+      "alpha_deg": -15,
+      "beta_deg": 0,
+      "dx_structural_ft": -0.7196,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -0.26179938779914946,
+          "aero/beta-rad": 3.678280170536724e-17,
+          "aero/qbar-psf": 103.86614770167596,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.0,
+          "forces/fby-aero-lbs": -1.4157202700017298e-16,
+          "forces/fbz-aero-lbs": 14.870871257162142,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -0.523499597863994,
+          "moments/n-aero-lbsft": -4.983763084337545e-18
+        },
+        "reference": {
+          "aero/alpha-rad": -0.26179938779914946,
+          "aero/beta-rad": 3.678280170536724e-17,
+          "aero/qbar-psf": 103.86614770167596,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.0,
+          "forces/fby-aero-lbs": -1.4157202700017298e-16,
+          "forces/fbz-aero-lbs": 14.870871257162142,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -0.5234995978639989,
+          "moments/n-aero-lbsft": -4.9837630843376e-18
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 4.884981308350689e-15,
+        "moments/n-aero-lbsft": 5.46964104205975e-32
+      }
+    },
+    {
+      "family": "cluster_crossflow",
+      "axis": "beta",
+      "alpha_deg": 0,
+      "beta_deg": -15,
+      "dx_structural_ft": -0.7196,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -1.98776213760121e-18,
+          "aero/beta-rad": -0.26179938779914935,
+          "aero/qbar-psf": 103.86614770167593,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": -4.440892098500626e-16,
+          "forces/fby-aero-lbs": 14.870871257162124,
+          "forces/fbz-aero-lbs": 8.77147804490747e-34,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -3.0878252859397017e-35,
+          "moments/n-aero-lbsft": 0.523499597863994
+        },
+        "reference": {
+          "aero/alpha-rad": -1.98776213760121e-18,
+          "aero/beta-rad": -0.26179938779914935,
+          "aero/qbar-psf": 103.86614770167593,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": -4.440892098500626e-16,
+          "forces/fby-aero-lbs": 14.870871257162124,
+          "forces/fbz-aero-lbs": 8.77147804490747e-34,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -3.0878252859397273e-35,
+          "moments/n-aero-lbsft": 0.5234995978639984
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 2.565854121688508e-49,
+        "moments/n-aero-lbsft": -4.3298697960381105e-15
+      }
+    },
+    {
+      "family": "cluster_crossflow",
+      "axis": "combined",
+      "alpha_deg": -15,
+      "beta_deg": -15,
+      "dx_structural_ft": -0.7196,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -0.2617993877991495,
+          "aero/beta-rad": -0.26179938779914963,
+          "aero/qbar-psf": 103.8661477016759,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.12667816261236142,
+          "forces/fby-aero-lbs": 15.8670307431881,
+          "forces/fbz-aero-lbs": 14.836927945791498,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -0.5223046907502535,
+          "moments/n-aero-lbsft": 0.5585674214854137
+        },
+        "reference": {
+          "aero/alpha-rad": -0.2617993877991495,
+          "aero/beta-rad": -0.26179938779914963,
+          "aero/qbar-psf": 103.8661477016759,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.12667816261236142,
+          "forces/fby-aero-lbs": 15.8670307431881,
+          "forces/fbz-aero-lbs": 14.836927945791498,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -0.5223046907502583,
+          "moments/n-aero-lbsft": 0.5585674214854183
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 4.773959005888173e-15,
+        "moments/n-aero-lbsft": -4.551914400963142e-15
+      }
+    },
+    {
+      "family": "cluster_crossflow",
+      "axis": "alpha",
+      "alpha_deg": -1,
+      "beta_deg": 0,
+      "dx_structural_ft": -0.7196,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -0.01745329251994329,
+          "aero/beta-rad": 2.6247977568681353e-16,
+          "aero/qbar-psf": 103.8661477016759,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.0,
+          "forces/fby-aero-lbs": -3.097460338654002e-19,
+          "forces/fbz-aero-lbs": 0.06761679623048465,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -0.002380315519069684,
+          "moments/n-aero-lbsft": -1.0903996232931414e-20
+        },
+        "reference": {
+          "aero/alpha-rad": -0.01745329251994329,
+          "aero/beta-rad": 2.6247977568681353e-16,
+          "aero/qbar-psf": 103.8661477016759,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.0,
+          "forces/fby-aero-lbs": -3.097460338654002e-19,
+          "forces/fbz-aero-lbs": 0.06761679623048465,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -0.002380315519069706,
+          "moments/n-aero-lbsft": -1.0903996232931519e-20
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 2.211772431870429e-17,
+        "moments/n-aero-lbsft": 1.0532429383367696e-34
+      }
+    },
+    {
+      "family": "cluster_crossflow",
+      "axis": "beta",
+      "alpha_deg": 0,
+      "beta_deg": -1,
+      "dx_structural_ft": -0.7196,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": 4.2495813430913944e-17,
+          "aero/beta-rad": -0.017453292519943382,
+          "aero/qbar-psf": 103.86614770167598,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 1.7036579047989223e-47,
+          "forces/fby-aero-lbs": 0.06761679623048546,
+          "forces/fbz-aero-lbs": -4.0090619369035e-31,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 1.4104447412559348e-32,
+          "moments/n-aero-lbsft": 0.0023803155190697117
+        },
+        "reference": {
+          "aero/alpha-rad": 4.2495813430913944e-17,
+          "aero/beta-rad": -0.017453292519943382,
+          "aero/qbar-psf": 103.86614770167598,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 1.7036579047989223e-47,
+          "forces/fby-aero-lbs": 0.06761679623048546,
+          "forces/fbz-aero-lbs": -4.0090619369035e-31,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 1.411310928248435e-32,
+          "moments/n-aero-lbsft": 0.0023803155190697343
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": -8.661869925000817e-36,
+        "moments/n-aero-lbsft": -2.2551405187698492e-17
+      }
+    },
+    {
+      "family": "cluster_crossflow",
+      "axis": "combined",
+      "alpha_deg": -1,
+      "beta_deg": -1,
+      "dx_structural_ft": -0.7196,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -0.017453292519943323,
+          "aero/beta-rad": -0.017453292519943382,
+          "aero/qbar-psf": 103.86614770167597,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 1.7970388771623366e-07,
+          "forces/fby-aero-lbs": 0.06763739139314491,
+          "forces/fbz-aero-lbs": 0.06761679309374197,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -0.0023803154086468603,
+          "moments/n-aero-lbsft": 0.002381040531019833
+        },
+        "reference": {
+          "aero/alpha-rad": -0.017453292519943323,
+          "aero/beta-rad": -0.017453292519943382,
+          "aero/qbar-psf": 103.86614770167597,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 1.7970388771623366e-07,
+          "forces/fby-aero-lbs": 0.06763739139314491,
+          "forces/fbz-aero-lbs": 0.06761679309374197,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -0.0023803154086468863,
+          "moments/n-aero-lbsft": 0.0023810405310198566
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 2.6020852139652106e-17,
+        "moments/n-aero-lbsft": -2.3418766925686896e-17
+      }
+    },
+    {
+      "family": "cluster_crossflow",
+      "axis": "alpha",
+      "alpha_deg": 1,
+      "beta_deg": 0,
+      "dx_structural_ft": -0.7196,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": 0.017453292519943264,
+          "aero/beta-rad": -2.3471349115679933e-17,
+          "aero/qbar-psf": 103.86614770167596,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 2.168404344971009e-19,
+          "forces/fby-aero-lbs": 2.769797131493951e-20,
+          "forces/fbz-aero-lbs": -0.06761679623048451,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 0.002380315519069677,
+          "moments/n-aero-lbsft": 9.75052274629559e-22
+        },
+        "reference": {
+          "aero/alpha-rad": 0.017453292519943264,
+          "aero/beta-rad": -2.3471349115679933e-17,
+          "aero/qbar-psf": 103.86614770167596,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 2.168404344971009e-19,
+          "forces/fby-aero-lbs": 2.769797131493951e-20,
+          "forces/fbz-aero-lbs": -0.06761679623048451,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 0.0023803155190697013,
+          "moments/n-aero-lbsft": 9.750522746295682e-22
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": -2.42861286636753e-17,
+        "moments/n-aero-lbsft": -9.215875710446734e-36
+      }
+    },
+    {
+      "family": "cluster_crossflow",
+      "axis": "beta",
+      "alpha_deg": 0,
+      "beta_deg": 1,
+      "dx_structural_ft": -0.7196,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -4.880917992096095e-18,
+          "aero/beta-rad": 0.01745329251994362,
+          "aero/qbar-psf": 103.86614770167596,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": -2.168404344971009e-19,
+          "forces/fby-aero-lbs": -0.06761679623048729,
+          "forces/fbz-aero-lbs": 5.2894284700186694e-33,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -1.8620386318330316e-34,
+          "moments/n-aero-lbsft": -0.002380315519069774
+        },
+        "reference": {
+          "aero/alpha-rad": -4.880917992096095e-18,
+          "aero/beta-rad": 0.01745329251994362,
+          "aero/qbar-psf": 103.86614770167596,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": -2.168404344971009e-19,
+          "forces/fby-aero-lbs": -0.06761679623048729,
+          "forces/fbz-aero-lbs": 5.2894284700186694e-33,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -1.862038631833049e-34,
+          "moments/n-aero-lbsft": -0.002380315519069799
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 1.7319515321397428e-48,
+        "moments/n-aero-lbsft": 2.47198095326695e-17
+      }
+    },
+    {
+      "family": "cluster_crossflow",
+      "axis": "combined",
+      "alpha_deg": 1,
+      "beta_deg": 1,
+      "dx_structural_ft": -0.7196,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": 0.017453292519943295,
+          "aero/beta-rad": 0.017453292519943483,
+          "aero/qbar-psf": 103.86614770167593,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 1.7970388771623366e-07,
+          "forces/fby-aero-lbs": -0.06763739139314566,
+          "forces/fbz-aero-lbs": -0.06761679309374172,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 0.0023803154086468534,
+          "moments/n-aero-lbsft": -0.002381040531019854
+        },
+        "reference": {
+          "aero/alpha-rad": 0.017453292519943295,
+          "aero/beta-rad": 0.017453292519943483,
+          "aero/qbar-psf": 103.86614770167593,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 1.7970388771623366e-07,
+          "forces/fby-aero-lbs": -0.06763739139314566,
+          "forces/fbz-aero-lbs": -0.06761679309374172,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 0.0023803154086468777,
+          "moments/n-aero-lbsft": -0.0023810405310198826
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": -2.42861286636753e-17,
+        "moments/n-aero-lbsft": 2.862293735361732e-17
+      }
+    },
+    {
+      "family": "cluster_crossflow",
+      "axis": "alpha",
+      "alpha_deg": 15,
+      "beta_deg": 0,
+      "dx_structural_ft": -0.7196,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": 0.26179938779914946,
+          "aero/beta-rad": 4.847623007314965e-16,
+          "aero/qbar-psf": 103.8661477016759,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 4.440892098500626e-16,
+          "forces/fby-aero-lbs": -1.8657845065079152e-15,
+          "forces/fbz-aero-lbs": -14.870871257162133,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 0.523499597863994,
+          "moments/n-aero-lbsft": -6.568125175499353e-17
+        },
+        "reference": {
+          "aero/alpha-rad": 0.26179938779914946,
+          "aero/beta-rad": 4.847623007314965e-16,
+          "aero/qbar-psf": 103.8661477016759,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 4.440892098500626e-16,
+          "forces/fby-aero-lbs": -1.8657845065079152e-15,
+          "forces/fbz-aero-lbs": -14.870871257162133,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 0.5234995978639987,
+          "moments/n-aero-lbsft": -6.568125175499418e-17
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": -4.6629367034256575e-15,
+        "moments/n-aero-lbsft": 6.409494854920721e-31
+      }
+    },
+    {
+      "family": "cluster_crossflow",
+      "axis": "beta",
+      "alpha_deg": 0,
+      "beta_deg": 15,
+      "dx_structural_ft": -0.7196,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -1.9877621376012427e-18,
+          "aero/beta-rad": 0.26179938779914935,
+          "aero/qbar-psf": 103.86614770167593,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": -4.440892098500626e-16,
+          "forces/fby-aero-lbs": -14.870871257162124,
+          "forces/fbz-aero-lbs": 8.77147804490776e-34,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -1.1395976032442421e-33,
+          "moments/n-aero-lbsft": -0.523499597863994
+        },
+        "reference": {
+          "aero/alpha-rad": -1.9877621376012427e-18,
+          "aero/beta-rad": 0.26179938779914935,
+          "aero/qbar-psf": 103.86614770167593,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": -4.440892098500626e-16,
+          "forces/fby-aero-lbs": -14.870871257162124,
+          "forces/fbz-aero-lbs": 8.77147804490776e-34,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -3.0878252859398294e-35,
+          "moments/n-aero-lbsft": -0.5234995978639984
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": -1.1087193503848438e-33,
+        "moments/n-aero-lbsft": 4.3298697960381105e-15
+      }
+    },
+    {
+      "family": "cluster_crossflow",
+      "axis": "combined",
+      "alpha_deg": 15,
+      "beta_deg": 15,
+      "dx_structural_ft": -0.7196,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": 0.2617993877991495,
+          "aero/beta-rad": 0.2617993877991495,
+          "aero/qbar-psf": 103.86614770167597,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.12667816261236142,
+          "forces/fby-aero-lbs": -15.867030743188101,
+          "forces/fbz-aero-lbs": -14.836927945791512,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 0.5223046907502535,
+          "moments/n-aero-lbsft": -0.5585674214854119
+        },
+        "reference": {
+          "aero/alpha-rad": 0.2617993877991495,
+          "aero/beta-rad": 0.2617993877991495,
+          "aero/qbar-psf": 103.86614770167597,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.12667816261236142,
+          "forces/fby-aero-lbs": -15.867030743188101,
+          "forces/fbz-aero-lbs": -14.836927945791512,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 0.5223046907502588,
+          "moments/n-aero-lbsft": -0.5585674214854184
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": -5.218048215738236e-15,
+        "moments/n-aero-lbsft": 6.439293542825908e-15
+      }
+    },
+    {
+      "family": "cluster_crossflow",
+      "axis": "alpha",
+      "alpha_deg": 45,
+      "beta_deg": 0,
+      "dx_structural_ft": -0.7196,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": 0.7853981633974485,
+          "aero/beta-rad": 2.666031475359546e-16,
+          "aero/qbar-psf": 103.86614770167596,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": -7.105427357601002e-15,
+          "forces/fby-aero-lbs": -2.0924940491346806e-14,
+          "forces/fbz-aero-lbs": -110.99769416908958,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 3.9074541939405947,
+          "moments/n-aero-lbsft": -7.366211261678616e-16
+        },
+        "reference": {
+          "aero/alpha-rad": 0.7853981633974485,
+          "aero/beta-rad": 2.666031475359546e-16,
+          "aero/qbar-psf": 103.86614770167596,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": -7.105427357601002e-15,
+          "forces/fby-aero-lbs": -2.0924940491346806e-14,
+          "forces/fbz-aero-lbs": -110.99769416908958,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 3.907454193940641,
+          "moments/n-aero-lbsft": -7.366211261678685e-16
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": -4.618527782440651e-14,
+        "moments/n-aero-lbsft": 6.902532920683853e-30
+      }
+    },
+    {
+      "family": "cluster_crossflow",
+      "axis": "beta",
+      "alpha_deg": 0,
+      "beta_deg": 45,
+      "dx_structural_ft": -0.7196,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": 6.147531481791577e-18,
+          "aero/beta-rad": 0.7853981633974487,
+          "aero/qbar-psf": 103.86614770167593,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 7.105427357601002e-15,
+          "forces/fby-aero-lbs": -110.99769416908958,
+          "forces/fbz-aero-lbs": -8.389681532370835e-33,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 2.9534213782449525e-34,
+          "moments/n-aero-lbsft": -3.9074541939405947
+        },
+        "reference": {
+          "aero/alpha-rad": 6.147531481791577e-18,
+          "aero/beta-rad": 0.7853981633974487,
+          "aero/qbar-psf": 103.86614770167593,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 7.105427357601002e-15,
+          "forces/fby-aero-lbs": -110.99769416908958,
+          "forces/fbz-aero-lbs": -8.389681532370835e-33,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 2.9534213782449824e-34,
+          "moments/n-aero-lbsft": -3.907454193940641
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": -2.993496475303259e-48,
+        "moments/n-aero-lbsft": 4.618527782440651e-14
+      }
+    },
+    {
+      "family": "cluster_crossflow",
+      "axis": "combined",
+      "alpha_deg": 45,
+      "beta_deg": 45,
+      "dx_structural_ft": -0.7196,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": 0.7853981633974483,
+          "aero/beta-rad": 0.7853981633974486,
+          "aero/qbar-psf": 103.86614770167597,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 16.25523596302793,
+          "forces/fby-aero-lbs": -166.49654125363438,
+          "forces/fbz-aero-lbs": -94.74245820606166,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 3.335220775825917,
+          "moments/n-aero-lbsft": -5.861181290910906
+        },
+        "reference": {
+          "aero/alpha-rad": 0.7853981633974483,
+          "aero/beta-rad": 0.7853981633974486,
+          "aero/qbar-psf": 103.86614770167597,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 16.25523596302793,
+          "forces/fby-aero-lbs": -166.49654125363438,
+          "forces/fbz-aero-lbs": -94.74245820606166,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 3.335220775825941,
+          "moments/n-aero-lbsft": -5.861181290910961
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": -2.398081733190338e-14,
+        "moments/n-aero-lbsft": 5.5067062021407764e-14
+      }
+    },
+    {
+      "family": "series_crossflow",
+      "axis": "alpha",
+      "alpha_deg": -45,
+      "beta_deg": 0,
+      "dx_structural_ft": -0.7196,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -0.7853981633974484,
+          "aero/beta-rad": -6.578125145301936e-17,
+          "aero/qbar-psf": 103.86614770167591,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.0,
+          "forces/fby-aero-lbs": 5.1629877022180145e-15,
+          "forces/fbz-aero-lbs": 110.9976941690895,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -3.9074541939405947,
+          "moments/n-aero-lbsft": 1.8175276613911529e-16
+        },
+        "reference": {
+          "aero/alpha-rad": -0.7853981633974484,
+          "aero/beta-rad": -6.578125145301936e-17,
+          "aero/qbar-psf": 103.86614770167591,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.0,
+          "forces/fby-aero-lbs": 5.1629877022180145e-15,
+          "forces/fbz-aero-lbs": 110.9976941690895,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -3.9074541939406378,
+          "moments/n-aero-lbsft": 1.8175276613911667e-16
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 4.3076653355456074e-14,
+        "moments/n-aero-lbsft": -1.3805065841367707e-30
+      }
+    },
+    {
+      "family": "series_crossflow",
+      "axis": "beta",
+      "alpha_deg": 0,
+      "beta_deg": -45,
+      "dx_structural_ft": -0.7196,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": 7.313814305229946e-17,
+          "aero/beta-rad": -0.7853981633974483,
+          "aero/qbar-psf": 103.86614770167589,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 8.685118360895589e-47,
+          "forces/fby-aero-lbs": 110.99769416908946,
+          "forces/fbz-aero-lbs": -1.1874950605028424e-30,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 4.1803413928374716e-32,
+          "moments/n-aero-lbsft": 3.9074541939405947
+        },
+        "reference": {
+          "aero/alpha-rad": 7.313814305229946e-17,
+          "aero/beta-rad": -0.7853981633974483,
+          "aero/qbar-psf": 103.86614770167589,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 8.685118360895589e-47,
+          "forces/fby-aero-lbs": 110.99769416908946,
+          "forces/fbz-aero-lbs": -1.1874950605028424e-30,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 4.1803413928374984e-32,
+          "moments/n-aero-lbsft": 3.9074541939406364
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": -2.68217284187172e-46,
+        "moments/n-aero-lbsft": -4.1744385725905886e-14
+      }
+    },
+    {
+      "family": "series_crossflow",
+      "axis": "combined",
+      "alpha_deg": -45,
+      "beta_deg": -45,
+      "dx_structural_ft": -0.7196,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -0.7853981633974485,
+          "aero/beta-rad": -0.7853981633974486,
+          "aero/qbar-psf": 103.86614770167597,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 16.255235963027914,
+          "forces/fby-aero-lbs": 166.49654125363443,
+          "forces/fbz-aero-lbs": 94.74245820606167,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -3.3352207758259027,
+          "moments/n-aero-lbsft": 5.861181290910906
+        },
+        "reference": {
+          "aero/alpha-rad": -0.7853981633974485,
+          "aero/beta-rad": -0.7853981633974486,
+          "aero/qbar-psf": 103.86614770167597,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 16.255235963027914,
+          "forces/fby-aero-lbs": 166.49654125363443,
+          "forces/fbz-aero-lbs": 94.74245820606167,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -3.335220775825942,
+          "moments/n-aero-lbsft": 5.861181290910963
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 3.907985046680551e-14,
+        "moments/n-aero-lbsft": -5.684341886080802e-14
+      }
+    },
+    {
+      "family": "series_crossflow",
+      "axis": "alpha",
+      "alpha_deg": -15,
+      "beta_deg": 0,
+      "dx_structural_ft": -0.7196,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -0.26179938779914946,
+          "aero/beta-rad": 3.678280170536724e-17,
+          "aero/qbar-psf": 103.86614770167596,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.0,
+          "forces/fby-aero-lbs": -1.4157202700017298e-16,
+          "forces/fbz-aero-lbs": 14.870871257162142,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -0.523499597863994,
+          "moments/n-aero-lbsft": -4.983763084337545e-18
+        },
+        "reference": {
+          "aero/alpha-rad": -0.26179938779914946,
+          "aero/beta-rad": 3.678280170536724e-17,
+          "aero/qbar-psf": 103.86614770167596,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.0,
+          "forces/fby-aero-lbs": -1.4157202700017298e-16,
+          "forces/fbz-aero-lbs": 14.870871257162142,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -0.5234995978639989,
+          "moments/n-aero-lbsft": -4.9837630843376e-18
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 4.884981308350689e-15,
+        "moments/n-aero-lbsft": 5.46964104205975e-32
+      }
+    },
+    {
+      "family": "series_crossflow",
+      "axis": "beta",
+      "alpha_deg": 0,
+      "beta_deg": -15,
+      "dx_structural_ft": -0.7196,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -1.98776213760121e-18,
+          "aero/beta-rad": -0.26179938779914935,
+          "aero/qbar-psf": 103.86614770167593,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": -4.440892098500626e-16,
+          "forces/fby-aero-lbs": 14.870871257162124,
+          "forces/fbz-aero-lbs": 8.77147804490747e-34,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -3.0878252859397017e-35,
+          "moments/n-aero-lbsft": 0.523499597863994
+        },
+        "reference": {
+          "aero/alpha-rad": -1.98776213760121e-18,
+          "aero/beta-rad": -0.26179938779914935,
+          "aero/qbar-psf": 103.86614770167593,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": -4.440892098500626e-16,
+          "forces/fby-aero-lbs": 14.870871257162124,
+          "forces/fbz-aero-lbs": 8.77147804490747e-34,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -3.0878252859397273e-35,
+          "moments/n-aero-lbsft": 0.5234995978639984
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 2.565854121688508e-49,
+        "moments/n-aero-lbsft": -4.3298697960381105e-15
+      }
+    },
+    {
+      "family": "series_crossflow",
+      "axis": "combined",
+      "alpha_deg": -15,
+      "beta_deg": -15,
+      "dx_structural_ft": -0.7196,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -0.2617993877991495,
+          "aero/beta-rad": -0.26179938779914963,
+          "aero/qbar-psf": 103.8661477016759,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.12667816261236142,
+          "forces/fby-aero-lbs": 15.8670307431881,
+          "forces/fbz-aero-lbs": 14.836927945791498,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -0.5223046907502535,
+          "moments/n-aero-lbsft": 0.5585674214854137
+        },
+        "reference": {
+          "aero/alpha-rad": -0.2617993877991495,
+          "aero/beta-rad": -0.26179938779914963,
+          "aero/qbar-psf": 103.8661477016759,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.12667816261236142,
+          "forces/fby-aero-lbs": 15.8670307431881,
+          "forces/fbz-aero-lbs": 14.836927945791498,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -0.5223046907502583,
+          "moments/n-aero-lbsft": 0.5585674214854183
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 4.773959005888173e-15,
+        "moments/n-aero-lbsft": -4.551914400963142e-15
+      }
+    },
+    {
+      "family": "series_crossflow",
+      "axis": "alpha",
+      "alpha_deg": -1,
+      "beta_deg": 0,
+      "dx_structural_ft": -0.7196,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -0.01745329251994329,
+          "aero/beta-rad": 2.6247977568681353e-16,
+          "aero/qbar-psf": 103.8661477016759,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.0,
+          "forces/fby-aero-lbs": -3.097460338654002e-19,
+          "forces/fbz-aero-lbs": 0.06761679623048465,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -0.002380315519069684,
+          "moments/n-aero-lbsft": -1.0903996232931414e-20
+        },
+        "reference": {
+          "aero/alpha-rad": -0.01745329251994329,
+          "aero/beta-rad": 2.6247977568681353e-16,
+          "aero/qbar-psf": 103.8661477016759,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.0,
+          "forces/fby-aero-lbs": -3.097460338654002e-19,
+          "forces/fbz-aero-lbs": 0.06761679623048465,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -0.002380315519069706,
+          "moments/n-aero-lbsft": -1.0903996232931519e-20
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 2.211772431870429e-17,
+        "moments/n-aero-lbsft": 1.0532429383367696e-34
+      }
+    },
+    {
+      "family": "series_crossflow",
+      "axis": "beta",
+      "alpha_deg": 0,
+      "beta_deg": -1,
+      "dx_structural_ft": -0.7196,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": 4.2495813430913944e-17,
+          "aero/beta-rad": -0.017453292519943382,
+          "aero/qbar-psf": 103.86614770167598,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 1.7036579047989223e-47,
+          "forces/fby-aero-lbs": 0.06761679623048546,
+          "forces/fbz-aero-lbs": -4.0090619369035e-31,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 1.4104447412559348e-32,
+          "moments/n-aero-lbsft": 0.0023803155190697117
+        },
+        "reference": {
+          "aero/alpha-rad": 4.2495813430913944e-17,
+          "aero/beta-rad": -0.017453292519943382,
+          "aero/qbar-psf": 103.86614770167598,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 1.7036579047989223e-47,
+          "forces/fby-aero-lbs": 0.06761679623048546,
+          "forces/fbz-aero-lbs": -4.0090619369035e-31,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 1.411310928248435e-32,
+          "moments/n-aero-lbsft": 0.0023803155190697343
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": -8.661869925000817e-36,
+        "moments/n-aero-lbsft": -2.2551405187698492e-17
+      }
+    },
+    {
+      "family": "series_crossflow",
+      "axis": "combined",
+      "alpha_deg": -1,
+      "beta_deg": -1,
+      "dx_structural_ft": -0.7196,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -0.017453292519943323,
+          "aero/beta-rad": -0.017453292519943382,
+          "aero/qbar-psf": 103.86614770167597,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 1.7970388771623366e-07,
+          "forces/fby-aero-lbs": 0.06763739139314491,
+          "forces/fbz-aero-lbs": 0.06761679309374197,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -0.0023803154086468603,
+          "moments/n-aero-lbsft": 0.002381040531019833
+        },
+        "reference": {
+          "aero/alpha-rad": -0.017453292519943323,
+          "aero/beta-rad": -0.017453292519943382,
+          "aero/qbar-psf": 103.86614770167597,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 1.7970388771623366e-07,
+          "forces/fby-aero-lbs": 0.06763739139314491,
+          "forces/fbz-aero-lbs": 0.06761679309374197,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -0.0023803154086468863,
+          "moments/n-aero-lbsft": 0.0023810405310198566
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 2.6020852139652106e-17,
+        "moments/n-aero-lbsft": -2.3418766925686896e-17
+      }
+    },
+    {
+      "family": "series_crossflow",
+      "axis": "alpha",
+      "alpha_deg": 1,
+      "beta_deg": 0,
+      "dx_structural_ft": -0.7196,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": 0.017453292519943264,
+          "aero/beta-rad": -2.3471349115679933e-17,
+          "aero/qbar-psf": 103.86614770167596,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 2.168404344971009e-19,
+          "forces/fby-aero-lbs": 2.769797131493951e-20,
+          "forces/fbz-aero-lbs": -0.06761679623048451,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 0.002380315519069677,
+          "moments/n-aero-lbsft": 9.75052274629559e-22
+        },
+        "reference": {
+          "aero/alpha-rad": 0.017453292519943264,
+          "aero/beta-rad": -2.3471349115679933e-17,
+          "aero/qbar-psf": 103.86614770167596,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 2.168404344971009e-19,
+          "forces/fby-aero-lbs": 2.769797131493951e-20,
+          "forces/fbz-aero-lbs": -0.06761679623048451,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 0.0023803155190697013,
+          "moments/n-aero-lbsft": 9.750522746295682e-22
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": -2.42861286636753e-17,
+        "moments/n-aero-lbsft": -9.215875710446734e-36
+      }
+    },
+    {
+      "family": "series_crossflow",
+      "axis": "beta",
+      "alpha_deg": 0,
+      "beta_deg": 1,
+      "dx_structural_ft": -0.7196,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -4.880917992096095e-18,
+          "aero/beta-rad": 0.01745329251994362,
+          "aero/qbar-psf": 103.86614770167596,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": -2.168404344971009e-19,
+          "forces/fby-aero-lbs": -0.06761679623048729,
+          "forces/fbz-aero-lbs": 5.2894284700186694e-33,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -1.8620386318330316e-34,
+          "moments/n-aero-lbsft": -0.002380315519069774
+        },
+        "reference": {
+          "aero/alpha-rad": -4.880917992096095e-18,
+          "aero/beta-rad": 0.01745329251994362,
+          "aero/qbar-psf": 103.86614770167596,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": -2.168404344971009e-19,
+          "forces/fby-aero-lbs": -0.06761679623048729,
+          "forces/fbz-aero-lbs": 5.2894284700186694e-33,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -1.862038631833049e-34,
+          "moments/n-aero-lbsft": -0.002380315519069799
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": 1.7319515321397428e-48,
+        "moments/n-aero-lbsft": 2.47198095326695e-17
+      }
+    },
+    {
+      "family": "series_crossflow",
+      "axis": "combined",
+      "alpha_deg": 1,
+      "beta_deg": 1,
+      "dx_structural_ft": -0.7196,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": 0.017453292519943295,
+          "aero/beta-rad": 0.017453292519943483,
+          "aero/qbar-psf": 103.86614770167593,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 1.7970388771623366e-07,
+          "forces/fby-aero-lbs": -0.06763739139314566,
+          "forces/fbz-aero-lbs": -0.06761679309374172,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 0.0023803154086468534,
+          "moments/n-aero-lbsft": -0.002381040531019854
+        },
+        "reference": {
+          "aero/alpha-rad": 0.017453292519943295,
+          "aero/beta-rad": 0.017453292519943483,
+          "aero/qbar-psf": 103.86614770167593,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 1.7970388771623366e-07,
+          "forces/fby-aero-lbs": -0.06763739139314566,
+          "forces/fbz-aero-lbs": -0.06761679309374172,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 0.0023803154086468777,
+          "moments/n-aero-lbsft": -0.0023810405310198826
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": -2.42861286636753e-17,
+        "moments/n-aero-lbsft": 2.862293735361732e-17
+      }
+    },
+    {
+      "family": "series_crossflow",
+      "axis": "alpha",
+      "alpha_deg": 15,
+      "beta_deg": 0,
+      "dx_structural_ft": -0.7196,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": 0.26179938779914946,
+          "aero/beta-rad": 4.847623007314965e-16,
+          "aero/qbar-psf": 103.8661477016759,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 4.440892098500626e-16,
+          "forces/fby-aero-lbs": -1.8657845065079152e-15,
+          "forces/fbz-aero-lbs": -14.870871257162133,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 0.523499597863994,
+          "moments/n-aero-lbsft": -6.568125175499353e-17
+        },
+        "reference": {
+          "aero/alpha-rad": 0.26179938779914946,
+          "aero/beta-rad": 4.847623007314965e-16,
+          "aero/qbar-psf": 103.8661477016759,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 4.440892098500626e-16,
+          "forces/fby-aero-lbs": -1.8657845065079152e-15,
+          "forces/fbz-aero-lbs": -14.870871257162133,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 0.5234995978639987,
+          "moments/n-aero-lbsft": -6.568125175499418e-17
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": -4.6629367034256575e-15,
+        "moments/n-aero-lbsft": 6.409494854920721e-31
+      }
+    },
+    {
+      "family": "series_crossflow",
+      "axis": "beta",
+      "alpha_deg": 0,
+      "beta_deg": 15,
+      "dx_structural_ft": -0.7196,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": -1.9877621376012427e-18,
+          "aero/beta-rad": 0.26179938779914935,
+          "aero/qbar-psf": 103.86614770167593,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": -4.440892098500626e-16,
+          "forces/fby-aero-lbs": -14.870871257162124,
+          "forces/fbz-aero-lbs": 8.77147804490776e-34,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -1.1395976032442421e-33,
+          "moments/n-aero-lbsft": -0.523499597863994
+        },
+        "reference": {
+          "aero/alpha-rad": -1.9877621376012427e-18,
+          "aero/beta-rad": 0.26179938779914935,
+          "aero/qbar-psf": 103.86614770167593,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": -4.440892098500626e-16,
+          "forces/fby-aero-lbs": -14.870871257162124,
+          "forces/fbz-aero-lbs": 8.77147804490776e-34,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": -3.0878252859398294e-35,
+          "moments/n-aero-lbsft": -0.5234995978639984
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": -1.1087193503848438e-33,
+        "moments/n-aero-lbsft": 4.3298697960381105e-15
+      }
+    },
+    {
+      "family": "series_crossflow",
+      "axis": "combined",
+      "alpha_deg": 15,
+      "beta_deg": 15,
+      "dx_structural_ft": -0.7196,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": 0.2617993877991495,
+          "aero/beta-rad": 0.2617993877991495,
+          "aero/qbar-psf": 103.86614770167597,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.12667816261236142,
+          "forces/fby-aero-lbs": -15.867030743188101,
+          "forces/fbz-aero-lbs": -14.836927945791512,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 0.5223046907502535,
+          "moments/n-aero-lbsft": -0.5585674214854119
+        },
+        "reference": {
+          "aero/alpha-rad": 0.2617993877991495,
+          "aero/beta-rad": 0.2617993877991495,
+          "aero/qbar-psf": 103.86614770167597,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 0.12667816261236142,
+          "forces/fby-aero-lbs": -15.867030743188101,
+          "forces/fbz-aero-lbs": -14.836927945791512,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 0.5223046907502588,
+          "moments/n-aero-lbsft": -0.5585674214854184
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": -5.218048215738236e-15,
+        "moments/n-aero-lbsft": 6.439293542825908e-15
+      }
+    },
+    {
+      "family": "series_crossflow",
+      "axis": "alpha",
+      "alpha_deg": 45,
+      "beta_deg": 0,
+      "dx_structural_ft": -0.7196,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": 0.7853981633974485,
+          "aero/beta-rad": 2.666031475359546e-16,
+          "aero/qbar-psf": 103.86614770167596,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": -7.105427357601002e-15,
+          "forces/fby-aero-lbs": -2.0924940491346806e-14,
+          "forces/fbz-aero-lbs": -110.99769416908958,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 3.9074541939405947,
+          "moments/n-aero-lbsft": -7.366211261678616e-16
+        },
+        "reference": {
+          "aero/alpha-rad": 0.7853981633974485,
+          "aero/beta-rad": 2.666031475359546e-16,
+          "aero/qbar-psf": 103.86614770167596,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": -7.105427357601002e-15,
+          "forces/fby-aero-lbs": -2.0924940491346806e-14,
+          "forces/fbz-aero-lbs": -110.99769416908958,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 3.907454193940641,
+          "moments/n-aero-lbsft": -7.366211261678685e-16
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": -4.618527782440651e-14,
+        "moments/n-aero-lbsft": 6.902532920683853e-30
+      }
+    },
+    {
+      "family": "series_crossflow",
+      "axis": "beta",
+      "alpha_deg": 0,
+      "beta_deg": 45,
+      "dx_structural_ft": -0.7196,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": 6.147531481791577e-18,
+          "aero/beta-rad": 0.7853981633974487,
+          "aero/qbar-psf": 103.86614770167593,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 7.105427357601002e-15,
+          "forces/fby-aero-lbs": -110.99769416908958,
+          "forces/fbz-aero-lbs": -8.389681532370835e-33,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 2.9534213782449525e-34,
+          "moments/n-aero-lbsft": -3.9074541939405947
+        },
+        "reference": {
+          "aero/alpha-rad": 6.147531481791577e-18,
+          "aero/beta-rad": 0.7853981633974487,
+          "aero/qbar-psf": 103.86614770167593,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 7.105427357601002e-15,
+          "forces/fby-aero-lbs": -110.99769416908958,
+          "forces/fbz-aero-lbs": -8.389681532370835e-33,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 2.9534213782449824e-34,
+          "moments/n-aero-lbsft": -3.907454193940641
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": -2.993496475303259e-48,
+        "moments/n-aero-lbsft": 4.618527782440651e-14
+      }
+    },
+    {
+      "family": "series_crossflow",
+      "axis": "combined",
+      "alpha_deg": 45,
+      "beta_deg": 45,
+      "dx_structural_ft": -0.7196,
+      "raw": {
+        "current": {
+          "aero/alpha-rad": 0.7853981633974483,
+          "aero/beta-rad": 0.7853981633974486,
+          "aero/qbar-psf": 103.86614770167597,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 16.25523596302793,
+          "forces/fby-aero-lbs": -166.49654125363438,
+          "forces/fbz-aero-lbs": -94.74245820606166,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 3.335220775825917,
+          "moments/n-aero-lbsft": -5.861181290910906
+        },
+        "reference": {
+          "aero/alpha-rad": 0.7853981633974483,
+          "aero/beta-rad": 0.7853981633974486,
+          "aero/qbar-psf": 103.86614770167597,
+          "metrics/Sw-sqft": 0.0845,
+          "simulation/sim-time-sec": 0.0,
+          "forces/fbx-aero-lbs": 16.25523596302793,
+          "forces/fby-aero-lbs": -166.49654125363438,
+          "forces/fbz-aero-lbs": -94.74245820606166,
+          "moments/l-aero-lbsft": 0.0,
+          "moments/m-aero-lbsft": 3.335220775825941,
+          "moments/n-aero-lbsft": -5.861181290910961
+        }
+      },
+      "errors": {
+        "forces/fbx-aero-lbs": 0.0,
+        "forces/fby-aero-lbs": 0.0,
+        "forces/fbz-aero-lbs": 0.0,
+        "moments/l-aero-lbsft": 0.0,
+        "moments/m-aero-lbsft": -2.398081733190338e-14,
+        "moments/n-aero-lbsft": 5.5067062021407764e-14
+      }
+    }
+  ]
+}

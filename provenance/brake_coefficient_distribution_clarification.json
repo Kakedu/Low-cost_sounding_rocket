@@ -1,0 +1,22 @@
+{
+  "status": "CONFIRMED_FROZEN_SAMPLER",
+  "accepted_source_snapshots": [
+    {
+      "source": "work\\revised_project\\provenance\\run_sources\\874a9fd29a2314e8dd2175f8ba39d32956220d38fb7c2bb8e57ebb8003d761b6\\sweep.py",
+      "sha256": "5dcfcc3e4e4887eef795e868cd8617029a7708c8211f70eb2c0dc98d53f2d810",
+      "draw_inputs_lines": [
+        951,
+        965
+      ],
+      "BRAKE_DCD_SIGMA": 0.2
+    }
+  ],
+  "all_draw_inputs_AST_identical": true,
+  "body_cd_distribution": "Lognormal multiplier, mean 1, CV 0.20",
+  "brake_increment_distribution": "B=max(0.5,X), X ~ Normal(mean=1, SD=0.20); lower clipping, not resampling or lognormal",
+  "floor_probability": 0.006209665325776159,
+  "actual_clipped_mean": 1.0004008274358256,
+  "probability_B_le_1_4_nominal": 0.9772498680518207,
+  "probability_B_le_1_4_actual_clipped_mean": 0.9774009310302763,
+  "interpretation": "1.4 times nominal equals nominal plus 2 assigned SD and has about 97.725% marginal coefficient coverage under the chosen clipped-normal model. It does not bound complete flight load, angle, dynamic pressure, temporal maxima or all uncertain inputs. The additional 1.5 multiplier and product 2.1 are engineering screening factors, not calibrated global reliability bounds."
+}

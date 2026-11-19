@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+data_output/*
+!data_output/.gitkeep
+aircraft/_*/
+engine/_*
+scripts/_*
+val/jsb/
+val/jsb_cavour/
+M1670_new.xml
+JSBSim.exe
+*.nc

@@ -1,0 +1,21 @@
+{
+  "output": "C:\\Users\\Haoran Du\\Documents\\Codex\\2026-10-11\\ban\\work\\revised_project\\engine\\M1670.xml",
+  "impulse_Ns": 6026.35,
+  "source_impulse_Ns": 6026.35,
+  "prop_kg": 3.101,
+  "prop_lb": 6.836534750353054,
+  "burned_kg": 0.0,
+  "remaining_prop_lb": 6.836534750353054,
+  "isp_s": 198.16726217605736,
+  "isp_scale": 1.0,
+  "start_time_s": 0.0,
+  "sample_dt_s": 0.002,
+  "rows": 1952,
+  "burn_end_s": 3.9,
+  "initial_regularized_thrust_N": 0.7388649817453817,
+  "terminal_regularized_thrust_N": 0.28446301797194423,
+  "input": "C:\\Users\\Haoran Du\\Documents\\Codex\\2026-10-11\\ban\\work\\revised_project\\M1670.eng",
+  "total_kg": 5.231,
+  "hardware_kg": 2.13,
+  "rasp_name": "M1670-BS"
+}

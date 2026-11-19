@@ -1,0 +1,34 @@
+[
+  {
+    "aircraft": "myrocket",
+    "phases": 1,
+    "forces_checked": 6,
+    "angle_tables_remaining": 0,
+    "max_expression_error": 1.7763568394002505e-15,
+    "sha256": "490444d3490caaae120bd81bb8da8c8c38395201ff32423d53917a3373d69bb0"
+  },
+  {
+    "aircraft": "myrocket2",
+    "phases": 2,
+    "forces_checked": 12,
+    "angle_tables_remaining": 0,
+    "max_expression_error": 2.220446049250313e-15,
+    "sha256": "49392f1a9b3161aea26bb00e9ae42a7513595f8e1fcbf00d4e598050b2a96d2e"
+  },
+  {
+    "aircraft": "myrocket_cluster",
+    "phases": 1,
+    "forces_checked": 6,
+    "angle_tables_remaining": 0,
+    "max_expression_error": 1.7763568394002505e-15,
+    "sha256": "e26f31ad9f7d8e9a8d70f0186de7385a9c44e0151f824015291310a5133e2aaa"
+  },
+  {
+    "aircraft": "myrocket_series",
+    "phases": 1,
+    "forces_checked": 6,
+    "angle_tables_remaining": 0,
+    "max_expression_error": 1.7763568394002505e-15,
+    "sha256": "2647f47c5968f263b41c5ad15a55d3324f2f520d4113308b534fe8f1cea5f242"
+  }
+]

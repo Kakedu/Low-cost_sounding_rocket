@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-29",
+  "source_thesis_docx_sha256": "7bae50737acab3699e7035d1555ae089491d8659d86caa0e30533fb2085bf92b",
+  "previous_complete_archive_sha256": "41af0709a6b90713baad3ba8358cdcde7cf467720541fb7746da59a7ad7fbf4f",
+  "previous_package_audit_sha256": "fea6ac859db608fae3d1b95446861b26aa200bb52a5d37709df4cdb5920ab10b",
+  "thesis": {
+    "docx": "thesis/Haoran_Du.docx",
+    "docx_sha256": "448768dbf98ed4864634d6664f6b4153f1465b40b96ecc085b45fee5827b9700",
+    "pdf": "thesis/Haoran_Du.pdf",
+    "pdf_sha256": "659c0fdd9dcc52d569fd9f47d0acefb58944b393692ef9545dfe2c9a961aada3"
+  },
+  "pages": {
+    "body": 66,
+    "total_pdf": 180,
+    "code_appendix_starts_physical_page": 92
+  },
+  "changes": [
+    "Added the existing 84.6% known-drag controller success rate to the corresponding sentence in Section 9.2."
+  ],
+  "code_listing_page_index_unchanged": true,
+  "appendix_A_unchanged": true,
+  "scientific_source_files_changed": false,
+  "scientific_result_files_changed": false,
+  "figure_files_changed": false,
+  "new_flight_simulations": 0,
+  "new_Monte_Carlo_simulations": 0,
+  "new_FEA_runs": 0,
+  "full_saved_result_checks": {
+    "rerun_in_this_revision": false,
+    "previous_pass_audit_sha256": "fea6ac859db608fae3d1b95446861b26aa200bb52a5d37709df4cdb5920ab10b",
+    "continuity": "Unchanged source ZIP SHA and unchanged scientific member SHA values link this package to the previously verified saved results."
+  }
+}

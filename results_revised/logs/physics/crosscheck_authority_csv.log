@@ -1,0 +1,21 @@
+Un-braked apogee 10555 ft. Each row holds the brake fully
+deployed for that window only, all else stowed.
+
+  window after burnout (s)  apogee (ft)  authority (ft)  per second
+-------------------------------------------------------------------
+                       0-2         8207            2349      1174.5
+                       2-4         8851            1704       852.2
+                       4-6         9352            1203       601.6
+                       6-8         9738             818       409.0
+                      8-10        10026             530       264.9
+                     10-15        10073             482        96.4
+                     15-20        10485              70        14.0
+                     20-22        10555               1         0.3
+-------------------------------------------------------------------
+                full coast         6516            4040
+       first 4 s (one run)         7202            3353
+
+First 4 s give 3353 ft of the 4040 ft total, 83%. Note this is computed as a single
+run, not by adding the 0-2 and 2-4 rows: authority is not additive.
+wrote C:\Users\Haoran Du\Documents\Codex\2026-10-11\ban\work\revised_project\results_revised\crosscheck_authority.csv
+

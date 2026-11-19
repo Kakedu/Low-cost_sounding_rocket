@@ -4,6 +4,8 @@
 
 import json
 import math
+from pathlib import Path
+import xml.etree.ElementTree as ET
 
 IN = 0.0254
 D = 3.94 * IN
@@ -12,7 +14,22 @@ L1 = 98.4 * IN
 LN = 4.0 * D
 FIN = dict(N=4, Cr=0.16, Ct=0.08, S=0.0426, Xt=0.08)
 BOOST_FIN = dict(N=4, Cr=0.20, Ct=0.10, S=0.0, Xt=0.10)
-STACK_CG_IN = 74.04
+def mass_cg(aircraft, empty_tanks=()):
+    xml = ET.parse(Path(__file__).resolve().parent / 'aircraft' / aircraft / (aircraft+'.xml')).getroot()
+    mb = xml.find('mass_balance')
+    parts = [(float(mb.findtext('emptywt')), float(mb.find("location[@name='CG']/x").text))]
+    parts.extend((float(p.findtext('weight')), float(p.findtext('location/x'))) for p in mb.findall('pointmass'))
+    for i, tank in enumerate(xml.findall('propulsion/tank')):
+        if i not in empty_tanks:
+            parts.append((float(tank.findtext('contents')), float(tank.findtext('location/x'))))
+    return sum(m*x for m,x in parts) / sum(m for m,x in parts)
+
+SINGLE_CG_IN = mass_cg('myrocket')
+SINGLE_BURNOUT_CG_IN = mass_cg('myrocket', (0,))
+STACK_CG_IN = mass_cg('myrocket2')
+STACK_BOOSTER_BURNOUT_CG_IN = mass_cg('myrocket2', (1,))
+CLUSTER_CG_IN = mass_cg('myrocket_cluster')
+CLUSTER_BURNOUT_CG_IN = mass_cg('myrocket_cluster', (0, 1))
 CLUSTER_FIN = dict(N=4, Cr=0.16, Ct=0.08, S=0.0, Xt=0.08)
 L_BOOST = (196.8 - 98.4) * IN
 MACHS = [0.0, 0.3, 0.5, 0.6, 0.8, 0.9, 1.0, 1.2]
@@ -79,7 +96,7 @@ def config(name, fin_sets, cg_launch_in, cg_burnout_in):
         cna = sum(c for c, _ in parts)
         xcp = sum(c * x for c, x in parts) / cna
         rows.append(dict(mach=M, cna=cna, xcp_in=xcp / IN))
-    out = dict(name=name, rows=rows)
+    out = dict(name=name, rows=rows, aero_limitation="Fin Mach correction clamped at M=0.8; no validated supersonic normal-force or CP model", cg_burnout_definition="booster burnout before separation" if name=="stack" else "all propellant exhausted")
     for tag, cg in (("launch", cg_launch_in), ("burnout", cg_burnout_in)):
         out[f"margin_{tag}_cal"] = (rows[0]["xcp_in"] - cg) / (D / IN)
     cg_mid = 0.5 * (cg_launch_in + cg_burnout_in) * IN
@@ -93,26 +110,26 @@ if __name__ == "__main__":
     lo, hi = 0.01, 0.3
     for _ in range(50):
         FIN["S"] = (lo + hi) / 2
-        c = config("single", [(FIN, L1 - FIN["Cr"])], 44.39, 38.47)
+        c = config("single", [(FIN, L1 - FIN["Cr"])], SINGLE_CG_IN, SINGLE_BURNOUT_CG_IN)
         lo, hi = (lo, FIN["S"]) if c["margin_launch_cal"] > 2.0 else (FIN["S"], hi)
     FIN["S"] = round(FIN["S"], 4)
-    single = config("single", [(FIN, L1 - FIN["Cr"])], 44.39, 38.47)
+    single = config("single", [(FIN, L1 - FIN["Cr"])], SINGLE_CG_IN, SINGLE_BURNOUT_CG_IN)
     lo, hi = 0.01, 0.4
     for _ in range(50):
         BOOST_FIN["S"] = (lo + hi) / 2
         c = config("stack", [(FIN, L1 - FIN["Cr"]), (BOOST_FIN, L1 + L_BOOST - BOOST_FIN["Cr"])],
-                   STACK_CG_IN, STACK_CG_IN)
+                   STACK_CG_IN, STACK_BOOSTER_BURNOUT_CG_IN)
         lo, hi = (lo, BOOST_FIN["S"]) if c["margin_launch_cal"] > 2.0 else (BOOST_FIN["S"], hi)
     BOOST_FIN["S"] = round(BOOST_FIN["S"], 4)
     stack = config("stack", [(FIN, L1 - FIN["Cr"]), (BOOST_FIN, L1 + L_BOOST - BOOST_FIN["Cr"])],
-                   STACK_CG_IN, STACK_CG_IN)
+                   STACK_CG_IN, STACK_BOOSTER_BURNOUT_CG_IN)
     lo, hi = 0.01, 0.3
     for _ in range(50):
         CLUSTER_FIN["S"] = (lo + hi) / 2
-        c = config("cluster", [(CLUSTER_FIN, L1 - CLUSTER_FIN["Cr"])], 52.16, 52.16)
+        c = config("cluster", [(CLUSTER_FIN, L1 - CLUSTER_FIN["Cr"])], CLUSTER_CG_IN, CLUSTER_BURNOUT_CG_IN)
         lo, hi = (lo, CLUSTER_FIN["S"]) if c["margin_launch_cal"] > 2.0 else (CLUSTER_FIN["S"], hi)
     CLUSTER_FIN["S"] = round(CLUSTER_FIN["S"], 4)
-    cluster = config("cluster", [(CLUSTER_FIN, L1 - CLUSTER_FIN["Cr"])], 52.16, 45.07)
+    cluster = config("cluster", [(CLUSTER_FIN, L1 - CLUSTER_FIN["Cr"])], CLUSTER_CG_IN, CLUSTER_BURNOUT_CG_IN)
     res = dict(geometry=dict(D_m=D, L1_m=L1, nose="tangent ogive", Ln_m=LN,
                              fin=FIN, booster_fin=BOOST_FIN, cluster_fin=CLUSTER_FIN,
                              L_booster_m=L_BOOST),

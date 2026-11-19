@@ -7,6 +7,7 @@ import math
 import random
 
 import jsbsim
+from flight_checks import require, run_checked
 
 ROOT = "."
 DT = 0.001
@@ -31,14 +32,15 @@ def fly(coast, gate_alt=0.0, wind=None, tipoff_dps=0.0, tipoff_dir=0.0,
     k = k or {}
     f = jsbsim.FGFDMExec(ROOT)
     f.set_debug_level(0)
-    f.load_model("myrocket2")
+    require(f.load_model("myrocket2"), "model load")
     f.set_dt(DT)
-    f.load_ic("reset", True)
+    require(f.load_ic("reset", True), "initial conditions load")
     if elev is not None:
         f["ic/theta-deg"] = elev
     if psi is not None:
         f["ic/psi-true-deg"] = psi
-    f.run_ic()
+    require(f.run_ic(), "initial conditions execution")
+    f.disable_output()
     f["fcs/k-stack"] = k_stack
     f["fcs/target-apogee-ft"] = 1.0e9
     f["fcs/coast-sec"] = coast
@@ -66,22 +68,32 @@ def fly(coast, gate_alt=0.0, wind=None, tipoff_dps=0.0, tipoff_dir=0.0,
     f["propulsion/engine[0]/set-running"] = 1
     f["fcs/throttle-cmd-norm"] = 1.0
     apo, t, tilt_max_seen, iyy = 0.0, 0.0, 0.0, None
+    decision_time=None
     while t < t_max:
-        f.run()
+        run_checked(f)
         t = f["simulation/sim-time-sec"]
         h = f["position/h-agl-ft"]
         apo = max(apo, h)
+        if decision_time is None and f["fcs/decision-now"] > 0.5:
+            decision_time=t-DT
         if f["fcs/staged"] > 0.5 and iyy is None:
             iyy = f["inertia/iyy-slugs_ft2"]
         if f["fcs/staged"] > 0.5 and f["fcs/decision-now"] < 0.5:
             tilt_max_seen = max(tilt_max_seen, f["fcs/tilt-deg"])
-        if t > 5 and f["velocities/h-dot-fps"] < 0:
+        complete_burn = f["fcs/sust-lit"] < 0.5 or f["propulsion/tank[0]/contents-lbs"] < 1e-10
+        if t > 5 and f["fcs/decision-now"] > 0.5 and complete_burn and f["velocities/h-dot-fps"] < 0:
             break
+    else:
+        raise RuntimeError(f"Coast {coast}: apogee/decision not reached by {t_max}s")
     out = dict(t_bo1=f["fcs/t-burnout"], apogee=apo, lit=int(f["fcs/sust-lit"] > 0.5), lockout=int(f["fcs/lockout"] > 0.5),
                dec_tilt=f["fcs/lit-tilt-deg"], dec_alt=f["fcs/lit-alt-ft"],
-               tilt_max_coast=tilt_max_seen, iyy_sep=iyy)
+               tilt_max_coast=tilt_max_seen, iyy_sep=iyy, decision_time_s=decision_time)
     out["lock_alt"] = int(out["lockout"] and out["dec_alt"] < gate_alt)
     out["lock_tilt"] = int(out["lockout"] and out["dec_tilt"] > TILT_MAX)
+    if out["lit"] + out["lockout"] != 1:
+        raise RuntimeError("Ignition decision missing or ambiguous")
+    if out["lockout"] and not (out["lock_alt"] or out["lock_tilt"]):
+        raise RuntimeError("Lockout causes disagree with logged decision state")
     return out
 
 
@@ -156,7 +168,7 @@ def main():
                 r = fly(c, gate[ci], wind=w, k=k, elev=elev, psi=psi, k_stack=a.k_stack)
                 rows.append(dict(sample=i, coast=c, wind_fps=w[0], wind_from=w[1], elev=elev, psi=psi, **k,
                                  **{kk: r[kk] for kk in ("apogee", "lit", "lockout", "lock_tilt",
-                                                         "lock_alt", "dec_tilt", "dec_alt", "t_bo1")}))
+                                                         "lock_alt", "dec_tilt", "dec_alt", "t_bo1", "decision_time_s")}))
             if (i + 1) % 25 == 0:
                 print(f"  {i + 1}/{a.n}", flush=True)
     if a.csv:

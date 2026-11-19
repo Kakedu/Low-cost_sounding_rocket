@@ -1,0 +1,29 @@
+listing,section,title,source_path,printed_source_lines,scope,printed_page,physical_pdf_page,source_sha256
+G.1,G.1,Complete single-stage vehicle model,aircraft/myrocket/myrocket.xml,1-666,complete file,89,94,490444d3490caaae120bd81bb8da8c8c38395201ff32423d53917a3373d69bb0
+G.2,G.1,Complete single-stage initial conditions,aircraft/myrocket/reset.xml,1-14,complete file,100,105,bab1ee5bddb92266599429547598210dcbf12374701da6ded108d9524fcf9539
+G.3,G.1,Complete nominal launch and recovery script,scripts/launch.xml,1-86,complete file,100,105,663ab351071e43b16cf1e775e0be5e8afa17c15597370fc8097acbf7e2cc2936
+G.4,G.1,Complete direct-thrust definition,engine/direct.xml,1-4,complete file,102,107,246b69d6edc7acfca84395ba5f53b5d7e03409d5ebcf7c89b2c369907a703b24
+G.5,G.2,Complete RASP motor input,M1670.eng,1-16,complete file,103,108,a18a3ae712108760c5fdbf5c5ddaefe50bb6a429d75bc5ab4bcf7ce7716548d8
+G.6,G.2,Complete motor conversion functions,motor_model.py,1-137,complete file,103,108,e9d566135a0ff66464acc45ecd56c68dca0dc5a544765f6e0f9ffc996d0caad2
+G.7,G.2,Complete motor-builder command line,make_motor.py,1-32,complete file,106,111,533809aa9f92b5caff00bb04ecfa0898b1a658274f4f0a009ad7fa20a8233006
+G.8,G.2,Generated engine header only,engine/M1670.xml,1-9,selected source ranges,107,112,0160cd7dd8e647791d6323b3d818fa7ff86d99bbbc79e9690d2ee4292f829dc2
+G.9,G.3,Attitude estimate and vertical projection,kf/attitude_sensor.py,1-57,complete file,108,113,696783b128f9276d6fa8b6600b2ec895c236fa8ce41ffd959c49f2dff028b340
+G.10,G.3,Pressure and density model used by the filter,atmosphere_model.py,1-24,complete file,109,114,bf26ec9195d0f353b3277dae97684f67b774cfa869e9a66547bb7b0cf9483129
+G.11,G.3,Complete three-state and four-state filters,kf/kf_estimator.py,1-211,complete file,109,114,0e6a33af646e763a16413baf2a98bbc3669f54f408ac8e91dc106bbf21e19780
+G.12,G.3,Complete sensor and flight-computer loop,sil.py,1-328,complete file,113,118,cad0e80b7bc0b611869082be8d558ce9f44c5a1e4e27779e558c0e67b09f3230
+G.13,G.4,Complete two-stage vehicle model,aircraft/myrocket2/myrocket2.xml,1-973,complete file,119,124,49392f1a9b3161aea26bb00e9ae42a7513595f8e1fcbf00d4e598050b2a96d2e
+G.14,G.4,Complete two-stage initial conditions,aircraft/myrocket2/reset.xml,1-14,complete file,135,140,a6d5e79ff0312edc13f340299cefe066948021ed9468e9141d4e2e55532290db
+G.15,G.4,Shared flight integration checks,flight_checks.py,1-11,complete file,135,140,4ec4baf3d4e1ab987232e9b1e73af9d0316cf5bf69c3c2636431590270c109d6
+G.16,G.4,Complete staging study driver,staging_seq.py,1-179,complete file,136,141,7ec01cae032a8a7b8b3bf2ae8139854247ab21cdf334aee3a9f847e07cbcd965
+G.17,G.5,Input draws and their transfer into XML and flight results,sweep.py,1-453; 929-1034; 1254-1263,selected source ranges,140,145,3cd7afe70c160dac07175d0a86ea35b600e81aafc5a9994b59c8bf35a6b417df
+G.18,G.5,Complete control result calculations,control_postprocess.py,1-218,complete file,149,154,4e079292058af26cd189663524377c4cdbf72856086c7aca51a0d3f5e19ec80a
+G.19,G.5,Complete gyro-error and timer calculations,staging_post.py,1-96,complete file,154,159,8eceae1f5fc12ec63960f256ba999521e4a288e0e5d18e2d3f2c263cb6dcf983
+G.20,G.6,Independent point-mass inputs and integration functions,crosscheck.py,1-215,selected source ranges,157,162,3c689a7d9df86426175a895da5adb3499850004e5d6cc0de45504d6dce95febe
+G.21,G.6,Prometheus input preparation — prefix extract,val/build_prometheus.py,1-122,selected source ranges,160,165,bc9bb1ed164d1cca49ed70175d5ef54b08d8d7980b716166effd9660da87292d
+G.22,G.6,Cavour input preparation — prefix extract,val/build_cavour.py,1-130,selected source ranges,163,168,968ffd4d24c59d6c9e505b79c341ccc7043d1e6f5a06164c2d1337182d4deb2f
+G.23,G.6,Complete pressure-height observation helper,val/validation_atmosphere.py,1-19,complete file,165,170,6ff6b8e8f40f00667ff0a28c2166e5d462d17cb33b803bb47be0c8a2f628305a
+G.24,G.6,Complete flight-informed temperature calculation,val/flight_temperature.py,1-48,complete file,166,171,4ebb58b674d538fe0425cda8f58716d74ba28fb510e1a0fc4c9c706580ad4909
+G.25,G.6,Complete Prometheus GPS and barometric comparison,val/gps_check.py,1-108,complete file,167,172,f5767cf0909f44f9322d52d9b23b2866440f41ada27c2ca54abc2069e123c5f0
+G.26,G.6,Complete Cavour barometric comparison,val/cavour_check.py,1-69,complete file,169,174,47a05d344506e055cab288a3f7ce30a56120085540e63f1a362fea3a3cb0a833
+G.27,G.7,Brake and fin load calculations,loads.py,1-107,complete file,171,176,eef1e01e05e137a8c30c3aff65e83f417ff65051b4b5fc12a4875a5847652a8f
+G.28,G.7,Complete brake-flap plate and beam calculations,flap_fea.py,1-116,complete file,173,178,88f194c190ee81a416142a7aaaab984bbcfc623b876e4a26da8b2c2539d5f56a

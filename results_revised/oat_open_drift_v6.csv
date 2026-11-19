@@ -1,0 +1,27 @@
+parameter,low,high,range,pct_of_base,per_sigma,baseline,metric,loop,description
+gust,0.000,2059.621,2059.621,1528.5055,,134.747,drift,open,"discrete gust at t=2.5 s, fps (0 / 40, not +/-10%)"
+wind,0.000,888.203,888.203,659.1617,,134.747,drift,open,"crosswind, fps (0 / 30, not +/-10%)"
+launch_elev,132.978,-118.971,251.949,186.9786,,134.747,drift,open,"launch elevation angle, deg (88 / 89.9, not +/-10%)"
+cg_shift,36.474,-41.424,77.898,57.8101,,134.747,drift,open,dry centre of gravity station
+isp,-18.814,18.620,37.434,27.7809,4.679,134.747,drift,open,"specific impulse (thrust curve kept, propellant burns slower: impulse and burn time scale)"
+prop_mass,-12.095,9.864,21.959,16.2967,,134.747,drift,open,independent propellant-loading perturbation (tank and mass-indexed curve scale together; fixed Isp)
+cd0,5.418,-4.277,9.695,7.1950,-9.695,134.747,drift,open,zero-incidence drag coefficient (whole Mach table)
+dry_mass,3.424,-4.842,8.266,6.1347,-0.179,134.747,drift,open,dry mass
+mdot,2.401,-1.017,3.417,2.5360,,134.747,drift,open,"thrust level at fixed isp (flow scales with it, burn shortens, impulse unchanged)"
+cp_x,-1.394,1.269,2.663,1.9761,0.666,134.747,drift,open,centre of pressure station (drives static margin)
+drogue_cda,0.947,-0.816,1.762,1.3079,-0.881,134.747,drift,open,"drogue parachute CdA (assumed sizing, ~75 fps descent)"
+payload,-0.684,0.677,1.361,1.0104,,134.747,drift,open,payload mass
+cn_alpha,-0.171,0.157,0.327,0.2430,0.164,134.747,drift,open,normal-force slope CNalpha (lift and side scaled together)
+pitch_damp,0.079,-0.078,0.157,0.1165,,134.747,drift,open,pitch damping derivative
+iyy,0.388,0.460,0.072,0.0534,,134.747,drift,open,transverse moment of inertia (Iyy and Izz scaled together)
+main_cda,0.760,0.733,0.027,0.0202,-0.014,134.747,drift,open,"main parachute CdA (assumed sizing, ~20 fps descent)"
+yaw_damp,0.000,-0.000,0.001,0.0006,,134.747,drift,open,yaw damping derivative (the axis a crosswind actually excites)
+roll_damp,0.000,-0.000,0.000,0.0000,,134.747,drift,open,roll damping derivative
+airbrake_dcd,0.000,0.000,0.000,0.0000,,134.747,drift,open,air-brake drag increment at full deployment
+launch_az,0.000,0.000,0.000,0.0000,,134.747,drift,open,"launch azimuth, deg (Monte Carlo only)"
+rail_travel,0.000,0.000,0.000,0.0000,,134.747,drift,open,"guided rail travel, ft (absolute; anglesweep.py rail variant, not OAT)"
+act_time,0.000,0.000,0.000,0.0000,,134.747,drift,open,"actuator travel time, stowed to fully deployed"
+gate_alt,0.000,0.000,0.000,0.0000,,134.747,drift,open,minimum altitude before the brake is allowed to act
+kp,0.000,0.000,0.000,0.0000,,134.747,drift,open,proportional gain
+target,0.000,0.000,0.000,0.0000,,134.747,drift,open,"target apogee, ft (absolute; used by the margin curve, not OAT)"
+cd_est,0.000,0.000,0.000,0.0000,,134.747,drift,open,"Cd the on-board estimator assumes (a wrong belief, not a real change)"

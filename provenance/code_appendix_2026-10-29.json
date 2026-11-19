@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-29",
+  "advisor_review_date": "28.10.2026",
+  "previous_complete_archive_sha256": "9cc4c6802f6b395185a683e43b7baf0e88788314d29ea2f5c2bca2b5fbc47df9",
+  "source_thesis_docx_sha256": "a29ff3bac298573a992954b775ac92282c436e118829592e60163dcbd20e1a85",
+  "thesis": {
+    "docx": "thesis/Haoran_Du.docx",
+    "docx_sha256": "f4b77368c10273e089094be397f989fc0fc999df04daf2fdf03ce174378d90ae",
+    "pdf": "thesis/Haoran_Du.pdf",
+    "pdf_sha256": "310c597c314fafe2efcd0e56e39e04e714740203a20e0e34e49f4097d25f91a0"
+  },
+  "printed_code": {
+    "appendix": "G",
+    "index": "thesis/CODE_LISTINGS.csv",
+    "listings": 28,
+    "logical_source_lines": 4578,
+    "complete_files": 23,
+    "selected_excerpts": 5,
+    "includes_original_source_line_numbers": true
+  },
+  "pages": {
+    "body": 68,
+    "total_pdf": 181,
+    "code_appendix_starts_physical_page": 93
+  },
+  "new_flight_simulations": 0,
+  "new_Monte_Carlo_simulations": 0,
+  "model_source_files_changed": false,
+  "scientific_result_files_changed": false,
+  "source_sha256": {
+    "aircraft/myrocket/myrocket.xml": "490444d3490caaae120bd81bb8da8c8c38395201ff32423d53917a3373d69bb0",
+    "aircraft/myrocket/reset.xml": "bab1ee5bddb92266599429547598210dcbf12374701da6ded108d9524fcf9539",
+    "scripts/launch.xml": "663ab351071e43b16cf1e775e0be5e8afa17c15597370fc8097acbf7e2cc2936",
+    "engine/direct.xml": "246b69d6edc7acfca84395ba5f53b5d7e03409d5ebcf7c89b2c369907a703b24",
+    "M1670.eng": "a18a3ae712108760c5fdbf5c5ddaefe50bb6a429d75bc5ab4bcf7ce7716548d8",
+    "motor_model.py": "e9d566135a0ff66464acc45ecd56c68dca0dc5a544765f6e0f9ffc996d0caad2",
+    "make_motor.py": "533809aa9f92b5caff00bb04ecfa0898b1a658274f4f0a009ad7fa20a8233006",
+    "engine/M1670.xml": "0160cd7dd8e647791d6323b3d818fa7ff86d99bbbc79e9690d2ee4292f829dc2",
+    "kf/attitude_sensor.py": "696783b128f9276d6fa8b6600b2ec895c236fa8ce41ffd959c49f2dff028b340",
+    "atmosphere_model.py": "bf26ec9195d0f353b3277dae97684f67b774cfa869e9a66547bb7b0cf9483129",
+    "kf/kf_estimator.py": "0e6a33af646e763a16413baf2a98bbc3669f54f408ac8e91dc106bbf21e19780",
+    "sil.py": "cad0e80b7bc0b611869082be8d558ce9f44c5a1e4e27779e558c0e67b09f3230",
+    "aircraft/myrocket2/myrocket2.xml": "49392f1a9b3161aea26bb00e9ae42a7513595f8e1fcbf00d4e598050b2a96d2e",
+    "aircraft/myrocket2/reset.xml": "a6d5e79ff0312edc13f340299cefe066948021ed9468e9141d4e2e55532290db",
+    "flight_checks.py": "4ec4baf3d4e1ab987232e9b1e73af9d0316cf5bf69c3c2636431590270c109d6",
+    "staging_seq.py": "7ec01cae032a8a7b8b3bf2ae8139854247ab21cdf334aee3a9f847e07cbcd965",
+    "sweep.py": "3cd7afe70c160dac07175d0a86ea35b600e81aafc5a9994b59c8bf35a6b417df",
+    "control_postprocess.py": "4e079292058af26cd189663524377c4cdbf72856086c7aca51a0d3f5e19ec80a",
+    "staging_post.py": "8eceae1f5fc12ec63960f256ba999521e4a288e0e5d18e2d3f2c263cb6dcf983",
+    "crosscheck.py": "3c689a7d9df86426175a895da5adb3499850004e5d6cc0de45504d6dce95febe",
+    "val/build_prometheus.py": "bc9bb1ed164d1cca49ed70175d5ef54b08d8d7980b716166effd9660da87292d",
+    "val/build_cavour.py": "968ffd4d24c59d6c9e505b79c341ccc7043d1e6f5a06164c2d1337182d4deb2f",
+    "val/validation_atmosphere.py": "6ff6b8e8f40f00667ff0a28c2166e5d462d17cb33b803bb47be0c8a2f628305a",
+    "val/flight_temperature.py": "4ebb58b674d538fe0425cda8f58716d74ba28fb510e1a0fc4c9c706580ad4909",
+    "val/gps_check.py": "f5767cf0909f44f9322d52d9b23b2866440f41ada27c2ca54abc2069e123c5f0",
+    "val/cavour_check.py": "47a05d344506e055cab288a3f7ce30a56120085540e63f1a362fea3a3cb0a833",
+    "loads.py": "eef1e01e05e137a8c30c3aff65e83f417ff65051b4b5fc12a4875a5847652a8f",
+    "flap_fea.py": "88f194c190ee81a416142a7aaaab984bbcfc623b876e4a26da8b2c2539d5f56a"
+  }
+}

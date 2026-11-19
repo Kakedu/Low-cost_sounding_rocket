@@ -1,0 +1,96 @@
+{
+ "geometry_mm": [
+  60.0,
+  55.0,
+  3.0
+ ],
+ "material": "6061-T6",
+ "load_N": 185.93678710921495,
+ "pressure_kPa": 56.344480942186344,
+ "meshes": [
+  {
+   "mesh": "6x6x1",
+   "dofs": 1521,
+   "w_max_mm": 0.3772397717481652,
+   "vm_max_MPa": 34.89027762880134,
+   "vm_max_away_MPa": 32.14249704210809
+  },
+  {
+   "mesh": "12x11x2",
+   "dofs": 8625,
+   "w_max_mm": 0.38248782444498824,
+   "vm_max_MPa": 43.43796923477424,
+   "vm_max_away_MPa": 35.5843570121432
+  },
+  {
+   "mesh": "24x22x3",
+   "dofs": 46305,
+   "w_max_mm": 0.3848168496609004,
+   "vm_max_MPa": 47.313361344395055,
+   "vm_max_away_MPa": 38.341884377143884
+  },
+  {
+   "mesh": "30x28x4",
+   "dofs": 93879,
+   "w_max_mm": 0.38524951840724175,
+   "vm_max_MPa": 48.722042128595135,
+   "vm_max_away_MPa": 39.36713965436263,
+   "f_Hz": [
+    843.4359683453255,
+    1876.708866622419,
+    4945.100557740568
+   ]
+  }
+ ],
+ "beam_theory": {
+  "sigma_root_MPa": 56.81401828337124,
+  "w_tip_mm": 0.41572908879341547,
+  "f1_Hz": 809.2859130698114
+ },
+ "sf_yield_beam": 4.857955982331596,
+ "sf_yield_fe_away": 7.010923384915366,
+ "dynamics": {
+  "I_hinge_kgm2": 2.6952749999999997e-05,
+  "hinge_mode_Hz": {
+   "k=1 N.m/rad": 30.656219016491605,
+   "k=10 N.m/rad": 96.94347654108044,
+   "k=100 N.m/rad": 306.56219016491605,
+   "k=1000 N.m/rad": 969.4347654108044
+  },
+  "k_for_2x_f1_Nm_per_rad": 3027.7990348870344,
+  "shedding_Hz": {
+   "V=100 m/s": {
+    "h=10 mm": 1460.0,
+    "h=25 mm": 584.0,
+    "h=55 mm": 265.45454545454544
+   },
+   "V=200 m/s": {
+    "h=10 mm": 2920.0,
+    "h=25 mm": 1168.0,
+    "h=55 mm": 530.9090909090909
+   },
+   "V=270 m/s": {
+    "h=10 mm": 3941.9999999999995,
+    "h=25 mm": 1576.7999999999997,
+    "h=55 mm": 716.7272727272726
+   }
+  },
+  "hinge_overlap_shedding": {
+   "k=1 N.m/rad": false,
+   "k=10 N.m/rad": false,
+   "k=100 N.m/rad": true,
+   "k=1000 N.m/rad": true
+  },
+  "limitation": "Mode and shedding overlap is a screening calculation; no aeroelastic instability or complete hinge/actuator assembly certification"
+ },
+ "load_factor": 2.0999999999999996,
+ "factors": {
+  "dcd_2sd": 1.4,
+  "ultimate": 1.5
+ },
+ "sf_yield_factored_beam": 2.3133123725388556,
+ "margin_of_safety_beam": 1.3133123725388556,
+ "stress_limitation": "Beam nominal root stress is a section-resultant comparison, not an upper bound on the FE clamp-corner singularity",
+ "thickness_for_yield_sf2_at_factored_load_mm": 2.7894534106369093,
+ "thickness_screening_limitation": "Uniform-pressure beam stress scales as inverse thickness squared; this preliminary thickness estimate does not verify the hinge, mounting, actuator, fatigue or aeroelastic response"
+}

@@ -1,0 +1,8 @@
+case,const_error_ft,dragform_error_ft
+nominal,252.8,8.3
+Cd +10%,76.9,-41.3
+Cd -10%,389.1,30.9
+Isp +5%,365.5,9.1
+Isp -5%,-230.2,-230.2
+dry mass +5%,-43.7,-43.7
+dry mass -5%,284.0,8.5

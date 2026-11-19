@@ -1,0 +1,57 @@
+{
+ "t_exit": 0.384099999999974,
+ "v_exit": 25.190236571570754,
+ "dT": 16.737700306079773,
+ "isp": 206.8105991917274,
+ "impulse": 7579.0813105,
+ "cmq": -447.633412145752,
+ "motor": {
+  "output": "C:\\Users\\Haoran Du\\Documents\\Codex\\2026-10-11\\ban\\work\\revision2_project\\rq2_revision2\\prometheus_temperature\\runs\\flight_geometric\\model\\engine\\M1520.xml",
+  "impulse_Ns": 7579.081310500001,
+  "source_impulse_Ns": 7579.081310500001,
+  "prop_kg": 3.737,
+  "prop_lb": 8.238674737848875,
+  "burned_kg": 0.2920277742638369,
+  "remaining_prop_lb": 7.594863700498672,
+  "isp_s": 206.81059919172748,
+  "isp_scale": 1.0,
+  "start_time_s": 0.384099999999974,
+  "sample_dt_s": 0.002,
+  "rows": 2265,
+  "burn_end_s": 4.897,
+  "initial_regularized_thrust_N": 1661.8761608391608,
+  "terminal_regularized_thrust_N": 0.6368324380309888
+ },
+ "input_file": "prometheus_inputs_2022.json",
+ "weather": {
+  "station": "USM00072364",
+  "station_latitude": 31.8728,
+  "station_longitude": -106.698,
+  "station_pad_distance_m": 120287.17600983239,
+  "bracketing_times_utc": [
+   "2022-06-24 12:00",
+   "2022-06-25 00:00"
+  ],
+  "nominal_hour_weight": 0.2736111111111111,
+  "fit_dT_K": 19.20000000000769,
+  "source_url": "https://www.ncei.noaa.gov/pub/data/igra/data/data-por/USM00072364-data.txt.zip",
+  "excerpt_sha256": "ca64b7dfb59f7a2c075b5477c6d5c7ff05703402db0f1019aed55f5d84b2f2bc",
+  "profiles": {
+   "2022062412": {
+    "thermodynamic_levels": 99,
+    "wind_levels": 181,
+    "release_time_HHMM_UTC": "1106"
+   },
+   "2022062500": {
+    "thermodynamic_levels": 95,
+    "wind_levels": 185,
+    "release_time_HHMM_UTC": "2313"
+   }
+  },
+  "processing": "Separate valid thermodynamic/wind masks; logarithmic vertical pressure interpolation; meteorological FROM-wind converted to east/north; nominal-hour interpolation",
+  "limitation": "Regional proxy about 120km away, not launch-site weather; whole-profile nominal-time interpolation ignores balloon ascent time; spatial and profile-shape representativeness unquantified"
+ },
+ "cg_dry_in": 54.88688751503756,
+ "x_cp_in": 64.95766674367104,
+ "static_margin_cal": 1.8310497800755692
+}

@@ -2,22 +2,41 @@
 
 import argparse
 import csv
+import json
 import math
 import os
 import random
 import statistics as st
+from pathlib import Path
+import control_postprocess as checked_statistics
 
 TOLS = (50.0, 75.0, 100.0)
 TOL = 100.0
 TARGET = 10000.0
-D = "."
+D = str(Path(__file__).resolve().parent/'results_revised')
+
+def nominal_open_apogee(directory):
+    path=Path(directory)/'nominal_open_v6.csv'
+    with path.open(encoding='utf-8') as file:
+        data=[{k.strip():v for k,v in r.items()} for r in csv.DictReader(file)]
+    values=[float(r['Altitude AGL (ft)']) for r in data]
+    if not values or not all(math.isfinite(v) for v in values):raise ValueError(f'Invalid nominal open-loop trace: {path}')
+    return max(values)
 
 
 def load(name):
     p = os.path.join(D, name)
     if not os.path.exists(p):
         return None
-    return {int(r["sample"]): r for r in csv.DictReader(open(p))}
+    protocol = json.loads((Path(__file__).resolve().parent / 'study_protocol.json').read_text(encoding='utf-8'))['jobs']
+    expected_n = next((job['n'] for job in protocol if job['name'] == name), None)
+    records = checked_statistics.rows(Path(p), expected_n)
+    values = {int(r["sample"]): r for r in records}
+    if len(values) != len(records):
+        raise ValueError(f"Duplicate sample IDs in {p}")
+    if set(values) != set(range(len(values))):
+        raise ValueError(f"Missing/noncontiguous sample IDs in {p}")
+    return values
 
 
 def wilson(k, n, z=1.96):
@@ -36,13 +55,17 @@ METRIC = "geo"
 def ap(r):
     a = float(r["apogee"])
     if METRIC == "baro":
-        a *= 288.15 / (288.15 + float(r.get("dT_K", 0.0) or 0.0))
+        h_m = a * 0.3048
+        H_m = h_m * 6356766.0 / (6356766.0 + h_m)
+        a = H_m / 0.3048 * 288.15 / (288.15 + float(r.get("dT_K", 0.0) or 0.0))
     return a
 
 
 def stats(rows, target=TARGET, tol=TOL):
     a = [ap(r) for r in rows.values()]
     n = len(a)
+    if n < 2 or not all(math.isfinite(value) for value in a):
+        raise ValueError('Incomplete or nonfinite apogee statistics')
     k_in = sum(abs(x - target) <= tol for x in a)
     k_lo = sum(x < target - tol for x in a)
     k_hi = sum(x > target + tol for x in a)
@@ -58,10 +81,27 @@ def fmt(s):
 
 
 def common(*sets):
-    keys = set(sets[0])
-    for s in sets[1:]:
-        keys &= set(s)
-    return sorted(keys)
+    first = [sets[0][key] for key in sorted(sets[0])]
+    n = len(first)
+    for data in sets[1:]:
+        ordered = [data[key] for key in sorted(data)]
+        n = min(n, checked_statistics.validate_pair(first, ordered))
+    return list(range(n))
+
+
+def metric_mean(rows, key):
+    """Report explicitly undefined gate metrics; reject bad ascent metrics."""
+    values = []
+    for sample, row in rows.items():
+        value = float(row[key])
+        if math.isfinite(value):
+            values.append(value)
+        elif not (key == 'cd_rms' and int(row.get('gate_sensor_samples', -1)) == 0):
+            raise ValueError(f'Nonfinite applicable {key}, sample {sample}')
+    if not values:
+        return f'undefined (0/{len(rows)} gate metrics)'
+    result = f'{st.mean(values):.3f}' if key == 'cd_rms' else f'{st.mean(values):.2f}'
+    return result + (f' ({len(values)}/{len(rows)} defined)' if len(values) != len(rows) else '')
 
 
 def mcnemar(a, b, target=TARGET, tol=TOL):
@@ -83,7 +123,7 @@ def paired_abs_diff(a, b, target=TARGET, n_boot=2000, seed=7):
     d = [abs(ap(a[k]) - target) - abs(ap(b[k]) - target) for k in ks]
     rng = random.Random(seed)
     bs = sorted(st.median(rng.choice(d) for _ in d) for _ in range(n_boot))
-    return st.median(d), bs[int(0.025 * n_boot)], bs[int(0.975 * n_boot) - 1]
+    return st.median(d), *__import__("numpy").percentile(bs, [2.5, 97.5], method="linear")
 
 
 def budget(o, cases, tol=TOL):
@@ -122,14 +162,16 @@ def src(rows, inputs):
 def main():
     global D
     ap_ = argparse.ArgumentParser()
-    ap_.add_argument("--dir", default=".")
-    ap_.add_argument("--open-nominal", type=float, default=10554.5, dest="open_nominal",
+    ap_.add_argument("--dir", default=D)
+    ap_.add_argument("--open-nominal", type=float, default=None, dest="open_nominal",
                      help="nominal open-loop apogee, ft (sweep.py nominal --open)")
     a = ap_.parse_args()
     D = a.dir
+    if a.open_nominal is None:a.open_nominal=nominal_open_apogee(D)
     o = load("mc_open_v6.csv")
     if o is None:
         raise SystemExit("mc_open_v6.csv not found in " + D)
+    print("CD labels specify the apogee-predictor reference. All SIL EKF variants still estimate their own CD state; design/sample references are not imposed on that state.")
     cases = {}
     for tag, f in (("XML, true state, nominal Cd", "mc_closed_v6.csv"),
                    ("XML, true state, oracle Cd", "mc_oracle_v6.csv"),
@@ -161,9 +203,9 @@ def report(o, cases, a):
         print(f"  {name:34s} {fmt(stats(rows))}")
         r0 = next(iter(rows.values()))
         if "h_rms_m" in r0:
-            g = lambda k: st.mean(float(r[k]) for r in rows.values() if r[k] not in ("", "nan"))
-            print(f"  {'':34s} mean rms errors: h {g('h_rms_m'):.2f} m, v {g('v_rms_ms'):.2f} m/s, "
-                  f"Cd {g('cd_rms'):.3f}")
+            print(f"  {'':34s} mean rms errors: h {metric_mean(rows, 'h_rms_m')} m, v {metric_mean(rows, 'v_rms_ms')} m/s, "
+                  f"Cd equivalent Mach-dependent drag reference {metric_mean(rows, 'cd_rms')}; "
+                  f"height/velocity RMS over full ascent")
 
     print("\nTOLERANCE (P(hit) at +/-50 / 75 / 100 ft)")
     for name, rows in [("open loop", o)] + list(cases.items()):
@@ -192,14 +234,14 @@ def report(o, cases, a):
                   f"  median d|err| {md:+.0f} ft [{lo:+.0f}, {hi:+.0f}]")
 
     print("\nSENSOR ERRORS ONE AT A TIME (SIL 3-state KF, estimated Cd; flights 0-299)")
-    ideal = cases.get("SIL KF3 ideal sensors, est Cd")
-    for e in ("port", "scale", "quant", "lat", "temp"):
+    ideal = load("mc_sil_kf_est_basenoise_v6.csv")
+    for e in ("port", "scale", "quant", "lat", "temp", "att"):
         r = load(f"mc_sil_kf_est_only_{e}_v6.csv")
         if r:
             line = f"  only {e:6s} {fmt(stats(r))}"
             if ideal:
                 b10, b01, p = mcnemar(r, ideal)
-                line += f"  vs ideal: hit only here {b10}, only ideal {b01}, p {p:.3g}"
+                line += f"  vs shared baseline noise/bias: hit only here {b10}, only baseline {b01}, p {p:.3g}"
             print(line)
     for lab, f in (("all, q-aware KF", "mc_sil_kf_est_qaware_v6.csv"),):
         r = load(f)
@@ -244,7 +286,7 @@ def rest(o, cases, a):
             print(f"  {r['input']:12s} mu* {mus:7.0f} [{float(r['ci_lo']):6.0f}, {float(r['ci_hi']):6.0f}]"
                   f"  mu {float(r['mu']):7.0f}  sigma {float(r['sigma']):7.0f}")
 
-    inputs = ["prop_mass", "cd0", "cn_alpha", "cp_x", "dry_mass", "launch_elev", "wind_fps",
+    inputs = ["isp", "cd0", "cn_alpha", "cp_x", "dry_mass", "launch_elev", "wind_fps",
               "airbrake_dcd", "dT_K"]
     for name, rows in (("open loop", o), ("XML closed", cases.get("XML, true state, nominal Cd")),
                        ("SIL KF4 est", cases.get("SIL KF4, est Cd"))):

@@ -1,0 +1,19 @@
+{
+  "variables": {
+    "SIM_DT": 0.001
+  },
+  "logs": [
+    {
+      "driver": "build_cavour.py",
+      "exit": 0,
+      "stdout": "{\n \"motor\": {\n  \"output\": \"C:\\\\Users\\\\Haoran Du\\\\AppData\\\\Local\\\\Temp\\\\validation_cavour_9y9ti2gv\\\\jsb\\\\engine\\\\L995.xml\",\n  \"impulse_Ns\": 3617.98,\n  \"source_impulse_Ns\": 3617.98,\n  \"prop_kg\": 1.996,\n  \"prop_lb\": 4.400426753210156,\n  \"burned_kg\": 0.30079987906996825,\n  \"remaining_prop_lb\": 3.7372765351631285,\n  \"isp_s\": 184.8353138391726,\n  \"isp_scale\": 1.0,\n  \"start_time_s\": 0.5141999999999597,\n  \"sample_dt_s\": 0.002,\n  \"rows\": 1651,\n  \"burn_end_s\": 3.8,\n  \"initial_regularized_thrust_N\": 1214.658153846154,\n  \"terminal_regularized_thrust_N\": 0.2011559912801589\n },\n \"t_exit\": 0.5141999999999597,\n \"v_exit\": 49.22734326107732,\n \"dT\": 7.500000000000249,\n \"dT_reanalysis\": 7.500000000000249,\n \"T_pad_reanalysis_C\": 23.837698407669166,\n \"isp\": 184.83531383917258,\n \"impulse\": 3617.98,\n \"m_prop\": 1.996,\n \"cmq\": -2454.980753901015,\n \"cna0\": 10.504949247965664,\n \"cp_sub_from_tail\": 0.5485377349420639,\n \"static_margin_cal\": 6.258291010172463,\n \"static_margin_launch_cal\": 4.379943707939698,\n \"weather\": [\n  \"2023-10-13 13:00:00\",\n  \"2023-10-13 14:00:00\"\n ],\n \"pad_m\": 150.0\n}\n",
+      "stderr": ""
+    },
+    {
+      "driver": "run_cavour.py",
+      "exit": 0,
+      "stdout": "\n\n     JSBSim Flight Dynamics Model v1.3.1 [GitHub build 1837/commit 3b25f25e49b42d0489c04ac805674fc1450ca579] May 17 2026 14:28:34\n            [JSBSim-ML v2.0]\n\nJSBSim startup beginning ...\n\nCompleted cavour: apogee 2801.2609741215942 m; burnout 3.7961999999997094 s; terminal {'t_s': 22.488200000003832, 'h_agl_ft': 9190.491404146878, 'v_vertical_fps': -0.03278906939589277, 'terminated': 1.0, 'fuel_lb': 0.0}\n",
+      "stderr": ""
+    }
+  ]
+}

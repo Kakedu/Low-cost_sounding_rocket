@@ -1,0 +1,17 @@
+{
+  "job": {
+    "name": "mc_closed_t9600_v6.csv",
+    "n": 300,
+    "seed": 1,
+    "kind": "xml",
+    "open": false,
+    "oracle": false,
+    "target": 9600
+  },
+  "worker": 79,
+  "start_unix": 1791725826.1588876,
+  "status": "SUCCESS",
+  "completed": 300,
+  "elapsed": 1504.8413333892822,
+  "sha256": "93155d081f63e90412b9e2f957c878c8e6e280620f22d3449f6f9f0738b652c4"
+}

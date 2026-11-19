@@ -1,0 +1,339 @@
+{
+  "status": "PASS",
+  "cases": 8,
+  "compiled_force_components": 48,
+  "max_coefficient_error": 1.9984014443252818e-15,
+  "tolerance": 1e-10,
+  "xml_sha256": {
+    "myrocket": "5e1c037aa3dddbef8f63bd2502bd0e82a8f2c8a1ee7cc3891e8be48adea22797",
+    "myrocket2": "fe0f7222cfb44ca8d289ec1d417a4a29a5fc44ec9fc9827237ecf05b5146682f",
+    "myrocket_cluster": "bae2d27ec11f0183475edf6eaad2b42d87e342c09191933bbe8d1d719e718695",
+    "myrocket_series": "24907fb8c23c8b1b67c7c825df061a54b6ba4a16b27998e6498a288252555e6b"
+  },
+  "engine_sha256": "0160cd7dd8e647791d6323b3d818fa7ff86d99bbbc79e9690d2ee4292f829dc2",
+  "source_sha256": "5f7d77ddc06f7126ba460f207ca7342c57964f76a1bc4a3bb130af55b2e192c6",
+  "xml_hash_evidence_checked": true,
+  "fixture": "1000 ft, 300 fps; alpha or beta \u00b11\u00b0/\u00b115\u00b0; private rail release; three 1 ms steps",
+  "values": [
+    {
+      "angle": "alpha",
+      "input_deg": -15,
+      "alpha_rad": -0.26173875152486414,
+      "beta_rad": -3.277050568188472e-07,
+      "mach": 0.269540960778993,
+      "qS_lbf": 8.770113151762635,
+      "raw_force_lbf": {
+        "Lift_alpha": -9.037861712500577,
+        "Side_beta": 1.1849501021437426e-05,
+        "Lift_crossflow": -14.34713309207538,
+        "Side_crossflow": 2.3822355542180638e-11,
+        "Drag_crossflow": 3.843370324093381,
+        "Drag_beta": 7.806706376509365e-18
+      },
+      "normalized": {
+        "Lift_alpha": -1.0305296586377715,
+        "Side_beta": 1.3511229349482098e-06,
+        "Lift_crossflow": -1.6359119710093895,
+        "Side_crossflow": 2.716311081732483e-12,
+        "Drag_crossflow": 0.43823497571646874,
+        "Drag_beta": 8.901488773768395e-19
+      },
+      "expected": {
+        "Lift_alpha": -1.0305296586377715,
+        "Side_beta": 1.35112293494821e-06,
+        "Lift_crossflow": -1.6359119710093877,
+        "Side_crossflow": 2.7163110817324807e-12,
+        "Drag_crossflow": 0.43823497571646824,
+        "Drag_beta": 8.901488773768387e-19
+      },
+      "errors": {
+        "Lift_alpha": 0.0,
+        "Side_beta": 2.117582368135751e-22,
+        "Lift_crossflow": 1.7763568394002505e-15,
+        "Side_crossflow": 2.4233807008389483e-27,
+        "Drag_crossflow": 4.996003610813204e-16,
+        "Drag_beta": 7.703719777548943e-34
+      }
+    },
+    {
+      "angle": "alpha",
+      "input_deg": -1,
+      "alpha_rad": -0.017450060694374145,
+      "beta_rad": -3.881067051561301e-07,
+      "mach": 0.2695444442209922,
+      "qS_lbf": 8.770331306761262,
+      "raw_force_lbf": {
+        "Lift_alpha": -0.6308651107799523,
+        "Side_beta": 1.4033916258199829e-05,
+        "Lift_crossflow": -0.0675325105148581,
+        "Side_crossflow": 3.341423408327227e-11,
+        "Drag_crossflow": 0.00117856603602321,
+        "Drag_beta": 1.2968288295375116e-17
+      },
+      "normalized": {
+        "Lift_alpha": -0.0719317308222556,
+        "Side_beta": 1.6001580518834837e-06,
+        "Lift_crossflow": -0.007700109397554417,
+        "Side_crossflow": 3.809916970583817e-12,
+        "Drag_crossflow": 0.0001343810164975894,
+        "Drag_beta": 1.478654322371784e-18
+      },
+      "expected": {
+        "Lift_alpha": -0.0719317308222556,
+        "Side_beta": 1.6001580518834834e-06,
+        "Lift_crossflow": -0.00770010939755441,
+        "Side_crossflow": 3.8099169705838134e-12,
+        "Drag_crossflow": 0.00013438101649758928,
+        "Drag_beta": 1.4786543223717826e-18
+      },
+      "errors": {
+        "Lift_alpha": 0.0,
+        "Side_beta": 2.117582368135751e-22,
+        "Lift_crossflow": 6.938893903907228e-18,
+        "Side_crossflow": 3.2311742677852644e-27,
+        "Drag_crossflow": 1.3552527156068805e-19,
+        "Drag_beta": 1.3481509610710651e-33
+      }
+    },
+    {
+      "angle": "alpha",
+      "input_deg": 1,
+      "alpha_rad": 0.017459399145511763,
+      "beta_rad": -3.9492161376694436e-07,
+      "mach": 0.2695444876571397,
+      "qS_lbf": 8.77033430830952,
+      "raw_force_lbf": {
+        "Lift_alpha": 0.6312027991445204,
+        "Side_beta": 1.4280347856047775e-05,
+        "Lift_crossflow": 0.06760481506709926,
+        "Side_crossflow": 3.4598014273774965e-11,
+        "Drag_crossflow": 0.0011804593995755975,
+        "Drag_beta": 1.3663503630131696e-17
+      },
+      "normalized": {
+        "Lift_alpha": 0.0719702096813439,
+        "Side_beta": 1.6282558171719577e-06,
+        "Lift_crossflow": 0.007708350980765529,
+        "Side_crossflow": 3.9448911589373295e-12,
+        "Drag_crossflow": 0.0001345968532188291,
+        "Drag_beta": 1.5579227826225626e-18
+      },
+      "expected": {
+        "Lift_alpha": 0.07197020968134389,
+        "Side_beta": 1.6282558171719575e-06,
+        "Lift_crossflow": 0.007708350980765521,
+        "Side_crossflow": 3.9448911589373255e-12,
+        "Drag_crossflow": 0.00013459685321882896,
+        "Drag_beta": 1.557922782622561e-18
+      },
+      "errors": {
+        "Lift_alpha": 1.3877787807814457e-17,
+        "Side_beta": 2.117582368135751e-22,
+        "Lift_crossflow": 7.806255641895632e-18,
+        "Side_crossflow": 4.0389678347315804e-27,
+        "Drag_crossflow": 1.3552527156068805e-19,
+        "Drag_beta": 1.5407439555097887e-33
+      }
+    },
+    {
+      "angle": "alpha",
+      "input_deg": 15,
+      "alpha_rad": 0.2617477713210607,
+      "beta_rad": -4.287571629993422e-07,
+      "mach": 0.2695416045977859,
+      "qS_lbf": 8.77015764184719,
+      "raw_force_lbf": {
+        "Lift_alpha": 9.038190079387773,
+        "Side_beta": 1.550352713486012e-05,
+        "Lift_crossflow": 14.3481373748346,
+        "Side_crossflow": 4.077964083123754e-11,
+        "Drag_crossflow": 3.8437780604262937,
+        "Drag_beta": 1.7484563110934614e-17
+      },
+      "normalized": {
+        "Lift_alpha": 1.0305618722589038,
+        "Side_beta": 1.7677592317023314e-06,
+        "Lift_crossflow": 1.6360181835696814,
+        "Side_crossflow": 4.6498184521399825e-12,
+        "Drag_crossflow": 0.43827924393120815,
+        "Drag_beta": 1.9936429680016536e-18
+      },
+      "expected": {
+        "Lift_alpha": 1.0305618722589038,
+        "Side_beta": 1.7677592317023316e-06,
+        "Lift_crossflow": 1.6360181835696797,
+        "Side_crossflow": 4.649818452139977e-12,
+        "Drag_crossflow": 0.43827924393120776,
+        "Drag_beta": 1.9936429680016513e-18
+      },
+      "errors": {
+        "Lift_alpha": 0.0,
+        "Side_beta": 2.117582368135751e-22,
+        "Lift_crossflow": 1.7763568394002505e-15,
+        "Side_crossflow": 5.6545549686242126e-27,
+        "Drag_crossflow": 3.885780586188048e-16,
+        "Drag_beta": 2.311115933264683e-33
+      }
+    },
+    {
+      "angle": "beta",
+      "input_deg": -15,
+      "alpha_rad": 4.782444214803543e-06,
+      "beta_rad": -0.26174365287600654,
+      "mach": 0.2695412826778346,
+      "qS_lbf": 8.770135396116048,
+      "raw_force_lbf": {
+        "Lift_alpha": 0.00017292904186676214,
+        "Side_beta": 9.038038154279977,
+        "Lift_crossflow": 5.07363643274249e-09,
+        "Side_crossflow": 14.347675654529967,
+        "Drag_crossflow": 2.4264383205970792e-14,
+        "Drag_beta": 3.843591037615036
+      },
+      "normalized": {
+        "Lift_alpha": 1.9717944371000895e-05,
+        "Side_beta": 1.0305471633063468,
+        "Lift_crossflow": 5.785128967324047e-10,
+        "Side_crossflow": 1.635969686498112,
+        "Drag_crossflow": 2.766705656188221e-15,
+        "Drag_beta": 0.43825903067781746
+      },
+      "expected": {
+        "Lift_alpha": 1.9717944371000895e-05,
+        "Side_beta": 1.0305471633063468,
+        "Lift_crossflow": 5.78512896732404e-10,
+        "Side_crossflow": 1.63596968649811,
+        "Drag_crossflow": 2.7667056561882177e-15,
+        "Drag_beta": 0.43825903067781696
+      },
+      "errors": {
+        "Lift_alpha": 0.0,
+        "Side_beta": 0.0,
+        "Lift_crossflow": 6.203854594147708e-25,
+        "Side_crossflow": 1.9984014443252818e-15,
+        "Drag_crossflow": 3.1554436208840472e-30,
+        "Drag_beta": 4.996003610813204e-16
+      }
+    },
+    {
+      "angle": "beta",
+      "input_deg": -1,
+      "alpha_rad": 4.66731700191599e-06,
+      "beta_rad": -0.01745512148440733,
+      "mach": 0.26954446593925724,
+      "qS_lbf": 8.770332807548966,
+      "raw_force_lbf": {
+        "Lift_alpha": 0.0001687699447195015,
+        "Side_beta": 0.6310481052860203,
+        "Lift_crossflow": 4.832411298908299e-09,
+        "Side_crossflow": 0.06757168877495309,
+        "Drag_crossflow": 2.2554395415809407e-14,
+        "Drag_beta": 0.0011795918387517699
+      },
+      "normalized": {
+        "Lift_alpha": 1.9243277127891275e-05,
+        "Side_beta": 0.07195258368563308,
+        "Lift_crossflow": 5.509952022286834e-10,
+        "Side_crossflow": 0.0077045752148415065,
+        "Drag_crossflow": 2.5716692753547464e-15,
+        "Drag_beta": 0.00013449795630747892
+      },
+      "expected": {
+        "Lift_alpha": 1.9243277127891275e-05,
+        "Side_beta": 0.07195258368563308,
+        "Lift_crossflow": 5.509952022286828e-10,
+        "Side_crossflow": 0.007704575214841499,
+        "Drag_crossflow": 2.571669275354744e-15,
+        "Drag_beta": 0.0001344979563074788
+      },
+      "errors": {
+        "Lift_alpha": 0.0,
+        "Side_beta": 0.0,
+        "Lift_crossflow": 5.169878828456423e-25,
+        "Side_crossflow": 7.806255641895632e-18,
+        "Drag_crossflow": 2.3665827156630354e-30,
+        "Drag_beta": 1.0842021724855044e-19
+      }
+    },
+    {
+      "angle": "beta",
+      "input_deg": 1,
+      "alpha_rad": 4.674132949721086e-06,
+      "beta_rad": 0.01745433835587042,
+      "mach": 0.2695444659388797,
+      "qS_lbf": 8.770332807520836,
+      "raw_force_lbf": {
+        "Lift_alpha": 0.00016901640904391714,
+        "Side_beta": -0.6310198046493783,
+        "Lift_crossflow": 4.846535693441073e-09,
+        "Side_crossflow": -0.06756562720758477,
+        "Drag_crossflow": 2.265335217687722e-14,
+        "Drag_beta": 0.0011794330939152184
+      },
+      "normalized": {
+        "Lift_alpha": 1.9271379177193854e-05,
+        "Side_beta": -0.07194935682580472,
+        "Lift_crossflow": 5.526056764100236e-10,
+        "Side_crossflow": -0.0077038840703565,
+        "Drag_crossflow": 2.5829524003298096e-15,
+        "Drag_beta": 0.00013447985610122088
+      },
+      "expected": {
+        "Lift_alpha": 1.9271379177193854e-05,
+        "Side_beta": -0.07194935682580472,
+        "Lift_crossflow": 5.526056764100231e-10,
+        "Side_crossflow": -0.007703884070356493,
+        "Drag_crossflow": 2.5829524003298072e-15,
+        "Drag_beta": 0.00013447985610122074
+      },
+      "errors": {
+        "Lift_alpha": 0.0,
+        "Side_beta": 0.0,
+        "Lift_crossflow": 5.169878828456423e-25,
+        "Side_crossflow": 7.806255641895632e-18,
+        "Drag_crossflow": 2.3665827156630354e-30,
+        "Drag_beta": 1.3552527156068805e-19
+      }
+    },
+    {
+      "angle": "beta",
+      "input_deg": 15,
+      "alpha_rad": 4.8870610600560126e-06,
+      "beta_rad": 0.2617428699749634,
+      "mach": 0.2695412826993549,
+      "qS_lbf": 8.770135397487937,
+      "raw_force_lbf": {
+        "Lift_alpha": 0.00017671189643481114,
+        "Side_beta": -9.038013637772815,
+        "Lift_crossflow": 5.298037745594602e-09,
+        "Side_crossflow": -14.347594804484702,
+        "Drag_crossflow": 2.589183396140845e-14,
+        "Drag_beta": 3.8435573398805127
+      },
+      "normalized": {
+        "Lift_alpha": 2.01492780243082e-05,
+        "Side_beta": -1.0305443676914734,
+        "Lift_crossflow": 6.040998805003784e-10,
+        "Side_crossflow": -1.6359604674512023,
+        "Drag_crossflow": 2.952273002401393e-15,
+        "Drag_beta": 0.43825518828152155
+      },
+      "expected": {
+        "Lift_alpha": 2.0149278024308203e-05,
+        "Side_beta": -1.0305443676914736,
+        "Lift_crossflow": 6.040998805003779e-10,
+        "Side_crossflow": -1.6359604674512007,
+        "Drag_crossflow": 2.9522730024013904e-15,
+        "Drag_beta": 0.4382551882815211
+      },
+      "errors": {
+        "Lift_alpha": 3.3881317890172014e-21,
+        "Side_beta": 2.220446049250313e-16,
+        "Lift_crossflow": 5.169878828456423e-25,
+        "Side_crossflow": 1.5543122344752192e-15,
+        "Drag_crossflow": 2.7610131682735413e-30,
+        "Drag_beta": 4.440892098500626e-16
+      }
+    }
+  ]
+}

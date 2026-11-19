@@ -1,0 +1,182 @@
+{
+  "status": "PASS",
+  "scope": "Four new deterministic nominal reruns; not new Monte Carlo samples. No existing source/result edited.",
+  "case_count": 4,
+  "new_MC_flights": 0,
+  "comparison": [
+    {
+      "case": "simultaneous",
+      "reference_apogee_ft": 20189.640130667078,
+      "new_apogee_ft": 20189.640130667078,
+      "difference_ft": 0.0,
+      "apogee_time_s": 34.015000000011426,
+      "motor1_last_thrust_gt1_lbf_s": 3.894999999999682,
+      "motor1_fuel_depletion_s": 3.8999999999996815,
+      "separation_observed_s": null,
+      "motor2_ignition_flag_observed_s": 0.0,
+      "motor2_last_thrust_gt1_lbf_s": 3.894999999999682,
+      "motor2_fuel_depletion_s": 3.8999999999996815,
+      "last_combined_thrust_gt1_lbf_s": 3.8979999999996817
+    },
+    {
+      "case": "series",
+      "reference_apogee_ft": 20570.591640779232,
+      "new_apogee_ft": 20570.591640779232,
+      "difference_ft": 0.0,
+      "apogee_time_s": 36.53600000000555,
+      "motor1_last_thrust_gt1_lbf_s": 3.894999999999682,
+      "motor1_fuel_depletion_s": 3.8999999999996815,
+      "separation_observed_s": null,
+      "motor2_ignition_flag_observed_s": 3.896999999999682,
+      "motor2_last_thrust_gt1_lbf_s": 7.792000000000937,
+      "motor2_fuel_depletion_s": 7.7970000000009385,
+      "last_combined_thrust_gt1_lbf_s": 7.792000000000937
+    },
+    {
+      "case": "staged_0s",
+      "reference_apogee_ft": 20032.58128497692,
+      "new_apogee_ft": 20032.58128497692,
+      "difference_ft": 0.0,
+      "apogee_time_s": 36.135000000006485,
+      "motor1_last_thrust_gt1_lbf_s": 3.894999999999682,
+      "motor1_fuel_depletion_s": 3.8999999999996815,
+      "separation_observed_s": 4.0959999999997025,
+      "motor2_ignition_flag_observed_s": 4.0959999999997025,
+      "motor2_last_thrust_gt1_lbf_s": 7.991000000001003,
+      "motor2_fuel_depletion_s": 7.996000000001005,
+      "last_combined_thrust_gt1_lbf_s": 7.991000000001003
+    },
+    {
+      "case": "staged_5s",
+      "reference_apogee_ft": 20491.062251548246,
+      "new_apogee_ft": 20491.062251548246,
+      "difference_ft": 0.0,
+      "apogee_time_s": 40.05899999999734,
+      "motor1_last_thrust_gt1_lbf_s": 3.894999999999682,
+      "motor1_fuel_depletion_s": 3.8999999999996815,
+      "separation_observed_s": 4.0959999999997025,
+      "motor2_ignition_flag_observed_s": 9.096000000000398,
+      "motor2_last_thrust_gt1_lbf_s": 12.99099999999824,
+      "motor2_fuel_depletion_s": 12.995999999998237,
+      "last_combined_thrust_gt1_lbf_s": 12.99099999999824
+    }
+  ],
+  "event_definition": "All event times are first observed in the1msrunloop. Motor1/2 fuel-depletion events are separate from last-thrust>1lbf and low-thrust sequencing definitions. The series model command can precede complete fuel depletion by a few ms; no event is silently equated with another.",
+  "sequencer_definition": "myrocket2 FCS latches low engine0 thrust<1lbf after1s; separation follows configured0.2sdelay; second ignition follows0or5scoast plus altitude/tilt checks. No new velocity gate added.",
+  "nominal_parameters": "89deg elevation,0deg azimuth,still air,brake target1e9ft,nominal motor/tank/drymass/inertia/aero,k_stack=1,sepdelay0.2s,gatealt0,tiltlimit20deg.",
+  "integration_dt_s": 0.001,
+  "trajectory_sampling_dt_s": 0.002,
+  "trace_paths": {
+    "simultaneous": "D:\\AAAAA\\2\\ENGG7340\\2026-10-12\\work\\supervisor_revision_2026-10-28\\staging_figure\\data\\simultaneous_trajectory.csv",
+    "series": "D:\\AAAAA\\2\\ENGG7340\\2026-10-12\\work\\supervisor_revision_2026-10-28\\staging_figure\\data\\series_trajectory.csv",
+    "staged_0s": "D:\\AAAAA\\2\\ENGG7340\\2026-10-12\\work\\supervisor_revision_2026-10-28\\staging_figure\\data\\staged_0s_trajectory.csv",
+    "staged_5s": "D:\\AAAAA\\2\\ENGG7340\\2026-10-12\\work\\supervisor_revision_2026-10-28\\staging_figure\\data\\staged_5s_trajectory.csv"
+  },
+  "individual_event_paths": {
+    "simultaneous": "D:\\AAAAA\\2\\ENGG7340\\2026-10-12\\work\\supervisor_revision_2026-10-28\\staging_figure\\data\\simultaneous_events.json",
+    "series": "D:\\AAAAA\\2\\ENGG7340\\2026-10-12\\work\\supervisor_revision_2026-10-28\\staging_figure\\data\\series_events.json",
+    "staged_0s": "D:\\AAAAA\\2\\ENGG7340\\2026-10-12\\work\\supervisor_revision_2026-10-28\\staging_figure\\data\\staged_0s_events.json",
+    "staged_5s": "D:\\AAAAA\\2\\ENGG7340\\2026-10-12\\work\\supervisor_revision_2026-10-28\\staging_figure\\data\\staged_5s_events.json"
+  },
+  "accepted_reference_max_abs_error_ft": 0.0,
+  "source_original_bytes_unchanged": true,
+  "source_checks": [
+    {
+      "path": "D:\\AAAAA\\2\\ENGG7340\\Code_Package\\Haoran_Du_ENGG7340_Code\\flight_checks.py",
+      "sha256": "4ec4baf3d4e1ab987232e9b1e73af9d0316cf5bf69c3c2636431590270c109d6",
+      "matches_snapshot": true
+    },
+    {
+      "path": "D:\\AAAAA\\2\\ENGG7340\\Code_Package\\Haoran_Du_ENGG7340_Code\\M1670.eng",
+      "sha256": "a18a3ae712108760c5fdbf5c5ddaefe50bb6a429d75bc5ab4bcf7ce7716548d8",
+      "matches_snapshot": true
+    },
+    {
+      "path": "D:\\AAAAA\\2\\ENGG7340\\Code_Package\\Haoran_Du_ENGG7340_Code\\motor_build_info.json",
+      "sha256": "c1a31d0e831ef89742c7e28fae195396aec2c3052345f1ec231734c09162669b",
+      "matches_snapshot": true
+    },
+    {
+      "path": "D:\\AAAAA\\2\\ENGG7340\\Code_Package\\Haoran_Du_ENGG7340_Code\\motor_model.py",
+      "sha256": "e9d566135a0ff66464acc45ecd56c68dca0dc5a544765f6e0f9ffc996d0caad2",
+      "matches_snapshot": true
+    },
+    {
+      "path": "D:\\AAAAA\\2\\ENGG7340\\Code_Package\\Haoran_Du_ENGG7340_Code\\results_revised\\stage_compare_v6.csv",
+      "sha256": "355bd3d6724f1347e29cd70362636e62d7e16a58e3663d40c865c608b38bfb64",
+      "matches_snapshot": true
+    },
+    {
+      "path": "D:\\AAAAA\\2\\ENGG7340\\Code_Package\\Haoran_Du_ENGG7340_Code\\results_revised\\staging_coast_tilt1_v6.csv",
+      "sha256": "d3f98cbd7f7c320da4f5e0cc1ae7ecd669ac3b495106faec73971f2515ab9700",
+      "matches_snapshot": true
+    },
+    {
+      "path": "D:\\AAAAA\\2\\ENGG7340\\Code_Package\\Haoran_Du_ENGG7340_Code\\stage_compare.py",
+      "sha256": "52b876a557631a46ba7235ae18a9d5fa1ea597852e0275ce185c361de1c1f30f",
+      "matches_snapshot": true
+    },
+    {
+      "path": "D:\\AAAAA\\2\\ENGG7340\\Code_Package\\Haoran_Du_ENGG7340_Code\\staging_seq.py",
+      "sha256": "7ec01cae032a8a7b8b3bf2ae8139854247ab21cdf334aee3a9f847e07cbcd965",
+      "matches_snapshot": true
+    },
+    {
+      "path": "D:\\AAAAA\\2\\ENGG7340\\Code_Package\\Haoran_Du_ENGG7340_Code\\engine\\direct.xml",
+      "sha256": "246b69d6edc7acfca84395ba5f53b5d7e03409d5ebcf7c89b2c369907a703b24",
+      "matches_snapshot": true
+    },
+    {
+      "path": "D:\\AAAAA\\2\\ENGG7340\\Code_Package\\Haoran_Du_ENGG7340_Code\\engine\\M1670.xml",
+      "sha256": "0160cd7dd8e647791d6323b3d818fa7ff86d99bbbc79e9690d2ee4292f829dc2",
+      "matches_snapshot": true
+    },
+    {
+      "path": "D:\\AAAAA\\2\\ENGG7340\\Code_Package\\Haoran_Du_ENGG7340_Code\\scripts\\launch.xml",
+      "sha256": "663ab351071e43b16cf1e775e0be5e8afa17c15597370fc8097acbf7e2cc2936",
+      "matches_snapshot": true
+    },
+    {
+      "path": "D:\\AAAAA\\2\\ENGG7340\\Code_Package\\Haoran_Du_ENGG7340_Code\\aircraft\\myrocket\\myrocket.xml",
+      "sha256": "490444d3490caaae120bd81bb8da8c8c38395201ff32423d53917a3373d69bb0",
+      "matches_snapshot": true
+    },
+    {
+      "path": "D:\\AAAAA\\2\\ENGG7340\\Code_Package\\Haoran_Du_ENGG7340_Code\\aircraft\\myrocket\\reset.xml",
+      "sha256": "bab1ee5bddb92266599429547598210dcbf12374701da6ded108d9524fcf9539",
+      "matches_snapshot": true
+    },
+    {
+      "path": "D:\\AAAAA\\2\\ENGG7340\\Code_Package\\Haoran_Du_ENGG7340_Code\\aircraft\\myrocket2\\myrocket2.xml",
+      "sha256": "49392f1a9b3161aea26bb00e9ae42a7513595f8e1fcbf00d4e598050b2a96d2e",
+      "matches_snapshot": true
+    },
+    {
+      "path": "D:\\AAAAA\\2\\ENGG7340\\Code_Package\\Haoran_Du_ENGG7340_Code\\aircraft\\myrocket2\\reset.xml",
+      "sha256": "a6d5e79ff0312edc13f340299cefe066948021ed9468e9141d4e2e55532290db",
+      "matches_snapshot": true
+    },
+    {
+      "path": "D:\\AAAAA\\2\\ENGG7340\\Code_Package\\Haoran_Du_ENGG7340_Code\\aircraft\\myrocket_cluster\\myrocket_cluster.xml",
+      "sha256": "e26f31ad9f7d8e9a8d70f0186de7385a9c44e0151f824015291310a5133e2aaa",
+      "matches_snapshot": true
+    },
+    {
+      "path": "D:\\AAAAA\\2\\ENGG7340\\Code_Package\\Haoran_Du_ENGG7340_Code\\aircraft\\myrocket_cluster\\reset.xml",
+      "sha256": "19867bc90ac91a71b13429601e7eb1b73f37ce137e757463f7289997393e5b2d",
+      "matches_snapshot": true
+    },
+    {
+      "path": "D:\\AAAAA\\2\\ENGG7340\\Code_Package\\Haoran_Du_ENGG7340_Code\\aircraft\\myrocket_series\\myrocket_series.xml",
+      "sha256": "2647f47c5968f263b41c5ad15a55d3324f2f520d4113308b534fe8f1cea5f242",
+      "matches_snapshot": true
+    },
+    {
+      "path": "D:\\AAAAA\\2\\ENGG7340\\Code_Package\\Haoran_Du_ENGG7340_Code\\aircraft\\myrocket_series\\reset.xml",
+      "sha256": "19867bc90ac91a71b13429601e7eb1b73f37ce137e757463f7289997393e5b2d",
+      "matches_snapshot": true
+    }
+  ],
+  "manifest_sha256": "6f85edcace4a37abe6a952a2d8ae7f0a1ca9fc06255697a46b7d2e6743deb269",
+  "comparison_csv_sha256": "6503a97974179121fa0ac7bee98bfa22140fd3eb2399366d4f7663c7c69805c1"
+}

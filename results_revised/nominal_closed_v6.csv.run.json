@@ -1,0 +1,13 @@
+{
+  "job": {
+    "name": "nominal_closed_v6.csv",
+    "kind": "nominal",
+    "open": false
+  },
+  "worker": 76,
+  "start_unix": 1791731143.0820758,
+  "status": "SUCCESS",
+  "completed": null,
+  "elapsed": 5.695563793182373,
+  "sha256": "645a07a4055ba5b16e6a1147d203f203673fb4123f67f5d6dd1c67fd7c2b03f9"
+}

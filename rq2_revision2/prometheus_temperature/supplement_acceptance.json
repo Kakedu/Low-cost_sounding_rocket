@@ -1,0 +1,1382 @@
+{
+  "status": "PASS",
+  "recorded_UTC": "2026-10-11T17:11:36.605847+00:00",
+  "script_sha256": "c82671a9cf42a025dd3a5b884cfa48bf2c2bf7d6a6bcce0e5762b6bb2ffee6b4",
+  "command": "python work/check_revision2_temperature_supplement.py",
+  "checks": [
+    {
+      "name": "artifact val\\gps_check.json",
+      "status": "PASS",
+      "details": {
+        "expected_sha256": "ce837f9e99630995ff8de248bc099701c6fa41a8f72b3db881f0fbd7f7c8b8b9",
+        "current_sha256": "ce837f9e99630995ff8de248bc099701c6fa41a8f72b3db881f0fbd7f7c8b8b9"
+      }
+    },
+    {
+      "name": "artifact results_revised\\validation\\gps_check.json",
+      "status": "PASS",
+      "details": {
+        "expected_sha256": "ce837f9e99630995ff8de248bc099701c6fa41a8f72b3db881f0fbd7f7c8b8b9",
+        "current_sha256": "ce837f9e99630995ff8de248bc099701c6fa41a8f72b3db881f0fbd7f7c8b8b9"
+      }
+    },
+    {
+      "name": "artifact results_revised\\fig_validation_gps.png",
+      "status": "PASS",
+      "details": {
+        "expected_sha256": "567db792119079783fef720b98cc16ebb68be278d90233938c28579eb9fc9f8d",
+        "current_sha256": "567db792119079783fef720b98cc16ebb68be278d90233938c28579eb9fc9f8d"
+      }
+    },
+    {
+      "name": "artifact val\\fig_validation_gps.png",
+      "status": "PASS",
+      "details": {
+        "expected_sha256": "567db792119079783fef720b98cc16ebb68be278d90233938c28579eb9fc9f8d",
+        "current_sha256": "567db792119079783fef720b98cc16ebb68be278d90233938c28579eb9fc9f8d"
+      }
+    },
+    {
+      "name": "artifact rq2_revision2\\prometheus_temperature\\validation_word_patch.json",
+      "status": "PASS",
+      "details": {
+        "expected_sha256": "2c3c582711b076be452c11f393c09a31338bd5854dadf8703bda4a1189ecc5d7",
+        "current_sha256": "2c3c582711b076be452c11f393c09a31338bd5854dadf8703bda4a1189ecc5d7"
+      }
+    },
+    {
+      "name": "artifact rq2_revision2\\prometheus_temperature\\validation_word_patch_binding.json",
+      "status": "PASS",
+      "details": {
+        "expected_sha256": "93594fba382d2fc0d1be428a0b2d450eeb3c7c517139ab5f668a2ee82a00e317",
+        "current_sha256": "93594fba382d2fc0d1be428a0b2d450eeb3c7c517139ab5f668a2ee82a00e317"
+      }
+    },
+    {
+      "name": "artifact rq2_revision2\\prometheus_temperature\\comparison_summary.json",
+      "status": "PASS",
+      "details": {
+        "expected_sha256": "4f79c3bb87fa208939efac68d742327f8a63ebf1def8c00b067071db4ccf94f8",
+        "current_sha256": "4f79c3bb87fa208939efac68d742327f8a63ebf1def8c00b067071db4ccf94f8"
+      }
+    },
+    {
+      "name": "artifact rq2_revision2\\prometheus_temperature\\temperature_inference.json",
+      "status": "PASS",
+      "details": {
+        "expected_sha256": "a8c03f933e612cf7eef08041ad240a40b578d7db5a3fba6b61665e6bd8f2fc9d",
+        "current_sha256": "a8c03f933e612cf7eef08041ad240a40b578d7db5a3fba6b61665e6bd8f2fc9d"
+      }
+    },
+    {
+      "name": "updated source val/flight_temperature.py",
+      "status": "PASS",
+      "details": {
+        "path": "val/flight_temperature.py",
+        "sha256": "4ebb58b674d538fe0425cda8f58716d74ba28fb510e1a0fc4c9c706580ad4909"
+      }
+    },
+    {
+      "name": "updated source val/gps_check.py",
+      "status": "PASS",
+      "details": {
+        "path": "val/gps_check.py",
+        "sha256": "f5767cf0909f44f9322d52d9b23b2866440f41ada27c2ca54abc2069e123c5f0"
+      }
+    },
+    {
+      "name": "updated source val/validation_mc.py",
+      "status": "PASS",
+      "details": {
+        "path": "val/validation_mc.py",
+        "sha256": "4c67c3157ae7a56bc7cdf4201f1ff380eacf38e19d3c7674d2472bbd5a6a5f53"
+      }
+    },
+    {
+      "name": "unchanged source/input val/build_prometheus.py",
+      "status": "PASS",
+      "details": {
+        "file": "val/build_prometheus.py",
+        "unchanged": true,
+        "sha256": "bc9bb1ed164d1cca49ed70175d5ef54b08d8d7980b716166effd9660da87292d"
+      }
+    },
+    {
+      "name": "unchanged source/input val/run_prometheus.py",
+      "status": "PASS",
+      "details": {
+        "file": "val/run_prometheus.py",
+        "unchanged": true,
+        "sha256": "2c9748d6d63c083cbcb3a86934e609f10cfd3e62148fdfb0f411fcd3ab8ab5d6"
+      }
+    },
+    {
+      "name": "unchanged source/input val/build_cavour.py",
+      "status": "PASS",
+      "details": {
+        "file": "val/build_cavour.py",
+        "unchanged": true,
+        "sha256": "968ffd4d24c59d6c9e505b79c341ccc7043d1e6f5a06164c2d1337182d4deb2f"
+      }
+    },
+    {
+      "name": "unchanged source/input val/run_cavour.py",
+      "status": "PASS",
+      "details": {
+        "file": "val/run_cavour.py",
+        "unchanged": true,
+        "sha256": "17cc07a40a6d9e2d82e576d75bbe7bb56ac7e36411cdc3e14f9b756373b732bc"
+      }
+    },
+    {
+      "name": "unchanged source/input val/cavour_check.py",
+      "status": "PASS",
+      "details": {
+        "file": "val/cavour_check.py",
+        "unchanged": true,
+        "sha256": "47a05d344506e055cab288a3f7ce30a56120085540e63f1a362fea3a3cb0a833"
+      }
+    },
+    {
+      "name": "unchanged source/input val/validation_atmosphere.py",
+      "status": "PASS",
+      "details": {
+        "file": "val/validation_atmosphere.py",
+        "unchanged": true,
+        "sha256": "6ff6b8e8f40f00667ff0a28c2166e5d462d17cb33b803bb47be0c8a2f628305a"
+      }
+    },
+    {
+      "name": "unchanged source/input val/prepare_prometheus_weather.py",
+      "status": "PASS",
+      "details": {
+        "file": "val/prepare_prometheus_weather.py",
+        "unchanged": true,
+        "sha256": "58760a581e9602985385173f19afcc8b49474d9c3b177519be39b655f7c74e28"
+      }
+    },
+    {
+      "name": "unchanged source/input val/prometheus_inputs_2022.json",
+      "status": "PASS",
+      "details": {
+        "file": "val/prometheus_inputs_2022.json",
+        "unchanged": true,
+        "sha256": "f6fdb38b3fc85fa88ad2b29fea6b7a591220321760fe6390d00a9e92625b2a79"
+      }
+    },
+    {
+      "name": "unchanged source/input val/prometheus_inputs.json",
+      "status": "PASS",
+      "details": {
+        "file": "val/prometheus_inputs.json",
+        "unchanged": true,
+        "sha256": "d503ccb23b2d170a9cd55a94c99eb8d049c83788996e2b57a342b15764e30616"
+      }
+    },
+    {
+      "name": "unchanged source/input val/prom_mc.json",
+      "status": "PASS",
+      "details": {
+        "file": "val/prom_mc.json",
+        "unchanged": true,
+        "sha256": "ccee5408bbee409ba2566ed409779465549561cda546de66c14987f2df09b414"
+      }
+    },
+    {
+      "name": "unchanged source/input val/prom_mc_inputs.json",
+      "status": "PASS",
+      "details": {
+        "file": "val/prom_mc_inputs.json",
+        "unchanged": true,
+        "sha256": "5e61a4a24c20a98f8e49a3e5759ea6e34ee43955147b97b652e7b51d9598b290"
+      }
+    },
+    {
+      "name": "unchanged source/input val/cavour_mc.json",
+      "status": "PASS",
+      "details": {
+        "file": "val/cavour_mc.json",
+        "unchanged": true,
+        "sha256": "9af802490d4da055ffa5de3902906d10147bbea2268541dd5310bdae7671bd95"
+      }
+    },
+    {
+      "name": "unchanged source/input val/cavour_mc_inputs.json",
+      "status": "PASS",
+      "details": {
+        "file": "val/cavour_mc_inputs.json",
+        "unchanged": true,
+        "sha256": "ff8183857af38f1dc840d6b286a471229d29b0ab111c69ac0d3807a544f87c25"
+      }
+    },
+    {
+      "name": "unchanged source/input atmosphere_model.py",
+      "status": "PASS",
+      "details": {
+        "file": "atmosphere_model.py",
+        "unchanged": true,
+        "sha256": "bf26ec9195d0f353b3277dae97684f67b774cfa869e9a66547bb7b0cf9483129"
+      }
+    },
+    {
+      "name": "unchanged source/input motor_model.py",
+      "status": "PASS",
+      "details": {
+        "file": "motor_model.py",
+        "unchanged": true,
+        "sha256": "e9d566135a0ff66464acc45ecd56c68dca0dc5a544765f6e0f9ffc996d0caad2"
+      }
+    },
+    {
+      "name": "landing regional_2022",
+      "status": "PASS",
+      "details": {
+        "t_s": 220.5351000006871,
+        "h_agl_ft": 2.984574751852051,
+        "v_vertical_fps": -9.294310170964202,
+        "terminated": 1.0,
+        "fuel_lb": 0.0
+      }
+    },
+    {
+      "name": "finite flight regional_2022",
+      "status": "PASS",
+      "details": {
+        "apogee_m": 4259.552950075875,
+        "n": 11008
+      }
+    },
+    {
+      "name": "executed source regional_2022/atmosphere_model.py",
+      "status": "PASS",
+      "details": {
+        "sha256": "bf26ec9195d0f353b3277dae97684f67b774cfa869e9a66547bb7b0cf9483129"
+      }
+    },
+    {
+      "name": "executed source regional_2022/motor_model.py",
+      "status": "PASS",
+      "details": {
+        "sha256": "e9d566135a0ff66464acc45ecd56c68dca0dc5a544765f6e0f9ffc996d0caad2"
+      }
+    },
+    {
+      "name": "executed source regional_2022/val\\build_cavour.py",
+      "status": "PASS",
+      "details": {
+        "sha256": "968ffd4d24c59d6c9e505b79c341ccc7043d1e6f5a06164c2d1337182d4deb2f"
+      }
+    },
+    {
+      "name": "executed source regional_2022/val\\build_info.json",
+      "status": "PASS",
+      "details": {
+        "sha256": "b749b3c948a2ae1bf8224c2dc3363aba6600ebfe8c7dabda0b0ebb1af079e9f9"
+      }
+    },
+    {
+      "name": "executed source regional_2022/val\\build_info_cavour.json",
+      "status": "PASS",
+      "details": {
+        "sha256": "919904c2b2161ede26c4ecb138f1407d3f9a36b31df0df41d428b847a8e506fc"
+      }
+    },
+    {
+      "name": "executed source regional_2022/val\\build_prometheus.py",
+      "status": "PASS",
+      "details": {
+        "sha256": "bc9bb1ed164d1cca49ed70175d5ef54b08d8d7980b716166effd9660da87292d"
+      }
+    },
+    {
+      "name": "executed source regional_2022/val\\cavour_check.json",
+      "status": "PASS",
+      "details": {
+        "sha256": "8577c5c55476199661724f574d2776f13330364eccb1c2531bbfadeb8dcf9699"
+      }
+    },
+    {
+      "name": "executed source regional_2022/val\\cavour_check.py",
+      "status": "PASS",
+      "details": {
+        "sha256": "47a05d344506e055cab288a3f7ce30a56120085540e63f1a362fea3a3cb0a833"
+      }
+    },
+    {
+      "name": "executed source regional_2022/val\\cavour_mc.json",
+      "status": "PASS",
+      "details": {
+        "sha256": "9af802490d4da055ffa5de3902906d10147bbea2268541dd5310bdae7671bd95"
+      }
+    },
+    {
+      "name": "executed source regional_2022/val\\cavour_mc.py",
+      "status": "PASS",
+      "details": {
+        "sha256": "3631a89074bd2576932dbe2b1fa8036ce53703edb40eab3b3ab25b8078585261"
+      }
+    },
+    {
+      "name": "executed source regional_2022/val\\cavour_mc_inputs.json",
+      "status": "PASS",
+      "details": {
+        "sha256": "ff8183857af38f1dc840d6b286a471229d29b0ab111c69ac0d3807a544f87c25"
+      }
+    },
+    {
+      "name": "executed source regional_2022/val\\gps_check.json",
+      "status": "PASS",
+      "details": {
+        "sha256": "c7cb61465f562d83870805a9f96a25192e9d10cbc77dfc3f616b08203c4bbd45"
+      }
+    },
+    {
+      "name": "executed source regional_2022/val\\gps_check.py",
+      "status": "PASS",
+      "details": {
+        "sha256": "1324f57fedb9dda2a1bc4deb96a1f0c4abb028c2808e0790a6a4c8fccd9b5c15"
+      }
+    },
+    {
+      "name": "executed source regional_2022/val\\jsb_result.json",
+      "status": "PASS",
+      "details": {
+        "sha256": "bfa42b31dd0850708214346283b274afe73d1ddaf3926fa7a50c1416310ca1a4"
+      }
+    },
+    {
+      "name": "executed source regional_2022/val\\jsb_result_cavour.json",
+      "status": "PASS",
+      "details": {
+        "sha256": "26bdab73ef57c171cdfe393fe1253263a6eb044b9c824643bc6b9370e1b1da53"
+      }
+    },
+    {
+      "name": "executed source regional_2022/val\\plot_validation.py",
+      "status": "PASS",
+      "details": {
+        "sha256": "d4f55b66a85fb2a6a77d6444818bd7f9da1fced96fb08d0276040f4b20ec52ed"
+      }
+    },
+    {
+      "name": "executed source regional_2022/val\\prepare_prometheus_weather.py",
+      "status": "PASS",
+      "details": {
+        "sha256": "58760a581e9602985385173f19afcc8b49474d9c3b177519be39b655f7c74e28"
+      }
+    },
+    {
+      "name": "executed source regional_2022/val\\prometheus_inputs.json",
+      "status": "PASS",
+      "details": {
+        "sha256": "d503ccb23b2d170a9cd55a94c99eb8d049c83788996e2b57a342b15764e30616"
+      }
+    },
+    {
+      "name": "executed source regional_2022/val\\prometheus_inputs.py",
+      "status": "PASS",
+      "details": {
+        "sha256": "cbce9c7a14697c5d4e5a71378ed9ba28b1c3cec01b65384a3d6ffaab3f894d1f"
+      }
+    },
+    {
+      "name": "executed source regional_2022/val\\prometheus_inputs_2022.json",
+      "status": "PASS",
+      "details": {
+        "sha256": "f6fdb38b3fc85fa88ad2b29fea6b7a591220321760fe6390d00a9e92625b2a79"
+      }
+    },
+    {
+      "name": "executed source regional_2022/val\\prom_mc.json",
+      "status": "PASS",
+      "details": {
+        "sha256": "ccee5408bbee409ba2566ed409779465549561cda546de66c14987f2df09b414"
+      }
+    },
+    {
+      "name": "executed source regional_2022/val\\prom_mc.py",
+      "status": "PASS",
+      "details": {
+        "sha256": "15e27947e8df281b1efbfbd999ec708c5307c1faaa120a063232fd75ac7e956b"
+      }
+    },
+    {
+      "name": "executed source regional_2022/val\\prom_mc_inputs.json",
+      "status": "PASS",
+      "details": {
+        "sha256": "5e61a4a24c20a98f8e49a3e5759ea6e34ee43955147b97b652e7b51d9598b290"
+      }
+    },
+    {
+      "name": "executed source regional_2022/val\\run_cavour.py",
+      "status": "PASS",
+      "details": {
+        "sha256": "17cc07a40a6d9e2d82e576d75bbe7bb56ac7e36411cdc3e14f9b756373b732bc"
+      }
+    },
+    {
+      "name": "executed source regional_2022/val\\run_prometheus.py",
+      "status": "PASS",
+      "details": {
+        "sha256": "2c9748d6d63c083cbcb3a86934e609f10cfd3e62148fdfb0f411fcd3ab8ab5d6"
+      }
+    },
+    {
+      "name": "executed source regional_2022/val\\validation_atmosphere.py",
+      "status": "PASS",
+      "details": {
+        "sha256": "6ff6b8e8f40f00667ff0a28c2166e5d462d17cb33b803bb47be0c8a2f628305a"
+      }
+    },
+    {
+      "name": "executed source regional_2022/val\\validation_mc.py",
+      "status": "PASS",
+      "details": {
+        "sha256": "fc806e7df6a38edab1e89a1d870c25b886159e7573b4641fa71d4863a1f53522"
+      }
+    },
+    {
+      "name": "executed source regional_2022/val\\data\\2022-06-24-serial-5115-flight-0001-TeleMetrum.csv",
+      "status": "PASS",
+      "details": {
+        "sha256": "9fe8d17a25e7944267b34a45ed955303afd5818b3f18479a5f7ffb31a574cecf"
+      }
+    },
+    {
+      "name": "executed source regional_2022/val\\data\\2022-06-24-serial-6583-flight-0003-TeleMega.csv",
+      "status": "PASS",
+      "details": {
+        "sha256": "befe40714e6b88b3bd5af8cd51b569a94544c486ced299878f66ab264f9105a6"
+      }
+    },
+    {
+      "name": "executed source regional_2022/val\\data\\Cesaroni_7579M1520-P.eng",
+      "status": "PASS",
+      "details": {
+        "sha256": "f38ad06972a07e4ef04164a60718f099d732de6e433185e211dd87083f89e4ca"
+      }
+    },
+    {
+      "name": "executed source regional_2022/val\\data\\prometheus_2022_igra_excerpt.txt",
+      "status": "PASS",
+      "details": {
+        "sha256": "ca64b7dfb59f7a2c075b5477c6d5c7ff05703402db0f1019aed55f5d84b2f2bc"
+      }
+    },
+    {
+      "name": "executed source regional_2022/val\\data\\prometheus_sounding_2022062412.csv",
+      "status": "PASS",
+      "details": {
+        "sha256": "04752e1e952397e608c2bbf90d3386efbf98a8f81d881b10ca9451a8ba82f137"
+      }
+    },
+    {
+      "name": "executed source regional_2022/val\\data\\prometheus_sounding_2022062500.csv",
+      "status": "PASS",
+      "details": {
+        "sha256": "143a474ffc5439ac1a1085bf902e7ad2afa421dd3004d2ca781bd65f55748a30"
+      }
+    },
+    {
+      "name": "executed source regional_2022/val\\data\\spaceport_america_pressure_levels_2023_hourly.nc",
+      "status": "PASS",
+      "details": {
+        "sha256": "25d48e9d03554251dc2d0601dcaa1e441ca7e7c502f573fceb4ce5c058da8694"
+      }
+    },
+    {
+      "name": "executed source regional_2022/val\\data\\cavour\\altimeter_cavour.csv",
+      "status": "PASS",
+      "details": {
+        "sha256": "f912724676eea0ca9ba031c3779e48f861538814170b050b7bda2887c31f29a8"
+      }
+    },
+    {
+      "name": "executed source regional_2022/val\\data\\cavour\\Cesaroni_3618L995-P.eng",
+      "status": "PASS",
+      "details": {
+        "sha256": "efc04492a3527bdb626d8ec0c18bbbd51f02012393d3b82e00b11d167b2dad2b"
+      }
+    },
+    {
+      "name": "executed source regional_2022/val\\data\\cavour\\drag_coefficient_power_off.csv",
+      "status": "PASS",
+      "details": {
+        "sha256": "e47b9398b9e7802ac2f6edafe291edc1015fbb1ee6cb02df52404cf1b276f1c9"
+      }
+    },
+    {
+      "name": "executed source regional_2022/val\\data\\cavour\\drag_coefficient_power_on.csv",
+      "status": "PASS",
+      "details": {
+        "sha256": "5f588e25e43b843470e1882f35e2a3be0b7f1760c6652da0c757ad203e7469ed"
+      }
+    },
+    {
+      "name": "executed source regional_2022/val\\data\\cavour\\euroc_2023_all_windows.nc",
+      "status": "PASS",
+      "details": {
+        "sha256": "a3d9e08eb3bb4480d1b8ef03b06878a1a1f76397fdc9dcc929fe5cc856f61d56"
+      }
+    },
+    {
+      "name": "run output regional_2022/build_info.json",
+      "status": "PASS",
+      "details": {
+        "sha256": "3e56159e4e12a7d6e101874a45c7f8605ffdf2a1fc629b1e80c9ceebe99c1bb2"
+      }
+    },
+    {
+      "name": "run output regional_2022/result.json",
+      "status": "PASS",
+      "details": {
+        "sha256": "f424d656639b661bc2ee591ac8464fdab1c0eab2108e0d5bf8c5c635b1f04d82"
+      }
+    },
+    {
+      "name": "run output regional_2022/model\\data_output\\prometheus.csv",
+      "status": "PASS",
+      "details": {
+        "sha256": "3f21a2f88bc3a627d8dd8dbb94b68069369986a7c48b4edb3e5707d021143d53"
+      }
+    },
+    {
+      "name": "run output regional_2022/model\\engine\\direct.xml",
+      "status": "PASS",
+      "details": {
+        "sha256": "f116b6f6d25d4b2b46c2f0faa713e85d0064db7a634105bc96e391fb52e4dde5"
+      }
+    },
+    {
+      "name": "run output regional_2022/model\\engine\\M1520.xml",
+      "status": "PASS",
+      "details": {
+        "sha256": "6fab2ffdfc99466a24d8e80c7bec6be168be9582c017961f964f55d82c4f2f0b"
+      }
+    },
+    {
+      "name": "run output regional_2022/model\\scripts\\prometheus.xml",
+      "status": "PASS",
+      "details": {
+        "sha256": "bcb3d2f2c26e9d1f4701a81ab7e781a0794f31c3c9eea10615e004a44ddfab06"
+      }
+    },
+    {
+      "name": "run output regional_2022/model\\aircraft\\prometheus\\prometheus.xml",
+      "status": "PASS",
+      "details": {
+        "sha256": "4545c42e3f975ff25dad2c669e63a3ddbfe8f24f86a94b0b5c21585ee348f975"
+      }
+    },
+    {
+      "name": "run output regional_2022/model\\aircraft\\prometheus\\rail_exit.xml",
+      "status": "PASS",
+      "details": {
+        "sha256": "76a10051acf0d24f68815c2cc6d9db35417e277aa57d16cfc3c2eb1987ef13f4"
+      }
+    },
+    {
+      "name": "landing flight_geometric",
+      "status": "PASS",
+      "details": {
+        "t_s": 220.724100000688,
+        "h_agl_ft": 2.984268549389526,
+        "v_vertical_fps": -9.252183542739612,
+        "terminated": 1.0,
+        "fuel_lb": 0.0
+      }
+    },
+    {
+      "name": "finite flight flight_geometric",
+      "status": "PASS",
+      "details": {
+        "apogee_m": 4249.3417910928465,
+        "n": 11018
+      }
+    },
+    {
+      "name": "executed source flight_geometric/atmosphere_model.py",
+      "status": "PASS",
+      "details": {
+        "sha256": "bf26ec9195d0f353b3277dae97684f67b774cfa869e9a66547bb7b0cf9483129"
+      }
+    },
+    {
+      "name": "executed source flight_geometric/motor_model.py",
+      "status": "PASS",
+      "details": {
+        "sha256": "e9d566135a0ff66464acc45ecd56c68dca0dc5a544765f6e0f9ffc996d0caad2"
+      }
+    },
+    {
+      "name": "executed source flight_geometric/val\\build_cavour.py",
+      "status": "PASS",
+      "details": {
+        "sha256": "968ffd4d24c59d6c9e505b79c341ccc7043d1e6f5a06164c2d1337182d4deb2f"
+      }
+    },
+    {
+      "name": "executed source flight_geometric/val\\build_info.json",
+      "status": "PASS",
+      "details": {
+        "sha256": "b749b3c948a2ae1bf8224c2dc3363aba6600ebfe8c7dabda0b0ebb1af079e9f9"
+      }
+    },
+    {
+      "name": "executed source flight_geometric/val\\build_info_cavour.json",
+      "status": "PASS",
+      "details": {
+        "sha256": "919904c2b2161ede26c4ecb138f1407d3f9a36b31df0df41d428b847a8e506fc"
+      }
+    },
+    {
+      "name": "executed source flight_geometric/val\\build_prometheus.py",
+      "status": "PASS",
+      "details": {
+        "sha256": "bc9bb1ed164d1cca49ed70175d5ef54b08d8d7980b716166effd9660da87292d"
+      }
+    },
+    {
+      "name": "executed source flight_geometric/val\\cavour_check.json",
+      "status": "PASS",
+      "details": {
+        "sha256": "8577c5c55476199661724f574d2776f13330364eccb1c2531bbfadeb8dcf9699"
+      }
+    },
+    {
+      "name": "executed source flight_geometric/val\\cavour_check.py",
+      "status": "PASS",
+      "details": {
+        "sha256": "47a05d344506e055cab288a3f7ce30a56120085540e63f1a362fea3a3cb0a833"
+      }
+    },
+    {
+      "name": "executed source flight_geometric/val\\cavour_mc.json",
+      "status": "PASS",
+      "details": {
+        "sha256": "9af802490d4da055ffa5de3902906d10147bbea2268541dd5310bdae7671bd95"
+      }
+    },
+    {
+      "name": "executed source flight_geometric/val\\cavour_mc.py",
+      "status": "PASS",
+      "details": {
+        "sha256": "3631a89074bd2576932dbe2b1fa8036ce53703edb40eab3b3ab25b8078585261"
+      }
+    },
+    {
+      "name": "executed source flight_geometric/val\\cavour_mc_inputs.json",
+      "status": "PASS",
+      "details": {
+        "sha256": "ff8183857af38f1dc840d6b286a471229d29b0ab111c69ac0d3807a544f87c25"
+      }
+    },
+    {
+      "name": "executed source flight_geometric/val\\gps_check.json",
+      "status": "PASS",
+      "details": {
+        "sha256": "c7cb61465f562d83870805a9f96a25192e9d10cbc77dfc3f616b08203c4bbd45"
+      }
+    },
+    {
+      "name": "executed source flight_geometric/val\\gps_check.py",
+      "status": "PASS",
+      "details": {
+        "sha256": "1324f57fedb9dda2a1bc4deb96a1f0c4abb028c2808e0790a6a4c8fccd9b5c15"
+      }
+    },
+    {
+      "name": "executed source flight_geometric/val\\jsb_result.json",
+      "status": "PASS",
+      "details": {
+        "sha256": "bfa42b31dd0850708214346283b274afe73d1ddaf3926fa7a50c1416310ca1a4"
+      }
+    },
+    {
+      "name": "executed source flight_geometric/val\\jsb_result_cavour.json",
+      "status": "PASS",
+      "details": {
+        "sha256": "26bdab73ef57c171cdfe393fe1253263a6eb044b9c824643bc6b9370e1b1da53"
+      }
+    },
+    {
+      "name": "executed source flight_geometric/val\\plot_validation.py",
+      "status": "PASS",
+      "details": {
+        "sha256": "d4f55b66a85fb2a6a77d6444818bd7f9da1fced96fb08d0276040f4b20ec52ed"
+      }
+    },
+    {
+      "name": "executed source flight_geometric/val\\prepare_prometheus_weather.py",
+      "status": "PASS",
+      "details": {
+        "sha256": "58760a581e9602985385173f19afcc8b49474d9c3b177519be39b655f7c74e28"
+      }
+    },
+    {
+      "name": "executed source flight_geometric/val\\prometheus_inputs.json",
+      "status": "PASS",
+      "details": {
+        "sha256": "d503ccb23b2d170a9cd55a94c99eb8d049c83788996e2b57a342b15764e30616"
+      }
+    },
+    {
+      "name": "executed source flight_geometric/val\\prometheus_inputs.py",
+      "status": "PASS",
+      "details": {
+        "sha256": "cbce9c7a14697c5d4e5a71378ed9ba28b1c3cec01b65384a3d6ffaab3f894d1f"
+      }
+    },
+    {
+      "name": "executed source flight_geometric/val\\prometheus_inputs_2022.json",
+      "status": "PASS",
+      "details": {
+        "sha256": "f6fdb38b3fc85fa88ad2b29fea6b7a591220321760fe6390d00a9e92625b2a79"
+      }
+    },
+    {
+      "name": "executed source flight_geometric/val\\prom_mc.json",
+      "status": "PASS",
+      "details": {
+        "sha256": "ccee5408bbee409ba2566ed409779465549561cda546de66c14987f2df09b414"
+      }
+    },
+    {
+      "name": "executed source flight_geometric/val\\prom_mc.py",
+      "status": "PASS",
+      "details": {
+        "sha256": "15e27947e8df281b1efbfbd999ec708c5307c1faaa120a063232fd75ac7e956b"
+      }
+    },
+    {
+      "name": "executed source flight_geometric/val\\prom_mc_inputs.json",
+      "status": "PASS",
+      "details": {
+        "sha256": "5e61a4a24c20a98f8e49a3e5759ea6e34ee43955147b97b652e7b51d9598b290"
+      }
+    },
+    {
+      "name": "executed source flight_geometric/val\\run_cavour.py",
+      "status": "PASS",
+      "details": {
+        "sha256": "17cc07a40a6d9e2d82e576d75bbe7bb56ac7e36411cdc3e14f9b756373b732bc"
+      }
+    },
+    {
+      "name": "executed source flight_geometric/val\\run_prometheus.py",
+      "status": "PASS",
+      "details": {
+        "sha256": "2c9748d6d63c083cbcb3a86934e609f10cfd3e62148fdfb0f411fcd3ab8ab5d6"
+      }
+    },
+    {
+      "name": "executed source flight_geometric/val\\validation_atmosphere.py",
+      "status": "PASS",
+      "details": {
+        "sha256": "6ff6b8e8f40f00667ff0a28c2166e5d462d17cb33b803bb47be0c8a2f628305a"
+      }
+    },
+    {
+      "name": "executed source flight_geometric/val\\validation_mc.py",
+      "status": "PASS",
+      "details": {
+        "sha256": "fc806e7df6a38edab1e89a1d870c25b886159e7573b4641fa71d4863a1f53522"
+      }
+    },
+    {
+      "name": "executed source flight_geometric/val\\data\\2022-06-24-serial-5115-flight-0001-TeleMetrum.csv",
+      "status": "PASS",
+      "details": {
+        "sha256": "9fe8d17a25e7944267b34a45ed955303afd5818b3f18479a5f7ffb31a574cecf"
+      }
+    },
+    {
+      "name": "executed source flight_geometric/val\\data\\2022-06-24-serial-6583-flight-0003-TeleMega.csv",
+      "status": "PASS",
+      "details": {
+        "sha256": "befe40714e6b88b3bd5af8cd51b569a94544c486ced299878f66ab264f9105a6"
+      }
+    },
+    {
+      "name": "executed source flight_geometric/val\\data\\Cesaroni_7579M1520-P.eng",
+      "status": "PASS",
+      "details": {
+        "sha256": "f38ad06972a07e4ef04164a60718f099d732de6e433185e211dd87083f89e4ca"
+      }
+    },
+    {
+      "name": "executed source flight_geometric/val\\data\\prometheus_2022_igra_excerpt.txt",
+      "status": "PASS",
+      "details": {
+        "sha256": "ca64b7dfb59f7a2c075b5477c6d5c7ff05703402db0f1019aed55f5d84b2f2bc"
+      }
+    },
+    {
+      "name": "executed source flight_geometric/val\\data\\prometheus_sounding_2022062412.csv",
+      "status": "PASS",
+      "details": {
+        "sha256": "04752e1e952397e608c2bbf90d3386efbf98a8f81d881b10ca9451a8ba82f137"
+      }
+    },
+    {
+      "name": "executed source flight_geometric/val\\data\\prometheus_sounding_2022062500.csv",
+      "status": "PASS",
+      "details": {
+        "sha256": "143a474ffc5439ac1a1085bf902e7ad2afa421dd3004d2ca781bd65f55748a30"
+      }
+    },
+    {
+      "name": "executed source flight_geometric/val\\data\\spaceport_america_pressure_levels_2023_hourly.nc",
+      "status": "PASS",
+      "details": {
+        "sha256": "25d48e9d03554251dc2d0601dcaa1e441ca7e7c502f573fceb4ce5c058da8694"
+      }
+    },
+    {
+      "name": "executed source flight_geometric/val\\data\\cavour\\altimeter_cavour.csv",
+      "status": "PASS",
+      "details": {
+        "sha256": "f912724676eea0ca9ba031c3779e48f861538814170b050b7bda2887c31f29a8"
+      }
+    },
+    {
+      "name": "executed source flight_geometric/val\\data\\cavour\\Cesaroni_3618L995-P.eng",
+      "status": "PASS",
+      "details": {
+        "sha256": "efc04492a3527bdb626d8ec0c18bbbd51f02012393d3b82e00b11d167b2dad2b"
+      }
+    },
+    {
+      "name": "executed source flight_geometric/val\\data\\cavour\\drag_coefficient_power_off.csv",
+      "status": "PASS",
+      "details": {
+        "sha256": "e47b9398b9e7802ac2f6edafe291edc1015fbb1ee6cb02df52404cf1b276f1c9"
+      }
+    },
+    {
+      "name": "executed source flight_geometric/val\\data\\cavour\\drag_coefficient_power_on.csv",
+      "status": "PASS",
+      "details": {
+        "sha256": "5f588e25e43b843470e1882f35e2a3be0b7f1760c6652da0c757ad203e7469ed"
+      }
+    },
+    {
+      "name": "executed source flight_geometric/val\\data\\cavour\\euroc_2023_all_windows.nc",
+      "status": "PASS",
+      "details": {
+        "sha256": "a3d9e08eb3bb4480d1b8ef03b06878a1a1f76397fdc9dcc929fe5cc856f61d56"
+      }
+    },
+    {
+      "name": "run output flight_geometric/build_info.json",
+      "status": "PASS",
+      "details": {
+        "sha256": "51f0a1db40bdb3d7466fb3b25d93c10f441468f2ffbfe4ff071e17c0997219f8"
+      }
+    },
+    {
+      "name": "run output flight_geometric/result.json",
+      "status": "PASS",
+      "details": {
+        "sha256": "0a68660ea5b7ed042ed3fcad4799a5f94ed4d72760a9a09fb5e5257fc5672a79"
+      }
+    },
+    {
+      "name": "run output flight_geometric/model\\data_output\\prometheus.csv",
+      "status": "PASS",
+      "details": {
+        "sha256": "2bd4581ac7db6296c96ddf53854bdf08b360e692d685c6dd25122e71868f49c9"
+      }
+    },
+    {
+      "name": "run output flight_geometric/model\\engine\\direct.xml",
+      "status": "PASS",
+      "details": {
+        "sha256": "f116b6f6d25d4b2b46c2f0faa713e85d0064db7a634105bc96e391fb52e4dde5"
+      }
+    },
+    {
+      "name": "run output flight_geometric/model\\engine\\M1520.xml",
+      "status": "PASS",
+      "details": {
+        "sha256": "6fab2ffdfc99466a24d8e80c7bec6be168be9582c017961f964f55d82c4f2f0b"
+      }
+    },
+    {
+      "name": "run output flight_geometric/model\\scripts\\prometheus.xml",
+      "status": "PASS",
+      "details": {
+        "sha256": "4b9f01774787d31a5ae4a6541a3c77fa094ed3fd84c60c40fe21f7162ab893ca"
+      }
+    },
+    {
+      "name": "run output flight_geometric/model\\aircraft\\prometheus\\prometheus.xml",
+      "status": "PASS",
+      "details": {
+        "sha256": "4545c42e3f975ff25dad2c669e63a3ddbfe8f24f86a94b0b5c21585ee348f975"
+      }
+    },
+    {
+      "name": "run output flight_geometric/model\\aircraft\\prometheus\\rail_exit.xml",
+      "status": "PASS",
+      "details": {
+        "sha256": "76a10051acf0d24f68815c2cc6d9db35417e277aa57d16cfc3c2eb1987ef13f4"
+      }
+    },
+    {
+      "name": "landing historical_flat",
+      "status": "PASS",
+      "details": {
+        "t_s": 220.69810000068787,
+        "h_agl_ft": 2.9900689588248497,
+        "v_vertical_fps": -9.240225921264702,
+        "terminated": 1.0,
+        "fuel_lb": 0.0
+      }
+    },
+    {
+      "name": "finite flight historical_flat",
+      "status": "PASS",
+      "details": {
+        "apogee_m": 4250.673020107794,
+        "n": 11016
+      }
+    },
+    {
+      "name": "executed source historical_flat/atmosphere_model.py",
+      "status": "PASS",
+      "details": {
+        "sha256": "bf26ec9195d0f353b3277dae97684f67b774cfa869e9a66547bb7b0cf9483129"
+      }
+    },
+    {
+      "name": "executed source historical_flat/motor_model.py",
+      "status": "PASS",
+      "details": {
+        "sha256": "e9d566135a0ff66464acc45ecd56c68dca0dc5a544765f6e0f9ffc996d0caad2"
+      }
+    },
+    {
+      "name": "executed source historical_flat/val\\build_cavour.py",
+      "status": "PASS",
+      "details": {
+        "sha256": "968ffd4d24c59d6c9e505b79c341ccc7043d1e6f5a06164c2d1337182d4deb2f"
+      }
+    },
+    {
+      "name": "executed source historical_flat/val\\build_info.json",
+      "status": "PASS",
+      "details": {
+        "sha256": "b749b3c948a2ae1bf8224c2dc3363aba6600ebfe8c7dabda0b0ebb1af079e9f9"
+      }
+    },
+    {
+      "name": "executed source historical_flat/val\\build_info_cavour.json",
+      "status": "PASS",
+      "details": {
+        "sha256": "919904c2b2161ede26c4ecb138f1407d3f9a36b31df0df41d428b847a8e506fc"
+      }
+    },
+    {
+      "name": "executed source historical_flat/val\\build_prometheus.py",
+      "status": "PASS",
+      "details": {
+        "sha256": "bc9bb1ed164d1cca49ed70175d5ef54b08d8d7980b716166effd9660da87292d"
+      }
+    },
+    {
+      "name": "executed source historical_flat/val\\cavour_check.json",
+      "status": "PASS",
+      "details": {
+        "sha256": "8577c5c55476199661724f574d2776f13330364eccb1c2531bbfadeb8dcf9699"
+      }
+    },
+    {
+      "name": "executed source historical_flat/val\\cavour_check.py",
+      "status": "PASS",
+      "details": {
+        "sha256": "47a05d344506e055cab288a3f7ce30a56120085540e63f1a362fea3a3cb0a833"
+      }
+    },
+    {
+      "name": "executed source historical_flat/val\\cavour_mc.json",
+      "status": "PASS",
+      "details": {
+        "sha256": "9af802490d4da055ffa5de3902906d10147bbea2268541dd5310bdae7671bd95"
+      }
+    },
+    {
+      "name": "executed source historical_flat/val\\cavour_mc.py",
+      "status": "PASS",
+      "details": {
+        "sha256": "3631a89074bd2576932dbe2b1fa8036ce53703edb40eab3b3ab25b8078585261"
+      }
+    },
+    {
+      "name": "executed source historical_flat/val\\cavour_mc_inputs.json",
+      "status": "PASS",
+      "details": {
+        "sha256": "ff8183857af38f1dc840d6b286a471229d29b0ab111c69ac0d3807a544f87c25"
+      }
+    },
+    {
+      "name": "executed source historical_flat/val\\gps_check.json",
+      "status": "PASS",
+      "details": {
+        "sha256": "c7cb61465f562d83870805a9f96a25192e9d10cbc77dfc3f616b08203c4bbd45"
+      }
+    },
+    {
+      "name": "executed source historical_flat/val\\gps_check.py",
+      "status": "PASS",
+      "details": {
+        "sha256": "1324f57fedb9dda2a1bc4deb96a1f0c4abb028c2808e0790a6a4c8fccd9b5c15"
+      }
+    },
+    {
+      "name": "executed source historical_flat/val\\jsb_result.json",
+      "status": "PASS",
+      "details": {
+        "sha256": "bfa42b31dd0850708214346283b274afe73d1ddaf3926fa7a50c1416310ca1a4"
+      }
+    },
+    {
+      "name": "executed source historical_flat/val\\jsb_result_cavour.json",
+      "status": "PASS",
+      "details": {
+        "sha256": "26bdab73ef57c171cdfe393fe1253263a6eb044b9c824643bc6b9370e1b1da53"
+      }
+    },
+    {
+      "name": "executed source historical_flat/val\\plot_validation.py",
+      "status": "PASS",
+      "details": {
+        "sha256": "d4f55b66a85fb2a6a77d6444818bd7f9da1fced96fb08d0276040f4b20ec52ed"
+      }
+    },
+    {
+      "name": "executed source historical_flat/val\\prepare_prometheus_weather.py",
+      "status": "PASS",
+      "details": {
+        "sha256": "58760a581e9602985385173f19afcc8b49474d9c3b177519be39b655f7c74e28"
+      }
+    },
+    {
+      "name": "executed source historical_flat/val\\prometheus_inputs.json",
+      "status": "PASS",
+      "details": {
+        "sha256": "d503ccb23b2d170a9cd55a94c99eb8d049c83788996e2b57a342b15764e30616"
+      }
+    },
+    {
+      "name": "executed source historical_flat/val\\prometheus_inputs.py",
+      "status": "PASS",
+      "details": {
+        "sha256": "cbce9c7a14697c5d4e5a71378ed9ba28b1c3cec01b65384a3d6ffaab3f894d1f"
+      }
+    },
+    {
+      "name": "executed source historical_flat/val\\prometheus_inputs_2022.json",
+      "status": "PASS",
+      "details": {
+        "sha256": "f6fdb38b3fc85fa88ad2b29fea6b7a591220321760fe6390d00a9e92625b2a79"
+      }
+    },
+    {
+      "name": "executed source historical_flat/val\\prom_mc.json",
+      "status": "PASS",
+      "details": {
+        "sha256": "ccee5408bbee409ba2566ed409779465549561cda546de66c14987f2df09b414"
+      }
+    },
+    {
+      "name": "executed source historical_flat/val\\prom_mc.py",
+      "status": "PASS",
+      "details": {
+        "sha256": "15e27947e8df281b1efbfbd999ec708c5307c1faaa120a063232fd75ac7e956b"
+      }
+    },
+    {
+      "name": "executed source historical_flat/val\\prom_mc_inputs.json",
+      "status": "PASS",
+      "details": {
+        "sha256": "5e61a4a24c20a98f8e49a3e5759ea6e34ee43955147b97b652e7b51d9598b290"
+      }
+    },
+    {
+      "name": "executed source historical_flat/val\\run_cavour.py",
+      "status": "PASS",
+      "details": {
+        "sha256": "17cc07a40a6d9e2d82e576d75bbe7bb56ac7e36411cdc3e14f9b756373b732bc"
+      }
+    },
+    {
+      "name": "executed source historical_flat/val\\run_prometheus.py",
+      "status": "PASS",
+      "details": {
+        "sha256": "2c9748d6d63c083cbcb3a86934e609f10cfd3e62148fdfb0f411fcd3ab8ab5d6"
+      }
+    },
+    {
+      "name": "executed source historical_flat/val\\validation_atmosphere.py",
+      "status": "PASS",
+      "details": {
+        "sha256": "6ff6b8e8f40f00667ff0a28c2166e5d462d17cb33b803bb47be0c8a2f628305a"
+      }
+    },
+    {
+      "name": "executed source historical_flat/val\\validation_mc.py",
+      "status": "PASS",
+      "details": {
+        "sha256": "fc806e7df6a38edab1e89a1d870c25b886159e7573b4641fa71d4863a1f53522"
+      }
+    },
+    {
+      "name": "executed source historical_flat/val\\data\\2022-06-24-serial-5115-flight-0001-TeleMetrum.csv",
+      "status": "PASS",
+      "details": {
+        "sha256": "9fe8d17a25e7944267b34a45ed955303afd5818b3f18479a5f7ffb31a574cecf"
+      }
+    },
+    {
+      "name": "executed source historical_flat/val\\data\\2022-06-24-serial-6583-flight-0003-TeleMega.csv",
+      "status": "PASS",
+      "details": {
+        "sha256": "befe40714e6b88b3bd5af8cd51b569a94544c486ced299878f66ab264f9105a6"
+      }
+    },
+    {
+      "name": "executed source historical_flat/val\\data\\Cesaroni_7579M1520-P.eng",
+      "status": "PASS",
+      "details": {
+        "sha256": "f38ad06972a07e4ef04164a60718f099d732de6e433185e211dd87083f89e4ca"
+      }
+    },
+    {
+      "name": "executed source historical_flat/val\\data\\prometheus_2022_igra_excerpt.txt",
+      "status": "PASS",
+      "details": {
+        "sha256": "ca64b7dfb59f7a2c075b5477c6d5c7ff05703402db0f1019aed55f5d84b2f2bc"
+      }
+    },
+    {
+      "name": "executed source historical_flat/val\\data\\prometheus_sounding_2022062412.csv",
+      "status": "PASS",
+      "details": {
+        "sha256": "04752e1e952397e608c2bbf90d3386efbf98a8f81d881b10ca9451a8ba82f137"
+      }
+    },
+    {
+      "name": "executed source historical_flat/val\\data\\prometheus_sounding_2022062500.csv",
+      "status": "PASS",
+      "details": {
+        "sha256": "143a474ffc5439ac1a1085bf902e7ad2afa421dd3004d2ca781bd65f55748a30"
+      }
+    },
+    {
+      "name": "executed source historical_flat/val\\data\\spaceport_america_pressure_levels_2023_hourly.nc",
+      "status": "PASS",
+      "details": {
+        "sha256": "25d48e9d03554251dc2d0601dcaa1e441ca7e7c502f573fceb4ce5c058da8694"
+      }
+    },
+    {
+      "name": "executed source historical_flat/val\\data\\cavour\\altimeter_cavour.csv",
+      "status": "PASS",
+      "details": {
+        "sha256": "f912724676eea0ca9ba031c3779e48f861538814170b050b7bda2887c31f29a8"
+      }
+    },
+    {
+      "name": "executed source historical_flat/val\\data\\cavour\\Cesaroni_3618L995-P.eng",
+      "status": "PASS",
+      "details": {
+        "sha256": "efc04492a3527bdb626d8ec0c18bbbd51f02012393d3b82e00b11d167b2dad2b"
+      }
+    },
+    {
+      "name": "executed source historical_flat/val\\data\\cavour\\drag_coefficient_power_off.csv",
+      "status": "PASS",
+      "details": {
+        "sha256": "e47b9398b9e7802ac2f6edafe291edc1015fbb1ee6cb02df52404cf1b276f1c9"
+      }
+    },
+    {
+      "name": "executed source historical_flat/val\\data\\cavour\\drag_coefficient_power_on.csv",
+      "status": "PASS",
+      "details": {
+        "sha256": "5f588e25e43b843470e1882f35e2a3be0b7f1760c6652da0c757ad203e7469ed"
+      }
+    },
+    {
+      "name": "executed source historical_flat/val\\data\\cavour\\euroc_2023_all_windows.nc",
+      "status": "PASS",
+      "details": {
+        "sha256": "a3d9e08eb3bb4480d1b8ef03b06878a1a1f76397fdc9dcc929fe5cc856f61d56"
+      }
+    },
+    {
+      "name": "run output historical_flat/build_info.json",
+      "status": "PASS",
+      "details": {
+        "sha256": "fb0d4043d7b189fd0078626e71bee235bd11b1bbb13b0c0cd2e484fc0acacf0a"
+      }
+    },
+    {
+      "name": "run output historical_flat/result.json",
+      "status": "PASS",
+      "details": {
+        "sha256": "10287f576ca549c296325abb555ef3f1fc37c01a1b005db5fb59fce6d4360dee"
+      }
+    },
+    {
+      "name": "run output historical_flat/model\\data_output\\prometheus.csv",
+      "status": "PASS",
+      "details": {
+        "sha256": "551ba63e2074e5f98d34563dc8a6d81b2b8ebc394520ac6a313c6d84235e8aca"
+      }
+    },
+    {
+      "name": "run output historical_flat/model\\engine\\direct.xml",
+      "status": "PASS",
+      "details": {
+        "sha256": "f116b6f6d25d4b2b46c2f0faa713e85d0064db7a634105bc96e391fb52e4dde5"
+      }
+    },
+    {
+      "name": "run output historical_flat/model\\engine\\M1520.xml",
+      "status": "PASS",
+      "details": {
+        "sha256": "6fab2ffdfc99466a24d8e80c7bec6be168be9582c017961f964f55d82c4f2f0b"
+      }
+    },
+    {
+      "name": "run output historical_flat/model\\scripts\\prometheus.xml",
+      "status": "PASS",
+      "details": {
+        "sha256": "608cbc9a553f0b90f50d0d4145edc2e979cbe8c2eaa11fa000c41ceb98c6b784"
+      }
+    },
+    {
+      "name": "run output historical_flat/model\\aircraft\\prometheus\\prometheus.xml",
+      "status": "PASS",
+      "details": {
+        "sha256": "4545c42e3f975ff25dad2c669e63a3ddbfe8f24f86a94b0b5c21585ee348f975"
+      }
+    },
+    {
+      "name": "run output historical_flat/model\\aircraft\\prometheus\\rail_exit.xml",
+      "status": "PASS",
+      "details": {
+        "sha256": "76a10051acf0d24f68815c2cc6d9db35417e277aa57d16cfc3c2eb1987ef13f4"
+      }
+    },
+    {
+      "name": "unchanged primary fields",
+      "status": "PASS",
+      "details": [
+        "jsbsim_apogee_m",
+        "jsbsim_dT_K",
+        "TeleMetrum_baro_apogee_m",
+        "TeleMetrum_gps_highest_fix_m",
+        "TeleMetrum_gps_apogee_fit_m",
+        "TeleMega_baro_apogee_m",
+        "TeleMega_gps_highest_fix_m",
+        "TeleMega_gps_apogee_fit_m",
+        "gps_mean_m",
+        "baro_mean_m",
+        "jsbsim_as_baro_m",
+        "E_m",
+        "E_pct",
+        "u_input_m",
+        "u_D_m",
+        "u_num_m",
+        "u_val_m",
+        "E_over_u_val",
+        "expanded_validation_halfwidth_m",
+        "expanded_validation_halfwidth_pct",
+        "discrepancy_interval_low_m",
+        "discrepancy_interval_high_m",
+        "interpretation",
+        "mc_mean_m",
+        "mc_p2_5",
+        "mc_p97_5",
+        "flight_in_mc_95",
+        "err_as_baro_vs_baro_pct"
+      ]
+    },
+    {
+      "name": "corrected diagnostic",
+      "status": "PASS",
+      "details": 16.737700306079773
+    },
+    {
+      "name": "MC unchanged",
+      "status": "PASS",
+      "details": {
+        "path": "val/prom_mc.json",
+        "sha256": "ccee5408bbee409ba2566ed409779465549561cda546de66c14987f2df09b414",
+        "n": 200,
+        "seed": 7,
+        "failed": 0,
+        "reason": "Primary independent 2022 weather/motor/model inputs unchanged; flight-informed temperature is a deterministic calibration sensitivity, not a second independent MC validation",
+        "mean": 4330.403323427128,
+        "sd": 327.15600776474633,
+        "p2_5": 3731.29951621511,
+        "p97_5": 4915.858160425202
+      }
+    }
+  ],
+  "issues": [],
+  "required_artifacts": [
+    {
+      "path": "rq2_revision2/prometheus_temperature/temperature_inference.json",
+      "sha256": "a8c03f933e612cf7eef08041ad240a40b578d7db5a3fba6b61665e6bd8f2fc9d"
+    },
+    {
+      "path": "rq2_revision2/prometheus_temperature/comparison_summary.json",
+      "sha256": "4f79c3bb87fa208939efac68d742327f8a63ebf1def8c00b067071db4ccf94f8"
+    },
+    {
+      "path": "rq2_revision2/prometheus_temperature/source_integration_proof.json",
+      "sha256": "27147f573c09dc2105e024af565f9914cf613809aabeb99c2be7c612e80659d2"
+    },
+    {
+      "path": "rq2_revision2/prometheus_temperature/validation_word_patch.json",
+      "sha256": "2c3c582711b076be452c11f393c09a31338bd5854dadf8703bda4a1189ecc5d7"
+    },
+    {
+      "path": "rq2_revision2/prometheus_temperature/validation_word_patch_binding.json",
+      "sha256": "93594fba382d2fc0d1be428a0b2d450eeb3c7c517139ab5f668a2ee82a00e317"
+    },
+    {
+      "path": "rq2_revision2/prometheus_temperature/fig_prometheus_temperature_main.png",
+      "sha256": "c327a61e8db398e2464880b7da99028f64e21fb1ca4cd3d04dd861f33fae18c2"
+    },
+    {
+      "path": "val/flight_temperature.py",
+      "sha256": "4ebb58b674d538fe0425cda8f58716d74ba28fb510e1a0fc4c9c706580ad4909"
+    },
+    {
+      "path": "val/gps_check.py",
+      "sha256": "f5767cf0909f44f9322d52d9b23b2866440f41ada27c2ca54abc2069e123c5f0"
+    },
+    {
+      "path": "val/validation_mc.py",
+      "sha256": "4c67c3157ae7a56bc7cdf4201f1ff380eacf38e19d3c7674d2472bbd5a6a5f53"
+    },
+    {
+      "path": "val/gps_check.json",
+      "sha256": "ce837f9e99630995ff8de248bc099701c6fa41a8f72b3db881f0fbd7f7c8b8b9"
+    },
+    {
+      "path": "results_revised/validation/gps_check.json",
+      "sha256": "ce837f9e99630995ff8de248bc099701c6fa41a8f72b3db881f0fbd7f7c8b8b9"
+    }
+  ],
+  "scope": "Temperature diagnostic correction and 3 deterministic full-ground runs. Reused primary 200-draw MC and all Cavour samples are unchanged; no new Monte Carlo denominator. V1 inherited manifest gps_check derivative hash is historical.",
+  "n_nominal": 3,
+  "nominal_failures": 0,
+  "new_MC_flights": 0,
+  "updated_temperature_K": 16.737700306079773
+}

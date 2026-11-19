@@ -1,0 +1,15 @@
+{
+  "job": {
+    "name": "morris_closed_v6.csv",
+    "kind": "morris",
+    "open": false,
+    "n": 20,
+    "seed": 1
+  },
+  "worker": 79,
+  "start_unix": 1791731101.7401056,
+  "status": "SUCCESS",
+  "completed": 20,
+  "elapsed": 944.698673248291,
+  "sha256": "f23814901041d4f49152b1090bfed4d64541f33c6fb254c6b8b6c4dec5ff6812"
+}

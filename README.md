@@ -1,88 +1,53 @@
-# JSBSim sounding rocket simulation
+# ENGG7340 project files
 
-6-DOF flight simulation of a low-cost sounding rocket in [JSBSim](https://github.com/JSBSim-Team/jsbsim),
-built from scratch for my master's thesis at the University of Queensland
-(*Simulation Tools for Low-Cost Sounding Rockets*, 2026).
+This folder contains the main code, inputs and results for the thesis.
+The full project is in `../03_Complete_Project/Haoran_Du_ENGG7340_Final_2026-10-29.zip`.
+File paths follow those given in the thesis.
 
-The rocket is a 2.5 m, 100 mm, ~21 kg single-stage vehicle on a Cesaroni M1670, aimed at 10,000 ft,
-plus two-motor versions (cluster, series, two-stage). On top of the JSBSim model there are:
+| Part | Files |
+| --- | --- |
+| Rocket models | `aircraft/`, `engine/` and `scripts/` contain the JSBSim models, motor inputs and launch settings. |
+| Motor and aerodynamics | `motor_model.py`, `make_motor.py` and `barrowman.py` calculate the motor and aerodynamic inputs. The `verify_*.py` scripts check these calculations. |
+| Flight validation | `val/` contains the Prometheus and Cavour scripts and flight data. Results are in `results_revised/validation/` and `rq2_revision2/prometheus_temperature/`. |
+| Apogee control | `sil.py` runs the flight-computer cases. `kf/` contains the filters and sensor model. `sweep.py` runs the vehicle parameter studies. |
+| Monte Carlo results | `results_revised/mc_*_v6.csv` contains the flight results. `rq2_revision2/final_control_summary.json` contains the control statistics. |
+| Weather | `atmos/` contains the weather data and analysis. `atmosphere_model.py` supplies the atmosphere used by the simulation. |
+| Staging | `staging_seq.py`, `stage_compare.py` and `sweep_staging.py` run the staging studies. `staging_post.py` calculates statistics from the saved flights. |
+| Brake loads | `loads.py`, `flap_fea.py` and `structure_screen.py` calculate the loads and plate response. |
 
-- a launch rail, air brake with apogee controller, dual-deploy recovery and a staging sequencer,
-  all written as JSBSim flight-control channels
-- a software-in-the-loop flight computer (sensor errors, 3- and 4-state EKF, apogee predictor)
-- an independent 3-DOF point-mass code for verification
-- Monte Carlo, one-at-a-time and Morris sensitivity studies
-- validation against two flown rockets (Prometheus, Cavour)
+`THESIS_FIGURES.csv` links each thesis figure to its image, data and scripts.
+The figure images are in `thesis/figures/`. `FILE_INDEX.csv` lists all the other
+files in this folder.
 
-## Setup
+`RUN.md` gives the package versions and commands. To check the saved thesis
+results without rerunning flights, use `python verify_thesis_results.py`.
 
-Python 3.11+.
+A few points matter when reading the results:
 
-```
-pip install -r requirements.txt
-```
+- Paired control cases reuse the same sampled inputs. The 21,900 recorded
+  flight outcomes are not 21,900 independent input draws.
+- Prometheus has a regional-weather prediction and a separate temperature
+  calibration using its own flight measurements. `DATA_SOURCES.md` explains
+  these comparisons and the assumed pressure-height conversion for Cavour.
+- The staging results include flights where ignition was blocked. Keep those
+  flights when calculating the mean apogee for the full sample.
 
-No separate JSBSim install is needed; the `jsbsim` Python package is enough. Run everything from
-the repo root. Don't run two scripts at once from the same folder: they share `data_output/`.
+The full ZIP contains the individual run folders and earlier studies omitted
+here. `rq2_revision2/repair_source_v3/` is the code copy used by the filter
+Monte Carlo launcher. Keep it unchanged if rerunning that study.
 
-## Quick check
+The current Word and PDF are in `thesis/`. Figure 3.1 source is in
+`figures/workflow/`; Figure 7.1 source and its four nominal trajectories are
+in `figures/staging/`. See `figures/README.md` for the plotting commands.
 
-| Command | Should give |
-|---|---|
-| `python barrowman.py` | static margin 1.99 cal at launch, fin span 0.0463 m |
-| `python sweep.py nominal --open` | apogee 10554.52 ft |
-| `python sweep.py nominal` | apogee 10018.35 ft (brake on) |
-| `python crosscheck.py verify` | 3-DOF apogee 10555 ft |
-| `python stage_compare.py` | series 20549.7, cluster 20197.7, two-stage 20017.2 ft |
-| `python sil.py nominal --ideal` | apogee 10013.9 ft |
-| `cd kf && python test_kf.py` | ALL PASS |
-| `cd val && python build_prometheus.py && python run_prometheus.py && python gps_check.py` | apogee 4186.5 m, +1.31 % vs GPS |
-| `cd val && python build_cavour.py && python run_cavour.py && python cavour_check.py` | −1.64 % vs barometric record |
+Appendix G prints the main model and analysis code with source line numbers.
+`thesis/CODE_LISTINGS.csv` gives the file, printed range and thesis page for
+each listing. Longer source files identified as extracts remain complete
+in this folder. The thesis methods link to the matching appendix sections.
 
-## Main studies
+For the flap check, the thesis uses `sf_yield_beam` at the simulated load in
+`results_revised/flap_fea_v6.json`. The saved file also includes scaled-load
+and vibration results, which are outside the reported static comparison.
 
-| What | Command | Time (1 core) |
-|---|---|---|
-| Launch angle × wind, 6-DOF vs point mass | `python anglesweep.py --root . --csv results_v6/anglesweep_v6.csv` | ~3 min |
-| Recovery range of the brake | `python sweep.py recovery` | ~1 min |
-| Brake size × gain map | `python sweep.py dmap` | ~3 min |
-| Monte Carlo, 500 flights | `python sweep.py mcw 500 [--open \| --oracle]` | ~13 min |
-| Flight computer in the loop | `python sil.py mc 500 --est kf4 --cd estimated` (`--ideal`, `--errors`, `--pad-temp-sd`, ...) | ~4 min |
-| ±10 % sensitivity | `python sweep.py oat [--open]` | ~3 min |
-| Morris screening | `python sweep.py morris 20 [--open]` | ~10 min |
-| Tables from the result CSVs | `python batch2_tables.py --dir results_v6` | ~1 min |
-| Brake loads, flap FE check | `python loads.py --root .`, `python flap_fea.py` | ~5 min |
-| Staging | `python staging_seq.py coast\|wind\|tipoff\|mc --root . --tilt 1`, `python sweep_staging.py` | 1–30 min |
-
-All Monte Carlo runs use seed 1, so they reproduce the numbers in `results_v6/`.
-Use `-h` on any script for the options.
-
-## Layout
-
-```
-aircraft/        JSBSim vehicle files (single stage, two-stage, cluster, series)
-engine/          M1670 thrust table (from make_motor.py)
-scripts/         launch.xml run script
-kf/              Kalman filters used by sil.py
-val/             Prometheus and Cavour validation models and flight data
-atmos/           ERA5 temperature statistics
-results_v6/      CSVs and figures behind the thesis
-```
-
-## Data
-
-- Motor curves: Cesaroni RASP `.eng` files.
-- Prometheus (Western Engineering Rocketry Team, 2022) and Cavour (PoliTo Rocket Team, 2023):
-  vehicle data and flight logs from the data folder of the
-  [RocketPy repository](https://github.com/RocketPy-Team/RocketPy), where the teams' permission is
-  recorded. Only the data are used, not RocketPy itself.
-- `atmos/atmos_stats.py` needs three ERA5 files from the same data folder
-  (`EuroC_pressure_levels_reanalysis_2001-2021.nc`, `EuroC_single_level_reanalysis_2002_2021.nc`,
-  `SpaceportAmerica_2018_ERA-5.nc`). They are not included here because of their size;
-  the results are in `atmos/atmos_stats.json`. The same goes for the 2023 Spaceport America file used
-  by `val/prometheus_inputs.py` (its output, `prometheus_inputs.json`, is included).
-
-## Notes
-
-- Units inside the JSBSim files are imperial, as JSBSim expects. `atmosphere/delta-T` is in Rankine.
-- The air brake is modelled as drag only (no moment, no Mach dependence).
+The plate geometry, material assumptions and mesh results are in Section F.4
+and Table F.2. Sections 5.7 and 5.8 give the loads and the main static results.

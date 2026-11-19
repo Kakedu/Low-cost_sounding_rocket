@@ -1,0 +1,32 @@
+  jsbsim_apogee_m                   4259.55
+  jsbsim_dT_K                         19.25
+  TeleMetrum_baro_apogee_m          3903.77
+  TeleMetrum_gps_highest_fix_m      4133.00
+  TeleMetrum_gps_apogee_fit_m       4134.28
+  TeleMetrum_column_dT_K              17.03
+  TeleMega_baro_apogee_m            3898.37
+  TeleMega_gps_highest_fix_m        4130.00
+  TeleMega_gps_apogee_fit_m         4130.48
+  TeleMega_column_dT_K                17.09
+  gps_mean_m                        4132.38
+  baro_mean_m                       3901.07
+  column_dT_K                         17.06
+  jsbsim_as_baro_m                  3988.38
+  E_m                                127.17
+  E_pct                                3.08
+  u_input_m                          327.16
+  u_D_m                               10.00
+  u_num_m                              1.00
+  u_val_m                            327.31
+  E_over_u_val                         0.39
+  expanded_validation_halfwidth_m     654.62
+  expanded_validation_halfwidth_pct      15.84
+  discrepancy_interval_low_m        -527.45
+  discrepancy_interval_high_m        781.79
+  interpretation                 Conditional expanded uncertainty interval, not a pass/fail or detection threshold
+  mc_mean_m                         4330.40
+  mc_p2_5                           3731.30
+  mc_p97_5                          4915.86
+  flight_in_mc_95                1
+  err_as_baro_vs_baro_pct              2.24
+

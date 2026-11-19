@@ -1,0 +1,368 @@
+{
+  "status": "PASS",
+  "created_utc": "2026-10-28T14:26:36.058361+00:00",
+  "scope": "Portable copies of Figure 3.1/Figure 7.1 scripts plus exact existing nominal trace/event records. Plotting only was executed; no flight or Monte Carlo rerun was performed.",
+  "package_layout": "Place the figures/ subtree at the code package root. Keep README.md and this audit alongside it or in package provenance.",
+  "source_original_script_sha256": {
+    "D:\\AAAAA\\2\\ENGG7340\\2026-10-12\\work\\supervisor_revision_2026-10-28\\staging_figure\\plot_staging_trajectories.py": "8e3093240acad8e310ad907a5e68393186d116778d493d4919a7099639d40613",
+    "D:\\AAAAA\\2\\ENGG7340\\2026-10-12\\work\\supervisor_revision_2026-10-28\\staging_figure\\rerun_staging_trajectories.py": "3227fd2e51c5509406b85afa4a8ae37644ca9ce4100c464dd544b3874fe4dd55",
+    "D:\\AAAAA\\2\\ENGG7340\\2026-10-12\\work\\readability_review_2026-10-28\\draw_workflow.py": "071c55f7b54c9a4f2c7a72d2c9ebe24b07f2e666d49cf432dac876deb0530c8b"
+  },
+  "portable_script_sha256": {
+    "figures/staging/plot_staging_trajectories.py": "88925e265d676d1963dc5aae0be6428972cd635da2d7a6faa53d8b694b578ff3",
+    "figures/staging/rerun_staging_trajectories.py": "8c79337ed232afd2bb89947bde549a17c119cdf0f4f7c8288f094ebe9a7c0baf",
+    "figures/workflow/draw_workflow.py": "3bb4494d90523a8943b95fb37ee404489a6b01faf92f5680fb912c94879e2949"
+  },
+  "original_files_unchanged": true,
+  "hardcoded_local_runtime_path_scan": "PASS: no local D/C drive, audit_deps or user-runtime path literals in the three portable scripts. Third-party dependencies are imported normally.",
+  "path_behavior": {
+    "staging_plot_inputs": "data/ and trajectory_run_manifest.json beside the script; override with --data-dir and --manifest",
+    "plot_outputs": "generated/ beside each script; override with --output-dir",
+    "optional_rerun_source": "nearest enclosing code package, or --source-root",
+    "optional_rerun_output": "new nonexistent rerun_output/ beside the script, or --output-dir; existing directories are rejected",
+    "historical_paths": "Original manifest/event absolute paths are preserved as provenance; they do not locate the shipped plotting inputs."
+  },
+  "dependencies": {
+    "plotting_required": [
+      "numpy",
+      "matplotlib"
+    ],
+    "verified_runtime": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "numpy": "2.5.4",
+      "matplotlib": "3.11.2",
+      "Pillow": "12.3.0"
+    },
+    "optional_flight_rerun_additional": [
+      "jsbsim==1.3.1",
+      "complete package aircraft/, engine/, scripts/, local modules and two reference result CSVs"
+    ],
+    "user_install_command": "python -m pip install -r figures/requirements-figures.txt",
+    "external_verification_environment": {
+      "PYTHONPATH": "D:/AAAAA/2/ENGG7340/2026-10-12/work/audit_deps",
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "MPLCONFIGDIR": "separate scratch paths beneath _verification/",
+      "TEMP_TMP": "scratch beneath _verification/"
+    },
+    "environment_note": "The verification environment supplied the already installed libraries externally; no package code injects that environment path."
+  },
+  "file_mapping": [
+    {
+      "source": "D:\\AAAAA\\2\\ENGG7340\\2026-10-12\\work\\supervisor_revision_2026-10-28\\staging_figure\\data\\simultaneous_trajectory.csv",
+      "destination_relative": "figures/staging/data/simultaneous_trajectory.csv",
+      "sha256": "5c2f5476c5e24935a2489e2197f62f10d5c6bfc29b17c6ea789e4dea42e2d8ce",
+      "kind": "exact nominal trace"
+    },
+    {
+      "source": "D:\\AAAAA\\2\\ENGG7340\\2026-10-12\\work\\supervisor_revision_2026-10-28\\staging_figure\\data\\simultaneous_events.json",
+      "destination_relative": "figures/staging/data/simultaneous_events.json",
+      "sha256": "8221ae7a14108def1041065f8d39575b19b1c874d167eddcebe832f79194b184",
+      "kind": "exact event record"
+    },
+    {
+      "source": "D:\\AAAAA\\2\\ENGG7340\\2026-10-12\\work\\supervisor_revision_2026-10-28\\staging_figure\\data\\series_trajectory.csv",
+      "destination_relative": "figures/staging/data/series_trajectory.csv",
+      "sha256": "867919b5217461472bb584a85e437b0fa0e407e6eda09e704dac6da418520e77",
+      "kind": "exact nominal trace"
+    },
+    {
+      "source": "D:\\AAAAA\\2\\ENGG7340\\2026-10-12\\work\\supervisor_revision_2026-10-28\\staging_figure\\data\\series_events.json",
+      "destination_relative": "figures/staging/data/series_events.json",
+      "sha256": "6f0608a5d3ef8bfe6e81b25170d8ac1c954b0a59ec101bc28194308b1d12dcc4",
+      "kind": "exact event record"
+    },
+    {
+      "source": "D:\\AAAAA\\2\\ENGG7340\\2026-10-12\\work\\supervisor_revision_2026-10-28\\staging_figure\\data\\staged_0s_trajectory.csv",
+      "destination_relative": "figures/staging/data/staged_0s_trajectory.csv",
+      "sha256": "eaadadfe74e39b5ab0c917264eb18decc73b98f5aac8e5c118971168d5dd83c3",
+      "kind": "exact nominal trace"
+    },
+    {
+      "source": "D:\\AAAAA\\2\\ENGG7340\\2026-10-12\\work\\supervisor_revision_2026-10-28\\staging_figure\\data\\staged_0s_events.json",
+      "destination_relative": "figures/staging/data/staged_0s_events.json",
+      "sha256": "47b01c442ae32082876fbb9d86ed447efbed7ae590e9f964cbb84b64fe3e1841",
+      "kind": "exact event record"
+    },
+    {
+      "source": "D:\\AAAAA\\2\\ENGG7340\\2026-10-12\\work\\supervisor_revision_2026-10-28\\staging_figure\\data\\staged_5s_trajectory.csv",
+      "destination_relative": "figures/staging/data/staged_5s_trajectory.csv",
+      "sha256": "5a48d540dd18acfdef69fffb13606f4caded771eaa68753694f4d0a1e3250df2",
+      "kind": "exact nominal trace"
+    },
+    {
+      "source": "D:\\AAAAA\\2\\ENGG7340\\2026-10-12\\work\\supervisor_revision_2026-10-28\\staging_figure\\data\\staged_5s_events.json",
+      "destination_relative": "figures/staging/data/staged_5s_events.json",
+      "sha256": "3199638f17eb5e2ec7f49048f1b2aab8b6119abd0fa207c6de94d725ad2a3b64",
+      "kind": "exact event record"
+    },
+    {
+      "source": "D:\\AAAAA\\2\\ENGG7340\\2026-10-12\\work\\supervisor_revision_2026-10-28\\staging_figure\\trajectory_run_manifest.json",
+      "destination_relative": "figures/staging/trajectory_run_manifest.json",
+      "sha256": "6f85edcace4a37abe6a952a2d8ae7f0a1ca9fc06255697a46b7d2e6743deb269",
+      "kind": "exact historical provenance; historical absolute paths are not used as runtime inputs"
+    },
+    {
+      "source": "D:\\AAAAA\\2\\ENGG7340\\2026-10-12\\work\\supervisor_revision_2026-10-28\\staging_figure\\events_summary.json",
+      "destination_relative": "figures/staging/events_summary.json",
+      "sha256": "435e90c125422a3430efa1288d7554edeb060f41026cb405d43d41c4ed4132db",
+      "kind": "exact historical provenance; historical absolute paths are not used as runtime inputs"
+    },
+    {
+      "source": "D:\\AAAAA\\2\\ENGG7340\\2026-10-12\\work\\supervisor_revision_2026-10-28\\staging_figure\\apogee_and_events_comparison.csv",
+      "destination_relative": "figures/staging/apogee_and_events_comparison.csv",
+      "sha256": "6503a97974179121fa0ac7bee98bfa22140fd3eb2399366d4f7663c7c69805c1",
+      "kind": "exact historical provenance; historical absolute paths are not used as runtime inputs"
+    },
+    {
+      "source": "D:\\AAAAA\\2\\ENGG7340\\2026-10-12\\work\\supervisor_revision_2026-10-28\\staging_figure\\Figure_7_1_staging_trajectories.png",
+      "destination_relative": "figures/staging/reference/Figure_7_1_staging_trajectories.png",
+      "sha256": "5ba2daa60c61de2b188c128eb4e0aa03d9ca1105df0b7af96f9c316bfcb648d8",
+      "kind": "exact reference figure/audit"
+    },
+    {
+      "source": "D:\\AAAAA\\2\\ENGG7340\\2026-10-12\\work\\supervisor_revision_2026-10-28\\staging_figure\\figure_audit.json",
+      "destination_relative": "figures/staging/reference/figure_audit.original.json",
+      "sha256": "4e6dc6087490aa7f5ef4834eb215e8aeb0fea36e7171d766fe51e592fa24161e",
+      "kind": "exact reference figure/audit"
+    },
+    {
+      "source": "D:\\AAAAA\\2\\ENGG7340\\2026-10-12\\work\\readability_review_2026-10-28\\model_workflow.png",
+      "destination_relative": "figures/workflow/reference/model_workflow.png",
+      "sha256": "131643f13053bb9ee7cc4bf3c210dbd474a54b15453f3ab2057d4105a25d3d52",
+      "kind": "exact reference figure/audit"
+    }
+  ],
+  "commands_executed": [
+    {
+      "purpose": "Regenerate Figure 7.1 from supplied traces/events",
+      "argv": [
+        "C:\\Users\\Haoran Du\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-B",
+        "D:\\AAAAA\\2\\ENGG7340\\2026-10-12\\work\\submission_sync_2026-10-29\\figure_sources\\figures\\staging\\plot_staging_trajectories.py",
+        "--output-dir",
+        "D:\\AAAAA\\2\\ENGG7340\\2026-10-12\\work\\submission_sync_2026-10-29\\figure_sources\\_verification\\staging"
+      ],
+      "cwd": "D:\\AAAAA\\2\\ENGG7340\\2026-10-12\\work\\submission_sync_2026-10-29\\figure_sources\\_verification",
+      "exit_code": 0
+    },
+    {
+      "purpose": "Regenerate Figure 3.1",
+      "argv": [
+        "C:\\Users\\Haoran Du\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-B",
+        "D:\\AAAAA\\2\\ENGG7340\\2026-10-12\\work\\submission_sync_2026-10-29\\figure_sources\\figures\\workflow\\draw_workflow.py",
+        "--output-dir",
+        "D:\\AAAAA\\2\\ENGG7340\\2026-10-12\\work\\submission_sync_2026-10-29\\figure_sources\\_verification\\workflow"
+      ],
+      "cwd": "D:\\AAAAA\\2\\ENGG7340\\2026-10-12\\work\\submission_sync_2026-10-29\\figure_sources\\_verification",
+      "exit_code": 0
+    },
+    {
+      "purpose": "Check optional rerun CLI only; no simulation",
+      "argv": [
+        "C:\\Users\\Haoran Du\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-B",
+        "D:\\AAAAA\\2\\ENGG7340\\2026-10-12\\work\\submission_sync_2026-10-29\\figure_sources\\figures\\staging\\rerun_staging_trajectories.py",
+        "--help"
+      ],
+      "cwd": "D:\\AAAAA\\2\\ENGG7340\\2026-10-12\\work\\submission_sync_2026-10-29\\figure_sources\\_verification",
+      "exit_code": 0
+    }
+  ],
+  "portable_commands_from_package_root": [
+    "python figures/staging/plot_staging_trajectories.py",
+    "python figures/workflow/draw_workflow.py"
+  ],
+  "pixel_comparisons": [
+    {
+      "figure": "Figure 7.1",
+      "reference": "figures\\staging\\reference\\Figure_7_1_staging_trajectories.png",
+      "generated": "_verification\\staging\\Figure_7_1_staging_trajectories.png",
+      "dimensions": [
+        2220,
+        1950
+      ],
+      "reference_sha256": "5ba2daa60c61de2b188c128eb4e0aa03d9ca1105df0b7af96f9c316bfcb648d8",
+      "generated_sha256": "5ba2daa60c61de2b188c128eb4e0aa03d9ca1105df0b7af96f9c316bfcb648d8",
+      "decoded_RGBA_pixels_identical": true,
+      "file_bytes_identical": true,
+      "difference_bbox": null
+    },
+    {
+      "figure": "Figure 3.1",
+      "reference": "figures\\workflow\\reference\\model_workflow.png",
+      "generated": "_verification\\workflow\\model_workflow.png",
+      "dimensions": [
+        2352,
+        1827
+      ],
+      "reference_sha256": "131643f13053bb9ee7cc4bf3c210dbd474a54b15453f3ab2057d4105a25d3d52",
+      "generated_sha256": "131643f13053bb9ee7cc4bf3c210dbd474a54b15453f3ab2057d4105a25d3d52",
+      "decoded_RGBA_pixels_identical": true,
+      "file_bytes_identical": true,
+      "difference_bbox": null
+    }
+  ],
+  "staging_render_data_audit_equality": {
+    "dpi": true,
+    "figure_inches": true,
+    "source_manifest_sha256": true,
+    "axes_limits": true,
+    "curve_data_summary": true,
+    "event_markers": true,
+    "max_abs_apogee_difference_ft": true,
+    "input_csv_sha256": true
+  },
+  "runner_scientific_AST_equality": {
+    "DT": true,
+    "CASES": true,
+    "worker": true
+  },
+  "workflow_drawing_AST_equality": true,
+  "native_views": [
+    {
+      "figure": "Figure 7.1",
+      "path": "_verification/staging/Figure_7_1_staging_trajectories.png",
+      "sha256": "5ba2daa60c61de2b188c128eb4e0aa03d9ca1105df0b7af96f9c316bfcb648d8",
+      "actually_viewed_native_image": true,
+      "status": "PASS",
+      "notes": "All height/speed/event panels, labels and markers are unchanged and unclipped."
+    },
+    {
+      "figure": "Figure 3.1",
+      "path": "_verification/workflow/model_workflow.png",
+      "sha256": "131643f13053bb9ee7cc4bf3c210dbd474a54b15453f3ab2057d4105a25d3d52",
+      "actually_viewed_native_image": true,
+      "status": "PASS",
+      "notes": "Workflow labels, Cavour comparison box and API arrows are unchanged and unclipped."
+    }
+  ],
+  "new_flight_cases": 0,
+  "new_MC_flights": 0,
+  "limitations": [
+    "The optional rerun CLI and its unchanged worker/scientific-settings AST were verified; the flight runner itself was not executed in this portability task.",
+    "Rendering with another Matplotlib or font-library version may differ in pixels even when data are unchanged; pinned versions document the exact successful comparison."
+  ],
+  "required_artifacts": {
+    "_verification/comparison.json": {
+      "sha256": "db84fe9619b36bca0854f84b08f1a59bdab0481fcb8497f4143e82a34c3678d4",
+      "bytes": 1723
+    },
+    "_verification/draw_workflow.diff": {
+      "sha256": "9672fd064d803e28d7764cf84dc4642763bc568755ea0902c9a7d2957e78abb8",
+      "bytes": 6496
+    },
+    "_verification/plot_staging_trajectories.diff": {
+      "sha256": "d5931fb73ba79d34d68101b249ed2dfc6523417d55c768bbce4fbb08bc517b10",
+      "bytes": 3661
+    },
+    "_verification/rerun_staging_trajectories.diff": {
+      "sha256": "e7607134dafcceca02e5de638625c7dc6735648f6c170e675bce93030f11c5f7",
+      "bytes": 5505
+    },
+    "_verification/staging/caption.txt": {
+      "sha256": "fab172d5f0fdad9a87894a5049ade61929f5360df19fce7c22b4ec3c8ee01e05",
+      "bytes": 732
+    },
+    "_verification/staging/Figure_7_1_staging_trajectories.pdf": {
+      "sha256": "148c99011e555dd2f17a1483a662fd55ac25479ad4ac6cb0fbe8c9903f886086",
+      "bytes": 27726
+    },
+    "_verification/staging/Figure_7_1_staging_trajectories.png": {
+      "sha256": "5ba2daa60c61de2b188c128eb4e0aa03d9ca1105df0b7af96f9c316bfcb648d8",
+      "bytes": 329508
+    },
+    "_verification/staging/figure_audit.json": {
+      "sha256": "7b5eba16b538fdb7e9eb280f3da8d07f78d85b801b1d4f0ee727d79d4e93725b",
+      "bytes": 5247
+    },
+    "_verification/workflow/model_workflow.png": {
+      "sha256": "131643f13053bb9ee7cc4bf3c210dbd474a54b15453f3ab2057d4105a25d3d52",
+      "bytes": 354939
+    },
+    "_verification/workflow/model_workflow.svg": {
+      "sha256": "8835c44212b0b0b9c379cb0b018e0a2e534db5a4287ec949ab74766bc2673620",
+      "bytes": 116864
+    },
+    "figures/requirements-figures.txt": {
+      "sha256": "af9c9ea6a882ecdb9816a50416e4e777ff38447e9caf3b8e4c630ce2f227d324",
+      "bytes": 32
+    },
+    "figures/staging/apogee_and_events_comparison.csv": {
+      "sha256": "6503a97974179121fa0ac7bee98bfa22140fd3eb2399366d4f7663c7c69805c1",
+      "bytes": 1010
+    },
+    "figures/staging/data/series_events.json": {
+      "sha256": "6f0608a5d3ef8bfe6e81b25170d8ac1c954b0a59ec101bc28194308b1d12dcc4",
+      "bytes": 4288
+    },
+    "figures/staging/data/series_trajectory.csv": {
+      "sha256": "867919b5217461472bb584a85e437b0fa0e407e6eda09e704dac6da418520e77",
+      "bytes": 6425186
+    },
+    "figures/staging/data/simultaneous_events.json": {
+      "sha256": "8221ae7a14108def1041065f8d39575b19b1c874d167eddcebe832f79194b184",
+      "bytes": 4133
+    },
+    "figures/staging/data/simultaneous_trajectory.csv": {
+      "sha256": "5c2f5476c5e24935a2489e2197f62f10d5c6bfc29b17c6ea789e4dea42e2d8ce",
+      "bytes": 6192944
+    },
+    "figures/staging/data/staged_0s_events.json": {
+      "sha256": "47b01c442ae32082876fbb9d86ed447efbed7ae590e9f964cbb84b64fe3e1841",
+      "bytes": 4516
+    },
+    "figures/staging/data/staged_0s_trajectory.csv": {
+      "sha256": "eaadadfe74e39b5ab0c917264eb18decc73b98f5aac8e5c118971168d5dd83c3",
+      "bytes": 5908873
+    },
+    "figures/staging/data/staged_5s_events.json": {
+      "sha256": "3199638f17eb5e2ec7f49048f1b2aab8b6119abd0fa207c6de94d725ad2a3b64",
+      "bytes": 4503
+    },
+    "figures/staging/data/staged_5s_trajectory.csv": {
+      "sha256": "5a48d540dd18acfdef69fffb13606f4caded771eaa68753694f4d0a1e3250df2",
+      "bytes": 6255090
+    },
+    "figures/staging/events_summary.json": {
+      "sha256": "435e90c125422a3430efa1288d7554edeb060f41026cb405d43d41c4ed4132db",
+      "bytes": 9415
+    },
+    "figures/staging/plot_staging_trajectories.py": {
+      "sha256": "88925e265d676d1963dc5aae0be6428972cd635da2d7a6faa53d8b694b578ff3",
+      "bytes": 9375
+    },
+    "figures/staging/reference/Figure_7_1_staging_trajectories.png": {
+      "sha256": "5ba2daa60c61de2b188c128eb4e0aa03d9ca1105df0b7af96f9c316bfcb648d8",
+      "bytes": 329508
+    },
+    "figures/staging/reference/figure_audit.original.json": {
+      "sha256": "4e6dc6087490aa7f5ef4834eb215e8aeb0fea36e7171d766fe51e592fa24161e",
+      "bytes": 6265
+    },
+    "figures/staging/rerun_staging_trajectories.py": {
+      "sha256": "8c79337ed232afd2bb89947bde549a17c119cdf0f4f7c8288f094ebe9a7c0baf",
+      "bytes": 14414
+    },
+    "figures/staging/trajectory_run_manifest.json": {
+      "sha256": "6f85edcace4a37abe6a952a2d8ae7f0a1ca9fc06255697a46b7d2e6743deb269",
+      "bytes": 26060
+    },
+    "figures/workflow/draw_workflow.py": {
+      "sha256": "3bb4494d90523a8943b95fb37ee404489a6b01faf92f5680fb912c94879e2949",
+      "bytes": 3462
+    },
+    "figures/workflow/reference/model_workflow.png": {
+      "sha256": "131643f13053bb9ee7cc4bf3c210dbd474a54b15453f3ab2057d4105a25d3d52",
+      "bytes": 354939
+    },
+    "portability_setup.json": {
+      "sha256": "3b86a65a609dd089d2bbc019547a0c19ff6ed105aa0673ddb8166d70ce417470",
+      "bytes": 6275
+    },
+    "README.md": {
+      "sha256": "88d1a533310cd09e92749e8134d071eb1df3bd52927c356d0bbf62cabae45a8f",
+      "bytes": 3091
+    }
+  }
+}

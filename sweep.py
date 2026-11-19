@@ -34,6 +34,13 @@ def _scale_number(text, pattern, factor, group=1):
     s, e = m.span(group)
     return text[:s] + f"{new:.6g}" + text[e:]
 
+def _scale_number_exact(text,pattern,factor,group=1):
+    """Preserve the motor table's exact fuel endpoint for propellant scaling."""
+    m=re.search(pattern,text,re.S)
+    if m is None: raise KeyError(f'pattern not found: {pattern[:60]}')
+    s,e=m.span(group)
+    return text[:s]+format(float(m.group(group))*factor,'.17g')+text[e:]
+
 
 def _scale_table_column(text, fn_name, factor):
     m = re.search(rf'<function name="{re.escape(fn_name)}">.*?</function>', text, re.S)
@@ -58,11 +65,12 @@ def _scale_engine_table(text, col, factor):
         raise KeyError("thrust table not found in engine file")
     out = []
     for line in td.group(1).splitlines():
-        m = re.match(r'(\s*)([-\d.]+)\s+([-\d.]+)(.*)$', line)
+        number=r'[+-]?(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d+)?'
+        m = re.match(rf'(\s*)({number})\s+({number})(.*)$', line)
         if m:
             v = [float(m.group(2)), float(m.group(3))]
             v[col] *= factor
-            out.append(f"{m.group(1)}{v[0]:9.4f}  {v[1]:9.2f}{m.group(4)}")
+            out.append(f"{m.group(1)}{v[0]:.17g}  {v[1]:.17g}{m.group(4)}")
         else:
             out.append(line)
     return text[:td.start(1)] + "\n".join(out) + text[td.end(1):]
@@ -106,9 +114,10 @@ PARAMS = {
         pat=r'<pointmass name="Payload">.*?<weight unit="LBS">\s*([\d.]+)\s*</weight>',
         desc="payload mass"),
     "iyy": dict(
-        file="ac", kind="scale",
-        pat=r'<iyy unit="SLUG\*FT2">\s*([\d.]+)\s*</iyy>',
-        desc="pitch moment of inertia"),
+        file="ac", kind="scale_all",
+        pats=[r'<iyy unit="SLUG\*FT2">\s*([\d.]+)\s*</iyy>',
+              r'<izz unit="SLUG\*FT2">\s*([\d.]+)\s*</izz>'],
+        desc="transverse moment of inertia (Iyy and Izz scaled together)"),
     "cg_shift": dict(
         file="ac", kind="scale",
         pat=r'<location name="CG" unit="IN">\s*<x>\s*([\d.]+)\s*</x>',
@@ -118,10 +127,10 @@ PARAMS = {
         file="ac", kind="prop",
         pats=[r'<tank type="FUEL".*?<capacity unit="LBS">\s*([\d.]+)',
               r'<tank type="FUEL".*?<contents unit="LBS">\s*([\d.]+)'],
-        desc="propellant mass = total impulse (curve shape and thrust level "
-             "kept, burn time scales)"),
-    # impulse is scaled through Isp: JSBSim won't fill a tank above its capacity,
-    # so scaling the propellant only works downwards
+        desc="independent propellant-loading perturbation (tank and mass-indexed "
+             "curve scale together; fixed Isp)"),
+    # Main impulse uncertainty is Isp at fixed propellant mass. The unchanged
+    # mass-indexed thrust curve stretches its time history as Isp changes.
     "isp": dict(
         file="eng", kind="scale",
         pat=r'<isp>\s*([\d.]+)\s*</isp>',
@@ -220,7 +229,7 @@ def apply_param(text, name, factor):
         return _scale_engine_table(text, 1, factor)
     if kind in ("scale_all", "prop"):
         for p in spec["pats"]:
-            text = _scale_number(text, p, factor)
+            text = (_scale_number_exact if kind=='prop' else _scale_number)(text,p,factor)
         return text
     if kind == "gust":
         ev = (f'\n    <event name="Gust">\n'
@@ -259,6 +268,44 @@ def check_template(open_loop):
     elif open_loop and gate <= 100000:
         print("note: open-loop runs set an unreachable target internally.\n")
 
+
+def validate_inertia(aircraft_xml):
+    """Reject nonphysical dry-body inertia tensors before starting a flight."""
+    import numpy as np
+    def moment(tag,required=False):
+        match=re.search(rf'<{tag}\b[^>]*>\s*([^<]+)',aircraft_xml)
+        if match is None:
+            if required: raise ValueError(f'Missing inertia element {tag}')
+            return 0.0
+        return float(match.group(1))
+    xx,yy,zz=[moment(tag,True) for tag in ['ixx','iyy','izz']]
+    xy,xz,yz=[moment(tag) for tag in ['ixy','ixz','iyz']]
+    tensor=np.array([[xx,-xy,-xz],[-xy,yy,-yz],[-xz,-yz,zz]])
+    if not np.isfinite(tensor).all(): raise ValueError('Nonfinite inertia tensor')
+    principal=np.linalg.eigvalsh(tensor)
+    tolerance=1e-10*max(1.0,float(principal[-1]))
+    if principal[0]<=0 or principal[0]+principal[1]<principal[2]-tolerance:
+        raise ValueError(f'Nonphysical inertia tensor: principal moments {principal.tolist()}')
+    return principal.tolist()
+
+def validate_engine_table(engine_xml,aircraft_xml):
+    """Reject rounded/duplicate mass indices before native JSBSim table loading."""
+    import xml.etree.ElementTree as ET
+    table=ET.fromstring(engine_xml).find('.//thrust_table/tableData')
+    if table is None: raise ValueError('Missing engine thrust table')
+    pairs=[]
+    for line in ''.join(table.itertext()).splitlines():
+        parts=line.split()
+        if parts: pairs.append([float(v) for v in parts[:2]])
+    if len(pairs)<2 or any(len(row)!=2 or not all(math.isfinite(v) for v in row) for row in pairs):
+        raise ValueError('Invalid engine table rows')
+    if any(b[0]<=a[0] for a,b in zip(pairs,pairs[1:])):
+        raise ValueError('Engine consumed-mass indices must be strictly increasing')
+    if any(y<0 for x,y in pairs): raise ValueError('Negative thrust')
+    contents=ET.fromstring(aircraft_xml).find('.//propulsion/tank/contents')
+    if contents is None or not math.isclose(float(contents.text),pairs[-1][0],rel_tol=1e-12,abs_tol=1e-12):
+        raise ValueError('Engine fuel endpoint differs from initial tank contents')
+    return pairs
 
 def build_case(factors, open_loop=False, wind=None):
     t = load_templates()
@@ -302,7 +349,10 @@ def build_case(factors, open_loop=False, wind=None):
 
     t["script"] = t["script"].replace('aircraft="myrocket"', f'aircraft="{CASE_NAME}"')
 
+    validate_inertia(t['ac'])
+    validate_engine_table(t['eng'],t['ac'])
     CASE_AC.mkdir(parents=True, exist_ok=True)
+    CASE_CSV.parent.mkdir(parents=True, exist_ok=True)
     (CASE_AC / f"{CASE_NAME}.xml").write_text(t["ac"], newline="\r\n")
     (CASE_AC / "reset.xml").write_text(t["ic"], newline="\r\n")
     CASE_ENG.write_text(t["eng"], newline="\r\n")
@@ -313,10 +363,12 @@ _BINDING_RUNNER = """
 import os, sys, jsbsim
 f = jsbsim.FGFDMExec(os.getcwd())
 f.set_debug_level(0)
-f.load_script(sys.argv[1])
-f.run_ic()
+if not f.load_script(sys.argv[1]): raise RuntimeError('script load failed')
+if not f.run_ic(): raise RuntimeError('initialisation failed')
 while f.run():
     pass
+if f['position/h-agl-ft'] >= 1.1 or f['simulation/sim-time-sec'] >= 599.9:
+    raise RuntimeError('flight stopped before ground termination')
 """
 
 
@@ -328,9 +380,9 @@ def run_case():
     else:
         cmd = [sys.executable, "-c", _BINDING_RUNNER, f"scripts/{CASE_NAME}.xml"]
     r = subprocess.run(cmd, cwd=str(JSBSIM_ROOT), capture_output=True, text=True)
-    if not CASE_CSV.exists():
+    if r.returncode != 0 or not CASE_CSV.exists():
         tail = "\n".join((r.stdout + r.stderr).splitlines()[-15:])
-        raise RuntimeError("no CSV produced:\n" + tail)
+        raise RuntimeError(f"JSBSim exit {r.returncode}; CSV present={CASE_CSV.exists()}:\n" + tail)
     return read_results(CASE_CSV)
 
 
@@ -356,6 +408,16 @@ def read_results(path):
     except KeyError:
         i_d = None
     data = [[float(x) for x in r] for r in rows[1:] if len(r) == len(hdr)]
+    if not data or not all(math.isfinite(v) for row in data for v in row):
+        raise RuntimeError("Empty or non-finite flight log")
+    i_v = idx("vertical speed")
+    last = data[-1]
+    # CSV is sampled at 50 Hz, so its last row can precede the <1 ft ground
+    # event by one output interval. Accept only a descending row within that
+    # interval's travel, with a small rounding tolerance.
+    landing_tolerance_ft = 1.2 + abs(last[i_v]) * 0.021
+    if last[i_v] >= 0.0 or last[i_h] > landing_tolerance_ft or last[i_t] >= 599.9:
+        raise RuntimeError(f"Flight did not finish at ground: t={last[i_t]}, h={last[i_h]}, v={last[i_v]}")
     apo_row = max(data, key=lambda r: r[i_h])
     asc = [r for r in data if r[i_t] <= apo_row[i_t]]
     flight = [r for r in asc if r[i_t] > 1.0] or asc
@@ -448,8 +510,7 @@ def cmd_oat(delta=0.10, open_loop=False, metric="apogee", csv_out=None):
                 build_case({name: f}, open_loop)
                 vals[sgn] = run_case()[metric] - base
             except Exception as e:
-                vals[sgn] = float("nan")
-                print(f"  ! {name} {sgn}: {e}")
+                raise RuntimeError(f"OAT failed: {name} {sgn}, factor={f}") from e
         rng = abs(vals["hi"] - vals["lo"])
         out.append((name, vals["lo"], vals["hi"], rng, spec["desc"]))
     out.sort(key=lambda r: -r[3])
@@ -479,7 +540,7 @@ def cmd_mc(n=500, open_loop=False):
     check_template(open_loop)
     IMPULSE_SIGMA_RPY = 0.0249
     IMPULSE_SIGMA_CERT = 0.067
-    DIST = {"prop_mass": IMPULSE_SIGMA_RPY,
+    DIST = {"isp": IMPULSE_SIGMA_RPY,
             "cd0": 0.03,
             "dry_mass": 0.03,
             "launch_elev": None}
@@ -496,8 +557,8 @@ def cmd_mc(n=500, open_loop=False):
         try:
             build_case(f, open_loop)
             res.append(run_case()["apogee"])
-        except Exception:
-            pass
+        except Exception as error:
+            raise RuntimeError(f"Monte Carlo sample {i} failed: {f}") from error
         if (i + 1) % 25 == 0:
             print(f"  {i+1}/{n}", end="\r", flush=True)
     res.sort()
@@ -556,8 +617,7 @@ def cmd_stab(gust=40.0, open_loop=False):
         try:
             r = run_case()
         except Exception as e:
-            print(f"{mg:8.2f}   run failed: {e}")
-            continue
+            raise RuntimeError(f"Stability baseline failed, margin={mg}, factors={f}") from e
         bases[mg] = r
         print(f"{mg:8.2f}{_cp_factor(mg)*CP_NOM_IN:9.1f}{r['apogee']:9.0f}"
               f"{r['drift']:10.0f}{r['max_alpha']:11.2f}{r['max_beta']:10.2f}"
@@ -583,8 +643,8 @@ def cmd_stab(gust=40.0, open_loop=False):
                 build_case(f, open_loop)
                 try:
                     d.append(run_case()["apogee"] - bases[mg]["apogee"])
-                except Exception:
-                    d.append(float("nan"))
+                except Exception as error:
+                    raise RuntimeError(f"Stability apogee trial failed: margin={mg}, parameter={p}, factors={f}") from error
             row.append(max(d) - min(d))
         print(f"{mg:8.2f}" + "".join(f"{v:13.1f}" for v in row))
 
@@ -604,8 +664,8 @@ def cmd_stab(gust=40.0, open_loop=False):
                 build_case(f, open_loop)
                 try:
                     d.append(run_case()["drift"] - bases[mg]["drift"])
-                except Exception:
-                    d.append(float("nan"))
+                except Exception as error:
+                    raise RuntimeError(f"Stability drift trial failed: margin={mg}, parameter={p}, factors={f}") from error
             row.append(max(d) - min(d))
         print(f"{mg:8.2f}" + "".join(f"{v:13.1f}" for v in row))
 
@@ -635,7 +695,7 @@ def cmd_margin(target=10000.0, impulses=None, open_loop=False, csv_out=None):
         impulses = [1.00, 1.05, 1.10, 1.15, 1.20, 1.30]
 
     print(f"target apogee {target:.0f} ft\n")
-    print("Impulse is scaled through propellant mass. 'nominal' is the apogee")
+    print("Impulse is scaled through Isp at fixed propellant mass. 'nominal' is the apogee")
     print("on a perfect day; 'brake' is how far the brake had to open to hold")
     print("the target, which is the price paid for the margin.\n")
 
@@ -648,21 +708,19 @@ def cmd_margin(target=10000.0, impulses=None, open_loop=False, csv_out=None):
 
     rows = []
     for imp in impulses:
-        base_f = {"prop_mass": imp}
+        base_f = {"isp": imp}
 
         build_case(base_f, open_loop=True)
         try:
             unbraked = run_case()["apogee"]
         except Exception as e:
-            print(f"{imp:9.2f}   unbraked run failed: {e}")
-            continue
+            raise RuntimeError(f"Margin open-loop trial failed: impulse={imp}") from e
 
         build_case(base_f, open_loop)
         try:
             r = run_case()
         except Exception as e:
-            print(f"{imp:9.2f}   nominal run failed: {e}")
-            continue
+            raise RuntimeError(f"Margin nominal trial failed: impulse={imp}") from e
         nominal, brake = r["apogee"], r["max_brake"]
 
         errs = []
@@ -677,8 +735,8 @@ def cmd_margin(target=10000.0, impulses=None, open_loop=False, csv_out=None):
             build_case(f, open_loop)
             try:
                 e = run_case()["apogee"] - target
-            except Exception:
-                e = float("nan")
+            except Exception as error:
+                raise RuntimeError(f"Margin downside trial failed: impulse={imp}, case={name}, factors={f}") from error
             errs.append(e)
             cells += f"{e:+10.0f}"
 
@@ -743,15 +801,14 @@ def cmd_grid(target=10000.0, impulses=None, brakes=None, open_loop=False,
     for imp in impulses:
         cells = ""
         for b in brakes:
-            base_f = {"prop_mass": imp, "airbrake_dcd": b / 2.0}
+            base_f = {"isp": imp, "airbrake_dcd": b / 2.0}
             if fixed_loop_gain:
                 base_f["kp"] = 2.0 / b
             build_case(base_f, open_loop)
             try:
                 nominal = run_case()["apogee"]
-            except Exception:
-                cells += f"{'err':>10s}"
-                continue
+            except Exception as error:
+                raise RuntimeError(f"Design grid nominal trial failed: factors={base_f}") from error
             errs = []
             for pert in DOWNSIDE.values():
                 f = dict(base_f)
@@ -763,8 +820,8 @@ def cmd_grid(target=10000.0, impulses=None, brakes=None, open_loop=False,
                 build_case(f, open_loop)
                 try:
                     errs.append(run_case()["apogee"] - target)
-                except Exception:
-                    pass
+                except Exception as error:
+                    raise RuntimeError(f"Design grid downside trial failed: factors={f}") from error
             w = max(abs(e) for e in errs) if errs else float("nan")
             score = max(w, abs(nominal - target))
             table[(imp, b)] = (score, w, nominal - target)
@@ -834,7 +891,7 @@ def cmd_residual(target=10000.0, impulse=1.15, dcd=2.0, open_loop=False):
       gate_alt   the brake is inhibited below 1500 ft AGL, which costs part of
                  the high-dynamic-pressure window just after burnout.
     """
-    base = {"prop_mass": impulse, "airbrake_dcd": dcd / 2.0}
+    base = {"isp": impulse, "airbrake_dcd": dcd / 2.0}
     build_case(base, open_loop)
     r0 = run_case()
     e0 = r0["apogee"] - target
@@ -861,7 +918,7 @@ def cmd_residual(target=10000.0, impulse=1.15, dcd=2.0, open_loop=False):
                 print(f"{nom*f:12g}{r['apogee']-target:+10.0f}"
                       f"{r['max_brake']:10.2f}{r['apogee']:10.0f}")
             except Exception as ex:
-                print(f"{nom*f:12g}   {ex}")
+                raise RuntimeError(f"Residual trial failed: factors={g}") from ex
         print()
 
     print("A term that flattens the nominal error when relaxed is the binding")
@@ -869,7 +926,7 @@ def cmd_residual(target=10000.0, impulse=1.15, dcd=2.0, open_loop=False):
     print("its physical plausibility.")
 
 
-MC_SIGMA = {"prop_mass": 0.025, "cd0": 0.20, "cn_alpha": 0.10, "cp_x": 0.05,
+MC_SIGMA = {"isp": 0.025, "cd0": 0.20, "cn_alpha": 0.10, "cp_x": 0.05,
             "drogue_cda": 0.10, "main_cda": 0.10}
 MC_UNIFORM = {"dry_mass": 0.0075}
 WIND_MEAN_FPS = 11.73
@@ -917,7 +974,7 @@ def cmd_mcw(n=500, open_loop=False, csv_out=None, seed=1, oracle=False,
     if cd_sigma is not None:
         sig["cd0"] = cd_sigma
     if imp_sigma is not None:
-        sig["prop_mass"] = imp_sigma
+        sig["isp"] = imp_sigma
     rows = []
     keys = None
     for i in range(n):
@@ -930,8 +987,15 @@ def cmd_mcw(n=500, open_loop=False, csv_out=None, seed=1, oracle=False,
             build_case(f, open_loop, wind=w)
             r = run_case()
         except Exception as e:
-            print(f"  ! sample {i}: {e}")
-            continue
+            # Stop the study instead of silently conditioning statistics on
+            # successful flights. Preserve the complete failing input draw.
+            if csv_out:
+                import json
+                failure_path = Path(str(csv_out) + ".failure.json")
+                failure_path.write_text(json.dumps(dict(
+                    sample=i, seed=seed, requested_n=n, completed_n=len(rows),
+                    factors=f, wind=w, exception=repr(e)), indent=2))
+            raise RuntimeError(f"Monte Carlo sample {i} failed; study aborted") from e
         row = dict(sample=i, wind_fps=w[0], wind_from_deg=w[1], **f, **r)
         rows.append(row)
         keys = keys or list(row.keys())
@@ -950,7 +1014,7 @@ def cmd_mcw(n=500, open_loop=False, csv_out=None, seed=1, oracle=False,
 def _mc_summary(rows):
     import statistics as st
     ap = sorted(r["apogee"] for r in rows)
-    q = lambda p: ap[int(p / 100 * (len(ap) - 1))]
+    q = lambda p: float(__import__("numpy").percentile(ap, p, method="linear"))
     print(f"\nn = {len(rows)}")
     print(f"apogee  mean {st.mean(ap):.0f}  sd {st.stdev(ap):.0f}  "
           f"p5 {q(5):.0f}  p50 {q(50):.0f}  p95 {q(95):.0f} ft")
@@ -966,12 +1030,12 @@ def _mc_summary(rows):
     print(f"landing centre  N {mn:.0f} m  E {me:.0f} m")
     print(f"1-sigma ellipse semi-axes {math.sqrt(l1):.0f} x {math.sqrt(l2):.0f} m, "
           f"major axis {ang:.0f} deg from north")
-    print(f"distance from pad  p50 {d[len(d)//2]:.0f}  p95 {d[int(0.95*(len(d)-1))]:.0f}  "
+    print(f"distance from pad  p50 {float(__import__("numpy").percentile(d, 50, method="linear")):.0f}  p95 {float(__import__("numpy").percentile(d, 95, method="linear")):.0f}  "
           f"max {d[-1]:.0f} m")
 
 
 MORRIS_INPUTS = [
-    ("prop_mass", "normal", 0.025), ("cd0", "lognormal", 0.20), ("cn_alpha", "normal", 0.10),
+    ("isp", "normal", 0.025), ("cd0", "lognormal", 0.20), ("cn_alpha", "normal", 0.10),
     ("cp_x", "normal", 0.05), ("dry_mass", "uniform", 0.0075),
     ("tilt_n", "tilt", 1.0), ("tilt_e", "tilt", 0.0),
     ("wind_spd", "rayleigh", None), ("wind_dir", "dir", None),
@@ -1001,7 +1065,7 @@ def _morris_map(u):
             sl = math.sqrt(math.log(1.0 + s * s))
             f[name] = math.exp(-0.5 * sl * sl + sl * _norm_ppf(q))
         elif kind == "uniform":
-            f[name] = 1.0 + (2 * x - 1) * s
+            f[name] = 1.0 + (2 * q - 1) * s
         elif kind == "dT":
             f[name] = s * _norm_ppf(q)
         elif kind == "tilt":
@@ -1035,14 +1099,16 @@ def cmd_morris(r=20, open_loop=False, csv_out=None, seed=1, p=4, n_boot=1000):
 
     for t in range(r):
         base = [rng.choice([l for l in levels if l + delta <= 1.0 + 1e-9]) for _ in range(k)]
+        directions = [rng.choice((-1, 1)) for _ in range(k)]
         order = list(range(k)); rng.shuffle(order)
-        u = list(base); y0 = y(u)
+        u = [b if direction > 0 else b + delta for b, direction in zip(base, directions)]
+        y0 = y(u)
         for i in order:
-            u2 = list(u); u2[i] = u[i] + delta
+            u2 = list(u); u2[i] = u[i] + directions[i] * delta
             y1 = y(u2)
-            e = (y1 - y0) / delta
+            e = (y1 - y0) / (directions[i] * delta)
             ee[MORRIS_INPUTS[i][0]].append(e)
-            rows.append(dict(traj=t, input=MORRIS_INPUTS[i][0], ee=e, y0=y0, y1=y1))
+            rows.append(dict(traj=t, input=MORRIS_INPUTS[i][0], ee=e, y0=y0, y1=y1, direction=directions[i], u0=u[i], u1=u2[i]))
             u, y0 = u2, y1
         print(f"  trajectory {t + 1}/{r}", flush=True)
     import statistics as st
@@ -1054,7 +1120,7 @@ def cmd_morris(r=20, open_loop=False, csv_out=None, seed=1, p=4, n_boot=1000):
         e = ee[name]
         mus = st.mean(abs(x) for x in e); mu = st.mean(e); sd = st.stdev(e) if len(e) > 1 else 0
         bs = sorted(st.mean(abs(brng.choice(e)) for _ in e) for _ in range(n_boot))
-        lo, hi = bs[int(0.025 * n_boot)], bs[int(0.975 * n_boot) - 1]
+        lo, hi = __import__("numpy").percentile(bs, [2.5, 97.5], method="linear")
         summ.append(dict(input=name, mu_star=mus, ci_lo=lo, ci_hi=hi, mu=mu, sigma=sd))
     for d in sorted(summ, key=lambda z: -z["mu_star"]):
         print(f"{d['input']:12s}{d['mu_star']:9.0f}   [{d['ci_lo']:5.0f}, {d['ci_hi']:5.0f}]"
@@ -1077,9 +1143,9 @@ def cmd_recovery(target=10000.0, csv_out=None):
           f"{'brake peak':>12s}")
     out = []
     for f in facs:
-        build_case({"prop_mass": f}, open_loop=True)
+        build_case({"isp": f}, open_loop=True)
         op = run_case()["apogee"]
-        build_case({"prop_mass": f}, open_loop=False)
+        build_case({"isp": f}, open_loop=False)
         r = run_case()
         out.append((f, op, r["apogee"], r["apogee"] - target, r["max_brake"]))
         print(f"{f:8.3f}{op:11.0f}{r['apogee']:13.0f}{r['apogee']-target:+9.0f}"
@@ -1097,8 +1163,8 @@ def cmd_recovery(target=10000.0, csv_out=None):
 
 MAP_CASES = {
     "nominal":    {},
-    "impulse+10": {"prop_mass": 1.10},
-    "impulse+20": {"prop_mass": 1.20},
+    "impulse+10": {"isp": 1.10},
+    "impulse+20": {"isp": 1.20},
     "cd-10":      {"cd0": 0.90},
     "dry-10":     {"dry_mass": 0.90},
     "cd+10":      {"cd0": 1.10},

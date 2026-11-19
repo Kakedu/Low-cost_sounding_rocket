@@ -1,0 +1,16 @@
+{
+  "job": {
+    "name": "mc_oracle_v6.csv",
+    "n": 500,
+    "seed": 1,
+    "kind": "xml",
+    "open": false,
+    "oracle": true
+  },
+  "worker": 72,
+  "start_unix": 1791723187.863206,
+  "status": "SUCCESS",
+  "completed": 500,
+  "elapsed": 3050.253445625305,
+  "sha256": "95045b97bf25d9baf756abb467bcb331b28ee4fee6d5fdc64adc91b12af1c6c8"
+}

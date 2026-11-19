@@ -1,0 +1,14 @@
+{
+  "job": {
+    "name": "oat_closed_drift_v6.csv",
+    "kind": "oat",
+    "open": false,
+    "metric": "drift"
+  },
+  "worker": 78,
+  "start_unix": 1791731217.876272,
+  "status": "SUCCESS",
+  "completed": null,
+  "elapsed": 234.56674647331238,
+  "sha256": "308d072317f54c0ba3213a0e640e0925c5576e030dfc70eb9f4cb69d7691248c"
+}
