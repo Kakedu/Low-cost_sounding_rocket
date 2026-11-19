@@ -10,3 +10,4 @@ val/jsb_cavour/
 M1670_new.xml
 JSBSim.exe
 *.nc
+!val/data/cavour/euroc_2023_all_windows.nc

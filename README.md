@@ -1,53 +1,102 @@
-# ENGG7340 project files
+# Simulation tools for low-cost sounding rockets
 
-This folder contains the main code, inputs and results for the thesis.
-The full project is in `../03_Complete_Project/Haoran_Du_ENGG7340_Final_2026-10-29.zip`.
-File paths follow those given in the thesis.
+Code, models and results for my master's thesis at the University of Queensland
+(ENGG7340, *Simulation Tools for Low-Cost Sounding Rockets*, Haoran Du, October 2026).
+
+The work builds a six-degree-of-freedom model of a low-cost sounding rocket in
+[JSBSim](https://github.com/JSBSim-Team/jsbsim), driven from Python, and uses it to
+answer three design questions:
+
+1. **Model fidelity** – when is a point-mass model enough, and when are attitude dynamics needed?
+2. **Apogee control** – how accurately can an air brake reach a 10,000 ft target when drag,
+   motor performance and sensors are uncertain?
+3. **Staging** – how do coast time, wind and ignition limits affect a two-stage design?
+
+The reference vehicle is a 100 mm, single-stage rocket on a Cesaroni M1670 motor, with
+two-motor variants (simultaneous, series and two-stage).
+
+## Main results
+
+| Question | Result |
+| --- | --- |
+| Fidelity | Point-mass and 6-DOF apogees agree within 0.075 % for near-vertical flight in still air, but differ by −28.65 % to +8.30 % in 20 mph wind. |
+| Flight comparison | Prometheus (2022) geometric apogee +3.08 % against GPS with regional weather; Cavour (2023) −2.03 % against its barometric record. |
+| Apogee control | Hit rate in the ±100 ft band rises from 9.4 % (no brake) to 73.8 % with true-state control. With all modelled sensor errors, the 4-state filter reaches 47.0 % and the 3-state filter 24.6 % (500 paired flights). |
+| Staging | A 5 s coast raises apogee by 458 ft in still air, but at 5° launch tilt the full-sample mean falls once blocked ignitions are counted. |
+
+The thesis gives the methods, assumptions and limits behind each number.
+
+## What is in the repository
 
 | Part | Files |
 | --- | --- |
-| Rocket models | `aircraft/`, `engine/` and `scripts/` contain the JSBSim models, motor inputs and launch settings. |
-| Motor and aerodynamics | `motor_model.py`, `make_motor.py` and `barrowman.py` calculate the motor and aerodynamic inputs. The `verify_*.py` scripts check these calculations. |
-| Flight validation | `val/` contains the Prometheus and Cavour scripts and flight data. Results are in `results_revised/validation/` and `rq2_revision2/prometheus_temperature/`. |
-| Apogee control | `sil.py` runs the flight-computer cases. `kf/` contains the filters and sensor model. `sweep.py` runs the vehicle parameter studies. |
-| Monte Carlo results | `results_revised/mc_*_v6.csv` contains the flight results. `rq2_revision2/final_control_summary.json` contains the control statistics. |
-| Weather | `atmos/` contains the weather data and analysis. `atmosphere_model.py` supplies the atmosphere used by the simulation. |
-| Staging | `staging_seq.py`, `stage_compare.py` and `sweep_staging.py` run the staging studies. `staging_post.py` calculates statistics from the saved flights. |
-| Brake loads | `loads.py`, `flap_fea.py` and `structure_screen.py` calculate the loads and plate response. |
+| JSBSim models | `aircraft/` (single stage, two-stage, simultaneous and series), `engine/`, `scripts/launch.xml` |
+| Motor and aerodynamics | `motor_model.py`, `make_motor.py`, `barrowman.py`, `verify_*.py` |
+| Flight computer (SIL) | `sil.py`, `kf/` (3- and 4-state extended Kalman filters, sensor and attitude models) |
+| Parameter studies | `sweep.py` (Monte Carlo, one-at-a-time, Morris), `control_postprocess.py` |
+| Point-mass cross-check | `crosscheck.py`, `crosscheck_staging.py` |
+| Staging | `staging_seq.py`, `stage_compare.py`, `sweep_staging.py`, `staging_post.py` |
+| Flight comparisons | `val/` (Prometheus and Cavour) |
+| Brake loads | `loads.py`, `flap_fea.py`, `structure_screen.py` |
+| Saved results | `results_revised/`, `rq2_revision2/` |
+| Thesis figures | `thesis/figures/`, `figures/`, `THESIS_FIGURES.csv` |
 
-`THESIS_FIGURES.csv` links each thesis figure to its image, data and scripts.
-The figure images are in `thesis/figures/`. `FILE_INDEX.csv` lists all the other
-files in this folder.
+`RUN.md` lists every command. `DATA_SOURCES.md` explains where the flight and weather
+data come from.
 
-`RUN.md` gives the package versions and commands. To check the saved thesis
-results without rerunning flights, use `python verify_thesis_results.py`.
+## Setup
 
-A few points matter when reading the results:
+Python **3.12** is required (`sweep.py` uses syntax that Python 3.11 rejects).
 
-- Paired control cases reuse the same sampled inputs. The 21,900 recorded
-  flight outcomes are not 21,900 independent input draws.
-- Prometheus has a regional-weather prediction and a separate temperature
-  calibration using its own flight measurements. `DATA_SOURCES.md` explains
-  these comparisons and the assumed pressure-height conversion for Cavour.
-- The staging results include flights where ignition was blocked. Keep those
-  flights when calculating the mean apogee for the full sample.
+```text
+python -m pip install -r requirements-verified.txt
+```
 
-The full ZIP contains the individual run folders and earlier studies omitted
-here. `rq2_revision2/repair_source_v3/` is the code copy used by the filter
-Monte Carlo launcher. Keep it unchanged if rerunning that study.
+JSBSim runs through its Python package; no separate install is needed. Run the scripts
+from the repository root and keep the `data_output/` folder.
 
-The current Word and PDF are in `thesis/`. Figure 3.1 source is in
-`figures/workflow/`; Figure 7.1 source and its four nominal trajectories are
-in `figures/staging/`. See `figures/README.md` for the plotting commands.
+Recalculate the main control results from the saved files (no simulation):
 
-Appendix G prints the main model and analysis code with source line numbers.
-`thesis/CODE_LISTINGS.csv` gives the file, printed range and thesis page for
-each listing. Longer source files identified as extracts remain complete
-in this folder. The thesis methods link to the matching appendix sections.
+```text
+python verify_thesis_results.py
+```
 
-For the flap check, the thesis uses `sf_yield_beam` at the simulated load in
-`results_revised/flap_fea_v6.json`. The saved file also includes scaled-load
-and vibration results, which are outside the reported static comparison.
+This script stops at the Prometheus check, because the two Prometheus run traces
+(`rq2_revision2/prometheus_temperature/runs/*/model/data_output/prometheus.csv`) were
+not part of this copy. Rerun them with `python val/validation_mc.py` after adding the
+flight logs listed under *Data not included*.
 
-The plate geometry, material assumptions and mesh results are in Section F.4
-and Table F.2. Sections 5.7 and 5.8 give the loads and the main static results.
+A single flight:
+
+```text
+python sweep.py nominal
+python sil.py nominal --est kf4 --cd estimated --ideal
+```
+
+## Data not included
+
+Some input files are not stored here because of their size or because they belong to
+the RocketPy project. They are all in the `data` folder of the
+[RocketPy repository](https://github.com/RocketPy-Team/RocketPy):
+
+| File | Put it in | Needed for |
+| --- | --- | --- |
+| `2022-06-24-serial-5115-flight-0001-TeleMetrum.csv`, `2022-06-24-serial-6583-flight-0003-TeleMega.csv` | `val/data/` | Prometheus flight comparison |
+| `EuroC_pressure_levels_reanalysis_2001-2021.nc`, `EuroC_single_level_reanalysis_2002_2021.nc`, `SpaceportAmerica_2018_ERA-5.nc` | `atmos/` | Weather statistics (`atmos/atmos_stats.py`); the results are already in `atmos/atmos_stats.json` |
+| `spaceport_america_pressure_levels_2023_hourly.nc` | `val/data/` | Earlier 2023 proxy-weather case only |
+
+Only the data are used; RocketPy itself is not run.
+
+## Notes
+
+- Units inside the JSBSim files are imperial, as JSBSim expects.
+- Monte Carlo runs use fixed seeds, so they reproduce the saved results.
+- Paired control cases reuse the same sampled vehicles: the 21,900 recorded flights
+  are not 21,900 independent draws.
+- `FILE_INDEX.csv` and `delivery_manifest.json` describe the full submission package,
+  which also contained the large data files listed above.
+
+## Licence
+
+Apache 2.0 (see `LICENSE`). Flight data belong to the Western Engineering Rocketry Team
+and the PoliTo Rocket Team, as published in the RocketPy repository.
